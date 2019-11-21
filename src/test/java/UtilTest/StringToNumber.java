@@ -1,5 +1,6 @@
 package UtilTest;
 
+import ListenerPackage.Assertion;
 import org.apache.commons.lang3.StringUtils;
 import org.testng.annotations.Test;
 
@@ -117,12 +118,25 @@ public class StringToNumber {
         }
 
          //尝试写会员管理的资金明细，判断暂无数据和有数据的的判断不同筛选类型
-
+        //包含
         @Test
         public void contains(){
                 String aa = "1234";
-                System.out.println(aa.contains("4"));//如果存在返回true，不存在返回false
+                String bb = "4";
+                if (aa.contains(bb)){
+                        System.out.println(true);
+                }else {
+                        System.out.println(false);
+                }
+                //boolean res = aa.contains(bb);
+                //System.out.println(aa.contains("5"));//如果存在返回true，不存在返回false
+                //Assertion.verifyEquals(true,"false");
+
         }
+
+
+
+
 
 
 }

@@ -104,7 +104,7 @@ import javax.xml.soap.Text;
                //浏览器打开Url
 
                public void loginBefore(String Url){
-                   System.setProperty("webdriver.chrome.driver", "C:\\Users\\Administrator\\AppData\\Local\\Google\\Chrome\\Application\\chromedriver.exe");
+                   System.setProperty("webdriver.chrome.driver", "C:\\Program Files (x86)\\Google\\Chrome\\Application\\chromedriver.exe");
                    // 去掉浏览器中的“--ignore-certificate-errors”
                    DesiredCapabilities capabilities = DesiredCapabilities.chrome();
                    capabilities.setCapability("chrome.switches",
