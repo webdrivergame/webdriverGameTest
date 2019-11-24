@@ -25,6 +25,10 @@ public class panel {
 
     }
 
+    /**1.点击首页仪表盘，2.获取平台总会员数，3.进入会员报表，4.获取会员列表总数
+     *
+     * */
+
     String panel = "//*[@id=\"app\"]/div/div[1]/div[2]/div[1]/div/ul/div[1]/a/li/span";
     String playerNumber = "//*[@id=\"app\"]/div/div[2]/section/div/div/div/div[1]/div/div/div[2]/div[2]/span[2]";
     String userManagement = "//*[@id=\"app\"]/div/div[1]/div[2]/div[1]/div/ul/div[2]/li/div/span";
@@ -33,23 +37,29 @@ public class panel {
 
     @Features("仪表盘")
     @Stories("会员数量")
-    @Title("验证平台总会员数是否有误")
+    @Title("验证仪表盘平台总会员数")
     @Test(priority = 1)
         public void playerNumber() throws InterruptedException {
+            //仪表盘总会员数
             driverUtil.xpathClick(panel);
             String getPlayerNumber = driverUtil.getTextByXpath(playerNumber);
+            //会员列表总会员数
             driverUtil.xpathClick(userManagement);
             driverUtil.xpathClick(vip);
             Thread.sleep(2000);
             String getPlayerNumberPage = driverUtil.getTextByXpath(playerNumberPage);
             String a1 = getPlayerNumberPage.substring(1,getPlayerNumberPage.indexOf("条"));
-            System.out.println("仪表盘会员数："+getPlayerNumber);
+            System.out.println("验证仪表盘平台总会员数："+getPlayerNumber);
             System.out.println("会员列表会员数："+getPlayerNumberPage);
             Assertion.setFlag(true);
             Assertion.verifyEquals(getPlayerNumber,a1);
             Assert.assertTrue(Assertion.currentFlag());
 
         }
+
+        /** 1.点击仪表盘，2.获取平台总注单量，3.进入历史投注记录，4.获取投注笔数
+         *
+         * */
 
     String clickNotesNumber = "//*[@id=\"tab-2\"]";
     String totalNotes = "//*[@id=\"app\"]/div/div[2]/section/div/div/div/div[1]/div/div/div[2]/div[2]/span[2]";
@@ -65,9 +75,11 @@ public class panel {
     @Title("验证平台总注单量是否有误")
     @Test(priority = 2)
         public void notesNumber() throws InterruptedException {
+            //仪表盘总注单量
             driverUtil.xpathClick(panel);
             driverUtil.xpathClick(clickNotesNumber);
             String getTotalNotes = driverUtil.getTextByXpath(totalNotes);
+            //历史投注记录获取总注单量
             driverUtil.xpathClick(betRecord);
             driverUtil.xpathClick(historyBet);
             Thread.sleep(1000);

@@ -5,6 +5,7 @@ Backstage\admin\UserManagement.class
 UtilTest\StringToNumber.class
 CPBet\cycleRacingCar.class
 Backstage\admin\test.class
+CPBet\chongqingTimeLottery.class
 Backstage\admin\panel.class
 ListenerPackage\AssertionListener.class
 ListenerPackage\Assertion.class

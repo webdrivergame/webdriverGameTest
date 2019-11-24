@@ -3,34 +3,31 @@
 <suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [All Test Suite]">
   <test name="平台管理员(failed)">
     <classes>
-      <class name="Backstage.admin.FinanceManagement">
-        <methods>
-          <include name="rechargeNumber"/>
-          <include name="rechargeOnline"/>
-          <include name="underLine"/>
-          <include name="rechargeMoney"/>
-          <include name="ReconciliationVip"/>
-          <include name="balanceWithdraw"/>
-          <include name="BalanceVipToday"/>
-          <include name="rechargeBalance"/>
-          <include name="unLiquidatedMoney"/>
-        </methods>
-      </class> <!-- Backstage.admin.FinanceManagement -->
       <class name="Backstage.admin.panel">
         <methods>
-          <include name="playerNumber"/>
           <include name="notesNumber"/>
           <include name="loginBefore"/>
         </methods>
       </class> <!-- Backstage.admin.panel -->
+      <class name="Backstage.admin.FinanceManagement">
+        <methods>
+          <include name="practiceLoseOrWin"/>
+          <include name="rechargeNumber"/>
+          <include name="ReconciliationVip"/>
+          <include name="BalanceVipToday"/>
+          <include name="rechargeBalance"/>
+        </methods>
+      </class> <!-- Backstage.admin.FinanceManagement -->
       <class name="Backstage.admin.ReportManagement">
         <methods>
+          <include name="waterBreakPracticeAgentTotal"/>
           <include name="loseWinAndWaterAgentTotal"/>
-          <include name="rechargeMoneyAgent"/>
+          <include name="betMoneyAgentReport"/>
           <include name="betMoneyAgentTotal"/>
-          <include name="loseWinAgentTotal"/>
-          <include name="serviceChargeAgentTotal"/>
-          <include name="withdrawMoneyAgent"/>
+          <include name="rechargeMoneyVip"/>
+          <include name="waterBreakMoneyActivityAgent"/>
+          <include name="countAgent"/>
+          <include name="winLoseWaterAgent"/>
         </methods>
       </class> <!-- Backstage.admin.ReportManagement -->
       <class name="Backstage.admin.UserManagement">
@@ -41,6 +38,7 @@
           <include name="subtractBalance"/>
           <include name="onlineBackstage"/>
           <include name="addBalance"/>
+          <include name="loginTime"/>
         </methods>
       </class> <!-- Backstage.admin.UserManagement -->
     </classes>
