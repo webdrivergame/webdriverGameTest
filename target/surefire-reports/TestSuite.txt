@@ -1,146 +1,113 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 39, Failures: 21, Errors: 0, Skipped: 0, Time elapsed: 184.94 s <<< FAILURE! - in TestSuite
-notesNumber(Backstage.admin.panel)  Time elapsed: 1.358 s  <<< FAILURE!
+Tests run: 31, Failures: 16, Errors: 0, Skipped: 0, Time elapsed: 129.785 s <<< FAILURE! - in TestSuite
+notesNumber(Backstage.admin.panel)  Time elapsed: 1.381 s  <<< FAILURE!
 org.openqa.selenium.WebDriverException: 
-element click intercepted: Element <span>...</span> is not clickable at point (82, 462). Other element would receive the click: <li role="menuitem" tabindex="-1" class="el-menu-item" style="padding-left: 40px; color: rgb(191, 203, 217); background-color: rgb(48, 65, 86);">...</li>
+element click intercepted: Element <span>...</span> is not clickable at point (82, 461). Other element would receive the click: <li role="menuitem" tabindex="-1" class="el-menu-item" style="padding-left: 40px; color: rgb(191, 203, 217); background-color: rgb(48, 65, 86);">...</li>
   (Session info: chrome=78.0.3904.97)
   (Driver info: chromedriver=78.0.3904.70 (edb9c9f3de0247fd912a77b7f6cae7447f6d3ad5-refs/branch-heads/3904@{#800}),platform=Windows NT 10.0.18363 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 311 milliseconds
+Command duration or timeout: 274 milliseconds
 Build info: version: '3.0.0', revision: '350cf60', time: '2016-10-13 10:48:57 -0700'
 System info: host: 'DESKTOP-8DI1090', ip: '10.1.101.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_231'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:65482}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=78.0.3904.70 (edb9c9f3de0247fd912a77b7f6cae7447f6d3ad5-refs/branch-heads/3904@{#800}), userDataDir=C:\Users\Owner\AppData\Local\Temp\scoped_dir15904_692047829}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=78.0.3904.97, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 8c4590adba09c9da9a6bbedc3ba9f9e3
-	at Backstage.admin.panel.notesNumber(panel.java:72)
+Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:58521}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=78.0.3904.70 (edb9c9f3de0247fd912a77b7f6cae7447f6d3ad5-refs/branch-heads/3904@{#800}), userDataDir=C:\Users\Owner\AppData\Local\Temp\scoped_dir15620_1103966197}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=78.0.3904.97, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 2f5106106f29eba7ef6066dae8ce9d27
+	at Backstage.admin.panel.notesNumber(panel.java:84)
 
-vipNumber(Backstage.admin.UserManagement)  Time elapsed: 3.573 s  <<< FAILURE!
+vipNumber(Backstage.admin.UserManagement)  Time elapsed: 3.622 s  <<< FAILURE!
 java.lang.AssertionError: expected [true] but found [false]
-	at Backstage.admin.UserManagement.vipNumber(UserManagement.java:85)
+	at Backstage.admin.UserManagement.vipNumber(UserManagement.java:93)
 
-loginTime(Backstage.admin.UserManagement)  Time elapsed: 2.304 s  <<< FAILURE!
-java.lang.AssertionError: expected [true] but found [false]
-	at Backstage.admin.UserManagement.loginTime(UserManagement.java:195)
-
-desc(Backstage.admin.UserManagement)  Time elapsed: 2.243 s  <<< FAILURE!
-java.lang.AssertionError: expected [true] but found [false]
-	at Backstage.admin.UserManagement.desc(UserManagement.java:245)
-
-addBalance(Backstage.admin.UserManagement)  Time elapsed: 4.423 s  <<< FAILURE!
-java.lang.AssertionError: expected [true] but found [false]
-	at Backstage.admin.UserManagement.addBalance(UserManagement.java:286)
-
-subtractBalance(Backstage.admin.UserManagement)  Time elapsed: 5.531 s  <<< FAILURE!
-java.lang.AssertionError: expected [true] but found [false]
-	at Backstage.admin.UserManagement.subtractBalance(UserManagement.java:313)
-
-vipUsableMoney(Backstage.admin.UserManagement)  Time elapsed: 12.397 s  <<< FAILURE!
-org.openqa.selenium.NoSuchElementException: 
-no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="app"]/div/div[2]/section/div/div/div[2]/div[1]/div[3]/table/tbody/tr/td[7]/div/span"}
-  (Session info: chrome=78.0.3904.97)
-  (Driver info: chromedriver=78.0.3904.70 (edb9c9f3de0247fd912a77b7f6cae7447f6d3ad5-refs/branch-heads/3904@{#800}),platform=Windows NT 10.0.18363 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 10.08 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.0.0', revision: '350cf60', time: '2016-10-13 10:48:57 -0700'
-System info: host: 'DESKTOP-8DI1090', ip: '10.1.101.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_231'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:65482}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=78.0.3904.70 (edb9c9f3de0247fd912a77b7f6cae7447f6d3ad5-refs/branch-heads/3904@{#800}), userDataDir=C:\Users\Owner\AppData\Local\Temp\scoped_dir15904_692047829}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=78.0.3904.97, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 8c4590adba09c9da9a6bbedc3ba9f9e3
-*** Element info: {Using=xpath, value=//*[@id="app"]/div/div[2]/section/div/div/div[2]/div[1]/div[3]/table/tbody/tr/td[7]/div/span}
-	at Backstage.admin.UserManagement.vipUsableMoney(UserManagement.java:338)
-
-onlineBackstage(Backstage.admin.UserManagement)  Time elapsed: 0.061 s  <<< FAILURE!
+rechargeBalance(Backstage.admin.FinanceManagement)  Time elapsed: 0.184 s  <<< FAILURE!
 org.openqa.selenium.WebDriverException: 
-element click intercepted: Element <span>...</span> is not clickable at point (82, 387). Other element would receive the click: <div tabindex="-1" role="dialog" aria-modal="true" aria-label="ÌבÊ¾" class="el-message-box__wrapper msgbox-fade-leave-active msgbox-fade-leave-to" style="z-index: 2007;">...</div>
+element click intercepted: Element <span>...</span> is not clickable at point (68, 551). Other element would receive the click: <li role="menuitem" tabindex="-1" class="el-menu-item" style="padding-left: 40px; color: rgb(191, 203, 217); background-color: rgb(38, 52, 69);">...</li>
   (Session info: chrome=78.0.3904.97)
   (Driver info: chromedriver=78.0.3904.70 (edb9c9f3de0247fd912a77b7f6cae7447f6d3ad5-refs/branch-heads/3904@{#800}),platform=Windows NT 10.0.18363 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 39 milliseconds
+Command duration or timeout: 97 milliseconds
 Build info: version: '3.0.0', revision: '350cf60', time: '2016-10-13 10:48:57 -0700'
 System info: host: 'DESKTOP-8DI1090', ip: '10.1.101.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_231'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:65482}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=78.0.3904.70 (edb9c9f3de0247fd912a77b7f6cae7447f6d3ad5-refs/branch-heads/3904@{#800}), userDataDir=C:\Users\Owner\AppData\Local\Temp\scoped_dir15904_692047829}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=78.0.3904.97, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 8c4590adba09c9da9a6bbedc3ba9f9e3
-	at Backstage.admin.UserManagement.onlineBackstage(UserManagement.java:393)
+Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:58521}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=78.0.3904.70 (edb9c9f3de0247fd912a77b7f6cae7447f6d3ad5-refs/branch-heads/3904@{#800}), userDataDir=C:\Users\Owner\AppData\Local\Temp\scoped_dir15620_1103966197}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=78.0.3904.97, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 2f5106106f29eba7ef6066dae8ce9d27
+	at Backstage.admin.FinanceManagement.rechargeBalance(FinanceManagement.java:49)
 
-rechargeNumber(Backstage.admin.FinanceManagement)  Time elapsed: 11.3 s  <<< FAILURE!
-org.openqa.selenium.NoSuchElementException: 
-no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="app"]/div/div[2]/section/div/div[1]/form/div[3]/div/div/div/input"}
-  (Session info: chrome=78.0.3904.97)
-  (Driver info: chromedriver=78.0.3904.70 (edb9c9f3de0247fd912a77b7f6cae7447f6d3ad5-refs/branch-heads/3904@{#800}),platform=Windows NT 10.0.18363 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 10.03 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.0.0', revision: '350cf60', time: '2016-10-13 10:48:57 -0700'
-System info: host: 'DESKTOP-8DI1090', ip: '10.1.101.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_231'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:65482}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=78.0.3904.70 (edb9c9f3de0247fd912a77b7f6cae7447f6d3ad5-refs/branch-heads/3904@{#800}), userDataDir=C:\Users\Owner\AppData\Local\Temp\scoped_dir15904_692047829}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=78.0.3904.97, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 8c4590adba09c9da9a6bbedc3ba9f9e3
-*** Element info: {Using=xpath, value=//*[@id="app"]/div/div[2]/section/div/div[1]/form/div[3]/div/div/div/input}
-	at Backstage.admin.FinanceManagement.rechargeNumber(FinanceManagement.java:42)
-
-rechargeBalance(Backstage.admin.FinanceManagement)  Time elapsed: 3.73 s  <<< FAILURE!
-java.lang.AssertionError: expected [true] but found [false]
-	at Backstage.admin.FinanceManagement.rechargeBalance(FinanceManagement.java:93)
-
-ReconciliationVip(Backstage.admin.FinanceManagement)  Time elapsed: 0.22 s  <<< FAILURE!
+ReconciliationVip(Backstage.admin.FinanceManagement)  Time elapsed: 0.111 s  <<< FAILURE!
 org.openqa.selenium.WebDriverException: 
-element click intercepted: Element <span>...</span> is not clickable at point (68, 429). Other element would receive the click: <li role="menuitem" tabindex="-1" class="el-menu-item" style="padding-left: 40px; color: rgb(191, 203, 217); background-color: rgb(48, 65, 86);">...</li>
+element click intercepted: Element <span>...</span> is not clickable at point (78, 301). Other element would receive the click: <li role="menuitem" tabindex="-1" class="el-menu-item" style="padding-left: 40px; color: rgb(191, 203, 217); background-color: rgb(48, 65, 86);">...</li>
   (Session info: chrome=78.0.3904.97)
   (Driver info: chromedriver=78.0.3904.70 (edb9c9f3de0247fd912a77b7f6cae7447f6d3ad5-refs/branch-heads/3904@{#800}),platform=Windows NT 10.0.18363 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 247 milliseconds
+Command duration or timeout: 56 milliseconds
 Build info: version: '3.0.0', revision: '350cf60', time: '2016-10-13 10:48:57 -0700'
 System info: host: 'DESKTOP-8DI1090', ip: '10.1.101.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_231'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:65482}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=78.0.3904.70 (edb9c9f3de0247fd912a77b7f6cae7447f6d3ad5-refs/branch-heads/3904@{#800}), userDataDir=C:\Users\Owner\AppData\Local\Temp\scoped_dir15904_692047829}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=78.0.3904.97, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 8c4590adba09c9da9a6bbedc3ba9f9e3
-	at Backstage.admin.FinanceManagement.ReconciliationVip(FinanceManagement.java:123)
+Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:58521}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=78.0.3904.70 (edb9c9f3de0247fd912a77b7f6cae7447f6d3ad5-refs/branch-heads/3904@{#800}), userDataDir=C:\Users\Owner\AppData\Local\Temp\scoped_dir15620_1103966197}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=78.0.3904.97, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 2f5106106f29eba7ef6066dae8ce9d27
+	at Backstage.admin.FinanceManagement.ReconciliationVip(FinanceManagement.java:95)
 
-BalanceVipToday(Backstage.admin.FinanceManagement)  Time elapsed: 0.375 s  <<< FAILURE!
+practiceLoseOrWin(Backstage.admin.FinanceManagement)  Time elapsed: 0.044 s  <<< FAILURE!
 org.openqa.selenium.WebDriverException: 
-element click intercepted: Element <span>...</span> is not clickable at point (68, 393). Other element would receive the click: <div class="el-submenu__title" style="padding-left: 20px; color: rgb(191, 203, 217); background-color: rgb(48, 65, 86);">...</div>
+element click intercepted: Element <span>...</span> is not clickable at point (78, 226). Other element would receive the click: <div class="el-submenu__title" style="padding-left: 20px; color: rgb(191, 203, 217); background-color: rgb(48, 65, 86);">...</div>
   (Session info: chrome=78.0.3904.97)
   (Driver info: chromedriver=78.0.3904.70 (edb9c9f3de0247fd912a77b7f6cae7447f6d3ad5-refs/branch-heads/3904@{#800}),platform=Windows NT 10.0.18363 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 148 milliseconds
+Command duration or timeout: 29 milliseconds
 Build info: version: '3.0.0', revision: '350cf60', time: '2016-10-13 10:48:57 -0700'
 System info: host: 'DESKTOP-8DI1090', ip: '10.1.101.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_231'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:65482}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=78.0.3904.70 (edb9c9f3de0247fd912a77b7f6cae7447f6d3ad5-refs/branch-heads/3904@{#800}), userDataDir=C:\Users\Owner\AppData\Local\Temp\scoped_dir15904_692047829}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=78.0.3904.97, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 8c4590adba09c9da9a6bbedc3ba9f9e3
-	at Backstage.admin.FinanceManagement.BalanceVipToday(FinanceManagement.java:172)
+Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:58521}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=78.0.3904.70 (edb9c9f3de0247fd912a77b7f6cae7447f6d3ad5-refs/branch-heads/3904@{#800}), userDataDir=C:\Users\Owner\AppData\Local\Temp\scoped_dir15620_1103966197}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=78.0.3904.97, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 2f5106106f29eba7ef6066dae8ce9d27
+	at Backstage.admin.FinanceManagement.practiceLoseOrWin(FinanceManagement.java:146)
 
-practiceLoseOrWin(Backstage.admin.FinanceManagement)  Time elapsed: 5.024 s  <<< FAILURE!
-java.lang.AssertionError: expected [true] but found [false]
-	at Backstage.admin.FinanceManagement.practiceLoseOrWin(FinanceManagement.java:216)
+vipNumberToday(Backstage.admin.ReportManagement)  Time elapsed: 0.196 s  <<< FAILURE!
+org.openqa.selenium.WebDriverException: 
+element click intercepted: Element <span>...</span> is not clickable at point (75, 509). Other element would receive the click: <li role="menuitem" tabindex="-1" class="el-menu-item" style="padding-left: 40px; color: rgb(191, 203, 217); background-color: rgb(38, 52, 69);">...</li>
+  (Session info: chrome=78.0.3904.97)
+  (Driver info: chromedriver=78.0.3904.70 (edb9c9f3de0247fd912a77b7f6cae7447f6d3ad5-refs/branch-heads/3904@{#800}),platform=Windows NT 10.0.18363 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 98 milliseconds
+Build info: version: '3.0.0', revision: '350cf60', time: '2016-10-13 10:48:57 -0700'
+System info: host: 'DESKTOP-8DI1090', ip: '10.1.101.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_231'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:58521}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=78.0.3904.70 (edb9c9f3de0247fd912a77b7f6cae7447f6d3ad5-refs/branch-heads/3904@{#800}), userDataDir=C:\Users\Owner\AppData\Local\Temp\scoped_dir15620_1103966197}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=78.0.3904.97, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 2f5106106f29eba7ef6066dae8ce9d27
+	at Backstage.admin.ReportManagement.vipNumberToday(ReportManagement.java:40)
 
-betMoneyAgentTotal(Backstage.admin.ReportManagement)  Time elapsed: 4.773 s  <<< FAILURE!
+betMoneyAgentTotal(Backstage.admin.ReportManagement)  Time elapsed: 4.713 s  <<< FAILURE!
 java.lang.AssertionError: expected [true] but found [false]
-	at Backstage.admin.ReportManagement.betMoneyAgentTotal(ReportManagement.java:107)
+	at Backstage.admin.ReportManagement.betMoneyAgentTotal(ReportManagement.java:114)
 
-waterBreakPracticeAgentTotal(Backstage.admin.ReportManagement)  Time elapsed: 4.803 s  <<< FAILURE!
+loseWinAgentTotal(Backstage.admin.ReportManagement)  Time elapsed: 4.744 s  <<< FAILURE!
 java.lang.AssertionError: expected [true] but found [false]
-	at Backstage.admin.ReportManagement.waterBreakPracticeAgentTotal(ReportManagement.java:289)
+	at Backstage.admin.ReportManagement.loseWinAgentTotal(ReportManagement.java:270)
 
-loseWinAndWaterAgentTotal(Backstage.admin.ReportManagement)  Time elapsed: 4.635 s  <<< FAILURE!
+waterBreakPracticeAgentTotal(Backstage.admin.ReportManagement)  Time elapsed: 4.675 s  <<< FAILURE!
 java.lang.AssertionError: expected [true] but found [false]
-	at Backstage.admin.ReportManagement.loseWinAndWaterAgentTotal(ReportManagement.java:320)
+	at Backstage.admin.ReportManagement.waterBreakPracticeAgentTotal(ReportManagement.java:302)
 
-betMoneyAgentReport(Backstage.admin.ReportManagement)  Time elapsed: 3.864 s  <<< FAILURE!
+loseWinAndWaterAgentTotal(Backstage.admin.ReportManagement)  Time elapsed: 4.714 s  <<< FAILURE!
 java.lang.AssertionError: expected [true] but found [false]
-	at Backstage.admin.ReportManagement.betMoneyAgentReport(ReportManagement.java:447)
+	at Backstage.admin.ReportManagement.loseWinAndWaterAgentTotal(ReportManagement.java:334)
 
-countAgent(Backstage.admin.ReportManagement)  Time elapsed: 3.942 s  <<< FAILURE!
+rechargeMoneyAgent(Backstage.admin.ReportManagement)  Time elapsed: 4.238 s  <<< FAILURE!
 java.lang.AssertionError: expected [true] but found [false]
-	at Backstage.admin.ReportManagement.countAgent(ReportManagement.java:416)
+	at Backstage.admin.ReportManagement.rechargeMoneyAgent(ReportManagement.java:401)
 
-winLoseWaterAgent(Backstage.admin.ReportManagement)  Time elapsed: 4.236 s  <<< FAILURE!
+countAgent(Backstage.admin.ReportManagement)  Time elapsed: 4.184 s  <<< FAILURE!
 java.lang.AssertionError: expected [true] but found [false]
-	at Backstage.admin.ReportManagement.winLoseWaterAgent(ReportManagement.java:632)
+	at Backstage.admin.ReportManagement.countAgent(ReportManagement.java:433)
 
-waterBreakMoneyActivityAgent(Backstage.admin.ReportManagement)  Time elapsed: 4.119 s  <<< FAILURE!
+betMoneyAgentReport(Backstage.admin.ReportManagement)  Time elapsed: 4.165 s  <<< FAILURE!
 java.lang.AssertionError: expected [true] but found [false]
-	at Backstage.admin.ReportManagement.waterBreakMoneyActivityAgent(ReportManagement.java:660)
+	at Backstage.admin.ReportManagement.betMoneyAgentReport(ReportManagement.java:465)
 
-rechargeMoneyVip(Backstage.admin.ReportManagement)  Time elapsed: 9.824 s  <<< FAILURE!
+serviceMoneyAgent(Backstage.admin.ReportManagement)  Time elapsed: 4.324 s  <<< FAILURE!
 java.lang.AssertionError: expected [true] but found [false]
-	at Backstage.admin.ReportManagement.rechargeMoneyVip(ReportManagement.java:706)
+	at Backstage.admin.ReportManagement.serviceMoneyAgent(ReportManagement.java:528)
+
+winLoseWaterAgent(Backstage.admin.ReportManagement)  Time elapsed: 4.247 s  <<< FAILURE!
+java.lang.AssertionError: expected [true] but found [false]
+	at Backstage.admin.ReportManagement.winLoseWaterAgent(ReportManagement.java:656)
+
+waterBreakMoneyActivityAgent(Backstage.admin.ReportManagement)  Time elapsed: 4.165 s  <<< FAILURE!
+java.lang.AssertionError: expected [true] but found [false]
+	at Backstage.admin.ReportManagement.waterBreakMoneyActivityAgent(ReportManagement.java:685)
 

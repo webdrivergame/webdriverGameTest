@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1574841351870" stop="1574841387717" version="1.5.2" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>Default Suite : seleniumCp</name>
+    <title>Default Suite : seleniumCp</title>
+    <test-cases>
+        <test-case start="1574841378376" stop="1574841385684" status="passed">
+            <name>moneyDetails1</name>
+            <title>验证会员资金明细数据1</title>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="Default Suite"/>
+                <label name="testGroup" value="seleniumCp"/>
+                <label name="testClass" value="Backstage.admin.moneyDetails"/>
+                <label name="testMethod" value="moneyDetails1"/>
+                <label name="story" value="会员列表"/>
+                <label name="feature" value="用户管理"/>
+                <label name="host" value="DESKTOP-8DI1090"/>
+                <label name="thread" value="21104@DESKTOP-8DI1090.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1574841385688" stop="1574841385811" status="passed">
+            <name>moneyDetails2</name>
+            <title>验证会员资金明细数据2</title>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="Default Suite"/>
+                <label name="testGroup" value="seleniumCp"/>
+                <label name="testClass" value="Backstage.admin.moneyDetails"/>
+                <label name="testMethod" value="moneyDetails2"/>
+                <label name="story" value="会员列表"/>
+                <label name="feature" value="用户管理"/>
+                <label name="host" value="DESKTOP-8DI1090"/>
+                <label name="thread" value="21104@DESKTOP-8DI1090.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1574841385815" stop="1574841385946" status="passed">
+            <name>moneyDetails3</name>
+            <title>验证会员资金明细数据3</title>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="Default Suite"/>
+                <label name="testGroup" value="seleniumCp"/>
+                <label name="testClass" value="Backstage.admin.moneyDetails"/>
+                <label name="testMethod" value="moneyDetails3"/>
+                <label name="story" value="会员列表"/>
+                <label name="feature" value="用户管理"/>
+                <label name="host" value="DESKTOP-8DI1090"/>
+                <label name="thread" value="21104@DESKTOP-8DI1090.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1574841385950" stop="1574841386079" status="passed">
+            <name>moneyDetails4</name>
+            <title>验证会员资金明细数据4</title>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="Default Suite"/>
+                <label name="testGroup" value="seleniumCp"/>
+                <label name="testClass" value="Backstage.admin.moneyDetails"/>
+                <label name="testMethod" value="moneyDetails4"/>
+                <label name="story" value="会员列表"/>
+                <label name="feature" value="用户管理"/>
+                <label name="host" value="DESKTOP-8DI1090"/>
+                <label name="thread" value="21104@DESKTOP-8DI1090.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1574841386082" stop="1574841386208" status="passed">
+            <name>moneyDetails5</name>
+            <title>验证会员资金明细数据5</title>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="Default Suite"/>
+                <label name="testGroup" value="seleniumCp"/>
+                <label name="testClass" value="Backstage.admin.moneyDetails"/>
+                <label name="testMethod" value="moneyDetails5"/>
+                <label name="story" value="会员列表"/>
+                <label name="feature" value="用户管理"/>
+                <label name="host" value="DESKTOP-8DI1090"/>
+                <label name="thread" value="21104@DESKTOP-8DI1090.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1574841386211" stop="1574841386317" status="passed">
+            <name>moneyDetails6</name>
+            <title>验证会员资金明细数据6</title>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="Default Suite"/>
+                <label name="testGroup" value="seleniumCp"/>
+                <label name="testClass" value="Backstage.admin.moneyDetails"/>
+                <label name="testMethod" value="moneyDetails6"/>
+                <label name="story" value="会员列表"/>
+                <label name="feature" value="用户管理"/>
+                <label name="host" value="DESKTOP-8DI1090"/>
+                <label name="thread" value="21104@DESKTOP-8DI1090.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1574841386319" stop="1574841386415" status="passed">
+            <name>moneyDetails7</name>
+            <title>验证会员资金明细数据7</title>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="Default Suite"/>
+                <label name="testGroup" value="seleniumCp"/>
+                <label name="testClass" value="Backstage.admin.moneyDetails"/>
+                <label name="testMethod" value="moneyDetails7"/>
+                <label name="story" value="会员列表"/>
+                <label name="feature" value="用户管理"/>
+                <label name="host" value="DESKTOP-8DI1090"/>
+                <label name="thread" value="21104@DESKTOP-8DI1090.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1574841386416" stop="1574841386508" status="passed">
+            <name>moneyDetails8</name>
+            <title>验证会员资金明细数据8</title>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="Default Suite"/>
+                <label name="testGroup" value="seleniumCp"/>
+                <label name="testClass" value="Backstage.admin.moneyDetails"/>
+                <label name="testMethod" value="moneyDetails8"/>
+                <label name="story" value="会员列表"/>
+                <label name="feature" value="用户管理"/>
+                <label name="host" value="DESKTOP-8DI1090"/>
+                <label name="thread" value="21104@DESKTOP-8DI1090.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1574841386510" stop="1574841386633" status="passed">
+            <name>moneyDetails9</name>
+            <title>验证会员资金明细数据9</title>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="Default Suite"/>
+                <label name="testGroup" value="seleniumCp"/>
+                <label name="testClass" value="Backstage.admin.moneyDetails"/>
+                <label name="testMethod" value="moneyDetails9"/>
+                <label name="story" value="会员列表"/>
+                <label name="feature" value="用户管理"/>
+                <label name="host" value="DESKTOP-8DI1090"/>
+                <label name="thread" value="21104@DESKTOP-8DI1090.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1574841386636" stop="1574841386762" status="passed">
+            <name>moneyDetails10</name>
+            <title>验证会员资金明细数据10</title>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="Default Suite"/>
+                <label name="testGroup" value="seleniumCp"/>
+                <label name="testClass" value="Backstage.admin.moneyDetails"/>
+                <label name="testMethod" value="moneyDetails10"/>
+                <label name="story" value="会员列表"/>
+                <label name="feature" value="用户管理"/>
+                <label name="host" value="DESKTOP-8DI1090"/>
+                <label name="thread" value="21104@DESKTOP-8DI1090.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1574841386764" stop="1574841386867" status="passed">
+            <name>moneyDetails11</name>
+            <title>验证会员资金明细数据12</title>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="Default Suite"/>
+                <label name="testGroup" value="seleniumCp"/>
+                <label name="testClass" value="Backstage.admin.moneyDetails"/>
+                <label name="testMethod" value="moneyDetails11"/>
+                <label name="story" value="会员列表"/>
+                <label name="feature" value="用户管理"/>
+                <label name="host" value="DESKTOP-8DI1090"/>
+                <label name="thread" value="21104@DESKTOP-8DI1090.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1574841386869" stop="1574841386969" status="passed">
+            <name>moneyDetails12</name>
+            <title>验证会员资金明细数据12</title>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="Default Suite"/>
+                <label name="testGroup" value="seleniumCp"/>
+                <label name="testClass" value="Backstage.admin.moneyDetails"/>
+                <label name="testMethod" value="moneyDetails12"/>
+                <label name="story" value="会员列表"/>
+                <label name="feature" value="用户管理"/>
+                <label name="host" value="DESKTOP-8DI1090"/>
+                <label name="thread" value="21104@DESKTOP-8DI1090.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1574841386971" stop="1574841387073" status="passed">
+            <name>moneyDetails13</name>
+            <title>验证会员资金明细数据13</title>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="Default Suite"/>
+                <label name="testGroup" value="seleniumCp"/>
+                <label name="testClass" value="Backstage.admin.moneyDetails"/>
+                <label name="testMethod" value="moneyDetails13"/>
+                <label name="story" value="会员列表"/>
+                <label name="feature" value="用户管理"/>
+                <label name="host" value="DESKTOP-8DI1090"/>
+                <label name="thread" value="21104@DESKTOP-8DI1090.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1574841387076" stop="1574841387172" status="passed">
+            <name>moneyDetails14</name>
+            <title>验证会员资金明细数据14</title>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="Default Suite"/>
+                <label name="testGroup" value="seleniumCp"/>
+                <label name="testClass" value="Backstage.admin.moneyDetails"/>
+                <label name="testMethod" value="moneyDetails14"/>
+                <label name="story" value="会员列表"/>
+                <label name="feature" value="用户管理"/>
+                <label name="host" value="DESKTOP-8DI1090"/>
+                <label name="thread" value="21104@DESKTOP-8DI1090.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1574841387174" stop="1574841387296" status="passed">
+            <name>moneyDetails15</name>
+            <title>验证会员资金明细数据15</title>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="Default Suite"/>
+                <label name="testGroup" value="seleniumCp"/>
+                <label name="testClass" value="Backstage.admin.moneyDetails"/>
+                <label name="testMethod" value="moneyDetails15"/>
+                <label name="story" value="会员列表"/>
+                <label name="feature" value="用户管理"/>
+                <label name="host" value="DESKTOP-8DI1090"/>
+                <label name="thread" value="21104@DESKTOP-8DI1090.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1574841387299" stop="1574841387405" status="passed">
+            <name>moneyDetails16</name>
+            <title>验证会员资金明细数据16</title>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="Default Suite"/>
+                <label name="testGroup" value="seleniumCp"/>
+                <label name="testClass" value="Backstage.admin.moneyDetails"/>
+                <label name="testMethod" value="moneyDetails16"/>
+                <label name="story" value="会员列表"/>
+                <label name="feature" value="用户管理"/>
+                <label name="host" value="DESKTOP-8DI1090"/>
+                <label name="thread" value="21104@DESKTOP-8DI1090.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1574841387407" stop="1574841387502" status="passed">
+            <name>moneyDetails17</name>
+            <title>验证会员资金明细数据17</title>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="Default Suite"/>
+                <label name="testGroup" value="seleniumCp"/>
+                <label name="testClass" value="Backstage.admin.moneyDetails"/>
+                <label name="testMethod" value="moneyDetails17"/>
+                <label name="story" value="会员列表"/>
+                <label name="feature" value="用户管理"/>
+                <label name="host" value="DESKTOP-8DI1090"/>
+                <label name="thread" value="21104@DESKTOP-8DI1090.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1574841387504" stop="1574841387603" status="passed">
+            <name>moneyDetails18</name>
+            <title>验证会员资金明细数据18</title>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="Default Suite"/>
+                <label name="testGroup" value="seleniumCp"/>
+                <label name="testClass" value="Backstage.admin.moneyDetails"/>
+                <label name="testMethod" value="moneyDetails18"/>
+                <label name="story" value="会员列表"/>
+                <label name="feature" value="用户管理"/>
+                <label name="host" value="DESKTOP-8DI1090"/>
+                <label name="thread" value="21104@DESKTOP-8DI1090.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1574841387605" stop="1574841387705" status="passed">
+            <name>moneyDetails19</name>
+            <title>验证会员资金明细数据19</title>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="Default Suite"/>
+                <label name="testGroup" value="seleniumCp"/>
+                <label name="testClass" value="Backstage.admin.moneyDetails"/>
+                <label name="testMethod" value="moneyDetails19"/>
+                <label name="story" value="会员列表"/>
+                <label name="feature" value="用户管理"/>
+                <label name="host" value="DESKTOP-8DI1090"/>
+                <label name="thread" value="21104@DESKTOP-8DI1090.main(1)"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="framework" value="TestNG"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>

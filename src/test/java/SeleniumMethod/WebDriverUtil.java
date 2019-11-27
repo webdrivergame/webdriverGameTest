@@ -158,6 +158,28 @@ import javax.xml.soap.Text;
                 return driver;
              }
 
+    /** 远程
+     *
+     * */
+    public void setUpDriver(String Url) throws MalformedURLException{
+        ChromeOptions options = new ChromeOptions();
+
+        //加载chrome浏览器的配置文件,比如插件,下载设置等，个人建议先在浏览器中设置好，不要把浏览器的一些参数写在脚本里
+        //options.addArguments("user-data-dir=C:\\Users\\Administrator\\AppData\\Local\\Google\\Chrome\\User Data");
+        //启动chrome浏览器
+        DesiredCapabilities capabilities = DesiredCapabilities.chrome();
+        //将配置文件加载到chrome浏览器中
+        capabilities.setCapability(ChromeOptions.CAPABILITY,options);
+        //capabilities.setCapability("chromeOptions", options);
+        //启动远程的node节点，注意：URL地址一定要写你的node节点的地址,端口号为你指定的端口号，若没有修改，则就是默认的5555,若修改了，就用你自己修改过后的端口号
+        driver = new RemoteWebDriver(new URL("http://10.1.101.3:6655/wd/hub"), capabilities);
+        //打开百度主页
+        driver.get(Url);
+        driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+
+    }
+
 
 
               //----------------------------------------------------元素相关-----------------------------------------------------------------------------
@@ -402,7 +424,7 @@ import javax.xml.soap.Text;
                }
               //定位元素点击并输入
 
-              public void findElementByXpathAndClickSendKeys(String xpath,String text){
+              public void xpathClickSendKeys(String xpath,String text){
                   driver.findElement(By.xpath(xpath)).click();
                   driver.findElement(By.xpath(xpath)).sendKeys(text);
               }
@@ -623,8 +645,10 @@ import javax.xml.soap.Text;
         *    判断元素是否可写
         */
               public boolean getEnableStatById(String id) {
-                 return driver.findElement(By.id(id)).isEnabled();
+
+                  return driver.findElement(By.id(id)).isEnabled();
              }
+
               public boolean getEnableStatByXpath(String xpath) {
                  return driver.findElement(By.xpath(xpath)).isEnabled();
              }

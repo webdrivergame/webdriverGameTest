@@ -16,14 +16,6 @@ public class ReportManagement {
     String URL = "http://10.1.101.121:8703/?#/login?redirect=%2F";
     String login = "//*[@id=\"app\"]/div/div/form/div[4]/div/div/button/span";
 
-    @BeforeTest
-    public void loginBefore() throws InterruptedException {
-        driverUtil.loginBefore(URL);
-        driverUtil.adminLogin("achao", "123123");
-        driverUtil.xpathClick(login);
-        Thread.sleep(2000);
-
-    }
 
 
     /**
@@ -454,7 +446,7 @@ public class ReportManagement {
     @Features("报表管理")
     @Stories("代理报表")
     @Title("验证代理报表本月投注金额")
-    @Test(priority = 13)
+    @Test(priority = 14)
         public void betMoneyAgentReport() throws InterruptedException {
             driverUtil.xpathClick(reportAgent);
             driverUtil.xpathClearSendKeys(accountAgent,"dl");
@@ -486,7 +478,7 @@ public class ReportManagement {
     @Features("报表管理")
     @Stories("代理报表")
     @Title("验证代理报表本月赢利投注金额")
-    @Test(priority = 13)
+    @Test(priority = 15)
         public void winBetMoneyAgentReport() throws InterruptedException {
             driverUtil.xpathClick(reportAgent);
             driverUtil.xpathClearSendKeys(accountAgent,"dl");
