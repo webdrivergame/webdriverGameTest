@@ -5,9 +5,8 @@ import SeleniumMethod.WebDriverUtil;
 import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-import ru.yandex.qatools.allure.annotations.Features;
-import ru.yandex.qatools.allure.annotations.Stories;
-import ru.yandex.qatools.allure.annotations.Title;
+import ru.yandex.qatools.allure.annotations.*;
+import ru.yandex.qatools.allure.model.SeverityLevel;
 
 public class ReportManagement {
 
@@ -34,6 +33,10 @@ public class ReportManagement {
     @Features("报表管理")
     @Stories("总代理报表")
     @Title("验证总代理报表本月会员数")
+    @Severity(SeverityLevel.BLOCKER)
+    @Step("1.进入报表管理-总代理报表；2.获取zdl本月会员数；3.点击zdl跳转；4.获取跳转后代理报表会员总数")
+    @Description("测试仪表盘总会员数是否等于会员列表的会员数")
+    @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=25&version=1")
     @Test(priority = 1)
          public void vipNumberToday() throws InterruptedException {
             driverUtil.xpathClick(reportManagement);
@@ -65,6 +68,10 @@ public class ReportManagement {
     @Features("报表管理")
     @Stories("总代理报表")
     @Title("验证总代理报表本月充值金额")
+    @Severity(SeverityLevel.BLOCKER)
+    @Step("1.进入报表管理-总代理报表；2.获取zdl本月充值笔数；3.点击zdl跳转；4.获取跳转后代理报表充值总数")
+    @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=26&version=1")
+    @Description("测试总代理报表本月充值笔数是否等于跳转后的代理报表的充值笔数总和")
     @Test(priority = 2)
         public void countTotal() throws InterruptedException {
             driverUtil.xpathClick(reportAgentTotal);
@@ -95,6 +102,10 @@ public class ReportManagement {
     @Features("报表管理")
     @Stories("总代理报表")
     @Title("验证总代理报表本月投注金额")
+    @Severity(SeverityLevel.BLOCKER)
+    @Step("1.进入报表管理-总代理报表；2.获取zdl本月投注金额；3.点击zdl跳转；4.获取跳转后代理报表投注金额")
+    @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=27&version=1")
+    @Description("判断总代理报表的投注金额是否等于跳转后的代理报表投注金额总和")
     @Test(priority = 3)
         public void betMoneyAgentTotal() throws InterruptedException {
             driverUtil.xpathClick(reportAgentTotal);
@@ -127,6 +138,10 @@ public class ReportManagement {
     @Features("报表管理")
     @Stories("总代理报表")
     @Title("验证总代理报表本月赢利投注金额")
+    @Severity(SeverityLevel.BLOCKER)
+    @Step("1.进入报表管理-总代理报表；2.获取zdl本月盈利投注金额；3.点击zdl跳转；4.获取跳转后代理报表赢利投注金额")
+    @Description("判断总代理报表的赢利投注金额是否等于跳转后的代理报表赢利投注金额总和")
+    @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=28&version=1")
     @Test(priority = 4)
         public void winBetMoneyAgentTotal() throws InterruptedException {
             driverUtil.xpathClick(reportAgentTotal);
@@ -157,6 +172,10 @@ public class ReportManagement {
     @Features("报表管理")
     @Stories("总代理报表")
     @Title("验证总代理报表本月充值优惠/服务费金额")
+    @Severity(SeverityLevel.BLOCKER)
+    @Step("1.进入报表管理-总代理报表；2.获取zdl本月盈利投注金额；3.点击zdl跳转；4.获取跳转后代理报表赢利投注金额")
+    @Description("判断总代理报表的充值优惠/手续费金额是否等于跳转后的代理报表充值优惠/手续费金额总和")
+    @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=29&version=1")
     @Test(priority = 5)
         public void serviceChargeAgentTotal() throws InterruptedException {
             driverUtil.xpathClick(reportAgentTotal);
@@ -188,6 +207,10 @@ public class ReportManagement {
     @Features("报表管理")
     @Stories("总代理报表")
     @Title("验证总代理报表本月代理退水金额")
+    @Severity(SeverityLevel.BLOCKER)
+    @Step("1.进入报表管理-总代理报表；2.获取zdl本月代理退水金额；3.点击zdl跳转；4.获取跳转后代理报表代理退水金额")
+    @Description("判断总代理报表的代理退水金额是否等于跳转后的代理报表代理退水金额总和")
+    @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=30&version=1")
     @Test(priority = 6)
         public void waterBreakAgentTotal() throws InterruptedException {
             driverUtil.xpathClick(reportAgentTotal);
@@ -219,6 +242,10 @@ public class ReportManagement {
     @Features("报表管理")
     @Stories("总代理报表")
     @Title("验证总代理报表本月代理赔率金额")
+    @Severity(SeverityLevel.BLOCKER)
+    @Step("1.进入报表管理-总代理报表；2.获取zdl本月代理赔率金额；3.点击zdl跳转；4.获取跳转后代理报表代理赔率金额")
+    @Description("判断总代理报表的代理赔率金额是否等于跳转后的代理报表代理赔率金额总和")
+    @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=31&version=1")
     @Test(priority = 7)
         public void oddsMoneyAgentTotal() throws InterruptedException {
             driverUtil.xpathClick(reportAgentTotal);
@@ -251,6 +278,10 @@ public class ReportManagement {
     @Features("报表管理")
     @Stories("总代理报表")
     @Title("验证总代理报表本月会员输赢(不包括退水)金额")
+    @Severity(SeverityLevel.BLOCKER)
+    @Step("1.进入报表管理-总代理报表；2.获取zdl本月会员输赢（不包括退水）金额；3.点击zdl跳转；4.获取跳转后代理报表会员输赢（不包括退水）金额")
+    @Description("判断总代理报表的会员输赢（不包括退水）金额是否等于跳转后的代理报表会员输赢（不包括退水）金额总和")
+    @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=32&version=1")
     @Test(priority = 8)
         public void loseWinAgentTotal() throws InterruptedException {
             driverUtil.xpathClick(reportAgentTotal);
@@ -283,6 +314,10 @@ public class ReportManagement {
     @Features("报表管理")
     @Stories("总代理报表")
     @Title("验证总代理报表本月实际退水金额")
+    @Severity(SeverityLevel.BLOCKER)
+    @Step("1.进入报表管理-总代理报表；2.获取zdl本月实际退水金额；3.点击zdl跳转；4.获取跳转后代理报表实际退水金额")
+    @Description("判断总代理报表的实际退水金额是否等于跳转后的代理报表实际退水金额总和")
+    @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=33&version=1")
     @Test(priority = 9)
         public void waterBreakPracticeAgentTotal() throws InterruptedException {
             driverUtil.xpathClick(reportAgentTotal);
@@ -315,6 +350,10 @@ public class ReportManagement {
     @Features("报表管理")
     @Stories("总代理报表")
     @Title("验证总代理报表本月实际输赢(包括退水)金额")
+    @Severity(SeverityLevel.BLOCKER)
+    @Step("1.进入报表管理-总代理报表；2.获取zdl本月实际输赢(包括退水)金额；3.点击zdl跳转；4.获取跳转后代理报表实际输赢(包括退水)金额")
+    @Description("判断总代理报表的实际输赢(包括退水)金额是否等于跳转后的代理报表实际输赢(包括退水)金额总和")
+    @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=34&version=1")
     @Test(priority = 10)
         public void loseWinAndWaterAgentTotal() throws InterruptedException {
             driverUtil.xpathClick(reportAgentTotal);
@@ -337,7 +376,7 @@ public class ReportManagement {
 
 
     /**
-     * -------------------------------------------报表管理-代理报表-今日会员数-----------------------------------------
+     * -------------------------------------------报表管理-代理报表-本月会员数-----------------------------------------
      *
      * */
 
@@ -352,6 +391,10 @@ public class ReportManagement {
     @Features("报表管理")
     @Stories("代理报表")
     @Title("验证代理报表本月会员数量")
+    @Severity(SeverityLevel.BLOCKER)
+    @Step("1.进入报表管理-代理报表；2.获取账号dl本月会员数；3.点击dl跳转；4.获取跳转后会员报表本月会员数")
+    @Description("判断代理报表的本月会员数是否等于跳转后的代理报表本月会员数总和")
+    @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=35&version=1")
     @Test(priority = 11)
         public void vipNumberAgent() throws InterruptedException {
             driverUtil.xpathClick(reportAgent);
@@ -371,6 +414,11 @@ public class ReportManagement {
             Assert.assertTrue(Assertion.currentFlag());
     }
 
+
+
+
+
+
     /**
      * -------------------------------------------报表管理-代理报表-充值金额-----------------------------------------
      *
@@ -382,6 +430,10 @@ public class ReportManagement {
     @Features("报表管理")
     @Stories("代理报表")
     @Title("验证代理报表本月充值金额")
+    @Severity(SeverityLevel.BLOCKER)
+    @Step("1.进入仪表盘，2.获取会员数量")
+    @Description("测试仪表盘总会员数是否等于会员列表的会员数")
+    @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=36&version=1")
     @Test(priority = 12)
         public void rechargeMoneyAgent() throws InterruptedException {
             driverUtil.xpathClick(reportAgent);
@@ -414,6 +466,10 @@ public class ReportManagement {
     @Features("报表管理")
     @Stories("代理报表")
     @Title("验证代理报表本月充值笔数")
+    @Severity(SeverityLevel.BLOCKER)
+    @Step("1.进入仪表盘，2.获取会员数量")
+    @Description("测试仪表盘总会员数是否等于会员列表的会员数")
+    @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=37&version=1")
     @Test(priority = 13)
         public void countAgent() throws InterruptedException {
             driverUtil.xpathClick(reportAgent);
@@ -446,6 +502,10 @@ public class ReportManagement {
     @Features("报表管理")
     @Stories("代理报表")
     @Title("验证代理报表本月投注金额")
+    @Severity(SeverityLevel.BLOCKER)
+    @Step("1.进入仪表盘，2.获取会员数量")
+    @Description("测试仪表盘总会员数是否等于会员列表的会员数")
+    @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=38&version=1")
     @Test(priority = 14)
         public void betMoneyAgentReport() throws InterruptedException {
             driverUtil.xpathClick(reportAgent);
@@ -478,6 +538,10 @@ public class ReportManagement {
     @Features("报表管理")
     @Stories("代理报表")
     @Title("验证代理报表本月赢利投注金额")
+    @Severity(SeverityLevel.BLOCKER)
+    @Step("1.进入仪表盘，2.获取会员数量")
+    @Description("测试仪表盘总会员数是否等于会员列表的会员数")
+    @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=39&version=1")
     @Test(priority = 15)
         public void winBetMoneyAgentReport() throws InterruptedException {
             driverUtil.xpathClick(reportAgent);
@@ -509,6 +573,10 @@ public class ReportManagement {
     @Features("报表管理")
     @Stories("代理报表")
     @Title("验证代理报表本月充值优惠/手续费")
+    @Severity(SeverityLevel.BLOCKER)
+    @Step("1.进入仪表盘，2.获取会员数量")
+    @Description("测试仪表盘总会员数是否等于会员列表的会员数")
+    @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=40&version=1")
     @Test(priority = 16)
         public void serviceMoneyAgent() throws InterruptedException {
             driverUtil.xpathClick(reportAgent);
@@ -542,6 +610,10 @@ public class ReportManagement {
     @Features("报表管理")
     @Stories("代理报表")
     @Title("验证代理报表本月代理赔率金额")
+    @Severity(SeverityLevel.BLOCKER)
+    @Step("1.进入仪表盘，2.获取会员数量")
+    @Description("测试仪表盘总会员数是否等于会员列表的会员数")
+    @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=41&version=1")
     @Test(priority = 17)
         public void oddsAgent() throws InterruptedException {
             driverUtil.xpathClick(reportAgent);
@@ -574,6 +646,10 @@ public class ReportManagement {
     @Features("报表管理")
     @Stories("代理报表")
     @Title("验证代理报表本月代理退水金额")
+    @Severity(SeverityLevel.BLOCKER)
+    @Step("1.进入仪表盘，2.获取会员数量")
+    @Description("测试仪表盘总会员数是否等于会员列表的会员数")
+    @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=42&version=1")
     @Test(priority = 18)
         public void waterBreakMoneyAgent() throws InterruptedException {
             driverUtil.xpathClick(reportAgent);
@@ -605,6 +681,10 @@ public class ReportManagement {
     @Features("报表管理")
     @Stories("代理报表")
     @Title("验证代理报表本月实际输赢（不包括退水）")
+    @Severity(SeverityLevel.BLOCKER)
+    @Step("1.进入仪表盘，2.获取会员数量")
+    @Description("测试仪表盘总会员数是否等于会员列表的会员数")
+    @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=43&version=1")
     @Test(priority = 19)
         public void winLoseNotWaterAgent() throws InterruptedException {
             driverUtil.xpathClick(reportAgent);
@@ -637,6 +717,10 @@ public class ReportManagement {
     @Features("报表管理")
     @Stories("代理报表")
     @Title("验证代理报表本月实际输赢（包括退水）")
+    @Severity(SeverityLevel.BLOCKER)
+    @Step("1.进入仪表盘，2.获取会员数量")
+    @Description("测试仪表盘总会员数是否等于会员列表的会员数")
+    @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=44&version=1")
     @Test(priority = 20)
         public void winLoseWaterAgent() throws InterruptedException {
             driverUtil.xpathClick(reportAgent);
@@ -666,6 +750,10 @@ public class ReportManagement {
     @Features("报表管理")
     @Stories("代理报表")
     @Title("验证代理报表本月实际退水金额")
+    @Severity(SeverityLevel.BLOCKER)
+    @Step("1.进入仪表盘，2.获取会员数量")
+    @Description("测试仪表盘总会员数是否等于会员列表的会员数")
+    @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=45&version=1")
     @Test(priority = 21)
         public void waterBreakMoneyActivityAgent() throws InterruptedException {
             driverUtil.xpathClick(reportAgent);

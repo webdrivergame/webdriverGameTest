@@ -8,9 +8,8 @@ import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-import ru.yandex.qatools.allure.annotations.Features;
-import ru.yandex.qatools.allure.annotations.Stories;
-import ru.yandex.qatools.allure.annotations.Title;
+import ru.yandex.qatools.allure.annotations.*;
+import ru.yandex.qatools.allure.model.SeverityLevel;
 
 import java.math.BigDecimal;
 import java.text.SimpleDateFormat;
@@ -35,6 +34,10 @@ public class UserManagement {
     @Features("用户管理")
     @Stories("总代理列表")
     @Title("验证总代理列表代理数数量")
+    @Severity(SeverityLevel.BLOCKER)
+    @Step("1.进入总代理报表，2.获取总代理代理数，3.点击会员跳转到代理列表，4.获取代理page数量")
+    @Description("测试仪表盘总会员数是否等于会员列表的会员数")
+    @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=15&version=1")
     @Test(priority = 1)
         public void agentNumber() throws InterruptedException {
             //获取总代理列表代理数
@@ -71,6 +74,10 @@ public class UserManagement {
     @Features("用户管理")
     @Stories("总代理列表")
     @Title("验证总代理列表会员数数量")
+    @Severity(SeverityLevel.BLOCKER)
+    @Step("1.进入总代理列表，2.获取总代理会员数，3.点击跳转到会员列表，4.获取会员数")
+    @Description("测试仪表盘总会员数是否等于会员列表的会员数")
+    @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=16&version=1")
     @Test(priority = 2)
         public void vipNumber() throws InterruptedException {
             //获取总代理列表会员数
@@ -107,6 +114,10 @@ public class UserManagement {
     @Features("用户管理")
     @Stories("代理列表")
     @Title("验证代理列表会员数数量")
+    @Severity(SeverityLevel.BLOCKER)
+    @Step("1.进入代理列表，2.获取代理会员数，3.点击跳转会员列表，4.获取会员数")
+    @Description("测试仪表盘总会员数是否等于会员列表的会员数")
+    @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=17&version=1")
     @Test(priority = 3)
         public void agentVipNumber() throws InterruptedException {
             //获取代理列表会员数
@@ -144,6 +155,10 @@ public class UserManagement {
     @Features("用户管理")
     @Stories("在线玩家")
     @Title("验证在线玩家踢出功能")
+    @Severity(SeverityLevel.BLOCKER)
+    @Step("1.进入用户管理，2.在线玩家点击提出，3.判断是否提出成功")
+    @Description("测试仪表盘总会员数是否等于会员列表的会员数")
+    @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=18&version=1")
     @Test(priority = 10)
         public void onlinePlayer() throws InterruptedException {
             driverUtil.switchToParentFrame();//切换表格
@@ -176,6 +191,10 @@ public class UserManagement {
     @Features("用户管理")
     @Stories("在线后台用户")
     @Title("验证后台用户踢出功能")
+    @Severity(SeverityLevel.BLOCKER)
+    @Step("1.进入用户管理，2.提出在线后台用户，3.判断是否踢出承成功")
+    @Description("测试仪表盘总会员数是否等于会员列表的会员数")
+    @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=19&version=1")
     @Test(priority = 11)
         public void onlineBackstage() throws InterruptedException {
             driverUtil.xpathClick(clickOnlineBackstage);

@@ -82,13 +82,17 @@ public class StringToNumber {
         //截取
         @Test
         public void subString(){
-                String a1 = "0.000/0";
-                String a2 = a1.substring(a1.indexOf("/")+1);
-                String a3 = a1.substring(0,3);
-                System.out.println(a2);
-                System.out.println(a3);
+                String a1 = "共325页上的/大";
+                String a2 = a1.substring(1,a1.indexOf("页"));
+                int a4 = Integer.valueOf(a2).intValue();
+                //String a3 = a1.substring(0,3);
+                if (a4 >=323) {
+                    System.out.println("大于323");
 
-        }
+             }else if (a4<=323){
+                        System.out.println("小于323");
+                    }
+   }
         @Test
         public void  StringInt(){
                 String a1 = "9999.000";

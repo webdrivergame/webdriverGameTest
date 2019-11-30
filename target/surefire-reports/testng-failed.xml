@@ -3,11 +3,29 @@
 <suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [All Test Suite]">
   <test name="平台管理员(failed)">
     <classes>
+      <class name="Backstage.admin.ReportManagement">
+        <methods>
+          <include name="betMoneyAgentReport"/>
+          <include name="winLoseNotWaterAgent"/>
+          <include name="rechargeMoneyAgent"/>
+          <include name="betMoneyAgentTotal"/>
+          <include name="serviceMoneyAgent"/>
+          <include name="countTotal"/>
+          <include name="winBetMoneyAgentReport"/>
+          <include name="countAgent"/>
+          <include name="winLoseWaterAgent"/>
+          <include name="waterBreakPracticeAgentTotal"/>
+          <include name="loseWinAndWaterAgentTotal"/>
+          <include name="waterBreakMoneyAgent"/>
+          <include name="waterBreakMoneyActivityAgent"/>
+          <include name="vipNumberToday"/>
+        </methods>
+      </class> <!-- Backstage.admin.ReportManagement -->
       <class name="Backstage.admin.FinanceManagement">
         <methods>
-          <include name="practiceLoseOrWin"/>
+          <include name="ReconciliationVip2"/>
           <include name="ReconciliationVip"/>
-          <include name="rechargeBalance"/>
+          <include name="ReconciliationVip3"/>
         </methods>
       </class> <!-- Backstage.admin.FinanceManagement -->
       <class name="Backstage.admin.UserManagement">
@@ -17,25 +35,11 @@
       </class> <!-- Backstage.admin.UserManagement -->
       <class name="Backstage.admin.panel">
         <methods>
+          <include name="playerNumber"/>
           <include name="notesNumber"/>
           <include name="loginBefore"/>
         </methods>
       </class> <!-- Backstage.admin.panel -->
-      <class name="Backstage.admin.ReportManagement">
-        <methods>
-          <include name="waterBreakPracticeAgentTotal"/>
-          <include name="loseWinAndWaterAgentTotal"/>
-          <include name="betMoneyAgentReport"/>
-          <include name="rechargeMoneyAgent"/>
-          <include name="betMoneyAgentTotal"/>
-          <include name="loseWinAgentTotal"/>
-          <include name="serviceMoneyAgent"/>
-          <include name="waterBreakMoneyActivityAgent"/>
-          <include name="countAgent"/>
-          <include name="winLoseWaterAgent"/>
-          <include name="vipNumberToday"/>
-        </methods>
-      </class> <!-- Backstage.admin.ReportManagement -->
     </classes>
   </test> <!-- 平台管理员(failed) -->
 </suite> <!-- Failed suite [All Test Suite] -->

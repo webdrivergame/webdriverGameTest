@@ -7,9 +7,8 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-import ru.yandex.qatools.allure.annotations.Features;
-import ru.yandex.qatools.allure.annotations.Stories;
-import ru.yandex.qatools.allure.annotations.Title;
+import ru.yandex.qatools.allure.annotations.*;
+import ru.yandex.qatools.allure.model.SeverityLevel;
 
 import java.math.BigDecimal;
 import java.util.Collections;
@@ -19,7 +18,7 @@ import java.util.List;
 public class FinanceManagement {
 
     WebDriverUtil driverUtil = new WebDriverUtil(null);
-
+    /**
     String URL = "https://admin.zs-pre.com/";
     String login = "//*[@id=\"app\"]/div/div/form/div[4]/div/div/button/span";
 
@@ -31,13 +30,13 @@ public class FinanceManagement {
         Thread.sleep(2000);
 
     }
-
+    **/
     String financeManagement = "//*[@id=\"app\"]/div/div[1]/div[2]/div[1]/div/ul/div[3]/li/div/span";
 
 
     /** 1.进入会员对账，2.计算对账差别金额
      *
-     * */
+     */
 
     String reconciliationVip = "//*[@id=\"app\"]/div/div[1]/div[2]/div[1]/div/ul/div[3]/li/ul/div[4]/a/li/span";
 
@@ -54,7 +53,11 @@ public class FinanceManagement {
 
     @Features("财务管理")
     @Stories("会员对账")
-    @Title("验证会员对账差别金额数据第一条")
+    @Title("验证会员对账差别金额数据第一条数据")
+    @Severity(SeverityLevel.BLOCKER)
+    @Step("1.进入会员对账，2.计算对账差别金额")
+    @Description("测试仪表盘总会员数是否等于会员列表的会员数")
+    @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=20&version=1")
     @Test(priority = 1)
         public void ReconciliationVip() throws InterruptedException {
             driverUtil.xpathClick(financeManagement);
@@ -109,7 +112,11 @@ public class FinanceManagement {
 
     @Features("财务管理")
     @Stories("会员对账")
-    @Title("验证对账差别金额第二条")
+    @Title("验证对账差别金额第二条数据")
+    @Severity(SeverityLevel.BLOCKER)
+    @Step("1.进入会员对账，2.计算对账差别金额第二条数据")
+    @Description("测试仪表盘总会员数是否等于会员列表的会员数")
+    @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=21&version=1")
     @Test(priority = 2)
     public void ReconciliationVip2() throws InterruptedException {
         String getYesterdayBalanceVip2 = driverUtil.getTextByXpath(yesterdayBalanceVip2);
@@ -162,7 +169,11 @@ public class FinanceManagement {
 
     @Features("财务管理")
     @Stories("会员对账")
-    @Title("验证会员对账差别金额数据第三条")
+    @Title("1.进入会员对账，2.计算对账差别金额第三条数据")
+    @Severity(SeverityLevel.BLOCKER)
+    @Step("1.进入仪表盘，2.获取会员数量")
+    @Description("测试仪表盘总会员数是否等于会员列表的会员数")
+    @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=22&version=1")
     @Test(priority = 3)
     public void ReconciliationVip3() throws InterruptedException {
         String getYesterdayBalanceVip3 = driverUtil.getTextByXpath(yesterdayBalanceVip3);
@@ -211,7 +222,11 @@ public class FinanceManagement {
     String ReconciliationAgent1 = "//*[@id=\"app\"]/div/div[2]/section/div/div[2]/div[1]/div[3]/table/tbody/tr[1]/td[9]/div";
     @Features("财务管理")
     @Stories("代理对账")
-    @Title("验证代理对账差别金额数据第一条")
+    @Title("验证代理对账差别金额数据第一条数据")
+    @Severity(SeverityLevel.BLOCKER)
+    @Step("1.进入代理对账，2.计算对账差别金额第一条数据")
+    @Description("测试仪表盘总会员数是否等于会员列表的会员数")
+    @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=23&version=1")
     @Test(priority = 4)
         public void ReconciliationAgent1() throws InterruptedException {
             driverUtil.xpathClick(ReconciliationAgent);
@@ -256,7 +271,11 @@ public class FinanceManagement {
     String ReconciliationAgent2 = "//*[@id=\"app\"]/div/div[2]/section/div/div[2]/div[1]/div[3]/table/tbody/tr[2]/td[9]/div";
     @Features("财务管理")
     @Stories("代理对账")
-    @Title("验证代理对账差别金额数据第二条")
+    @Title("1.进入代理对账，2.计算对账差别金额第二条数据")
+    @Severity(SeverityLevel.BLOCKER)
+    @Step("1.进入仪表盘，2.获取会员数量")
+    @Description("测试仪表盘总会员数是否等于会员列表的会员数")
+    @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=24&version=1")
     @Test(priority = 5)
     public void ReconciliationAgent2() throws InterruptedException {
         driverUtil.xpathClick(ReconciliationAgent);

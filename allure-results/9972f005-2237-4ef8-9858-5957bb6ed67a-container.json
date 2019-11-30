@@ -1,0 +1,1 @@
+{"uuid":"9972f005-2237-4ef8-9858-5957bb6ed67a","name":"平台管理员","start":1574998692040,"stop":1574998714061,"children":["b61233cc-70df-4b25-af63-fc32b3a8d5e2","c59310e7-9a1f-4151-b00e-7fc2ee320f9d"],"befores":[{"name":"loginBefore","status":"passed","stage":"finished","description":"","start":1574998692082,"stop":1574998709875}]}

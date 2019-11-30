@@ -6,27 +6,31 @@ import org.openqa.selenium.remote.server.handler.DeleteSession;
 import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-import ru.yandex.qatools.allure.annotations.Features;
-import ru.yandex.qatools.allure.annotations.Stories;
-import ru.yandex.qatools.allure.annotations.Title;
+import ru.yandex.qatools.allure.annotations.*;
+import ru.yandex.qatools.allure.model.SeverityLevel;
 
 import java.math.BigDecimal;
 
+
+@Description("测试仪表盘总会员数是否等于会员列表的会员数")
+@Issue("http://10.1.101.66:890/index.php?m=bug&f=view&bugID=3179")
 public class moneyDetails {
 
     WebDriverUtil driverUtil = new WebDriverUtil(null);
-
-    String URL = "https://admin.zs-pre.com/";
+    String Url = "http://10.1.101.121:8703/";
+    //String Url = "https://admin.zs-pre.com/";
     String login = "//*[@id=\"app\"]/div/div/form/div[4]/div/div/button/span";
 
-    @BeforeTest
+   /** @BeforeTest
         public void loginBefore() throws InterruptedException {
-            driverUtil.loginBefore(URL);
+            driverUtil.loginBefore(Url);
             driverUtil.adminLogin("achao", "123123");
             driverUtil.xpathClick(login);
             Thread.sleep(2000);
 
-    }
+        }
+    */
+
 
     //用户管理-会员列表-输入账号-查询-资金明细
     String UserManagement = "//*[@id=\"app\"]/div/div[1]/div[2]/div[1]/div/ul/div[2]/li/div/span";
