@@ -63,7 +63,7 @@ public class panel    {
             System.out.println("验证仪表盘平台总会员数："+getPlayerNumber);
             System.out.println("会员列表会员数："+a1);
             Assertion.setFlag(true);
-            Assertion.verifyEquals(getPlayerNumber,"2");
+            Assertion.verifyEquals(getPlayerNumber,a1);
             Assert.assertTrue(Assertion.currentFlag());
         }
 
