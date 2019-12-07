@@ -1,9 +1,11 @@
 package Backstage.admin;
 
 import ListenerPackage.Assertion;
+import ListenerPackage.AssertionListener;
 import ListenerPackage.TestngListener;
 import SeleniumMethod.WebDriverUtil;
 import io.qameta.allure.Link;
+import io.qameta.allure.Links;
 import io.qameta.allure.TmsLink;
 import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
@@ -48,6 +50,7 @@ public class panel    {
     @Severity(SeverityLevel.BLOCKER)
     @Step("1.进入仪表盘; 2.获取会员数量; 3.进入会员列表；4.获取列表会员总数")
     @Description("测试仪表盘总会员数是否等于会员列表的总会员数")
+    @Link("禅道链接")
     @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=13&version=1")
     @Test(priority = 1)
         public void playerNumber() throws InterruptedException {
@@ -64,7 +67,11 @@ public class panel    {
             System.out.println("会员列表会员数："+a1);
             Assertion.setFlag(true);
             Assertion.verifyEquals(getPlayerNumber,a1);
-            Assert.assertTrue(Assertion.currentFlag());
+            Assert.assertTrue(Assertion.flag);
+            //Assert.assertTrue(Assertion.());
+
+
+
         }
 
         /** 1.点击仪表盘，2.获取平台总注单量，3.进入历史投注记录，4.获取投注笔数
@@ -85,6 +92,7 @@ public class panel    {
     @Severity(SeverityLevel.BLOCKER)
     @Step("1.点击仪表盘，2.获取平台总注单量，3.进入历史投注记录，4.获取投注笔数")
     @Description("测试仪表盘总会员数是否等于会员列表的会员数")
+    @Link("禅道链接")
     @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=14&version=1")
     @Test(priority = 2)
         public void notesNumber() throws InterruptedException {
@@ -94,6 +102,7 @@ public class panel    {
             String getTotalNotes = driverUtil.getTextByXpath(totalNotes);
             //历史投注记录获取总注单量
             driverUtil.xpathClick(betRecord);
+            Thread.sleep(1000);
             driverUtil.xpathClick(historyBet);
             Thread.sleep(1000);
             driverUtil.xpathClick(clickTime);
@@ -103,7 +112,10 @@ public class panel    {
             String getNotesPage1 = getNotesPage.substring(1,getNotesPage.indexOf("条"));
             Assertion.setFlag(true);
             Assertion.verifyEquals(getTotalNotes,getNotesPage1);
-            Assert.assertTrue(Assertion.currentFlag());
+            Assert.assertTrue(Assertion.flag);
+            //Assert.assertTrue(Assertion.currentFlag());
+
+            Thread.sleep(2000);
 
         }
 

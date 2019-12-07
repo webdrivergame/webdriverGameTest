@@ -84,7 +84,7 @@ public class lotteryBet {
                     System.out.println(getSuccess);
                     Assertion.setFlag(true);
                     Assertion.verifyEquals(getSuccess,"下注成功");
-                    Assert.assertTrue(Assertion.currentFlag());
+                   // Assert.assertTrue(Assertion.currentFlag());
             }
 
         //元素无法点击

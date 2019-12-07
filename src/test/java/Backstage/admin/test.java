@@ -37,7 +37,7 @@ public class test {
 
         @Test
         public void getTest() throws InterruptedException {
-            driverUtil.switchToWindow("后台管理系统");
+            driverUtil.switchToWindowUrl("后台管理系统");
             driverUtil.xpathClick(userAccount);
             driverUtil.xpathClick(user);
             Thread.sleep(2000);
@@ -48,7 +48,7 @@ public class test {
             System.out.println("弹出信息："+getAlert);
             Assertion.setFlag(true);
             Assertion.verifyEquals(getAlert,"修改成功！");
-            Assert.assertTrue(Assertion.currentFlag());
+          //  Assert.assertTrue(Assertion.currentFlag());
 
 
         }
@@ -79,11 +79,26 @@ public class test {
 
                     }
                 }
-
-
-
-
             }
+        }
+
+        String financeManagement = "//*[@id=\"app\"]/div/div[1]/div[2]/div[1]/div/ul/div[3]/li/div/span";
+        String rechargeRecord = "//*[@id=\"app\"]/div/div[1]/div[2]/div[1]/div/ul/div[3]/li/ul/div[1]/a/li/span";
+        String dateType = "//*[@id=\"app\"]/div/div[2]/section/div/div[1]/form/div[10]/div/div[1]/div[1]/input";
+        String addTime = "/html/body/div[2]/div[1]/div[1]/ul/li[2]/span";
+        String inquire = "//*[@id=\"app\"]/div/div[2]/section/div/div[1]/form/div[12]/div/button[1]/span";
+        @Test
+        public void click() throws InterruptedException {
+            driverUtil.xpathClick(financeManagement);
+            driverUtil.xpathClick(rechargeRecord);
+            Thread.sleep(2000);
+            driverUtil.xpathClick(dateType);
+            driverUtil.waitForElement(addTime,3);
+            driverUtil.xpathClick(addTime);
+            driverUtil.xpathClick(inquire);
+
+
+
         }
 
 }

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1575696243417" stop="1575696272106" version="1.5.2" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>All Test Suite : 平台管理员</name>
+    <title>All Test Suite : 平台管理员</title>
+    <test-cases>
+        <test-case start="1575696261961" stop="1575696264654" status="passed">
+            <name>playerNumber</name>
+            <title>验证仪表盘平台总会员数</title>
+            <description type="text">测试仪表盘总会员数是否等于会员列表的总会员数</description>
+            <steps>
+                <step start="1575696261998" stop="1575696264531" status="passed">
+                    <name>playerNumber</name>
+                    <title>1.进入仪表盘; 2.获取会员数量; 3.进入会员列表；4.获取列表会员总数</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="All Test Suite"/>
+                <label name="testGroup" value="平台管理员"/>
+                <label name="testClass" value="Backstage.admin.panel"/>
+                <label name="testMethod" value="playerNumber"/>
+                <label name="severity" value="blocker"/>
+                <label name="issue" value="http://10.1.101.66:890/index.php?m=testcase&amp;f=view&amp;caseID=13&amp;version=1"/>
+                <label name="story" value="会员数量"/>
+                <label name="feature" value="仪表盘"/>
+                <label name="host" value="DESKTOP-8DI1090"/>
+                <label name="thread" value="13324@DESKTOP-8DI1090.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1575696264659" stop="1575696272067" status="passed">
+            <name>notesNumber</name>
+            <title>验证平台总注单量是否有误</title>
+            <description type="text">测试仪表盘总会员数是否等于会员列表的会员数</description>
+            <steps>
+                <step start="1575696264661" stop="1575696272062" status="passed">
+                    <name>notesNumber</name>
+                    <title>1.点击仪表盘，2.获取平台总注单量，3.进入历史投注记录，4.获取投注笔数</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="All Test Suite"/>
+                <label name="testGroup" value="平台管理员"/>
+                <label name="testClass" value="Backstage.admin.panel"/>
+                <label name="testMethod" value="notesNumber"/>
+                <label name="severity" value="blocker"/>
+                <label name="issue" value="http://10.1.101.66:890/index.php?m=testcase&amp;f=view&amp;caseID=14&amp;version=1"/>
+                <label name="story" value="平台总注单量"/>
+                <label name="feature" value="仪表盘"/>
+                <label name="host" value="DESKTOP-8DI1090"/>
+                <label name="thread" value="13324@DESKTOP-8DI1090.main(1)"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="framework" value="TestNG"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>

@@ -856,16 +856,37 @@ import javax.xml.soap.Text;
       /**
        *     切换到指定title的窗口
       */
-              public void switchToWindow(String windowTitle) {
-                 Set<String> windowHandles = driver.getWindowHandles();
+              public void switchToWindowUrl(String windowTitle) {
+                 Set<String> windowHandles = driver.getWindowHandles();//获取所有窗口句柄
+                  System.out.println(windowHandles.size());  //输出句柄集合
                  for (String handler : windowHandles) {
                          driver.switchTo().window(handler);
-                         String title = driver.getTitle();
-                         if (windowTitle.equals(title)) {
+                         //String title = driver.getTitle();
+                         String url=driver.getCurrentUrl(); //获取新窗口的url
+                         System.out.println("成功切换到："+url);
+                         if (windowTitle.equals(url)) {
                                  break;
                              }
                      }
              }
+
+            /**
+             *     切换到指定title的窗口
+             */
+            public void switchToWindowTitle(String windowTitle) {
+                Set<String> windowHandles = driver.getWindowHandles();//获取所有窗口句柄
+                //System.out.println(windowHandles.size());  //输出句柄集合
+                for (String handler : windowHandles) {
+                    driver.switchTo().window(handler);
+                    String title = driver.getTitle();
+                    System.out.println("成功切换到："+title);
+                    if (windowTitle.equals(title)) {
+                        break;
+                    }
+                }
+            }
+
+
 
               /**
         *     切换至父级frame
@@ -937,6 +958,8 @@ import javax.xml.soap.Text;
 
              //打开切换新的窗口
               public void openUrl(String openUrl){((JavascriptExecutor)driver).executeScript(openUrl);}
+
+
               // 滚动到窗口最上方
               public void scrollToTop() {
                  ((JavascriptExecutor) driver).executeScript("window.scrollTo(0,0);");
