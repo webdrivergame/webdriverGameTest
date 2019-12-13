@@ -95,7 +95,7 @@ public class FinanceManagement {
         System.out.println("页面会员对账差别金额：" + getReconciliationMoney1);
         Assertion.setFlag(true);
         Assertion.verifyEquals(result, getReconciliationMoney1);
-        //Assert.assertTrue(Assertion.currentFlag());
+        Assert.assertTrue(Assertion.currentFlag());
 
     }
 
@@ -155,7 +155,7 @@ public class FinanceManagement {
         System.out.println("页面会员对账差别金额2：" + getReconciliationMoney22);
         Assertion.setFlag(true);
         Assertion.verifyEquals(result, getReconciliationMoney22);
-        //Assert.assertTrue(Assertion.currentFlag());
+        Assert.assertTrue(Assertion.currentFlag());
 
     }
 
@@ -215,7 +215,7 @@ public class FinanceManagement {
         System.out.println("页面会员对账差别金额3：" + getReconciliationMoney33);
         Assertion.setFlag(true);
         Assertion.verifyEquals(result, getReconciliationMoney33);
-        //Assert.assertTrue(Assertion.currentFlag());
+        Assert.assertTrue(Assertion.currentFlag());
 
     }
 
@@ -271,7 +271,7 @@ public class FinanceManagement {
         System.out.println("报表的代理对账差别金额："+getReconciliationAgent11);
         Assertion.setFlag(true);
         Assertion.verifyEquals(result1, getReconciliationAgent11);
-        //Assert.assertTrue(Assertion.currentFlag());
+        Assert.assertTrue(Assertion.currentFlag());
 
     }
 
@@ -320,7 +320,7 @@ public class FinanceManagement {
         System.out.println("报表的代理对账差别金额："+getReconciliationAgent22);
         Assertion.setFlag(true);
         Assertion.verifyEquals(result2, getReconciliationAgent22);
-        //Assert.assertTrue(Assertion.currentFlag());
+        Assert.assertTrue(Assertion.currentFlag());
         Thread.sleep(2000);
 
     }

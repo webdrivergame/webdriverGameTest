@@ -85,7 +85,7 @@ public class moneyDetails {
                 System.out.println("计算结果余额："+getBalanceBefore + getChangeMoney+" = "+result);
                 Assertion.setFlag(true);
                 Assertion.verifyEquals(getBalance,result);
-                //Assert.assertTrue(Assertion.currentFlag());
+                Assert.assertTrue(Assertion.currentFlag());
 
             }
 
@@ -129,7 +129,7 @@ public class moneyDetails {
 
         Assertion.setFlag(true);
         Assertion.verifyEquals(getBalance,result);
-       // Assert.assertTrue(Assertion.currentFlag());
+        Assert.assertTrue(Assertion.currentFlag());
 
     }
 
@@ -169,7 +169,7 @@ public class moneyDetails {
 
         Assertion.setFlag(true);
         Assertion.verifyEquals(getBalance,result);
-      //  Assert.assertTrue(Assertion.currentFlag());
+        Assert.assertTrue(Assertion.currentFlag());
 
     }
 
@@ -207,7 +207,7 @@ public class moneyDetails {
 
         Assertion.setFlag(true);
         Assertion.verifyEquals(getBalance,result);
-       // Assert.assertTrue(Assertion.currentFlag());
+        Assert.assertTrue(Assertion.currentFlag());
 
     }
 
@@ -247,7 +247,7 @@ public class moneyDetails {
 
         Assertion.setFlag(true);
         Assertion.verifyEquals(getBalance,result);
-      //  Assert.assertTrue(Assertion.currentFlag());
+        Assert.assertTrue(Assertion.currentFlag());
 
     }
 
@@ -286,7 +286,7 @@ public class moneyDetails {
 
         Assertion.setFlag(true);
         Assertion.verifyEquals(getBalance,result);
-       // Assert.assertTrue(Assertion.currentFlag());
+        Assert.assertTrue(Assertion.currentFlag());
 
     }
 
@@ -327,7 +327,7 @@ public class moneyDetails {
 
         Assertion.setFlag(true);
         Assertion.verifyEquals(getBalance,result);
-       // Assert.assertTrue(Assertion.currentFlag());
+        Assert.assertTrue(Assertion.currentFlag());
 
     }
 
@@ -366,7 +366,7 @@ public class moneyDetails {
 
         Assertion.setFlag(true);
         Assertion.verifyEquals(getBalance,result);
-       // Assert.assertTrue(Assertion.currentFlag());
+        Assert.assertTrue(Assertion.currentFlag());
 
     }
 
@@ -405,7 +405,7 @@ public class moneyDetails {
 
         Assertion.setFlag(true);
         Assertion.verifyEquals(getBalance,result);
-      //  Assert.assertTrue(Assertion.currentFlag());
+        Assert.assertTrue(Assertion.currentFlag());
 
     }
 
@@ -445,7 +445,7 @@ public class moneyDetails {
 
         Assertion.setFlag(true);
         Assertion.verifyEquals(getBalance,result);
-     //   Assert.assertTrue(Assertion.currentFlag());
+        Assert.assertTrue(Assertion.currentFlag());
 
     }
 
@@ -484,7 +484,7 @@ public class moneyDetails {
 
         Assertion.setFlag(true);
         Assertion.verifyEquals(getBalance,result);
-      //  Assert.assertTrue(Assertion.currentFlag());
+        Assert.assertTrue(Assertion.currentFlag());
 
     }
 
@@ -523,7 +523,7 @@ public class moneyDetails {
 
         Assertion.setFlag(true);
         Assertion.verifyEquals(getBalance,result);
-       // Assert.assertTrue(Assertion.currentFlag());
+        Assert.assertTrue(Assertion.currentFlag());
 
     }
 
@@ -560,7 +560,7 @@ public class moneyDetails {
         }
         Assertion.setFlag(true);
         Assertion.verifyEquals(getBalance,result);
-      //  Assert.assertTrue(Assertion.currentFlag());
+        Assert.assertTrue(Assertion.currentFlag());
 
     }
 
@@ -597,7 +597,7 @@ public class moneyDetails {
         }
         Assertion.setFlag(true);
         Assertion.verifyEquals(getBalance,result);
-     //   Assert.assertTrue(Assertion.currentFlag());
+        Assert.assertTrue(Assertion.currentFlag());
 
     }
 
@@ -635,7 +635,7 @@ public class moneyDetails {
         }
         Assertion.setFlag(true);
         Assertion.verifyEquals(getBalance,result);
-      //  Assert.assertTrue(Assertion.currentFlag());
+        Assert.assertTrue(Assertion.currentFlag());
 
     }
 
@@ -674,7 +674,7 @@ public class moneyDetails {
         }
         Assertion.setFlag(true);
         Assertion.verifyEquals(getBalance,result);
-      //  Assert.assertTrue(Assertion.currentFlag());
+        Assert.assertTrue(Assertion.currentFlag());
 
     }
 
@@ -711,7 +711,7 @@ public class moneyDetails {
         }
         Assertion.setFlag(true);
         Assertion.verifyEquals(getBalance,result);
-       // Assert.assertTrue(Assertion.currentFlag());
+        Assert.assertTrue(Assertion.currentFlag());
 
     }
 
@@ -750,7 +750,7 @@ public class moneyDetails {
         }
         Assertion.setFlag(true);
         Assertion.verifyEquals(getBalance,result);
-      //  Assert.assertTrue(Assertion.currentFlag());
+        Assert.assertTrue(Assertion.currentFlag());
 
     }
 
@@ -789,7 +789,7 @@ public class moneyDetails {
         }
         Assertion.setFlag(true);
         Assertion.verifyEquals(getBalance,result);
-      //  Assert.assertTrue(Assertion.currentFlag());
+        Assert.assertTrue(Assertion.currentFlag());
 
     }
 

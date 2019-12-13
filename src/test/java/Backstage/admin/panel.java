@@ -67,12 +67,12 @@ public class panel    {
             System.out.println("会员列表会员数："+a1);
             Assertion.setFlag(true);
             Assertion.verifyEquals(getPlayerNumber,a1);
-            Assert.assertTrue(Assertion.flag);
-            //Assert.assertTrue(Assertion.());
+            Assert.assertTrue(Assertion.currentFlag());
 
 
 
-        }
+
+    }
 
         /** 1.点击仪表盘，2.获取平台总注单量，3.进入历史投注记录，4.获取投注笔数
          *
@@ -113,7 +113,7 @@ public class panel    {
             Assertion.setFlag(true);
             Assertion.verifyEquals(getTotalNotes,getNotesPage1);
             Assert.assertTrue(Assertion.flag);
-            //Assert.assertTrue(Assertion.currentFlag());
+            Assert.assertTrue(Assertion.currentFlag());
 
             Thread.sleep(2000);
 

@@ -58,7 +58,7 @@ public class ReportManagement {
             System.out.println("代理报表本月会员数："+getTotalVip);
             Assertion.setFlag(true);
             Assertion.verifyEquals(getVipNumberToday,getTotalVip);
-          //  Assert.assertTrue(Assertion.currentFlag());
+            Assert.assertTrue(Assertion.currentFlag());
     }
 
     /**
@@ -92,7 +92,7 @@ public class ReportManagement {
             System.out.println("代理报表本月投注笔数："+getCountAgentTotal);
             Assertion.setFlag(true);
             Assertion.verifyEquals(getCountTotal,getCountAgentTotal);
-         //   Assert.assertTrue(Assertion.currentFlag());
+            Assert.assertTrue(Assertion.currentFlag());
     }
 
     /**
@@ -126,7 +126,7 @@ public class ReportManagement {
             System.out.println("代理列表本月投注金额："+getBetMoneyAgent);
             Assertion.setFlag(true);
             Assertion.verifyEquals(getBetMoneyAgentTotal,getBetMoneyAgent);
-        //    Assert.assertTrue(Assertion.currentFlag());
+            Assert.assertTrue(Assertion.currentFlag());
         }
 
 
@@ -162,7 +162,7 @@ public class ReportManagement {
             System.out.println("代理列表本月赢利投注金额："+getWinBetMoneyAgent);
             Assertion.setFlag(true);
             Assertion.verifyEquals(getWinBetMoneyAgentTotal,getWinBetMoneyAgent);
-          //  Assert.assertTrue(Assertion.currentFlag());
+            Assert.assertTrue(Assertion.currentFlag());
     }
 
     /**
@@ -196,7 +196,7 @@ public class ReportManagement {
             System.out.println("代理列表本月充值优惠/服务费金额："+getServiceChargeAgent);
             Assertion.setFlag(true);
             Assertion.verifyEquals(getServiceChargeAgentTotal,getServiceChargeAgent);
-          //  Assert.assertTrue(Assertion.currentFlag());
+            Assert.assertTrue(Assertion.currentFlag());
     }
 
 
@@ -231,7 +231,7 @@ public class ReportManagement {
             System.out.println("代理列表本月代理退水金额："+getWaterBreakAgent);
             Assertion.setFlag(true);
             Assertion.verifyEquals(getWaterBreakAgentTotal,getWaterBreakAgent);
-           // Assert.assertTrue(Assertion.currentFlag());
+            Assert.assertTrue(Assertion.currentFlag());
     }
 
 
@@ -266,7 +266,7 @@ public class ReportManagement {
             System.out.println("代理列表本月代理赔率金额："+getOddsMoneyAgent);
             Assertion.setFlag(true);
             Assertion.verifyEquals(getOddsMoneyAgentTotal,getOddsMoneyAgent);
-         //   Assert.assertTrue(Assertion.currentFlag());
+            Assert.assertTrue(Assertion.currentFlag());
     }
 
 
@@ -302,7 +302,7 @@ public class ReportManagement {
             System.out.println("代理列表本月会员输赢(不包括退水)金额："+getLoseWinAgent);
             Assertion.setFlag(true);
             Assertion.verifyEquals(getLoseWinAgentTotal,getLoseWinAgent);
-          //  Assert.assertTrue(Assertion.currentFlag());
+            Assert.assertTrue(Assertion.currentFlag());
     }
 
 
@@ -339,7 +339,7 @@ public class ReportManagement {
             System.out.println("代理列表本月实际退水金额："+getWaterBreakPracticeAgent);
             Assertion.setFlag(true);
             Assertion.verifyEquals(getWaterBreakPracticeAgentTotal,getWaterBreakPracticeAgent);
-         //   Assert.assertTrue(Assertion.currentFlag());
+            Assert.assertTrue(Assertion.currentFlag());
     }
 
 
@@ -375,7 +375,7 @@ public class ReportManagement {
             System.out.println("代理列表本月实际输赢(包括退水)金额："+getLoseWinAndWaterAgent);
             Assertion.setFlag(true);
             Assertion.verifyEquals(getLoseWinAndWaterAgentTotal,getLoseWinAndWaterAgent);
-         //   Assert.assertTrue(Assertion.currentFlag());
+            Assert.assertTrue(Assertion.currentFlag());
     }
 
 
@@ -416,7 +416,7 @@ public class ReportManagement {
             System.out.println("代理列表本月会员数："+getVipNumberVip);
             Assertion.setFlag(true);
             Assertion.verifyEquals(getVipNumberAgent,getVipNumberVip);
-           // Assert.assertTrue(Assertion.currentFlag());
+            Assert.assertTrue(Assertion.currentFlag());
     }
 
 
@@ -455,7 +455,7 @@ public class ReportManagement {
             System.out.println("会员报表本月充值金额："+getRechargeMoneyVip);
             Assertion.setFlag(true);
             Assertion.verifyEquals(getRechargeMoneyAgent,getRechargeMoneyVip);
-         //   Assert.assertTrue(Assertion.currentFlag());
+            Assert.assertTrue(Assertion.currentFlag());
     }
 
 
@@ -491,7 +491,7 @@ public class ReportManagement {
             System.out.println("会员报表本月充值笔数总计："+getCountVip);
             Assertion.setFlag(true);
             Assertion.verifyEquals(getCountAgent,getCountVip);
-        //    Assert.assertTrue(Assertion.currentFlag());
+            Assert.assertTrue(Assertion.currentFlag());
     }
 
 
@@ -527,7 +527,7 @@ public class ReportManagement {
             System.out.println("会员报表本月充值笔数总计："+getBetMoneyVip);
             Assertion.setFlag(true);
             Assertion.verifyEquals(getBetMoneyAgentReport,getBetMoneyVip);
-       //     Assert.assertTrue(Assertion.currentFlag());
+            Assert.assertTrue(Assertion.currentFlag());
     }
 
 
@@ -563,7 +563,7 @@ public class ReportManagement {
             System.out.println("会员报表本月赢利投注金额总计："+getWinBetMoneyVip);
             Assertion.setFlag(true);
             Assertion.verifyEquals(getWinBetMoneyAgentReport,getWinBetMoneyVip);
-        //    Assert.assertTrue(Assertion.currentFlag());
+            Assert.assertTrue(Assertion.currentFlag());
     }
 
 
@@ -598,7 +598,7 @@ public class ReportManagement {
             System.out.println("会员报表本月充值优惠手续费："+getServiceMoneyVipTotal);
             Assertion.setFlag(true);
             Assertion.verifyEquals(getServiceMoneyAgent,getServiceMoneyVipTotal);
-        //    Assert.assertTrue(Assertion.currentFlag());
+            Assert.assertTrue(Assertion.currentFlag());
     }
 
 
@@ -635,7 +635,7 @@ public class ReportManagement {
             System.out.println("会员报表本月代理赔率金额："+getOddsVip);
             Assertion.setFlag(true);
             Assertion.verifyEquals(getOddsAgent,getOddsVip);
-         //   Assert.assertTrue(Assertion.currentFlag());
+            Assert.assertTrue(Assertion.currentFlag());
     }
 
 
@@ -671,7 +671,7 @@ public class ReportManagement {
             System.out.println("会员报表本月代理退水金额："+getWaterBreakMoneyVip);
             Assertion.setFlag(true);
             Assertion.verifyEquals(getWaterBreakMoneyAgent,getWaterBreakMoneyVip);
-           // Assert.assertTrue(Assertion.currentFlag());
+            Assert.assertTrue(Assertion.currentFlag());
     }
 
 
@@ -706,7 +706,7 @@ public class ReportManagement {
             System.out.println("会员报表本月实际输赢（不包括退水）："+getWinLoseNotWaterVip);
             Assertion.setFlag(true);
             Assertion.verifyEquals(getWinLoseNotWaterAgent,getWinLoseNotWaterVip);
-         //   Assert.assertTrue(Assertion.currentFlag());
+            Assert.assertTrue(Assertion.currentFlag());
     }
 
 
@@ -743,7 +743,7 @@ public class ReportManagement {
             System.out.println("会员报表本月实际输赢（包括退水）："+getWinLoseWaterVip);
             Assertion.setFlag(true);
             Assertion.verifyEquals(getWinLoseWaterAgent,getWinLoseWaterVip);
-          //  Assert.assertTrue(Assertion.currentFlag());
+            Assert.assertTrue(Assertion.currentFlag());
     }
 
     /**
@@ -778,7 +778,7 @@ public class ReportManagement {
             System.out.println("会员报表本月实际退水金额："+getWaterBreakMoneyActivityVip);
             Assertion.setFlag(true);
             Assertion.verifyEquals(getWaterBreakMoneyActivityAgent,getWaterBreakMoneyActivityVip);
-         //   Assert.assertTrue(Assertion.currentFlag());
+            Assert.assertTrue(Assertion.currentFlag());
     }
 
 
@@ -834,7 +834,7 @@ public class ReportManagement {
             System.out.println("充值记录充值总计："+getRechargeTotals);
             Assertion.setFlag(true);
             Assertion.verifyEquals(getRechargeMoneyVip1,getRechargeTotals);
-       //     Assert.assertTrue(Assertion.currentFlag());
+            Assert.assertTrue(Assertion.currentFlag());
 
 
     }
@@ -885,7 +885,7 @@ public class ReportManagement {
             System.out.println("提现记录提现总计："+getWithdrawTotals);
             Assertion.setFlag(true);
             Assertion.verifyEquals(getWithdrawMoney,getWithdrawTotals);
-         //   Assert.assertTrue(Assertion.currentFlag());
+            Assert.assertTrue(Assertion.currentFlag());
 
 
     }
@@ -928,7 +928,7 @@ public class ReportManagement {
             String getPageBetNumbers = getPageBetNumber.substring(1,getPageBetNumber.indexOf("条"));
             Assertion.setFlag(true);
             Assertion.verifyEquals(getBetNumber,getPageBetNumbers);
-       //     Assert.assertTrue(Assertion.currentFlag());
+            Assert.assertTrue(Assertion.currentFlag());
 
     }
 
@@ -960,7 +960,7 @@ public class ReportManagement {
             System.out.println("投注详情页下注总金额："+getBetMoney1);
             Assertion.setFlag(true);
             Assertion.verifyEquals(getBetMoney,getBetMoney1);
-          //  Assert.assertTrue(Assertion.currentFlag());
+            Assert.assertTrue(Assertion.currentFlag());
 
     }
 
@@ -998,7 +998,7 @@ public class ReportManagement {
             System.out.println("充值记录充值优惠/手续费："+getRechargeDiscounts);
             Assertion.setFlag(true);
             Assertion.verifyEquals(getRechargeDiscount,getRechargeDiscounts);
-        //    Assert.assertTrue(Assertion.currentFlag());
+            Assert.assertTrue(Assertion.currentFlag());
 
     }
 
@@ -1019,6 +1019,7 @@ public class ReportManagement {
     @Test(priority = 27)
         public void agentMoney() throws InterruptedException {
             driverUtil.xpathClick(financeManagement);
+            Thread.sleep(1000);
             driverUtil.xpathClick(reportManagement);
             driverUtil.xpathClick(reportVip);
             Thread.sleep(2000);
@@ -1033,7 +1034,7 @@ public class ReportManagement {
             System.out.println("验证默认代理赔率金额为0");
             Assertion.setFlag(true);
             Assertion.verifyEquals(getAgentMoney,"0");
-        //    Assert.assertTrue(Assertion.currentFlag());
+            Assert.assertTrue(Assertion.currentFlag());
 
     }
 
@@ -1059,7 +1060,7 @@ public class ReportManagement {
             System.out.println("该代理为系统代理退水默认为0");
             Assertion.setFlag(true);
             Assertion.verifyEquals(getAgentWater,"0");
-         //   Assert.assertTrue(Assertion.currentFlag());
+            Assert.assertTrue(Assertion.currentFlag());
 
         }
 
@@ -1095,7 +1096,7 @@ public class ReportManagement {
             BigDecimal result = activityLoseWinNotWaters.add(ActivityWaters);//会员输赢（不包括退水）+实际退水=输赢总金额
             Assertion.setFlag(true);
             Assertion.verifyEquals(result,loseWinMoneyTotals);
-          //  Assert.assertTrue(Assertion.currentFlag());
+            Assert.assertTrue(Assertion.currentFlag());
 
     }
 
@@ -1127,11 +1128,9 @@ public class ReportManagement {
             System.out.println("投注详情输赢总金额："+getLoseWinMoneyTotal);
             Assertion.setFlag(true);
             Assertion.verifyEquals(getActivityLoseWinWater,getLoseWinMoneyTotal);
-          //  Assert.assertTrue(Assertion.currentFlag());
+            Assert.assertTrue(Assertion.currentFlag());
 
     }
-
-
 
 
     /**
@@ -1159,7 +1158,7 @@ public class ReportManagement {
             System.out.println("投注金额*0.5% = "+result);
             Assertion.setFlag(true);
             Assertion.verifyEquals(result,ActivityWaters);
-         //   Assert.assertTrue(Assertion.currentFlag());
+            Assert.assertTrue(Assertion.currentFlag());
 
     }
 

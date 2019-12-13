@@ -1,8 +1,12 @@
 Backstage\admin\FinanceManagement.class
 SeleniumMethod\WebDriverUtil.class
+complex\panel.class
+CPBet\rechargeWithdraw.class
+complex\UserManagement.class
 test\betNumberTest.class
 CPBet\lotteryBet.class
 Backstage\admin\panel.class
+complex\ReportManagement.class
 ListenerPackage\AssertionListener.class
 Backstage\admin\ReportManagement.class
 test\jdbcTest.class
@@ -13,6 +17,8 @@ CPBet\cycleRacingCar.class
 Backstage\admin\test.class
 CPBet\chongqingTimeLottery.class
 UtilTest\testMoneyDetails.class
+complex\FinanceManagement.class
 ListenerPackage\TestngListener.class
 test\switchWindow.class
+complex\moneyDetails.class
 ListenerPackage\Assertion.class

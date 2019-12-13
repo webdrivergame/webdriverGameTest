@@ -1,0 +1,2686 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1576145063211" stop="1576145272627" version="1.5.2" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>All Test Suite : 平台管理员</name>
+    <title>All Test Suite : 平台管理员</title>
+    <test-cases>
+        <test-case start="1576145063234" stop="1576145063241" status="pending">
+            <name>onlineBackstage</name>
+            <title>验证后台用户踢出功能</title>
+            <description type="text">测试踢出用户功能</description>
+            <failure>
+                <message>Test not implemented yet</message>
+                <stack-trace>There are no stack trace</stack-trace>
+            </failure>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="severity" value="blocker"/>
+                <label name="issue" value="http://10.1.101.66:890/index.php?m=testcase&amp;f=view&amp;caseID=19&amp;version=1"/>
+                <label name="story" value="在线后台用户"/>
+                <label name="feature" value="用户管理"/>
+                <label name="host" value="DESKTOP-8DI1090"/>
+                <label name="thread" value="3560@DESKTOP-8DI1090.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1576145081673" stop="1576145084389" status="passed">
+            <name>playerNumber</name>
+            <title>验证仪表盘平台总会员数</title>
+            <description type="text">测试仪表盘总会员数是否等于会员列表的总会员数</description>
+            <steps>
+                <step start="1576145081730" stop="1576145084254" status="passed">
+                    <name>playerNumber</name>
+                    <title>1.进入仪表盘; 2.获取会员数量; 3.进入会员列表；4.获取列表会员总数</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="All Test Suite"/>
+                <label name="testGroup" value="平台管理员"/>
+                <label name="testClass" value="Backstage.admin.panel"/>
+                <label name="testMethod" value="playerNumber"/>
+                <label name="severity" value="blocker"/>
+                <label name="issue" value="http://10.1.101.66:890/index.php?m=testcase&amp;f=view&amp;caseID=13&amp;version=1"/>
+                <label name="story" value="会员数量"/>
+                <label name="feature" value="仪表盘"/>
+                <label name="host" value="DESKTOP-8DI1090"/>
+                <label name="thread" value="3560@DESKTOP-8DI1090.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1576145084394" stop="1576145089878" status="failed">
+            <name>notesNumber</name>
+            <title>验证平台总注单量是否有误</title>
+            <description type="text">测试仪表盘总会员数是否等于会员列表的会员数</description>
+            <failure>
+                <message>AssertionError: expected [true] but found [false]</message>
+                <stack-trace>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at Backstage.admin.panel.notesNumber(panel.java:115)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1191)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
+	at org.testng.TestNG.run(TestNG.java:1024)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:386)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:323)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
+</stack-trace>
+            </failure>
+            <steps>
+                <step start="1576145084396" stop="1576145089851" status="failed">
+                    <name>notesNumber</name>
+                    <title>1.点击仪表盘，2.获取平台总注单量，3.进入历史投注记录，4.获取投注笔数</title>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="All Test Suite"/>
+                <label name="testGroup" value="平台管理员"/>
+                <label name="testClass" value="Backstage.admin.panel"/>
+                <label name="testMethod" value="notesNumber"/>
+                <label name="severity" value="blocker"/>
+                <label name="issue" value="http://10.1.101.66:890/index.php?m=testcase&amp;f=view&amp;caseID=14&amp;version=1"/>
+                <label name="story" value="平台总注单量"/>
+                <label name="feature" value="仪表盘"/>
+                <label name="host" value="DESKTOP-8DI1090"/>
+                <label name="thread" value="3560@DESKTOP-8DI1090.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1576145089884" stop="1576145094271" status="passed">
+            <name>agentNumber</name>
+            <title>验证总代理列表代理数数量</title>
+            <description type="text">测试总代理列表代理数</description>
+            <steps>
+                <step start="1576145089885" stop="1576145094266" status="passed">
+                    <name>agentNumber</name>
+                    <title>1.进入总代理报表，2.获取总代理代理数，3.点击会员跳转到代理列表，4.获取代理page数量</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="All Test Suite"/>
+                <label name="testGroup" value="平台管理员"/>
+                <label name="testClass" value="Backstage.admin.UserManagement"/>
+                <label name="testMethod" value="agentNumber"/>
+                <label name="severity" value="blocker"/>
+                <label name="issue" value="http://10.1.101.66:890/index.php?m=testcase&amp;f=view&amp;caseID=15&amp;version=1"/>
+                <label name="story" value="总代理列表"/>
+                <label name="feature" value="用户管理"/>
+                <label name="host" value="DESKTOP-8DI1090"/>
+                <label name="thread" value="3560@DESKTOP-8DI1090.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1576145094273" stop="1576145097797" status="failed">
+            <name>vipNumber</name>
+            <title>验证总代理列表会员数数量</title>
+            <description type="text">测试总代理列表会员数</description>
+            <failure>
+                <message>AssertionError: expected [true] but found [false]</message>
+                <stack-trace>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at Backstage.admin.UserManagement.vipNumber(UserManagement.java:101)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1191)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
+	at org.testng.TestNG.run(TestNG.java:1024)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:386)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:323)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
+</stack-trace>
+            </failure>
+            <steps>
+                <step start="1576145094273" stop="1576145097793" status="failed">
+                    <name>vipNumber</name>
+                    <title>1.进入总代理列表，2.获取总代理会员数，3.点击跳转到会员列表，4.获取会员数</title>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="All Test Suite"/>
+                <label name="testGroup" value="平台管理员"/>
+                <label name="testClass" value="Backstage.admin.UserManagement"/>
+                <label name="testMethod" value="vipNumber"/>
+                <label name="severity" value="blocker"/>
+                <label name="issue" value="http://10.1.101.66:890/index.php?m=testcase&amp;f=view&amp;caseID=16&amp;version=1"/>
+                <label name="story" value="总代理列表"/>
+                <label name="feature" value="用户管理"/>
+                <label name="host" value="DESKTOP-8DI1090"/>
+                <label name="thread" value="3560@DESKTOP-8DI1090.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1576145097801" stop="1576145101427" status="passed">
+            <name>agentVipNumber</name>
+            <title>验证代理列表会员数数量</title>
+            <description type="text">测试代理会员数是否等于会员列表该会员数量</description>
+            <steps>
+                <step start="1576145097803" stop="1576145101424" status="passed">
+                    <name>agentVipNumber</name>
+                    <title>1.进入代理列表，2.获取代理会员数，3.点击跳转会员列表，4.获取会员数</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="All Test Suite"/>
+                <label name="testGroup" value="平台管理员"/>
+                <label name="testClass" value="Backstage.admin.UserManagement"/>
+                <label name="testMethod" value="agentVipNumber"/>
+                <label name="severity" value="blocker"/>
+                <label name="issue" value="http://10.1.101.66:890/index.php?m=testcase&amp;f=view&amp;caseID=17&amp;version=1"/>
+                <label name="story" value="代理列表"/>
+                <label name="feature" value="用户管理"/>
+                <label name="host" value="DESKTOP-8DI1090"/>
+                <label name="thread" value="3560@DESKTOP-8DI1090.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1576145101432" stop="1576145104256" status="passed">
+            <name>onlinePlayer</name>
+            <title>验证在线玩家踢出功能</title>
+            <description type="text">测试踢出玩家功能</description>
+            <steps>
+                <step start="1576145101434" stop="1576145104252" status="passed">
+                    <name>onlinePlayer</name>
+                    <title>1.进入用户管理，2.在线玩家点击提出，3.判断是否提出成功</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="All Test Suite"/>
+                <label name="testGroup" value="平台管理员"/>
+                <label name="testClass" value="Backstage.admin.UserManagement"/>
+                <label name="testMethod" value="onlinePlayer"/>
+                <label name="severity" value="blocker"/>
+                <label name="issue" value="http://10.1.101.66:890/index.php?m=testcase&amp;f=view&amp;caseID=18&amp;version=1"/>
+                <label name="story" value="在线玩家"/>
+                <label name="feature" value="用户管理"/>
+                <label name="host" value="DESKTOP-8DI1090"/>
+                <label name="thread" value="3560@DESKTOP-8DI1090.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1576145104258" stop="1576145107822" status="failed">
+            <name>ReconciliationVip</name>
+            <title>验证会员对账差别金额数据第一条数据</title>
+            <description type="text">验证会员对账差别金额第一条数据</description>
+            <failure>
+                <message>AssertionError: expected [true] but found [false]</message>
+                <stack-trace>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at Backstage.admin.FinanceManagement.ReconciliationVip(FinanceManagement.java:98)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1191)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
+	at org.testng.TestNG.run(TestNG.java:1024)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:386)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:323)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
+</stack-trace>
+            </failure>
+            <steps>
+                <step start="1576145104259" stop="1576145107818" status="failed">
+                    <name>ReconciliationVip</name>
+                    <title>1.进入会员对账，2.计算对账差别金额</title>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="All Test Suite"/>
+                <label name="testGroup" value="平台管理员"/>
+                <label name="testClass" value="Backstage.admin.FinanceManagement"/>
+                <label name="testMethod" value="ReconciliationVip"/>
+                <label name="severity" value="blocker"/>
+                <label name="issue" value="http://10.1.101.66:890/index.php?m=testcase&amp;f=view&amp;caseID=20&amp;version=1"/>
+                <label name="story" value="会员对账"/>
+                <label name="feature" value="财务管理"/>
+                <label name="host" value="DESKTOP-8DI1090"/>
+                <label name="thread" value="3560@DESKTOP-8DI1090.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1576145107824" stop="1576145108086" status="failed">
+            <name>ReconciliationVip2</name>
+            <title>验证对账差别金额第二条数据</title>
+            <description type="text">验证会员对账差别金额第一条数据</description>
+            <failure>
+                <message>AssertionError: expected [true] but found [false]</message>
+                <stack-trace>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at Backstage.admin.FinanceManagement.ReconciliationVip2(FinanceManagement.java:158)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1191)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
+	at org.testng.TestNG.run(TestNG.java:1024)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:386)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:323)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
+</stack-trace>
+            </failure>
+            <steps>
+                <step start="1576145107824" stop="1576145108084" status="failed">
+                    <name>ReconciliationVip2</name>
+                    <title>1.进入会员对账，2.计算对账差别金额第二条数据</title>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="All Test Suite"/>
+                <label name="testGroup" value="平台管理员"/>
+                <label name="testClass" value="Backstage.admin.FinanceManagement"/>
+                <label name="testMethod" value="ReconciliationVip2"/>
+                <label name="severity" value="blocker"/>
+                <label name="issue" value="http://10.1.101.66:890/index.php?m=testcase&amp;f=view&amp;caseID=21&amp;version=1"/>
+                <label name="story" value="会员对账"/>
+                <label name="feature" value="财务管理"/>
+                <label name="host" value="DESKTOP-8DI1090"/>
+                <label name="thread" value="3560@DESKTOP-8DI1090.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1576145108089" stop="1576145108371" status="passed">
+            <name>ReconciliationVip3</name>
+            <title>验证会员对账差别金额第三条数据</title>
+            <description type="text">验证会员对账差别金额第三条数据</description>
+            <steps>
+                <step start="1576145108090" stop="1576145108370" status="passed">
+                    <name>ReconciliationVip3</name>
+                    <title>1.进入会员对账，2.计算对账差别金额第三条数据</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="All Test Suite"/>
+                <label name="testGroup" value="平台管理员"/>
+                <label name="testClass" value="Backstage.admin.FinanceManagement"/>
+                <label name="testMethod" value="ReconciliationVip3"/>
+                <label name="severity" value="blocker"/>
+                <label name="issue" value="http://10.1.101.66:890/index.php?m=testcase&amp;f=view&amp;caseID=22&amp;version=1"/>
+                <label name="story" value="会员对账"/>
+                <label name="feature" value="财务管理"/>
+                <label name="host" value="DESKTOP-8DI1090"/>
+                <label name="thread" value="3560@DESKTOP-8DI1090.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1576145108373" stop="1576145109882" status="passed">
+            <name>ReconciliationAgent1</name>
+            <title>验证代理对账差别金额数据第一条数据</title>
+            <description type="text">验证代理对账差别金额第一条数据</description>
+            <steps>
+                <step start="1576145108374" stop="1576145109880" status="passed">
+                    <name>ReconciliationAgent1</name>
+                    <title>1.进入财务管理-代理对账，2.验证第一条数据的对账差别金额</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="All Test Suite"/>
+                <label name="testGroup" value="平台管理员"/>
+                <label name="testClass" value="Backstage.admin.FinanceManagement"/>
+                <label name="testMethod" value="ReconciliationAgent1"/>
+                <label name="severity" value="blocker"/>
+                <label name="issue" value="http://10.1.101.66:890/index.php?m=testcase&amp;f=view&amp;caseID=23&amp;version=1"/>
+                <label name="story" value="代理对账"/>
+                <label name="feature" value="财务管理"/>
+                <label name="host" value="DESKTOP-8DI1090"/>
+                <label name="thread" value="3560@DESKTOP-8DI1090.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1576145109886" stop="1576145113234" status="passed">
+            <name>ReconciliationAgent2</name>
+            <title>验证代理对账第二条数据</title>
+            <description type="text">验证代理对账差别金额第二条数据</description>
+            <steps>
+                <step start="1576145109887" stop="1576145113229" status="passed">
+                    <name>ReconciliationAgent2</name>
+                    <title>1.进入财务管理-代理对账，2.验证第二条数据的对账差别金额</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="All Test Suite"/>
+                <label name="testGroup" value="平台管理员"/>
+                <label name="testClass" value="Backstage.admin.FinanceManagement"/>
+                <label name="testMethod" value="ReconciliationAgent2"/>
+                <label name="severity" value="blocker"/>
+                <label name="issue" value="http://10.1.101.66:890/index.php?m=testcase&amp;f=view&amp;caseID=24&amp;version=1"/>
+                <label name="story" value="代理对账"/>
+                <label name="feature" value="财务管理"/>
+                <label name="host" value="DESKTOP-8DI1090"/>
+                <label name="thread" value="3560@DESKTOP-8DI1090.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1576145113242" stop="1576145120088" status="passed">
+            <name>vipNumberToday</name>
+            <title>验证总代理报表本月会员数</title>
+            <description type="text">测试仪表盘总会员数是否等于会员列表的会员数</description>
+            <steps>
+                <step start="1576145113246" stop="1576145120085" status="passed">
+                    <name>vipNumberToday</name>
+                    <title>1.进入报表管理-总代理报表；2.获取zdl本月会员数；3.点击zdl跳转；4.获取跳转后代理报表会员总数</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="All Test Suite"/>
+                <label name="testGroup" value="平台管理员"/>
+                <label name="testClass" value="Backstage.admin.ReportManagement"/>
+                <label name="testMethod" value="vipNumberToday"/>
+                <label name="severity" value="blocker"/>
+                <label name="issue" value="http://10.1.101.66:890/index.php?m=testcase&amp;f=view&amp;caseID=25&amp;version=1"/>
+                <label name="story" value="总代理报表"/>
+                <label name="feature" value="报表管理"/>
+                <label name="host" value="DESKTOP-8DI1090"/>
+                <label name="thread" value="3560@DESKTOP-8DI1090.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1576145120093" stop="1576145124832" status="passed">
+            <name>countTotal</name>
+            <title>验证总代理报表本月充值金额</title>
+            <description type="text">测试总代理报表本月充值笔数是否等于跳转后的代理报表的充值笔数总和</description>
+            <steps>
+                <step start="1576145120094" stop="1576145124828" status="passed">
+                    <name>countTotal</name>
+                    <title>1.进入报表管理-总代理报表；2.获取zdl本月充值笔数；3.点击zdl跳转；4.获取跳转后代理报表充值总数</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="All Test Suite"/>
+                <label name="testGroup" value="平台管理员"/>
+                <label name="testClass" value="Backstage.admin.ReportManagement"/>
+                <label name="testMethod" value="countTotal"/>
+                <label name="severity" value="blocker"/>
+                <label name="issue" value="http://10.1.101.66:890/index.php?m=testcase&amp;f=view&amp;caseID=26&amp;version=1"/>
+                <label name="story" value="总代理报表"/>
+                <label name="feature" value="报表管理"/>
+                <label name="host" value="DESKTOP-8DI1090"/>
+                <label name="thread" value="3560@DESKTOP-8DI1090.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1576145124839" stop="1576145129481" status="failed">
+            <name>betMoneyAgentTotal</name>
+            <title>验证总代理报表本月投注金额</title>
+            <description type="text">判断总代理报表的投注金额是否等于跳转后的代理报表投注金额总和</description>
+            <failure>
+                <message>AssertionError: expected [true] but found [false]</message>
+                <stack-trace>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at Backstage.admin.ReportManagement.betMoneyAgentTotal(ReportManagement.java:129)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1191)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
+	at org.testng.TestNG.run(TestNG.java:1024)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:386)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:323)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
+</stack-trace>
+            </failure>
+            <steps>
+                <step start="1576145124842" stop="1576145129477" status="failed">
+                    <name>betMoneyAgentTotal</name>
+                    <title>1.进入报表管理-总代理报表；2.获取zdl本月投注金额；3.点击zdl跳转；4.获取跳转后代理报表投注金额</title>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="All Test Suite"/>
+                <label name="testGroup" value="平台管理员"/>
+                <label name="testClass" value="Backstage.admin.ReportManagement"/>
+                <label name="testMethod" value="betMoneyAgentTotal"/>
+                <label name="severity" value="blocker"/>
+                <label name="issue" value="http://10.1.101.66:890/index.php?m=testcase&amp;f=view&amp;caseID=27&amp;version=1"/>
+                <label name="story" value="总代理报表"/>
+                <label name="feature" value="报表管理"/>
+                <label name="host" value="DESKTOP-8DI1090"/>
+                <label name="thread" value="3560@DESKTOP-8DI1090.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1576145129485" stop="1576145134221" status="passed">
+            <name>winBetMoneyAgentTotal</name>
+            <title>验证总代理报表本月赢利投注金额</title>
+            <description type="text">判断总代理报表的赢利投注金额是否等于跳转后的代理报表赢利投注金额总和</description>
+            <steps>
+                <step start="1576145129487" stop="1576145134218" status="passed">
+                    <name>winBetMoneyAgentTotal</name>
+                    <title>1.进入报表管理-总代理报表；2.获取zdl本月盈利投注金额；3.点击zdl跳转；4.获取跳转后代理报表赢利投注金额</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="All Test Suite"/>
+                <label name="testGroup" value="平台管理员"/>
+                <label name="testClass" value="Backstage.admin.ReportManagement"/>
+                <label name="testMethod" value="winBetMoneyAgentTotal"/>
+                <label name="severity" value="blocker"/>
+                <label name="issue" value="http://10.1.101.66:890/index.php?m=testcase&amp;f=view&amp;caseID=28&amp;version=1"/>
+                <label name="story" value="总代理报表"/>
+                <label name="feature" value="报表管理"/>
+                <label name="host" value="DESKTOP-8DI1090"/>
+                <label name="thread" value="3560@DESKTOP-8DI1090.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1576145134225" stop="1576145138976" status="passed">
+            <name>serviceChargeAgentTotal</name>
+            <title>验证总代理报表本月充值优惠/服务费金额</title>
+            <description type="text">判断总代理报表的充值优惠/手续费金额是否等于跳转后的代理报表充值优惠/手续费金额总和</description>
+            <steps>
+                <step start="1576145134226" stop="1576145138973" status="passed">
+                    <name>serviceChargeAgentTotal</name>
+                    <title>1.进入报表管理-总代理报表；2.获取zdl本月盈利投注金额；3.点击zdl跳转；4.获取跳转后代理报表赢利投注金额</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="All Test Suite"/>
+                <label name="testGroup" value="平台管理员"/>
+                <label name="testClass" value="Backstage.admin.ReportManagement"/>
+                <label name="testMethod" value="serviceChargeAgentTotal"/>
+                <label name="severity" value="blocker"/>
+                <label name="issue" value="http://10.1.101.66:890/index.php?m=testcase&amp;f=view&amp;caseID=29&amp;version=1"/>
+                <label name="story" value="总代理报表"/>
+                <label name="feature" value="报表管理"/>
+                <label name="host" value="DESKTOP-8DI1090"/>
+                <label name="thread" value="3560@DESKTOP-8DI1090.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1576145138982" stop="1576145143814" status="passed">
+            <name>waterBreakAgentTotal</name>
+            <title>验证总代理报表本月代理退水金额</title>
+            <description type="text">判断总代理报表的代理退水金额是否等于跳转后的代理报表代理退水金额总和</description>
+            <steps>
+                <step start="1576145138985" stop="1576145143811" status="passed">
+                    <name>waterBreakAgentTotal</name>
+                    <title>1.进入报表管理-总代理报表；2.获取zdl本月代理退水金额；3.点击zdl跳转；4.获取跳转后代理报表代理退水金额</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="All Test Suite"/>
+                <label name="testGroup" value="平台管理员"/>
+                <label name="testClass" value="Backstage.admin.ReportManagement"/>
+                <label name="testMethod" value="waterBreakAgentTotal"/>
+                <label name="severity" value="blocker"/>
+                <label name="issue" value="http://10.1.101.66:890/index.php?m=testcase&amp;f=view&amp;caseID=30&amp;version=1"/>
+                <label name="story" value="总代理报表"/>
+                <label name="feature" value="报表管理"/>
+                <label name="host" value="DESKTOP-8DI1090"/>
+                <label name="thread" value="3560@DESKTOP-8DI1090.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1576145143815" stop="1576145148487" status="passed">
+            <name>oddsMoneyAgentTotal</name>
+            <title>验证总代理报表本月代理赔率金额</title>
+            <description type="text">判断总代理报表的代理赔率金额是否等于跳转后的代理报表代理赔率金额总和</description>
+            <steps>
+                <step start="1576145143816" stop="1576145148484" status="passed">
+                    <name>oddsMoneyAgentTotal</name>
+                    <title>1.进入报表管理-总代理报表；2.获取zdl本月代理赔率金额；3.点击zdl跳转；4.获取跳转后代理报表代理赔率金额</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="All Test Suite"/>
+                <label name="testGroup" value="平台管理员"/>
+                <label name="testClass" value="Backstage.admin.ReportManagement"/>
+                <label name="testMethod" value="oddsMoneyAgentTotal"/>
+                <label name="severity" value="blocker"/>
+                <label name="issue" value="http://10.1.101.66:890/index.php?m=testcase&amp;f=view&amp;caseID=31&amp;version=1"/>
+                <label name="story" value="总代理报表"/>
+                <label name="feature" value="报表管理"/>
+                <label name="host" value="DESKTOP-8DI1090"/>
+                <label name="thread" value="3560@DESKTOP-8DI1090.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1576145148490" stop="1576145153210" status="passed">
+            <name>loseWinAgentTotal</name>
+            <title>验证总代理报表本月会员输赢(不包括退水)金额</title>
+            <description type="text">判断总代理报表的会员输赢（不包括退水）金额是否等于跳转后的代理报表会员输赢（不包括退水）金额总和</description>
+            <steps>
+                <step start="1576145148491" stop="1576145153207" status="passed">
+                    <name>loseWinAgentTotal</name>
+                    <title>1.进入报表管理-总代理报表；2.获取zdl本月会员输赢（不包括退水）金额；3.点击zdl跳转；4.获取跳转后代理报表会员输赢（不包括退水）金额</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="All Test Suite"/>
+                <label name="testGroup" value="平台管理员"/>
+                <label name="testClass" value="Backstage.admin.ReportManagement"/>
+                <label name="testMethod" value="loseWinAgentTotal"/>
+                <label name="severity" value="blocker"/>
+                <label name="issue" value="http://10.1.101.66:890/index.php?m=testcase&amp;f=view&amp;caseID=32&amp;version=1"/>
+                <label name="story" value="总代理报表"/>
+                <label name="feature" value="报表管理"/>
+                <label name="host" value="DESKTOP-8DI1090"/>
+                <label name="thread" value="3560@DESKTOP-8DI1090.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1576145153214" stop="1576145158971" status="failed">
+            <name>waterBreakPracticeAgentTotal</name>
+            <title>验证总代理报表本月实际退水金额</title>
+            <description type="text">判断总代理报表的实际退水金额是否等于跳转后的代理报表实际退水金额总和</description>
+            <failure>
+                <message>AssertionError: expected [true] but found [false]</message>
+                <stack-trace>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at Backstage.admin.ReportManagement.waterBreakPracticeAgentTotal(ReportManagement.java:342)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1191)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
+	at org.testng.TestNG.run(TestNG.java:1024)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:386)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:323)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
+</stack-trace>
+            </failure>
+            <steps>
+                <step start="1576145153215" stop="1576145158966" status="failed">
+                    <name>waterBreakPracticeAgentTotal</name>
+                    <title>1.进入报表管理-总代理报表；2.获取zdl本月实际退水金额；3.点击zdl跳转；4.获取跳转后代理报表实际退水金额</title>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="All Test Suite"/>
+                <label name="testGroup" value="平台管理员"/>
+                <label name="testClass" value="Backstage.admin.ReportManagement"/>
+                <label name="testMethod" value="waterBreakPracticeAgentTotal"/>
+                <label name="severity" value="blocker"/>
+                <label name="issue" value="http://10.1.101.66:890/index.php?m=testcase&amp;f=view&amp;caseID=33&amp;version=1"/>
+                <label name="story" value="总代理报表"/>
+                <label name="feature" value="报表管理"/>
+                <label name="host" value="DESKTOP-8DI1090"/>
+                <label name="thread" value="3560@DESKTOP-8DI1090.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1576145158975" stop="1576145164648" status="failed">
+            <name>loseWinAndWaterAgentTotal</name>
+            <title>验证总代理报表本月实际输赢(包括退水)金额</title>
+            <description type="text">判断总代理报表的实际输赢(包括退水)金额是否等于跳转后的代理报表实际输赢(包括退水)金额总和</description>
+            <failure>
+                <message>AssertionError: expected [true] but found [false]</message>
+                <stack-trace>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at Backstage.admin.ReportManagement.loseWinAndWaterAgentTotal(ReportManagement.java:378)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1191)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
+	at org.testng.TestNG.run(TestNG.java:1024)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:386)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:323)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
+</stack-trace>
+            </failure>
+            <steps>
+                <step start="1576145158976" stop="1576145164642" status="failed">
+                    <name>loseWinAndWaterAgentTotal</name>
+                    <title>1.进入报表管理-总代理报表；2.获取zdl本月实际输赢(包括退水)金额；3.点击zdl跳转；4.获取跳转后代理报表实际输赢(包括退水)金额</title>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="All Test Suite"/>
+                <label name="testGroup" value="平台管理员"/>
+                <label name="testClass" value="Backstage.admin.ReportManagement"/>
+                <label name="testMethod" value="loseWinAndWaterAgentTotal"/>
+                <label name="severity" value="blocker"/>
+                <label name="issue" value="http://10.1.101.66:890/index.php?m=testcase&amp;f=view&amp;caseID=34&amp;version=1"/>
+                <label name="story" value="总代理报表"/>
+                <label name="feature" value="报表管理"/>
+                <label name="host" value="DESKTOP-8DI1090"/>
+                <label name="thread" value="3560@DESKTOP-8DI1090.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1576145164656" stop="1576145168312" status="passed">
+            <name>vipNumberAgent</name>
+            <title>验证代理报表本月会员数量</title>
+            <description type="text">判断代理报表的本月会员数是否等于跳转后的代理报表本月会员数总和</description>
+            <steps>
+                <step start="1576145164658" stop="1576145168310" status="passed">
+                    <name>vipNumberAgent</name>
+                    <title>1.进入报表管理-代理报表；2.获取账号dl本月会员数；3.点击dl跳转；4.获取跳转后会员报表本月会员数</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="All Test Suite"/>
+                <label name="testGroup" value="平台管理员"/>
+                <label name="testClass" value="Backstage.admin.ReportManagement"/>
+                <label name="testMethod" value="vipNumberAgent"/>
+                <label name="severity" value="blocker"/>
+                <label name="issue" value="http://10.1.101.66:890/index.php?m=testcase&amp;f=view&amp;caseID=35&amp;version=1"/>
+                <label name="story" value="代理报表"/>
+                <label name="feature" value="报表管理"/>
+                <label name="host" value="DESKTOP-8DI1090"/>
+                <label name="thread" value="3560@DESKTOP-8DI1090.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1576145168313" stop="1576145172608" status="failed">
+            <name>rechargeMoneyAgent</name>
+            <title>验证代理报表本月充值金额</title>
+            <description type="text">判断代理报表的本月充值金额是否等于跳转后的代理报表本月充值金额总和</description>
+            <failure>
+                <message>AssertionError: expected [true] but found [false]</message>
+                <stack-trace>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at Backstage.admin.ReportManagement.rechargeMoneyAgent(ReportManagement.java:458)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1191)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
+	at org.testng.TestNG.run(TestNG.java:1024)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:386)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:323)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
+</stack-trace>
+            </failure>
+            <steps>
+                <step start="1576145168314" stop="1576145172604" status="failed">
+                    <name>rechargeMoneyAgent</name>
+                    <title>1.进入报表管理-代理报表；2.获取账号dl本月充值金额；3.点击dl跳转；4.获取跳转后会员报表本月充值金额</title>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="All Test Suite"/>
+                <label name="testGroup" value="平台管理员"/>
+                <label name="testClass" value="Backstage.admin.ReportManagement"/>
+                <label name="testMethod" value="rechargeMoneyAgent"/>
+                <label name="severity" value="blocker"/>
+                <label name="issue" value="http://10.1.101.66:890/index.php?m=testcase&amp;f=view&amp;caseID=36&amp;version=1"/>
+                <label name="story" value="代理报表"/>
+                <label name="feature" value="报表管理"/>
+                <label name="host" value="DESKTOP-8DI1090"/>
+                <label name="thread" value="3560@DESKTOP-8DI1090.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1576145172611" stop="1576145176819" status="failed">
+            <name>countAgent</name>
+            <title>验证代理报表本月充值笔数</title>
+            <description type="text">判断代理报表的本月笔数是否等于跳转后的代理报表本月笔数总和</description>
+            <failure>
+                <message>AssertionError: expected [true] but found [false]</message>
+                <stack-trace>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at Backstage.admin.ReportManagement.countAgent(ReportManagement.java:494)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1191)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
+	at org.testng.TestNG.run(TestNG.java:1024)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:386)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:323)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
+</stack-trace>
+            </failure>
+            <steps>
+                <step start="1576145172612" stop="1576145176815" status="failed">
+                    <name>countAgent</name>
+                    <title>1.进入报表管理-代理报表；2.获取账号dl本月笔数；3.点击dl跳转；4.获取跳转后会员报表本月笔数金额</title>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="All Test Suite"/>
+                <label name="testGroup" value="平台管理员"/>
+                <label name="testClass" value="Backstage.admin.ReportManagement"/>
+                <label name="testMethod" value="countAgent"/>
+                <label name="severity" value="blocker"/>
+                <label name="issue" value="http://10.1.101.66:890/index.php?m=testcase&amp;f=view&amp;caseID=37&amp;version=1"/>
+                <label name="story" value="代理报表"/>
+                <label name="feature" value="报表管理"/>
+                <label name="host" value="DESKTOP-8DI1090"/>
+                <label name="thread" value="3560@DESKTOP-8DI1090.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1576145176822" stop="1576145180885" status="failed">
+            <name>betMoneyAgentReport</name>
+            <title>验证代理报表本月投注金额</title>
+            <description type="text">判断代理报表的本月投注金额是否等于跳转后的代理报表本月投注金额总和</description>
+            <failure>
+                <message>AssertionError: expected [true] but found [false]</message>
+                <stack-trace>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at Backstage.admin.ReportManagement.betMoneyAgentReport(ReportManagement.java:530)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1191)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
+	at org.testng.TestNG.run(TestNG.java:1024)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:386)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:323)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
+</stack-trace>
+            </failure>
+            <steps>
+                <step start="1576145176823" stop="1576145180877" status="failed">
+                    <name>betMoneyAgentReport</name>
+                    <title>1.进入报表管理-代理报表；2.获取账号dl本月投注金额；3.点击dl跳转；4.获取跳转后会员报表本月投注金额</title>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="All Test Suite"/>
+                <label name="testGroup" value="平台管理员"/>
+                <label name="testClass" value="Backstage.admin.ReportManagement"/>
+                <label name="testMethod" value="betMoneyAgentReport"/>
+                <label name="severity" value="blocker"/>
+                <label name="issue" value="http://10.1.101.66:890/index.php?m=testcase&amp;f=view&amp;caseID=38&amp;version=1"/>
+                <label name="story" value="代理报表"/>
+                <label name="feature" value="报表管理"/>
+                <label name="host" value="DESKTOP-8DI1090"/>
+                <label name="thread" value="3560@DESKTOP-8DI1090.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1576145180891" stop="1576145185124" status="passed">
+            <name>winBetMoneyAgentReport</name>
+            <title>验证代理报表本月赢利投注金额</title>
+            <description type="text">判断代理报表的本月赢利投注金额是否等于跳转后的代理报表本月赢利投注金额总和</description>
+            <steps>
+                <step start="1576145180893" stop="1576145185122" status="passed">
+                    <name>winBetMoneyAgentReport</name>
+                    <title>1.进入报表管理-代理报表；2.获取账号dl本月赢利投注金额；3.点击dl跳转；4.获取跳转后会员报表本月赢利投注金额</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="All Test Suite"/>
+                <label name="testGroup" value="平台管理员"/>
+                <label name="testClass" value="Backstage.admin.ReportManagement"/>
+                <label name="testMethod" value="winBetMoneyAgentReport"/>
+                <label name="severity" value="blocker"/>
+                <label name="issue" value="http://10.1.101.66:890/index.php?m=testcase&amp;f=view&amp;caseID=39&amp;version=1"/>
+                <label name="story" value="代理报表"/>
+                <label name="feature" value="报表管理"/>
+                <label name="host" value="DESKTOP-8DI1090"/>
+                <label name="thread" value="3560@DESKTOP-8DI1090.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1576145185128" stop="1576145189265" status="passed">
+            <name>serviceMoneyAgent</name>
+            <title>验证代理报表本月充值优惠/手续费</title>
+            <description type="text">判断代理报表的本月充值优惠/手续费金额是否等于跳转后的代理报表本月充值优惠/手续费金额总和</description>
+            <steps>
+                <step start="1576145185128" stop="1576145189263" status="passed">
+                    <name>serviceMoneyAgent</name>
+                    <title>1.进入报表管理-代理报表；2.获取账号dl本月充值优惠/手续费金额；3.点击dl跳转；4.获取跳转后会员报表本月充值优惠/手续费金额</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="All Test Suite"/>
+                <label name="testGroup" value="平台管理员"/>
+                <label name="testClass" value="Backstage.admin.ReportManagement"/>
+                <label name="testMethod" value="serviceMoneyAgent"/>
+                <label name="severity" value="blocker"/>
+                <label name="issue" value="http://10.1.101.66:890/index.php?m=testcase&amp;f=view&amp;caseID=40&amp;version=1"/>
+                <label name="story" value="代理报表"/>
+                <label name="feature" value="报表管理"/>
+                <label name="host" value="DESKTOP-8DI1090"/>
+                <label name="thread" value="3560@DESKTOP-8DI1090.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1576145189268" stop="1576145193433" status="passed">
+            <name>oddsAgent</name>
+            <title>验证代理报表本月代理赔率金额</title>
+            <description type="text">判断代理报表的本月代理赔率金额是否等于跳转后的代理报表本月代理赔率金额总和</description>
+            <steps>
+                <step start="1576145189268" stop="1576145193431" status="passed">
+                    <name>oddsAgent</name>
+                    <title>1.进入报表管理-代理报表；2.获取账号dl本月代理赔率金额；3.点击dl跳转；4.获取跳转后会员报表本月代理赔率金额</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="All Test Suite"/>
+                <label name="testGroup" value="平台管理员"/>
+                <label name="testClass" value="Backstage.admin.ReportManagement"/>
+                <label name="testMethod" value="oddsAgent"/>
+                <label name="severity" value="blocker"/>
+                <label name="issue" value="http://10.1.101.66:890/index.php?m=testcase&amp;f=view&amp;caseID=41&amp;version=1"/>
+                <label name="story" value="代理报表"/>
+                <label name="feature" value="报表管理"/>
+                <label name="host" value="DESKTOP-8DI1090"/>
+                <label name="thread" value="3560@DESKTOP-8DI1090.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1576145193435" stop="1576145197540" status="failed">
+            <name>waterBreakMoneyAgent</name>
+            <title>验证代理报表本月代理退水金额</title>
+            <description type="text">判断代理报表的本月代理退水金额是否等于跳转后的代理报表本月代理退水金额总和</description>
+            <failure>
+                <message>AssertionError: expected [true] but found [false]</message>
+                <stack-trace>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at Backstage.admin.ReportManagement.waterBreakMoneyAgent(ReportManagement.java:674)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1191)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
+	at org.testng.TestNG.run(TestNG.java:1024)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:386)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:323)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
+</stack-trace>
+            </failure>
+            <steps>
+                <step start="1576145193436" stop="1576145197536" status="failed">
+                    <name>waterBreakMoneyAgent</name>
+                    <title>1.进入报表管理-代理报表；2.获取账号dl本月代理退水金额；3.点击dl跳转；4.获取跳转后会员报表本月代理退水金额</title>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="All Test Suite"/>
+                <label name="testGroup" value="平台管理员"/>
+                <label name="testClass" value="Backstage.admin.ReportManagement"/>
+                <label name="testMethod" value="waterBreakMoneyAgent"/>
+                <label name="severity" value="blocker"/>
+                <label name="issue" value="http://10.1.101.66:890/index.php?m=testcase&amp;f=view&amp;caseID=42&amp;version=1"/>
+                <label name="story" value="代理报表"/>
+                <label name="feature" value="报表管理"/>
+                <label name="host" value="DESKTOP-8DI1090"/>
+                <label name="thread" value="3560@DESKTOP-8DI1090.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1576145197542" stop="1576145201623" status="passed">
+            <name>winLoseNotWaterAgent</name>
+            <title>验证代理报表本月实际输赢（不包括退水）</title>
+            <description type="text">判断代理报表的本月会员输赢（不包括退水）是否等于跳转后的代理报表本月会员输赢（不包括退水）总和</description>
+            <steps>
+                <step start="1576145197543" stop="1576145201620" status="passed">
+                    <name>winLoseNotWaterAgent</name>
+                    <title>1.进入报表管理-代理报表；2.获取账号dl本月代理退水金额；3.点击dl跳转；4.获取跳转后会员报表本月代理退水金额</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="All Test Suite"/>
+                <label name="testGroup" value="平台管理员"/>
+                <label name="testClass" value="Backstage.admin.ReportManagement"/>
+                <label name="testMethod" value="winLoseNotWaterAgent"/>
+                <label name="severity" value="blocker"/>
+                <label name="issue" value="http://10.1.101.66:890/index.php?m=testcase&amp;f=view&amp;caseID=43&amp;version=1"/>
+                <label name="story" value="代理报表"/>
+                <label name="feature" value="报表管理"/>
+                <label name="host" value="DESKTOP-8DI1090"/>
+                <label name="thread" value="3560@DESKTOP-8DI1090.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1576145201624" stop="1576145206862" status="failed">
+            <name>winLoseWaterAgent</name>
+            <title>验证代理报表本月实际输赢（包括退水）</title>
+            <description type="text">判断代理报表的本月会员输赢（包括退水）是否等于跳转后的代理报表本月会员输赢（包括退水）总和</description>
+            <failure>
+                <message>AssertionError: expected [true] but found [false]</message>
+                <stack-trace>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at Backstage.admin.ReportManagement.winLoseWaterAgent(ReportManagement.java:746)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1191)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
+	at org.testng.TestNG.run(TestNG.java:1024)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:386)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:323)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
+</stack-trace>
+            </failure>
+            <steps>
+                <step start="1576145201625" stop="1576145206860" status="failed">
+                    <name>winLoseWaterAgent</name>
+                    <title>1.进入报表管理-代理报表；2.获取账号dl本月代理退水金额；3.点击dl跳转；4.获取跳转后会员报表本月代理退水金额</title>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="All Test Suite"/>
+                <label name="testGroup" value="平台管理员"/>
+                <label name="testClass" value="Backstage.admin.ReportManagement"/>
+                <label name="testMethod" value="winLoseWaterAgent"/>
+                <label name="severity" value="blocker"/>
+                <label name="issue" value="http://10.1.101.66:890/index.php?m=testcase&amp;f=view&amp;caseID=44&amp;version=1"/>
+                <label name="story" value="代理报表"/>
+                <label name="feature" value="报表管理"/>
+                <label name="host" value="DESKTOP-8DI1090"/>
+                <label name="thread" value="3560@DESKTOP-8DI1090.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1576145206865" stop="1576145211908" status="failed">
+            <name>waterBreakMoneyActivityAgent</name>
+            <title>验证代理报表本月实际退水金额</title>
+            <description type="text">判断代理报表的本月代理实际退水是否等于跳转后的代理报表本月代理实际退水总和</description>
+            <failure>
+                <message>AssertionError: expected [true] but found [false]</message>
+                <stack-trace>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at Backstage.admin.ReportManagement.waterBreakMoneyActivityAgent(ReportManagement.java:781)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1191)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
+	at org.testng.TestNG.run(TestNG.java:1024)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:386)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:323)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
+</stack-trace>
+            </failure>
+            <steps>
+                <step start="1576145206866" stop="1576145211904" status="failed">
+                    <name>waterBreakMoneyActivityAgent</name>
+                    <title>1.进入报表管理-代理报表；2.获取账号dl本月代理退水金额；3.点击dl跳转；4.获取跳转后会员报表本月代理退水金额</title>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="All Test Suite"/>
+                <label name="testGroup" value="平台管理员"/>
+                <label name="testClass" value="Backstage.admin.ReportManagement"/>
+                <label name="testMethod" value="waterBreakMoneyActivityAgent"/>
+                <label name="severity" value="blocker"/>
+                <label name="issue" value="http://10.1.101.66:890/index.php?m=testcase&amp;f=view&amp;caseID=45&amp;version=1"/>
+                <label name="story" value="代理报表"/>
+                <label name="feature" value="报表管理"/>
+                <label name="host" value="DESKTOP-8DI1090"/>
+                <label name="thread" value="3560@DESKTOP-8DI1090.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1576145211910" stop="1576145221937" status="failed">
+            <name>rechargeMoneyVip</name>
+            <title>验证会员报表本月充值金额</title>
+            <description type="text">判断会员报表的充值金额是否等于该会员充值记录的充值总计</description>
+            <failure>
+                <message>AssertionError: expected [true] but found [false]</message>
+                <stack-trace>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at Backstage.admin.ReportManagement.rechargeMoneyVip(ReportManagement.java:837)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1191)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
+	at org.testng.TestNG.run(TestNG.java:1024)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:386)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:323)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
+</stack-trace>
+            </failure>
+            <steps>
+                <step start="1576145211911" stop="1576145221934" status="failed">
+                    <name>rechargeMoneyVip</name>
+                    <title>1.进入报表管理-会员报表；2.获取账号achy01本月充值金额；3.进入充值记录；4.获取充值记录achy01的本月充值总计</title>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="All Test Suite"/>
+                <label name="testGroup" value="平台管理员"/>
+                <label name="testClass" value="Backstage.admin.ReportManagement"/>
+                <label name="testMethod" value="rechargeMoneyVip"/>
+                <label name="severity" value="blocker"/>
+                <label name="issue" value="http://10.1.101.66:890/index.php?m=testcase&amp;f=view&amp;caseID=45&amp;version=1"/>
+                <label name="story" value="会员报表"/>
+                <label name="feature" value="报表管理"/>
+                <label name="host" value="DESKTOP-8DI1090"/>
+                <label name="thread" value="3560@DESKTOP-8DI1090.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1576145221942" stop="1576145233487" status="failed">
+            <name>withdrawMoneyVip</name>
+            <title>验证会员报表本月提现金额</title>
+            <description type="text">判断会员报表的提现金额是否等于该会员提现记录的提现总计</description>
+            <failure>
+                <message>AssertionError: expected [true] but found [false]</message>
+                <stack-trace>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at Backstage.admin.ReportManagement.withdrawMoneyVip(ReportManagement.java:888)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1191)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
+	at org.testng.TestNG.run(TestNG.java:1024)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:386)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:323)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
+</stack-trace>
+            </failure>
+            <steps>
+                <step start="1576145221943" stop="1576145233478" status="failed">
+                    <name>withdrawMoneyVip</name>
+                    <title>1.进入报表管理-会员报表；2.获取账号achy01本月提现金额；3.进入提现记录；4.获取充值记录achy01的本月提现总计</title>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="All Test Suite"/>
+                <label name="testGroup" value="平台管理员"/>
+                <label name="testClass" value="Backstage.admin.ReportManagement"/>
+                <label name="testMethod" value="withdrawMoneyVip"/>
+                <label name="severity" value="blocker"/>
+                <label name="issue" value="http://10.1.101.66:890/index.php?m=testcase&amp;f=view&amp;caseID=45&amp;version=1"/>
+                <label name="story" value="会员报表"/>
+                <label name="feature" value="报表管理"/>
+                <label name="host" value="DESKTOP-8DI1090"/>
+                <label name="thread" value="3560@DESKTOP-8DI1090.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1576145233494" stop="1576145246144" status="failed">
+            <name>betNumber</name>
+            <title>验证会员报表本月投注笔数</title>
+            <description type="text">判断会员报表的投注笔数是否等于投注详情页的投注数量</description>
+            <failure>
+                <message>AssertionError: expected [true] but found [false]</message>
+                <stack-trace>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at Backstage.admin.ReportManagement.betNumber(ReportManagement.java:931)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1191)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
+	at org.testng.TestNG.run(TestNG.java:1024)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:386)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:323)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
+</stack-trace>
+            </failure>
+            <steps>
+                <step start="1576145233496" stop="1576145246140" status="failed">
+                    <name>betNumber</name>
+                    <title>1.进入报表管理-会员报表；2.获取账号achy01本月投注笔数；3.点击投注笔数跳转；4.获取投注详情页页面数量</title>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="All Test Suite"/>
+                <label name="testGroup" value="平台管理员"/>
+                <label name="testClass" value="Backstage.admin.ReportManagement"/>
+                <label name="testMethod" value="betNumber"/>
+                <label name="severity" value="blocker"/>
+                <label name="issue" value="http://10.1.101.66:890/index.php?m=testcase&amp;f=view&amp;caseID=45&amp;version=1"/>
+                <label name="story" value="会员报表"/>
+                <label name="feature" value="报表管理"/>
+                <label name="host" value="DESKTOP-8DI1090"/>
+                <label name="thread" value="3560@DESKTOP-8DI1090.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1576145246147" stop="1576145249410" status="failed">
+            <name>betMoney</name>
+            <title>验证会员报表本月投注金额</title>
+            <description type="text">判断会员报表的投注金额是否等于投注详情页的投注金额总计</description>
+            <failure>
+                <message>AssertionError: expected [true] but found [false]</message>
+                <stack-trace>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at Backstage.admin.ReportManagement.betMoney(ReportManagement.java:963)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1191)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
+	at org.testng.TestNG.run(TestNG.java:1024)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:386)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:323)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
+</stack-trace>
+            </failure>
+            <steps>
+                <step start="1576145246148" stop="1576145249406" status="failed">
+                    <name>betMoney</name>
+                    <title>1.进入报表管理-会员报表；2.获取账号achy01本月投注金额；3.点击投注笔数跳转；4.获取投注详情页页面总投注金额</title>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="All Test Suite"/>
+                <label name="testGroup" value="平台管理员"/>
+                <label name="testClass" value="Backstage.admin.ReportManagement"/>
+                <label name="testMethod" value="betMoney"/>
+                <label name="severity" value="blocker"/>
+                <label name="issue" value="http://10.1.101.66:890/index.php?m=testcase&amp;f=view&amp;caseID=45&amp;version=1"/>
+                <label name="story" value="会员报表"/>
+                <label name="feature" value="报表管理"/>
+                <label name="host" value="DESKTOP-8DI1090"/>
+                <label name="thread" value="3560@DESKTOP-8DI1090.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1576145249415" stop="1576145255330" status="passed">
+            <name>rechargeDiscount</name>
+            <title>验证会员报表本月充值优惠金额</title>
+            <description type="text">判断会员报表的充值优惠金额是否等于充值记录本月充值优惠金额总计</description>
+            <steps>
+                <step start="1576145249417" stop="1576145255325" status="passed">
+                    <name>rechargeDiscount</name>
+                    <title>1.进入报表管理-会员报表；2.获取账号achy01本月充值优惠金额；3.进入充值记录；4.获取该会员本月充值优惠金额总计</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="All Test Suite"/>
+                <label name="testGroup" value="平台管理员"/>
+                <label name="testClass" value="Backstage.admin.ReportManagement"/>
+                <label name="testMethod" value="rechargeDiscount"/>
+                <label name="severity" value="blocker"/>
+                <label name="issue" value="http://10.1.101.66:890/index.php?m=testcase&amp;f=view&amp;caseID=45&amp;version=1"/>
+                <label name="story" value="会员报表"/>
+                <label name="feature" value="报表管理"/>
+                <label name="host" value="DESKTOP-8DI1090"/>
+                <label name="thread" value="3560@DESKTOP-8DI1090.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1576145255336" stop="1576145255711" status="broken">
+            <name>agentMoney</name>
+            <title>验证会员报表本月代理赔率金额</title>
+            <description type="text">判断会员报表的代理赔率金额是否等于0</description>
+            <failure>
+                <message>WebDriverException: element click intercepted: Element &lt;span&gt;...&lt;/span&gt; is not clickable at point (78, 325). Other element would receive the click: &lt;div class="el-submenu__title" style="padding-left: 20px; color: rgb(191, 203, 217); background-color: rgb(48, 65, 86);"&gt;...&lt;/div&gt;
+  (Session info: chrome=78.0.3904.97)
+  (Driver info: chromedriver=78.0.3904.70 (edb9c9f3de0247fd912a77b7f6cae7447f6d3ad5-refs/branch-heads/3904@{#800}),platform=Windows NT 10.0.18363 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 139 milliseconds
+Build info: version: '3.0.0', revision: '350cf60', time: '2016-10-13 10:48:57 -0700'
+System info: host: 'DESKTOP-8DI1090', ip: '10.1.101.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_231'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:54636}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=78.0.3904.70 (edb9c9f3de0247fd912a77b7f6cae7447f6d3ad5-refs/branch-heads/3904@{#800}), userDataDir=C:\Users\Owner\AppData\Local\Temp\scoped_dir2108_2065501313}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=78.0.3904.97, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: e221ed1dfd258ef4b02a34886400bb1f</message>
+                <stack-trace>org.openqa.selenium.WebDriverException: element click intercepted: Element &lt;span&gt;...&lt;/span&gt; is not clickable at point (78, 325). Other element would receive the click: &lt;div class="el-submenu__title" style="padding-left: 20px; color: rgb(191, 203, 217); background-color: rgb(48, 65, 86);"&gt;...&lt;/div&gt;
+  (Session info: chrome=78.0.3904.97)
+  (Driver info: chromedriver=78.0.3904.70 (edb9c9f3de0247fd912a77b7f6cae7447f6d3ad5-refs/branch-heads/3904@{#800}),platform=Windows NT 10.0.18363 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 139 milliseconds
+Build info: version: '3.0.0', revision: '350cf60', time: '2016-10-13 10:48:57 -0700'
+System info: host: 'DESKTOP-8DI1090', ip: '10.1.101.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_231'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:54636}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=78.0.3904.70 (edb9c9f3de0247fd912a77b7f6cae7447f6d3ad5-refs/branch-heads/3904@{#800}), userDataDir=C:\Users\Owner\AppData\Local\Temp\scoped_dir2108_2065501313}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=78.0.3904.97, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: e221ed1dfd258ef4b02a34886400bb1f
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:635)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:274)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at SeleniumMethod.WebDriverUtil.xpathClick(WebDriverUtil.java:308)
+	at Backstage.admin.ReportManagement.agentMoney(ReportManagement.java:1022)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1191)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
+	at org.testng.TestNG.run(TestNG.java:1024)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:386)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:323)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
+</stack-trace>
+            </failure>
+            <steps>
+                <step start="1576145255338" stop="1576145255701" status="broken">
+                    <name>agentMoney</name>
+                    <title>1.进入报表管理-会员报表；2.获取账号achy01本月代理赔率金额；</title>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="All Test Suite"/>
+                <label name="testGroup" value="平台管理员"/>
+                <label name="testClass" value="Backstage.admin.ReportManagement"/>
+                <label name="testMethod" value="agentMoney"/>
+                <label name="severity" value="blocker"/>
+                <label name="issue" value="http://10.1.101.66:890/index.php?m=testcase&amp;f=view&amp;caseID=45&amp;version=1"/>
+                <label name="story" value="会员报表"/>
+                <label name="feature" value="报表管理"/>
+                <label name="host" value="DESKTOP-8DI1090"/>
+                <label name="thread" value="3560@DESKTOP-8DI1090.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1576145255713" stop="1576145255798" status="failed">
+            <name>agentWater</name>
+            <title>验证会员报表本月代理退水金额</title>
+            <description type="text">判断会员报表的代理退水金额是否等于0</description>
+            <failure>
+                <message>AssertionError: expected [true] but found [false]</message>
+                <stack-trace>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at Backstage.admin.ReportManagement.agentWater(ReportManagement.java:1062)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1191)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
+	at org.testng.TestNG.run(TestNG.java:1024)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:386)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:323)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
+</stack-trace>
+            </failure>
+            <steps>
+                <step start="1576145255714" stop="1576145255796" status="failed">
+                    <name>agentWater</name>
+                    <title>1.进入报表管理-会员报表；2.获取账号achy01本月代理退水金额；</title>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="All Test Suite"/>
+                <label name="testGroup" value="平台管理员"/>
+                <label name="testClass" value="Backstage.admin.ReportManagement"/>
+                <label name="testMethod" value="agentWater"/>
+                <label name="severity" value="blocker"/>
+                <label name="issue" value="http://10.1.101.66:890/index.php?m=testcase&amp;f=view&amp;caseID=45&amp;version=1"/>
+                <label name="story" value="会员报表"/>
+                <label name="feature" value="报表管理"/>
+                <label name="host" value="DESKTOP-8DI1090"/>
+                <label name="thread" value="3560@DESKTOP-8DI1090.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1576145255799" stop="1576145255833" status="broken">
+            <name>activityLoseWin</name>
+            <title>验证会员报表本月实际输赢（不包括退水）金额</title>
+            <description type="text">判断会员报表的实际输赢（不包括退水）金额是否等于投注详情的实际输赢金额减去退水金额</description>
+            <failure>
+                <message>NumberFormatException: null</message>
+                <stack-trace>java.lang.NumberFormatException
+	at java.math.BigDecimal.&lt;init&gt;(BigDecimal.java:497)
+	at java.math.BigDecimal.&lt;init&gt;(BigDecimal.java:383)
+	at java.math.BigDecimal.&lt;init&gt;(BigDecimal.java:809)
+	at Backstage.admin.ReportManagement.activityLoseWin(ReportManagement.java:1085)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1191)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
+	at org.testng.TestNG.run(TestNG.java:1024)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:386)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:323)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
+</stack-trace>
+            </failure>
+            <steps>
+                <step start="1576145255799" stop="1576145255831" status="broken">
+                    <name>activityLoseWin</name>
+                    <title>1.进入报表管理-会员报表；2.获取账号achy01本月实际输赢（不包括退水）金额；3.进入投注详情；4.获取该会员本月实际输赢（不包括退水）金额</title>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="All Test Suite"/>
+                <label name="testGroup" value="平台管理员"/>
+                <label name="testClass" value="Backstage.admin.ReportManagement"/>
+                <label name="testMethod" value="activityLoseWin"/>
+                <label name="severity" value="blocker"/>
+                <label name="issue" value="http://10.1.101.66:890/index.php?m=testcase&amp;f=view&amp;caseID=45&amp;version=1"/>
+                <label name="story" value="会员报表"/>
+                <label name="feature" value="报表管理"/>
+                <label name="host" value="DESKTOP-8DI1090"/>
+                <label name="thread" value="3560@DESKTOP-8DI1090.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1576145255835" stop="1576145260068" status="failed">
+            <name>activityLoseWinWater</name>
+            <title>验证会员报表本月实际输赢（包括退水）</title>
+            <description type="text">判断会员报表的实际输赢（包括退水）是否等于投注详情的输赢总金额</description>
+            <failure>
+                <message>AssertionError: expected [true] but found [false]</message>
+                <stack-trace>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at Backstage.admin.ReportManagement.activityLoseWinWater(ReportManagement.java:1130)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1191)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
+	at org.testng.TestNG.run(TestNG.java:1024)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:386)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:323)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
+</stack-trace>
+            </failure>
+            <steps>
+                <step start="1576145255836" stop="1576145260063" status="failed">
+                    <name>activityLoseWinWater</name>
+                    <title>1.进入报表管理-会员报表；2.获取账号achy01本月实际输赢（包括退水）；3.进入投注详情；4.获取输赢总金额</title>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="All Test Suite"/>
+                <label name="testGroup" value="平台管理员"/>
+                <label name="testClass" value="Backstage.admin.ReportManagement"/>
+                <label name="testMethod" value="activityLoseWinWater"/>
+                <label name="severity" value="blocker"/>
+                <label name="issue" value="http://10.1.101.66:890/index.php?m=testcase&amp;f=view&amp;caseID=45&amp;version=1"/>
+                <label name="story" value="会员报表"/>
+                <label name="feature" value="报表管理"/>
+                <label name="host" value="DESKTOP-8DI1090"/>
+                <label name="thread" value="3560@DESKTOP-8DI1090.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1576145260069" stop="1576145262172" status="broken">
+            <name>activityWaterMoney</name>
+            <title>验证会员报表本月实际退水金额</title>
+            <description type="text">判断会员报表的实际退水金额是否等于投注金额*0.5%</description>
+            <failure>
+                <message>NumberFormatException: null</message>
+                <stack-trace>java.lang.NumberFormatException
+	at java.math.BigDecimal.&lt;init&gt;(BigDecimal.java:497)
+	at java.math.BigDecimal.&lt;init&gt;(BigDecimal.java:383)
+	at java.math.BigDecimal.&lt;init&gt;(BigDecimal.java:809)
+	at Backstage.admin.ReportManagement.activityWaterMoney(ReportManagement.java:1152)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1191)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
+	at org.testng.TestNG.run(TestNG.java:1024)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:386)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:323)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
+</stack-trace>
+            </failure>
+            <steps>
+                <step start="1576145260070" stop="1576145262169" status="broken">
+                    <name>activityWaterMoney</name>
+                    <title>1.进入报表管理-会员报表；2.获取账号achy01本月实际退水金额；3.用投注金额*0.5%</title>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="All Test Suite"/>
+                <label name="testGroup" value="平台管理员"/>
+                <label name="testClass" value="Backstage.admin.ReportManagement"/>
+                <label name="testMethod" value="activityWaterMoney"/>
+                <label name="severity" value="blocker"/>
+                <label name="issue" value="http://10.1.101.66:890/index.php?m=testcase&amp;f=view&amp;caseID=45&amp;version=1"/>
+                <label name="story" value="会员报表"/>
+                <label name="feature" value="报表管理"/>
+                <label name="host" value="DESKTOP-8DI1090"/>
+                <label name="thread" value="3560@DESKTOP-8DI1090.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1576145262176" stop="1576145270440" status="passed">
+            <name>moneyDetails1</name>
+            <title>验证会员资金明细数据1</title>
+            <description type="text">测试achy01的资金明细数据，资金账变是否有误</description>
+            <steps>
+                <step start="1576145262177" stop="1576145270438" status="passed">
+                    <name>moneyDetails1</name>
+                    <title>1.用户管理-会员列表，2.输入achy01会员查询；3.查看该会员资金明细</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="All Test Suite"/>
+                <label name="testGroup" value="平台管理员"/>
+                <label name="testClass" value="Backstage.admin.moneyDetails"/>
+                <label name="testMethod" value="moneyDetails1"/>
+                <label name="severity" value="blocker"/>
+                <label name="issue" value="http://10.1.101.66:890/index.php?m=testcase&amp;f=view&amp;caseID=45&amp;version=1"/>
+                <label name="story" value="会员列表-achy01会员资金明细"/>
+                <label name="feature" value="用户管理"/>
+                <label name="host" value="DESKTOP-8DI1090"/>
+                <label name="thread" value="3560@DESKTOP-8DI1090.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1576145270442" stop="1576145270533" status="passed">
+            <name>moneyDetails2</name>
+            <title>验证会员资金明细数据2</title>
+            <description type="text">测试achy01的资金明细数据，资金账变是否有误</description>
+            <steps>
+                <step start="1576145270442" stop="1576145270531" status="passed">
+                    <name>moneyDetails2</name>
+                    <title>1.用户管理-会员列表，2.输入achy01会员查询；3.查看该会员资金明细</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="All Test Suite"/>
+                <label name="testGroup" value="平台管理员"/>
+                <label name="testClass" value="Backstage.admin.moneyDetails"/>
+                <label name="testMethod" value="moneyDetails2"/>
+                <label name="severity" value="blocker"/>
+                <label name="issue" value="http://10.1.101.66:890/index.php?m=testcase&amp;f=view&amp;caseID=45&amp;version=1"/>
+                <label name="story" value="会员列表-achy01会员资金明细"/>
+                <label name="feature" value="用户管理"/>
+                <label name="host" value="DESKTOP-8DI1090"/>
+                <label name="thread" value="3560@DESKTOP-8DI1090.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1576145270535" stop="1576145270695" status="failed">
+            <name>moneyDetails3</name>
+            <title>验证会员资金明细数据3</title>
+            <description type="text">测试achy01的资金明细数据，资金账变是否有误</description>
+            <failure>
+                <message>AssertionError: expected [true] but found [false]</message>
+                <stack-trace>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at Backstage.admin.moneyDetails.moneyDetails3(moneyDetails.java:172)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1191)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
+	at org.testng.TestNG.run(TestNG.java:1024)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:386)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:323)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
+</stack-trace>
+            </failure>
+            <steps>
+                <step start="1576145270536" stop="1576145270686" status="failed">
+                    <name>moneyDetails3</name>
+                    <title>1.用户管理-会员列表，2.输入achy01会员查询；3.查看该会员资金明细</title>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="All Test Suite"/>
+                <label name="testGroup" value="平台管理员"/>
+                <label name="testClass" value="Backstage.admin.moneyDetails"/>
+                <label name="testMethod" value="moneyDetails3"/>
+                <label name="severity" value="blocker"/>
+                <label name="issue" value="http://10.1.101.66:890/index.php?m=testcase&amp;f=view&amp;caseID=45&amp;version=1"/>
+                <label name="story" value="会员列表-achy01会员资金明细"/>
+                <label name="feature" value="用户管理"/>
+                <label name="host" value="DESKTOP-8DI1090"/>
+                <label name="thread" value="3560@DESKTOP-8DI1090.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1576145270701" stop="1576145270824" status="failed">
+            <name>moneyDetails4</name>
+            <title>验证会员资金明细数据4</title>
+            <description type="text">测试achy01的资金明细数据，资金账变是否有误</description>
+            <failure>
+                <message>AssertionError: expected [true] but found [false]</message>
+                <stack-trace>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at Backstage.admin.moneyDetails.moneyDetails4(moneyDetails.java:210)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1191)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
+	at org.testng.TestNG.run(TestNG.java:1024)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:386)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:323)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
+</stack-trace>
+            </failure>
+            <steps>
+                <step start="1576145270704" stop="1576145270822" status="failed">
+                    <name>moneyDetails4</name>
+                    <title>1.用户管理-会员列表，2.输入achy01会员查询；3.查看该会员资金明细</title>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="All Test Suite"/>
+                <label name="testGroup" value="平台管理员"/>
+                <label name="testClass" value="Backstage.admin.moneyDetails"/>
+                <label name="testMethod" value="moneyDetails4"/>
+                <label name="severity" value="blocker"/>
+                <label name="issue" value="http://10.1.101.66:890/index.php?m=testcase&amp;f=view&amp;caseID=45&amp;version=1"/>
+                <label name="story" value="会员列表-achy01会员资金明细"/>
+                <label name="feature" value="用户管理"/>
+                <label name="host" value="DESKTOP-8DI1090"/>
+                <label name="thread" value="3560@DESKTOP-8DI1090.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1576145270826" stop="1576145270925" status="passed">
+            <name>moneyDetails5</name>
+            <title>验证会员资金明细数据5</title>
+            <description type="text">测试achy01的资金明细数据，资金账变是否有误</description>
+            <steps>
+                <step start="1576145270826" stop="1576145270923" status="passed">
+                    <name>moneyDetails5</name>
+                    <title>1.用户管理-会员列表，2.输入achy01会员查询；3.查看该会员资金明细</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="All Test Suite"/>
+                <label name="testGroup" value="平台管理员"/>
+                <label name="testClass" value="Backstage.admin.moneyDetails"/>
+                <label name="testMethod" value="moneyDetails5"/>
+                <label name="severity" value="blocker"/>
+                <label name="issue" value="http://10.1.101.66:890/index.php?m=testcase&amp;f=view&amp;caseID=45&amp;version=1"/>
+                <label name="story" value="会员列表-achy01会员资金明细"/>
+                <label name="feature" value="用户管理"/>
+                <label name="host" value="DESKTOP-8DI1090"/>
+                <label name="thread" value="3560@DESKTOP-8DI1090.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1576145270927" stop="1576145271021" status="passed">
+            <name>moneyDetails6</name>
+            <title>验证会员资金明细数据6</title>
+            <description type="text">测试achy01的资金明细数据，资金账变是否有误</description>
+            <steps>
+                <step start="1576145270927" stop="1576145271020" status="passed">
+                    <name>moneyDetails6</name>
+                    <title>1.用户管理-会员列表，2.输入achy01会员查询；3.查看该会员资金明细</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="All Test Suite"/>
+                <label name="testGroup" value="平台管理员"/>
+                <label name="testClass" value="Backstage.admin.moneyDetails"/>
+                <label name="testMethod" value="moneyDetails6"/>
+                <label name="severity" value="blocker"/>
+                <label name="issue" value="http://10.1.101.66:890/index.php?m=testcase&amp;f=view&amp;caseID=45&amp;version=1"/>
+                <label name="story" value="会员列表-achy01会员资金明细"/>
+                <label name="feature" value="用户管理"/>
+                <label name="host" value="DESKTOP-8DI1090"/>
+                <label name="thread" value="3560@DESKTOP-8DI1090.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1576145271023" stop="1576145271119" status="passed">
+            <name>moneyDetails7</name>
+            <title>验证会员资金明细数据7</title>
+            <description type="text">测试achy01的资金明细数据，资金账变是否有误</description>
+            <steps>
+                <step start="1576145271023" stop="1576145271118" status="passed">
+                    <name>moneyDetails7</name>
+                    <title>1.用户管理-会员列表，2.输入achy01会员查询；3.查看该会员资金明细</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="All Test Suite"/>
+                <label name="testGroup" value="平台管理员"/>
+                <label name="testClass" value="Backstage.admin.moneyDetails"/>
+                <label name="testMethod" value="moneyDetails7"/>
+                <label name="severity" value="blocker"/>
+                <label name="issue" value="http://10.1.101.66:890/index.php?m=testcase&amp;f=view&amp;caseID=45&amp;version=1"/>
+                <label name="story" value="会员列表-achy01会员资金明细"/>
+                <label name="feature" value="用户管理"/>
+                <label name="host" value="DESKTOP-8DI1090"/>
+                <label name="thread" value="3560@DESKTOP-8DI1090.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1576145271121" stop="1576145271221" status="failed">
+            <name>moneyDetails8</name>
+            <title>验证会员资金明细数据8</title>
+            <description type="text">测试achy01的资金明细数据，资金账变是否有误</description>
+            <failure>
+                <message>AssertionError: expected [true] but found [false]</message>
+                <stack-trace>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at Backstage.admin.moneyDetails.moneyDetails8(moneyDetails.java:369)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1191)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
+	at org.testng.TestNG.run(TestNG.java:1024)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:386)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:323)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
+</stack-trace>
+            </failure>
+            <steps>
+                <step start="1576145271121" stop="1576145271219" status="failed">
+                    <name>moneyDetails8</name>
+                    <title>1.用户管理-会员列表，2.输入achy01会员查询；3.查看该会员资金明细</title>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="All Test Suite"/>
+                <label name="testGroup" value="平台管理员"/>
+                <label name="testClass" value="Backstage.admin.moneyDetails"/>
+                <label name="testMethod" value="moneyDetails8"/>
+                <label name="severity" value="blocker"/>
+                <label name="issue" value="http://10.1.101.66:890/index.php?m=testcase&amp;f=view&amp;caseID=45&amp;version=1"/>
+                <label name="story" value="会员列表-achy01会员资金明细"/>
+                <label name="feature" value="用户管理"/>
+                <label name="host" value="DESKTOP-8DI1090"/>
+                <label name="thread" value="3560@DESKTOP-8DI1090.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1576145271222" stop="1576145271321" status="failed">
+            <name>moneyDetails9</name>
+            <title>验证会员资金明细数据9</title>
+            <description type="text">测试achy01的资金明细数据，资金账变是否有误</description>
+            <failure>
+                <message>AssertionError: expected [true] but found [false]</message>
+                <stack-trace>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at Backstage.admin.moneyDetails.moneyDetails9(moneyDetails.java:408)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1191)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
+	at org.testng.TestNG.run(TestNG.java:1024)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:386)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:323)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
+</stack-trace>
+            </failure>
+            <steps>
+                <step start="1576145271222" stop="1576145271320" status="failed">
+                    <name>moneyDetails9</name>
+                    <title>1.用户管理-会员列表，2.输入achy01会员查询；3.查看该会员资金明细</title>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="All Test Suite"/>
+                <label name="testGroup" value="平台管理员"/>
+                <label name="testClass" value="Backstage.admin.moneyDetails"/>
+                <label name="testMethod" value="moneyDetails9"/>
+                <label name="severity" value="blocker"/>
+                <label name="issue" value="http://10.1.101.66:890/index.php?m=testcase&amp;f=view&amp;caseID=45&amp;version=1"/>
+                <label name="story" value="会员列表-achy01会员资金明细"/>
+                <label name="feature" value="用户管理"/>
+                <label name="host" value="DESKTOP-8DI1090"/>
+                <label name="thread" value="3560@DESKTOP-8DI1090.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1576145271323" stop="1576145271417" status="passed">
+            <name>moneyDetails10</name>
+            <title>验证会员资金明细数据10</title>
+            <description type="text">测试achy01的资金明细数据，资金账变是否有误</description>
+            <steps>
+                <step start="1576145271324" stop="1576145271414" status="passed">
+                    <name>moneyDetails10</name>
+                    <title>1.用户管理-会员列表，2.输入achy01会员查询；3.查看该会员资金明细</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="All Test Suite"/>
+                <label name="testGroup" value="平台管理员"/>
+                <label name="testClass" value="Backstage.admin.moneyDetails"/>
+                <label name="testMethod" value="moneyDetails10"/>
+                <label name="severity" value="blocker"/>
+                <label name="issue" value="http://10.1.101.66:890/index.php?m=testcase&amp;f=view&amp;caseID=45&amp;version=1"/>
+                <label name="story" value="会员列表-achy01会员资金明细"/>
+                <label name="feature" value="用户管理"/>
+                <label name="host" value="DESKTOP-8DI1090"/>
+                <label name="thread" value="3560@DESKTOP-8DI1090.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1576145271418" stop="1576145271513" status="failed">
+            <name>moneyDetails11</name>
+            <title>验证会员资金明细数据12</title>
+            <description type="text">测试achy01的资金明细数据，资金账变是否有误</description>
+            <failure>
+                <message>AssertionError: expected [true] but found [false]</message>
+                <stack-trace>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at Backstage.admin.moneyDetails.moneyDetails11(moneyDetails.java:487)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1191)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
+	at org.testng.TestNG.run(TestNG.java:1024)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:386)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:323)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
+</stack-trace>
+            </failure>
+            <steps>
+                <step start="1576145271419" stop="1576145271511" status="failed">
+                    <name>moneyDetails11</name>
+                    <title>1.用户管理-会员列表，2.输入achy01会员查询；3.查看该会员资金明细</title>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="All Test Suite"/>
+                <label name="testGroup" value="平台管理员"/>
+                <label name="testClass" value="Backstage.admin.moneyDetails"/>
+                <label name="testMethod" value="moneyDetails11"/>
+                <label name="severity" value="blocker"/>
+                <label name="issue" value="http://10.1.101.66:890/index.php?m=testcase&amp;f=view&amp;caseID=45&amp;version=1"/>
+                <label name="story" value="会员列表-achy01会员资金明细"/>
+                <label name="feature" value="用户管理"/>
+                <label name="host" value="DESKTOP-8DI1090"/>
+                <label name="thread" value="3560@DESKTOP-8DI1090.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1576145271515" stop="1576145271711" status="failed">
+            <name>moneyDetails12</name>
+            <title>验证会员资金明细数据12</title>
+            <description type="text">测试achy01的资金明细数据，资金账变是否有误</description>
+            <failure>
+                <message>AssertionError: expected [true] but found [false]</message>
+                <stack-trace>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at Backstage.admin.moneyDetails.moneyDetails12(moneyDetails.java:526)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1191)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
+	at org.testng.TestNG.run(TestNG.java:1024)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:386)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:323)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
+</stack-trace>
+            </failure>
+            <steps>
+                <step start="1576145271516" stop="1576145271709" status="failed">
+                    <name>moneyDetails12</name>
+                    <title>1.用户管理-会员列表，2.输入achy01会员查询；3.查看该会员资金明细</title>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="All Test Suite"/>
+                <label name="testGroup" value="平台管理员"/>
+                <label name="testClass" value="Backstage.admin.moneyDetails"/>
+                <label name="testMethod" value="moneyDetails12"/>
+                <label name="severity" value="blocker"/>
+                <label name="issue" value="http://10.1.101.66:890/index.php?m=testcase&amp;f=view&amp;caseID=45&amp;version=1"/>
+                <label name="story" value="会员列表-achy01会员资金明细"/>
+                <label name="feature" value="用户管理"/>
+                <label name="host" value="DESKTOP-8DI1090"/>
+                <label name="thread" value="3560@DESKTOP-8DI1090.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1576145271712" stop="1576145271805" status="passed">
+            <name>moneyDetails13</name>
+            <title>验证会员资金明细数据13</title>
+            <description type="text">测试achy01的资金明细数据，资金账变是否有误</description>
+            <steps>
+                <step start="1576145271713" stop="1576145271804" status="passed">
+                    <name>moneyDetails13</name>
+                    <title>1.用户管理-会员列表，2.输入achy01会员查询；3.查看该会员资金明细</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="All Test Suite"/>
+                <label name="testGroup" value="平台管理员"/>
+                <label name="testClass" value="Backstage.admin.moneyDetails"/>
+                <label name="testMethod" value="moneyDetails13"/>
+                <label name="severity" value="blocker"/>
+                <label name="issue" value="http://10.1.101.66:890/index.php?m=testcase&amp;f=view&amp;caseID=45&amp;version=1"/>
+                <label name="story" value="会员列表-achy01会员资金明细"/>
+                <label name="feature" value="用户管理"/>
+                <label name="host" value="DESKTOP-8DI1090"/>
+                <label name="thread" value="3560@DESKTOP-8DI1090.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1576145271807" stop="1576145271904" status="passed">
+            <name>moneyDetails14</name>
+            <title>验证会员资金明细数据14</title>
+            <description type="text">测试achy01的资金明细数据，资金账变是否有误</description>
+            <steps>
+                <step start="1576145271807" stop="1576145271902" status="passed">
+                    <name>moneyDetails14</name>
+                    <title>1.用户管理-会员列表，2.输入achy01会员查询；3.查看该会员资金明细</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="All Test Suite"/>
+                <label name="testGroup" value="平台管理员"/>
+                <label name="testClass" value="Backstage.admin.moneyDetails"/>
+                <label name="testMethod" value="moneyDetails14"/>
+                <label name="severity" value="blocker"/>
+                <label name="issue" value="http://10.1.101.66:890/index.php?m=testcase&amp;f=view&amp;caseID=45&amp;version=1"/>
+                <label name="story" value="会员列表-achy01会员资金明细"/>
+                <label name="feature" value="用户管理"/>
+                <label name="host" value="DESKTOP-8DI1090"/>
+                <label name="thread" value="3560@DESKTOP-8DI1090.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1576145271905" stop="1576145272048" status="passed">
+            <name>moneyDetails15</name>
+            <title>验证会员资金明细数据15</title>
+            <description type="text">测试achy01的资金明细数据，资金账变是否有误</description>
+            <steps>
+                <step start="1576145271906" stop="1576145272045" status="passed">
+                    <name>moneyDetails15</name>
+                    <title>1.用户管理-会员列表，2.输入achy01会员查询；3.查看该会员资金明细</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="All Test Suite"/>
+                <label name="testGroup" value="平台管理员"/>
+                <label name="testClass" value="Backstage.admin.moneyDetails"/>
+                <label name="testMethod" value="moneyDetails15"/>
+                <label name="severity" value="blocker"/>
+                <label name="issue" value="http://10.1.101.66:890/index.php?m=testcase&amp;f=view&amp;caseID=45&amp;version=1"/>
+                <label name="story" value="会员列表-achy01会员资金明细"/>
+                <label name="feature" value="用户管理"/>
+                <label name="host" value="DESKTOP-8DI1090"/>
+                <label name="thread" value="3560@DESKTOP-8DI1090.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1576145272051" stop="1576145272195" status="failed">
+            <name>moneyDetails16</name>
+            <title>验证会员资金明细数据16</title>
+            <description type="text">测试achy01的资金明细数据，资金账变是否有误</description>
+            <failure>
+                <message>AssertionError: expected [true] but found [false]</message>
+                <stack-trace>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at Backstage.admin.moneyDetails.moneyDetails16(moneyDetails.java:677)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1191)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
+	at org.testng.TestNG.run(TestNG.java:1024)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:386)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:323)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
+</stack-trace>
+            </failure>
+            <steps>
+                <step start="1576145272052" stop="1576145272192" status="failed">
+                    <name>moneyDetails16</name>
+                    <title>1.用户管理-会员列表，2.输入achy01会员查询；3.查看该会员资金明细</title>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="All Test Suite"/>
+                <label name="testGroup" value="平台管理员"/>
+                <label name="testClass" value="Backstage.admin.moneyDetails"/>
+                <label name="testMethod" value="moneyDetails16"/>
+                <label name="severity" value="blocker"/>
+                <label name="issue" value="http://10.1.101.66:890/index.php?m=testcase&amp;f=view&amp;caseID=45&amp;version=1"/>
+                <label name="story" value="会员列表-achy01会员资金明细"/>
+                <label name="feature" value="用户管理"/>
+                <label name="host" value="DESKTOP-8DI1090"/>
+                <label name="thread" value="3560@DESKTOP-8DI1090.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1576145272198" stop="1576145272355" status="failed">
+            <name>moneyDetails17</name>
+            <title>验证会员资金明细数据17</title>
+            <description type="text">测试achy01的资金明细数据，资金账变是否有误</description>
+            <failure>
+                <message>AssertionError: expected [true] but found [false]</message>
+                <stack-trace>java.lang.AssertionError: expected [true] but found [false]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertTrue(Assert.java:42)
+	at org.testng.Assert.assertTrue(Assert.java:52)
+	at Backstage.admin.moneyDetails.moneyDetails17(moneyDetails.java:714)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1191)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
+	at org.testng.TestNG.run(TestNG.java:1024)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:386)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:323)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
+</stack-trace>
+            </failure>
+            <steps>
+                <step start="1576145272200" stop="1576145272353" status="failed">
+                    <name>moneyDetails17</name>
+                    <title>1.用户管理-会员列表，2.输入achy01会员查询；3.查看该会员资金明细</title>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="All Test Suite"/>
+                <label name="testGroup" value="平台管理员"/>
+                <label name="testClass" value="Backstage.admin.moneyDetails"/>
+                <label name="testMethod" value="moneyDetails17"/>
+                <label name="severity" value="blocker"/>
+                <label name="issue" value="http://10.1.101.66:890/index.php?m=testcase&amp;f=view&amp;caseID=45&amp;version=1"/>
+                <label name="story" value="会员列表-achy01会员资金明细"/>
+                <label name="feature" value="用户管理"/>
+                <label name="host" value="DESKTOP-8DI1090"/>
+                <label name="thread" value="3560@DESKTOP-8DI1090.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1576145272357" stop="1576145272462" status="passed">
+            <name>moneyDetails18</name>
+            <title>验证会员资金明细数据18</title>
+            <description type="text">测试achy01的资金明细数据，资金账变是否有误</description>
+            <steps>
+                <step start="1576145272357" stop="1576145272458" status="passed">
+                    <name>moneyDetails18</name>
+                    <title>1.用户管理-会员列表，2.输入achy01会员查询；3.查看该会员资金明细</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="All Test Suite"/>
+                <label name="testGroup" value="平台管理员"/>
+                <label name="testClass" value="Backstage.admin.moneyDetails"/>
+                <label name="testMethod" value="moneyDetails18"/>
+                <label name="severity" value="blocker"/>
+                <label name="issue" value="http://10.1.101.66:890/index.php?m=testcase&amp;f=view&amp;caseID=45&amp;version=1"/>
+                <label name="story" value="会员列表-achy01会员资金明细"/>
+                <label name="feature" value="用户管理"/>
+                <label name="host" value="DESKTOP-8DI1090"/>
+                <label name="thread" value="3560@DESKTOP-8DI1090.main(1)"/>
+            </labels>
+        </test-case>
+        <test-case start="1576145272465" stop="1576145272558" status="passed">
+            <name>moneyDetails19</name>
+            <title>验证会员资金明细数据19</title>
+            <description type="text">测试achy01的资金明细数据，资金账变是否有误</description>
+            <steps>
+                <step start="1576145272466" stop="1576145272557" status="passed">
+                    <name>moneyDetails19</name>
+                    <title>1.用户管理-会员列表，2.输入achy01会员查询；3.查看该会员资金明细</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="All Test Suite"/>
+                <label name="testGroup" value="平台管理员"/>
+                <label name="testClass" value="Backstage.admin.moneyDetails"/>
+                <label name="testMethod" value="moneyDetails19"/>
+                <label name="severity" value="blocker"/>
+                <label name="issue" value="http://10.1.101.66:890/index.php?m=testcase&amp;f=view&amp;caseID=45&amp;version=1"/>
+                <label name="story" value="会员列表-achy01会员资金明细"/>
+                <label name="feature" value="用户管理"/>
+                <label name="host" value="DESKTOP-8DI1090"/>
+                <label name="thread" value="3560@DESKTOP-8DI1090.main(1)"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="framework" value="TestNG"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>

@@ -59,7 +59,7 @@ public class UserManagement {
             //判断是否一致
             Assertion.setFlag(true);
             Assertion.verifyEquals(getAgentNumber, getAgentNumberPage1);
-         //   Assert.assertTrue(Assertion.currentFlag());
+            Assert.assertTrue(Assertion.currentFlag());
         }
 
 
@@ -98,7 +98,7 @@ public class UserManagement {
             //判断是否一致
             Assertion.setFlag(true);
             Assertion.verifyEquals(getVipNumber, getVipNumberPage1);
-         //   Assert.assertTrue(Assertion.currentFlag());
+            Assert.assertTrue(Assertion.currentFlag());
         }
 
 
@@ -138,7 +138,7 @@ public class UserManagement {
             //判断是否一致
             Assertion.setFlag(true);
             Assertion.verifyEquals(getAgentListVipNumber, agentListVipNumberPage1);
-          //  Assert.assertTrue(Assertion.currentFlag());
+            Assert.assertTrue(Assertion.currentFlag());
 
         }
 
@@ -176,7 +176,7 @@ public class UserManagement {
             //判断踢出后弹窗文本是否一致
             Assertion.setFlag(true);
             Assertion.verifyEquals(getSuccess,"踢出成功!");
-         //   Assert.assertTrue(Assertion.currentFlag());
+            Assert.assertTrue(Assertion.currentFlag());
         }
 
 
@@ -210,7 +210,7 @@ public class UserManagement {
             //判断是否踢出成功
             Assertion.setFlag(true);
             Assertion.verifyEquals(getAgentSuccess,"踢出成功!");
-          //  Assert.assertTrue(Assertion.currentFlag());
+            Assert.assertTrue(Assertion.currentFlag());
             Thread.sleep(2000);
 
         }
