@@ -19,7 +19,7 @@ public class panel {
 
     WebDriverUtil driverUtil = new WebDriverUtil(null);
 
-    String URL = "http://10.1.101.121:8703/?#/login?redirect=%2F";
+    String URL = "http://10.1.101.124:8653/";
     String login = "//*[@id=\"app\"]/div/div/form/div[4]/div/div/button/span";
 
     @BeforeTest

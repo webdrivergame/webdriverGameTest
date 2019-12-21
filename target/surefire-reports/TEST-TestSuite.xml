@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="211.364" tests="61" errors="0" skipped="0" failures="30">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="TestSuite" time="227.129" tests="61" errors="0" skipped="0" failures="23">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_231\jre\bin"/>
@@ -64,12 +64,12 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="playerNumber" classname="Backstage.admin.panel" time="2.667"/>
-  <testcase name="notesNumber" classname="Backstage.admin.panel" time="5.57">
+  <testcase name="playerNumber" classname="Backstage.admin.panel" time="2.567"/>
+  <testcase name="notesNumber" classname="Backstage.admin.panel" time="5.399">
     <failure message="expected [true] but found [false]" type="java.lang.AssertionError">java.lang.AssertionError: expected [true] but found [false]
 	at Backstage.admin.panel.notesNumber(panel.java:115)
 </failure>
-    <system-err><![CDATA[java.lang.AssertionError: expected [545398] but found [214961]
+    <system-err><![CDATA[java.lang.AssertionError: expected [545510] but found [214979]
 	at org.testng.Assert.fail(Assert.java:94)
 	at org.testng.Assert.failNotEquals(Assert.java:496)
 	at org.testng.Assert.assertEquals(Assert.java:125)
@@ -105,16 +105,16 @@
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
 ]]></system-err>
   </testcase>
-  <testcase name="agentNumber" classname="Backstage.admin.UserManagement" time="4.306"/>
-  <testcase name="vipNumber" classname="Backstage.admin.UserManagement" time="3.625">
+  <testcase name="agentNumber" classname="Backstage.admin.UserManagement" time="4.366"/>
+  <testcase name="vipNumber" classname="Backstage.admin.UserManagement" time="3.722">
     <failure message="expected [true] but found [false]" type="java.lang.AssertionError">java.lang.AssertionError: expected [true] but found [false]
 	at Backstage.admin.UserManagement.vipNumber(UserManagement.java:101)
 </failure>
     <system-out><![CDATA[验证总代理列表会员数数量
-总代理列表会员数：643
-跳转页面会员数量：680
+总代理列表会员数：644
+跳转页面会员数量：681
 ]]></system-out>
-    <system-err><![CDATA[java.lang.AssertionError: expected [680] but found [643]
+    <system-err><![CDATA[java.lang.AssertionError: expected [681] but found [644]
 	at org.testng.Assert.fail(Assert.java:94)
 	at org.testng.Assert.failNotEquals(Assert.java:496)
 	at org.testng.Assert.assertEquals(Assert.java:125)
@@ -150,59 +150,32 @@
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
 ]]></system-err>
   </testcase>
-  <testcase name="agentVipNumber" classname="Backstage.admin.UserManagement" time="3.533"/>
-  <testcase name="onlinePlayer" classname="Backstage.admin.UserManagement" time="2.824"/>
-  <testcase name="ReconciliationVip" classname="Backstage.admin.FinanceManagement" time="3.658">
-    <failure message="expected [true] but found [false]" type="java.lang.AssertionError">java.lang.AssertionError: expected [true] but found [false]
-	at Backstage.admin.FinanceManagement.ReconciliationVip(FinanceManagement.java:98)
+  <testcase name="agentVipNumber" classname="Backstage.admin.UserManagement" time="3.515"/>
+  <testcase name="onlinePlayer" classname="Backstage.admin.UserManagement" time="12.245">
+    <failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&quot;app&quot;]/div/div[2]/section/div/div[2]/div[1]/div[3]/table/tbody/tr[1]/td[11]/div/button/span&quot;}&#10;  (Session info: chrome=78.0.3904.97)&#10;  (Driver info: chromedriver=78.0.3904.70 (edb9c9f3de0247fd912a77b7f6cae7447f6d3ad5-refs/branch-heads/3904@{#800}),platform=Windows NT 10.0.18363 x86_64) (WARNING: The server did not provide any stacktrace information)&#10;Command duration or timeout: 10.05 seconds&#10;For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: &apos;3.0.0&apos;, revision: &apos;350cf60&apos;, time: &apos;2016-10-13 10:48:57 -0700&apos;&#10;System info: host: &apos;DESKTOP-8DI1090&apos;, ip: &apos;10.1.101.3&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_231&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:50320}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=78.0.3904.70 (edb9c9f3de0247fd912a77b7f6cae7447f6d3ad5-refs/branch-heads/3904@{#800}), userDataDir=C:\Users\Owner\AppData\Local\Temp\scoped_dir5656_1867398772}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=78.0.3904.97, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]&#10;Session ID: 1f7b0a126d48ed88aad89eef13367101&#10;*** Element info: {Using=xpath, value=//*[@id=&quot;app&quot;]/div/div[2]/section/div/div[2]/div[1]/div[3]/table/tbody/tr[1]/td[11]/div/button/span}" type="org.openqa.selenium.NoSuchElementException">org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="app"]/div/div[2]/section/div/div[2]/div[1]/div[3]/table/tbody/tr[1]/td[11]/div/button/span"}
+  (Session info: chrome=78.0.3904.97)
+  (Driver info: chromedriver=78.0.3904.70 (edb9c9f3de0247fd912a77b7f6cae7447f6d3ad5-refs/branch-heads/3904@{#800}),platform=Windows NT 10.0.18363 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 10.05 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.0.0', revision: '350cf60', time: '2016-10-13 10:48:57 -0700'
+System info: host: 'DESKTOP-8DI1090', ip: '10.1.101.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_231'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:50320}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=78.0.3904.70 (edb9c9f3de0247fd912a77b7f6cae7447f6d3ad5-refs/branch-heads/3904@{#800}), userDataDir=C:\Users\Owner\AppData\Local\Temp\scoped_dir5656_1867398772}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=78.0.3904.97, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 1f7b0a126d48ed88aad89eef13367101
+*** Element info: {Using=xpath, value=//*[@id="app"]/div/div[2]/section/div/div[2]/div[1]/div[3]/table/tbody/tr[1]/td[11]/div/button/span}
+	at Backstage.admin.UserManagement.onlinePlayer(UserManagement.java:168)
 </failure>
-    <system-out><![CDATA[验证会员对账差别金额数据第一条
-计算会员对账差别金额 = 3683980310.190-3639112773.090-3656.000-50502468.120-880356.250+0+6508943.280-0-0
-页面会员对账差别金额：-10000.000
-]]></system-out>
-    <system-err><![CDATA[java.lang.AssertionError: expected [-10000.000] but found [-9999.990]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:496)
-	at org.testng.Assert.assertEquals(Assert.java:125)
-	at org.testng.Assert.assertEquals(Assert.java:167)
-	at ListenerPackage.Assertion.verifyEquals(Assertion.java:32)
-	at Backstage.admin.FinanceManagement.ReconciliationVip(FinanceManagement.java:97)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:774)
-	at org.testng.TestRunner.run(TestRunner.java:624)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1191)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
-	at org.testng.TestNG.run(TestNG.java:1024)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
-	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
-	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:386)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:323)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
-]]></system-err>
   </testcase>
-  <testcase name="ReconciliationVip2" classname="Backstage.admin.FinanceManagement" time="0.278">
+  <testcase name="ReconciliationVip" classname="Backstage.admin.FinanceManagement" time="3.59"/>
+  <testcase name="ReconciliationVip2" classname="Backstage.admin.FinanceManagement" time="0.276"/>
+  <testcase name="ReconciliationVip3" classname="Backstage.admin.FinanceManagement" time="0.369">
     <failure message="expected [true] but found [false]" type="java.lang.AssertionError">java.lang.AssertionError: expected [true] but found [false]
-	at Backstage.admin.FinanceManagement.ReconciliationVip2(FinanceManagement.java:158)
+	at Backstage.admin.FinanceManagement.ReconciliationVip3(FinanceManagement.java:218)
 </failure>
     <system-out><![CDATA[验证对账差别金额第二条
-计算会员对账差别金额2 = 3639112773.090-3639110765.440-0-2000.000--24.880+0+0-0-21.650=10.880
-页面会员对账差别金额2：10.870
+计算会员对账差别金额3 = 3639112773.090-3639110765.440-0-2000.000--24.880+0+0-0-21.650=10.880
+页面会员对账差别金额3：10.870
 ]]></system-out>
     <system-err><![CDATA[java.lang.AssertionError: expected [10.870] but found [10.880]
 	at org.testng.Assert.fail(Assert.java:94)
@@ -210,7 +183,7 @@
 	at org.testng.Assert.assertEquals(Assert.java:125)
 	at org.testng.Assert.assertEquals(Assert.java:167)
 	at ListenerPackage.Assertion.verifyEquals(Assertion.java:32)
-	at Backstage.admin.FinanceManagement.ReconciliationVip2(FinanceManagement.java:157)
+	at Backstage.admin.FinanceManagement.ReconciliationVip3(FinanceManagement.java:217)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -240,20 +213,19 @@
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
 ]]></system-err>
   </testcase>
-  <testcase name="ReconciliationVip3" classname="Backstage.admin.FinanceManagement" time="0.183"/>
-  <testcase name="ReconciliationAgent1" classname="Backstage.admin.FinanceManagement" time="1.511"/>
-  <testcase name="ReconciliationAgent2" classname="Backstage.admin.FinanceManagement" time="3.344"/>
-  <testcase name="vipNumberToday" classname="Backstage.admin.ReportManagement" time="6.85"/>
-  <testcase name="countTotal" classname="Backstage.admin.ReportManagement" time="4.741"/>
-  <testcase name="betMoneyAgentTotal" classname="Backstage.admin.ReportManagement" time="4.766">
+  <testcase name="ReconciliationAgent1" classname="Backstage.admin.FinanceManagement" time="1.259"/>
+  <testcase name="ReconciliationAgent2" classname="Backstage.admin.FinanceManagement" time="3.256"/>
+  <testcase name="vipNumberToday" classname="Backstage.admin.ReportManagement" time="6.548"/>
+  <testcase name="countTotal" classname="Backstage.admin.ReportManagement" time="4.516"/>
+  <testcase name="betMoneyAgentTotal" classname="Backstage.admin.ReportManagement" time="4.825">
     <failure message="expected [true] but found [false]" type="java.lang.AssertionError">java.lang.AssertionError: expected [true] but found [false]
 	at Backstage.admin.ReportManagement.betMoneyAgentTotal(ReportManagement.java:129)
 </failure>
     <system-out><![CDATA[验证总代理报表本月投注金额
-总代理列表本月投注金额：1662010
-代理列表本月投注金额：1662010.000
+总代理列表本月投注金额：2135937
+代理列表本月投注金额：2135937.000
 ]]></system-out>
-    <system-err><![CDATA[java.lang.AssertionError: expected [1662010.000] but found [1662010]
+    <system-err><![CDATA[java.lang.AssertionError: expected [2135937.000] but found [2135937]
 	at org.testng.Assert.fail(Assert.java:94)
 	at org.testng.Assert.failNotEquals(Assert.java:496)
 	at org.testng.Assert.assertEquals(Assert.java:125)
@@ -289,20 +261,20 @@
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
 ]]></system-err>
   </testcase>
-  <testcase name="winBetMoneyAgentTotal" classname="Backstage.admin.ReportManagement" time="4.622"/>
-  <testcase name="serviceChargeAgentTotal" classname="Backstage.admin.ReportManagement" time="4.756"/>
-  <testcase name="waterBreakAgentTotal" classname="Backstage.admin.ReportManagement" time="4.836"/>
-  <testcase name="oddsMoneyAgentTotal" classname="Backstage.admin.ReportManagement" time="4.674"/>
-  <testcase name="loseWinAgentTotal" classname="Backstage.admin.ReportManagement" time="4.724"/>
-  <testcase name="waterBreakPracticeAgentTotal" classname="Backstage.admin.ReportManagement" time="5.911">
+  <testcase name="winBetMoneyAgentTotal" classname="Backstage.admin.ReportManagement" time="4.453"/>
+  <testcase name="serviceChargeAgentTotal" classname="Backstage.admin.ReportManagement" time="4.633"/>
+  <testcase name="waterBreakAgentTotal" classname="Backstage.admin.ReportManagement" time="4.717"/>
+  <testcase name="oddsMoneyAgentTotal" classname="Backstage.admin.ReportManagement" time="4.684"/>
+  <testcase name="loseWinAgentTotal" classname="Backstage.admin.ReportManagement" time="4.707"/>
+  <testcase name="waterBreakPracticeAgentTotal" classname="Backstage.admin.ReportManagement" time="5.859">
     <failure message="expected [true] but found [false]" type="java.lang.AssertionError">java.lang.AssertionError: expected [true] but found [false]
 	at Backstage.admin.ReportManagement.waterBreakPracticeAgentTotal(ReportManagement.java:342)
 </failure>
     <system-out><![CDATA[验证总代理报表本月实际退水金额
-总代理列表本月实际退水金额：8333.440
+总代理列表本月实际退水金额：10703.075
 代理列表本月实际退水金额：
 ]]></system-out>
-    <system-err><![CDATA[java.lang.AssertionError: expected [] but found [8333.440]
+    <system-err><![CDATA[java.lang.AssertionError: expected [] but found [10703.075]
 	at org.testng.Assert.fail(Assert.java:94)
 	at org.testng.Assert.failNotEquals(Assert.java:496)
 	at org.testng.Assert.assertEquals(Assert.java:125)
@@ -338,15 +310,15 @@
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
 ]]></system-err>
   </testcase>
-  <testcase name="loseWinAndWaterAgentTotal" classname="Backstage.admin.ReportManagement" time="5.686">
+  <testcase name="loseWinAndWaterAgentTotal" classname="Backstage.admin.ReportManagement" time="5.656">
     <failure message="expected [true] but found [false]" type="java.lang.AssertionError">java.lang.AssertionError: expected [true] but found [false]
 	at Backstage.admin.ReportManagement.loseWinAndWaterAgentTotal(ReportManagement.java:378)
 </failure>
     <system-out><![CDATA[验证总代理报表本月实际输赢(包括退水)金额
-总代理列表本月实际输赢(包括退水)金额：882920.914
+总代理列表本月实际输赢(包括退水)金额：871952.959
 代理列表本月实际输赢(包括退水)金额：
 ]]></system-out>
-    <system-err><![CDATA[java.lang.AssertionError: expected [] but found [882920.914]
+    <system-err><![CDATA[java.lang.AssertionError: expected [] but found [871952.959]
 	at org.testng.Assert.fail(Assert.java:94)
 	at org.testng.Assert.failNotEquals(Assert.java:496)
 	at org.testng.Assert.assertEquals(Assert.java:125)
@@ -382,16 +354,16 @@
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
 ]]></system-err>
   </testcase>
-  <testcase name="vipNumberAgent" classname="Backstage.admin.ReportManagement" time="3.502"/>
-  <testcase name="rechargeMoneyAgent" classname="Backstage.admin.ReportManagement" time="4.413">
+  <testcase name="vipNumberAgent" classname="Backstage.admin.ReportManagement" time="3.718"/>
+  <testcase name="rechargeMoneyAgent" classname="Backstage.admin.ReportManagement" time="4.283">
     <failure message="expected [true] but found [false]" type="java.lang.AssertionError">java.lang.AssertionError: expected [true] but found [false]
 	at Backstage.admin.ReportManagement.rechargeMoneyAgent(ReportManagement.java:458)
 </failure>
     <system-out><![CDATA[验证代理报表本月充值金额
-代理报表本月充值金额：50539204.000
-会员报表本月充值金额：50539104.000
+代理报表本月充值金额：50541104.000
+会员报表本月充值金额：50541004.000
 ]]></system-out>
-    <system-err><![CDATA[java.lang.AssertionError: expected [50539104.000] but found [50539204.000]
+    <system-err><![CDATA[java.lang.AssertionError: expected [50541004.000] but found [50541104.000]
 	at org.testng.Assert.fail(Assert.java:94)
 	at org.testng.Assert.failNotEquals(Assert.java:496)
 	at org.testng.Assert.assertEquals(Assert.java:125)
@@ -427,15 +399,15 @@
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
 ]]></system-err>
   </testcase>
-  <testcase name="countAgent" classname="Backstage.admin.ReportManagement" time="4.275">
+  <testcase name="countAgent" classname="Backstage.admin.ReportManagement" time="4.228">
     <failure message="expected [true] but found [false]" type="java.lang.AssertionError">java.lang.AssertionError: expected [true] but found [false]
 	at Backstage.admin.ReportManagement.countAgent(ReportManagement.java:494)
 </failure>
     <system-out><![CDATA[验证代理报表本月充值笔数
-代理报表本月充值笔数：1356
-会员报表本月充值笔数总计：1356.000
+代理报表本月充值笔数：1834
+会员报表本月充值笔数总计：1834.000
 ]]></system-out>
-    <system-err><![CDATA[java.lang.AssertionError: expected [1356.000] but found [1356]
+    <system-err><![CDATA[java.lang.AssertionError: expected [1834.000] but found [1834]
 	at org.testng.Assert.fail(Assert.java:94)
 	at org.testng.Assert.failNotEquals(Assert.java:496)
 	at org.testng.Assert.assertEquals(Assert.java:125)
@@ -471,15 +443,15 @@
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
 ]]></system-err>
   </testcase>
-  <testcase name="betMoneyAgentReport" classname="Backstage.admin.ReportManagement" time="4.005">
+  <testcase name="betMoneyAgentReport" classname="Backstage.admin.ReportManagement" time="4.083">
     <failure message="expected [true] but found [false]" type="java.lang.AssertionError">java.lang.AssertionError: expected [true] but found [false]
 	at Backstage.admin.ReportManagement.betMoneyAgentReport(ReportManagement.java:530)
 </failure>
     <system-out><![CDATA[验证代理报表本月投注金额
-代理报表本月充值笔数：1661924
-会员报表本月充值笔数总计：1661924.000
+代理报表本月充值笔数：2135851
+会员报表本月充值笔数总计：2135851.000
 ]]></system-out>
-    <system-err><![CDATA[java.lang.AssertionError: expected [1661924.000] but found [1661924]
+    <system-err><![CDATA[java.lang.AssertionError: expected [2135851.000] but found [2135851]
 	at org.testng.Assert.fail(Assert.java:94)
 	at org.testng.Assert.failNotEquals(Assert.java:496)
 	at org.testng.Assert.assertEquals(Assert.java:125)
@@ -515,18 +487,18 @@
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
 ]]></system-err>
   </testcase>
-  <testcase name="winBetMoneyAgentReport" classname="Backstage.admin.ReportManagement" time="4.119"/>
-  <testcase name="serviceMoneyAgent" classname="Backstage.admin.ReportManagement" time="4.14"/>
-  <testcase name="oddsAgent" classname="Backstage.admin.ReportManagement" time="4.168"/>
-  <testcase name="waterBreakMoneyAgent" classname="Backstage.admin.ReportManagement" time="4.19">
+  <testcase name="winBetMoneyAgentReport" classname="Backstage.admin.ReportManagement" time="4.055"/>
+  <testcase name="serviceMoneyAgent" classname="Backstage.admin.ReportManagement" time="4.175"/>
+  <testcase name="oddsAgent" classname="Backstage.admin.ReportManagement" time="4.14"/>
+  <testcase name="waterBreakMoneyAgent" classname="Backstage.admin.ReportManagement" time="4.284">
     <failure message="expected [true] but found [false]" type="java.lang.AssertionError">java.lang.AssertionError: expected [true] but found [false]
 	at Backstage.admin.ReportManagement.waterBreakMoneyAgent(ReportManagement.java:674)
 </failure>
     <system-out><![CDATA[验证代理报表本月代理退水金额
 代理报表本月代理退水金额：0
-会员报表本月代理退水金额：8333.010
+会员报表本月代理退水金额：10702.645
 ]]></system-out>
-    <system-err><![CDATA[java.lang.AssertionError: expected [8333.010] but found [0]
+    <system-err><![CDATA[java.lang.AssertionError: expected [10702.645] but found [0]
 	at org.testng.Assert.fail(Assert.java:94)
 	at org.testng.Assert.failNotEquals(Assert.java:496)
 	at org.testng.Assert.assertEquals(Assert.java:125)
@@ -562,16 +534,16 @@
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
 ]]></system-err>
   </testcase>
-  <testcase name="winLoseNotWaterAgent" classname="Backstage.admin.ReportManagement" time="3.999"/>
-  <testcase name="winLoseWaterAgent" classname="Backstage.admin.ReportManagement" time="5.365">
+  <testcase name="winLoseNotWaterAgent" classname="Backstage.admin.ReportManagement" time="3.897"/>
+  <testcase name="winLoseWaterAgent" classname="Backstage.admin.ReportManagement" time="5.201">
     <failure message="expected [true] but found [false]" type="java.lang.AssertionError">java.lang.AssertionError: expected [true] but found [false]
 	at Backstage.admin.ReportManagement.winLoseWaterAgent(ReportManagement.java:746)
 </failure>
     <system-out><![CDATA[验证代理报表本月实际输赢（包括退水）
-代理报表本月实际输赢（包括退水）：882871.094
+代理报表本月实际输赢（包括退水）：882606.214
 会员报表本月实际输赢（包括退水）：
 ]]></system-out>
-    <system-err><![CDATA[java.lang.AssertionError: expected [] but found [882871.094]
+    <system-err><![CDATA[java.lang.AssertionError: expected [] but found [882606.214]
 	at org.testng.Assert.fail(Assert.java:94)
 	at org.testng.Assert.failNotEquals(Assert.java:496)
 	at org.testng.Assert.assertEquals(Assert.java:125)
@@ -607,15 +579,15 @@
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
 ]]></system-err>
   </testcase>
-  <testcase name="waterBreakMoneyActivityAgent" classname="Backstage.admin.ReportManagement" time="5.009">
+  <testcase name="waterBreakMoneyActivityAgent" classname="Backstage.admin.ReportManagement" time="5.033">
     <failure message="expected [true] but found [false]" type="java.lang.AssertionError">java.lang.AssertionError: expected [true] but found [false]
 	at Backstage.admin.ReportManagement.waterBreakMoneyActivityAgent(ReportManagement.java:781)
 </failure>
     <system-out><![CDATA[验证代理报表本月实际退水金额
-代理报表本月实际退水金额：8333.010
+代理报表本月实际退水金额：10702.645
 会员报表本月实际退水金额：
 ]]></system-out>
-    <system-err><![CDATA[java.lang.AssertionError: expected [] but found [8333.010]
+    <system-err><![CDATA[java.lang.AssertionError: expected [] but found [10702.645]
 	at org.testng.Assert.fail(Assert.java:94)
 	at org.testng.Assert.failNotEquals(Assert.java:496)
 	at org.testng.Assert.assertEquals(Assert.java:125)
@@ -651,7 +623,7 @@
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
 ]]></system-err>
   </testcase>
-  <testcase name="rechargeMoneyVip" classname="Backstage.admin.ReportManagement" time="10.063">
+  <testcase name="rechargeMoneyVip" classname="Backstage.admin.ReportManagement" time="10.149">
     <failure message="expected [true] but found [false]" type="java.lang.AssertionError">java.lang.AssertionError: expected [true] but found [false]
 	at Backstage.admin.ReportManagement.rechargeMoneyVip(ReportManagement.java:837)
 </failure>
@@ -695,15 +667,15 @@
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
 ]]></system-err>
   </testcase>
-  <testcase name="withdrawMoneyVip" classname="Backstage.admin.ReportManagement" time="11.559">
+  <testcase name="withdrawMoneyVip" classname="Backstage.admin.ReportManagement" time="11.085">
     <failure message="expected [true] but found [false]" type="java.lang.AssertionError">java.lang.AssertionError: expected [true] but found [false]
 	at Backstage.admin.ReportManagement.withdrawMoneyVip(ReportManagement.java:888)
 </failure>
     <system-out><![CDATA[验证会员报表本月提现金额
-会员报表会员提现金额：12865.560
+会员报表会员提现金额：13065.560
 提现记录提现总计：
 ]]></system-out>
-    <system-err><![CDATA[java.lang.AssertionError: expected [] but found [12865.560]
+    <system-err><![CDATA[java.lang.AssertionError: expected [] but found [13065.560]
 	at org.testng.Assert.fail(Assert.java:94)
 	at org.testng.Assert.failNotEquals(Assert.java:496)
 	at org.testng.Assert.assertEquals(Assert.java:125)
@@ -739,7 +711,7 @@
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
 ]]></system-err>
   </testcase>
-  <testcase name="betNumber" classname="Backstage.admin.ReportManagement" time="12.651">
+  <testcase name="betNumber" classname="Backstage.admin.ReportManagement" time="12.67">
     <failure message="expected [true] but found [false]" type="java.lang.AssertionError">java.lang.AssertionError: expected [true] but found [false]
 	at Backstage.admin.ReportManagement.betNumber(ReportManagement.java:931)
 </failure>
@@ -749,7 +721,7 @@
 成功切换到：注单明细
 投注详情页投注笔数：共35条记录 第1 / 1页
 ]]></system-out>
-    <system-err><![CDATA[[1576145244.022][WARNING]: Timed out connecting to Chrome, retrying...
+    <system-err><![CDATA[[1576289016.259][WARNING]: Timed out connecting to Chrome, retrying...
 java.lang.AssertionError: expected [35] but found [37]
 	at org.testng.Assert.fail(Assert.java:94)
 	at org.testng.Assert.failNotEquals(Assert.java:496)
@@ -786,7 +758,7 @@ java.lang.AssertionError: expected [35] but found [37]
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
 ]]></system-err>
   </testcase>
-  <testcase name="betMoney" classname="Backstage.admin.ReportManagement" time="3.297">
+  <testcase name="betMoney" classname="Backstage.admin.ReportManagement" time="3.206">
     <failure message="expected [true] but found [false]" type="java.lang.AssertionError">java.lang.AssertionError: expected [true] but found [false]
 	at Backstage.admin.ReportManagement.betMoney(ReportManagement.java:963)
 </failure>
@@ -833,36 +805,22 @@ java.lang.AssertionError: expected [35] but found [37]
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
 ]]></system-err>
   </testcase>
-  <testcase name="rechargeDiscount" classname="Backstage.admin.ReportManagement" time="5.762"/>
-  <testcase name="agentMoney" classname="Backstage.admin.ReportManagement" time="0.373">
-    <failure message="element click intercepted: Element &lt;span&gt;...&lt;/span&gt; is not clickable at point (78, 325). Other element would receive the click: &lt;div class=&quot;el-submenu__title&quot; style=&quot;padding-left: 20px; color: rgb(191, 203, 217); background-color: rgb(48, 65, 86);&quot;&gt;...&lt;/div&gt;&#10;  (Session info: chrome=78.0.3904.97)&#10;  (Driver info: chromedriver=78.0.3904.70 (edb9c9f3de0247fd912a77b7f6cae7447f6d3ad5-refs/branch-heads/3904@{#800}),platform=Windows NT 10.0.18363 x86_64) (WARNING: The server did not provide any stacktrace information)&#10;Command duration or timeout: 139 milliseconds&#10;Build info: version: &apos;3.0.0&apos;, revision: &apos;350cf60&apos;, time: &apos;2016-10-13 10:48:57 -0700&apos;&#10;System info: host: &apos;DESKTOP-8DI1090&apos;, ip: &apos;10.1.101.3&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_231&apos;&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:54636}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=78.0.3904.70 (edb9c9f3de0247fd912a77b7f6cae7447f6d3ad5-refs/branch-heads/3904@{#800}), userDataDir=C:\Users\Owner\AppData\Local\Temp\scoped_dir2108_2065501313}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=78.0.3904.97, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]&#10;Session ID: e221ed1dfd258ef4b02a34886400bb1f" type="org.openqa.selenium.WebDriverException"><![CDATA[org.openqa.selenium.WebDriverException: 
-element click intercepted: Element <span>...</span> is not clickable at point (78, 325). Other element would receive the click: <div class="el-submenu__title" style="padding-left: 20px; color: rgb(191, 203, 217); background-color: rgb(48, 65, 86);">...</div>
-  (Session info: chrome=78.0.3904.97)
-  (Driver info: chromedriver=78.0.3904.70 (edb9c9f3de0247fd912a77b7f6cae7447f6d3ad5-refs/branch-heads/3904@{#800}),platform=Windows NT 10.0.18363 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 139 milliseconds
-Build info: version: '3.0.0', revision: '350cf60', time: '2016-10-13 10:48:57 -0700'
-System info: host: 'DESKTOP-8DI1090', ip: '10.1.101.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_231'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:54636}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=78.0.3904.70 (edb9c9f3de0247fd912a77b7f6cae7447f6d3ad5-refs/branch-heads/3904@{#800}), userDataDir=C:\Users\Owner\AppData\Local\Temp\scoped_dir2108_2065501313}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=78.0.3904.97, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
-Session ID: e221ed1dfd258ef4b02a34886400bb1f
-	at Backstage.admin.ReportManagement.agentMoney(ReportManagement.java:1022)
-]]></failure>
-  </testcase>
-  <testcase name="agentWater" classname="Backstage.admin.ReportManagement" time="0.202">
+  <testcase name="rechargeDiscount" classname="Backstage.admin.ReportManagement" time="6.312"/>
+  <testcase name="agentMoney" classname="Backstage.admin.ReportManagement" time="6.215">
     <failure message="expected [true] but found [false]" type="java.lang.AssertionError">java.lang.AssertionError: expected [true] but found [false]
-	at Backstage.admin.ReportManagement.agentWater(ReportManagement.java:1062)
+	at Backstage.admin.ReportManagement.agentMoney(ReportManagement.java:1037)
 </failure>
-    <system-out><![CDATA[验证会员报表本月代理退水金额
-代理退水金额：局域网
-该代理为系统代理退水默认为0
+    <system-out><![CDATA[验证会员报表本月代理赔率金额
+代理赔率金额：24999981.050
+验证默认代理赔率金额为0
 ]]></system-out>
-    <system-err><![CDATA[java.lang.AssertionError: expected [0] but found [局域网]
+    <system-err><![CDATA[java.lang.AssertionError: expected [0] but found [24999981.050]
 	at org.testng.Assert.fail(Assert.java:94)
 	at org.testng.Assert.failNotEquals(Assert.java:496)
 	at org.testng.Assert.assertEquals(Assert.java:125)
 	at org.testng.Assert.assertEquals(Assert.java:167)
 	at ListenerPackage.Assertion.verifyEquals(Assertion.java:32)
-	at Backstage.admin.ReportManagement.agentWater(ReportManagement.java:1061)
+	at Backstage.admin.ReportManagement.agentMoney(ReportManagement.java:1036)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -892,29 +850,68 @@ Session ID: e221ed1dfd258ef4b02a34886400bb1f
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
 ]]></system-err>
   </testcase>
-  <testcase name="activityLoseWin" classname="Backstage.admin.ReportManagement" time="0">
-    <failure type="java.lang.NumberFormatException">java.lang.NumberFormatException
-	at Backstage.admin.ReportManagement.activityLoseWin(ReportManagement.java:1085)
-</failure>
-  </testcase>
-  <testcase name="activityLoseWinWater" classname="Backstage.admin.ReportManagement" time="4.278">
+  <testcase name="agentWater" classname="Backstage.admin.ReportManagement" time="0.112">
     <failure message="expected [true] but found [false]" type="java.lang.AssertionError">java.lang.AssertionError: expected [true] but found [false]
-	at Backstage.admin.ReportManagement.activityLoseWinWater(ReportManagement.java:1130)
+	at Backstage.admin.ReportManagement.agentWater(ReportManagement.java:1063)
 </failure>
-    <system-out><![CDATA[成功切换到：后台管理系统
-验证会员报表本月实际输赢（包括退水）
-会员报表本月实际输赢（包括退水）：通过 驳回
+    <system-out><![CDATA[验证会员报表本月代理退水金额
+代理退水金额：8.375
+该代理为系统代理退水默认为0
+]]></system-out>
+    <system-err><![CDATA[java.lang.AssertionError: expected [0] but found [8.375]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:167)
+	at ListenerPackage.Assertion.verifyEquals(Assertion.java:32)
+	at Backstage.admin.ReportManagement.agentWater(ReportManagement.java:1062)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1191)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
+	at org.testng.TestNG.run(TestNG.java:1024)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:386)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:323)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
+]]></system-err>
+  </testcase>
+  <testcase name="activityLoseWin" classname="Backstage.admin.ReportManagement" time="2.107">
+    <failure message="expected [true] but found [false]" type="java.lang.AssertionError">java.lang.AssertionError: expected [true] but found [false]
+	at Backstage.admin.ReportManagement.activityLoseWin(ReportManagement.java:1099)
+</failure>
+    <system-out><![CDATA[验证会员报表本月实际输赢（不包括退水）金额
+会员报表本月实际输赢（不包括退水）金额：-224.750
+会员报表实际退水：8.375
 成功切换到：后台管理系统
 成功切换到：注单明细
 投注详情输赢总金额：-93.825
 ]]></system-out>
-    <system-err><![CDATA[java.lang.AssertionError: expected [-93.825] but found [通过 驳回]
+    <system-err><![CDATA[java.lang.AssertionError: expected [-93.825] but found [-216.375]
 	at org.testng.Assert.fail(Assert.java:94)
 	at org.testng.Assert.failNotEquals(Assert.java:496)
 	at org.testng.Assert.assertEquals(Assert.java:125)
 	at org.testng.Assert.assertEquals(Assert.java:167)
 	at ListenerPackage.Assertion.verifyEquals(Assertion.java:32)
-	at Backstage.admin.ReportManagement.activityLoseWinWater(ReportManagement.java:1129)
+	at Backstage.admin.ReportManagement.activityLoseWin(ReportManagement.java:1098)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -944,20 +941,121 @@ Session ID: e221ed1dfd258ef4b02a34886400bb1f
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
 ]]></system-err>
   </testcase>
-  <testcase name="activityWaterMoney" classname="Backstage.admin.ReportManagement" time="1.978">
-    <failure type="java.lang.NumberFormatException">java.lang.NumberFormatException
-	at Backstage.admin.ReportManagement.activityWaterMoney(ReportManagement.java:1152)
+  <testcase name="activityLoseWinWater" classname="Backstage.admin.ReportManagement" time="4.286">
+    <failure message="expected [true] but found [false]" type="java.lang.AssertionError">java.lang.AssertionError: expected [true] but found [false]
+	at Backstage.admin.ReportManagement.activityLoseWinWater(ReportManagement.java:1131)
 </failure>
     <system-out><![CDATA[成功切换到：后台管理系统
+验证会员报表本月实际输赢（包括退水）
+会员报表本月实际输赢（包括退水）：
+成功切换到：后台管理系统
+成功切换到：注单明细
+投注详情输赢总金额：-93.825
 ]]></system-out>
+    <system-err><![CDATA[java.lang.AssertionError: expected [-93.825] but found []
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:167)
+	at ListenerPackage.Assertion.verifyEquals(Assertion.java:32)
+	at Backstage.admin.ReportManagement.activityLoseWinWater(ReportManagement.java:1130)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1191)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
+	at org.testng.TestNG.run(TestNG.java:1024)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:386)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:323)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
+]]></system-err>
   </testcase>
-  <testcase name="moneyDetails1" classname="Backstage.admin.moneyDetails" time="8.271"/>
-  <testcase name="moneyDetails2" classname="Backstage.admin.moneyDetails" time="0.093"/>
-  <testcase name="moneyDetails3" classname="Backstage.admin.moneyDetails" time="0.286">
+  <testcase name="activityWaterMoney" classname="Backstage.admin.ReportManagement" time="2.108">
     <failure message="expected [true] but found [false]" type="java.lang.AssertionError">java.lang.AssertionError: expected [true] but found [false]
-	at Backstage.admin.moneyDetails.moneyDetails3(moneyDetails.java:172)
+	at Backstage.admin.ReportManagement.activityWaterMoney(ReportManagement.java:1161)
 </failure>
-    <system-out><![CDATA[验证会员资金明细数据3
+    <system-out><![CDATA[成功切换到：后台管理系统
+验证会员报表本月实际退水金额
+会员报表实际退水金额：8.375
+投注金额*0.5% = 8.975
+]]></system-out>
+    <system-err><![CDATA[java.lang.AssertionError: expected [8.375] but found [8.975]
+	at org.testng.Assert.fail(Assert.java:94)
+	at org.testng.Assert.failNotEquals(Assert.java:496)
+	at org.testng.Assert.assertEquals(Assert.java:125)
+	at org.testng.Assert.assertEquals(Assert.java:167)
+	at ListenerPackage.Assertion.verifyEquals(Assertion.java:32)
+	at Backstage.admin.ReportManagement.activityWaterMoney(ReportManagement.java:1160)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
+	at org.testng.TestRunner.privateRun(TestRunner.java:774)
+	at org.testng.TestRunner.run(TestRunner.java:624)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1191)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
+	at org.testng.TestNG.run(TestNG.java:1024)
+	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
+	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
+	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:386)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:323)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
+]]></system-err>
+  </testcase>
+  <testcase name="moneyDetails1" classname="Backstage.admin.moneyDetails" time="8.182"/>
+  <testcase name="moneyDetails2" classname="Backstage.admin.moneyDetails" time="0.19"/>
+  <testcase name="moneyDetails3" classname="Backstage.admin.moneyDetails" time="0.096"/>
+  <testcase name="moneyDetails4" classname="Backstage.admin.moneyDetails" time="0.093"/>
+  <testcase name="moneyDetails5" classname="Backstage.admin.moneyDetails" time="0.093"/>
+  <testcase name="moneyDetails6" classname="Backstage.admin.moneyDetails" time="0.096"/>
+  <testcase name="moneyDetails7" classname="Backstage.admin.moneyDetails" time="0.166"/>
+  <testcase name="moneyDetails8" classname="Backstage.admin.moneyDetails" time="0.105"/>
+  <testcase name="moneyDetails9" classname="Backstage.admin.moneyDetails" time="0.091"/>
+  <testcase name="moneyDetails10" classname="Backstage.admin.moneyDetails" time="0.096"/>
+  <testcase name="moneyDetails11" classname="Backstage.admin.moneyDetails" time="0.095"/>
+  <testcase name="moneyDetails12" classname="Backstage.admin.moneyDetails" time="0.093"/>
+  <testcase name="moneyDetails13" classname="Backstage.admin.moneyDetails" time="0.095"/>
+  <testcase name="moneyDetails14" classname="Backstage.admin.moneyDetails" time="0.094"/>
+  <testcase name="moneyDetails15" classname="Backstage.admin.moneyDetails" time="0.092"/>
+  <testcase name="moneyDetails16" classname="Backstage.admin.moneyDetails" time="0.108"/>
+  <testcase name="moneyDetails17" classname="Backstage.admin.moneyDetails" time="0.1"/>
+  <testcase name="moneyDetails18" classname="Backstage.admin.moneyDetails" time="0.108"/>
+  <testcase name="moneyDetails19" classname="Backstage.admin.moneyDetails" time="0.29">
+    <failure message="expected [true] but found [false]" type="java.lang.AssertionError">java.lang.AssertionError: expected [true] but found [false]
+	at Backstage.admin.moneyDetails.moneyDetails19(moneyDetails.java:792)
+</failure>
+    <system-out><![CDATA[验证会员资金明细数据19
 交易类型：撤单[退水金额]
 交易前金额：998.185
 交易金额：-0.050
@@ -970,7 +1068,7 @@ Session ID: e221ed1dfd258ef4b02a34886400bb1f
 	at org.testng.Assert.assertEquals(Assert.java:125)
 	at org.testng.Assert.assertEquals(Assert.java:167)
 	at ListenerPackage.Assertion.verifyEquals(Assertion.java:32)
-	at Backstage.admin.moneyDetails.moneyDetails3(moneyDetails.java:171)
+	at Backstage.admin.moneyDetails.moneyDetails19(moneyDetails.java:791)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1000,342 +1098,4 @@ Session ID: e221ed1dfd258ef4b02a34886400bb1f
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
 ]]></system-err>
   </testcase>
-  <testcase name="moneyDetails4" classname="Backstage.admin.moneyDetails" time="0.095">
-    <failure message="expected [true] but found [false]" type="java.lang.AssertionError">java.lang.AssertionError: expected [true] but found [false]
-	at Backstage.admin.moneyDetails.moneyDetails4(moneyDetails.java:210)
-</failure>
-    <system-out><![CDATA[验证会员资金明细数据4
-交易类型：撤单[中奖金额]
-交易前金额：1006.085
-交易金额：-7.850
-余额：998.185
-计算结果余额：1006.085-7.850 = 998.235
-]]></system-out>
-    <system-err><![CDATA[java.lang.AssertionError: expected [998.235] but found [998.185]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:496)
-	at org.testng.Assert.assertEquals(Assert.java:125)
-	at org.testng.Assert.assertEquals(Assert.java:167)
-	at ListenerPackage.Assertion.verifyEquals(Assertion.java:32)
-	at Backstage.admin.moneyDetails.moneyDetails4(moneyDetails.java:209)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:774)
-	at org.testng.TestRunner.run(TestRunner.java:624)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1191)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
-	at org.testng.TestNG.run(TestNG.java:1024)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
-	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
-	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:386)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:323)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
-]]></system-err>
-  </testcase>
-  <testcase name="moneyDetails5" classname="Backstage.admin.moneyDetails" time="0.018"/>
-  <testcase name="moneyDetails6" classname="Backstage.admin.moneyDetails" time="0.09"/>
-  <testcase name="moneyDetails7" classname="Backstage.admin.moneyDetails" time="0.097"/>
-  <testcase name="moneyDetails8" classname="Backstage.admin.moneyDetails" time="0.185">
-    <failure message="expected [true] but found [false]" type="java.lang.AssertionError">java.lang.AssertionError: expected [true] but found [false]
-	at Backstage.admin.moneyDetails.moneyDetails8(moneyDetails.java:369)
-</failure>
-    <system-out><![CDATA[验证会员资金明细数据8
-交易类型：撤单[退水金额]
-交易前金额：998.185
-交易金额：-0.050
-余额：998.185
-计算结果余额：998.185-0.050 = 998.135
-]]></system-out>
-    <system-err><![CDATA[java.lang.AssertionError: expected [998.135] but found [998.185]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:496)
-	at org.testng.Assert.assertEquals(Assert.java:125)
-	at org.testng.Assert.assertEquals(Assert.java:167)
-	at ListenerPackage.Assertion.verifyEquals(Assertion.java:32)
-	at Backstage.admin.moneyDetails.moneyDetails8(moneyDetails.java:368)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:774)
-	at org.testng.TestRunner.run(TestRunner.java:624)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1191)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
-	at org.testng.TestNG.run(TestNG.java:1024)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
-	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
-	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:386)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:323)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
-]]></system-err>
-  </testcase>
-  <testcase name="moneyDetails9" classname="Backstage.admin.moneyDetails" time="0.101">
-    <failure message="expected [true] but found [false]" type="java.lang.AssertionError">java.lang.AssertionError: expected [true] but found [false]
-	at Backstage.admin.moneyDetails.moneyDetails9(moneyDetails.java:408)
-</failure>
-    <system-out><![CDATA[验证会员资金明细数据9
-交易类型：撤单[中奖金额]
-交易前金额：1010.185
-交易金额：-11.950
-余额：998.185
-计算结果余额：1010.185-11.950 = 998.235
-]]></system-out>
-    <system-err><![CDATA[java.lang.AssertionError: expected [998.235] but found [998.185]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:496)
-	at org.testng.Assert.assertEquals(Assert.java:125)
-	at org.testng.Assert.assertEquals(Assert.java:167)
-	at ListenerPackage.Assertion.verifyEquals(Assertion.java:32)
-	at Backstage.admin.moneyDetails.moneyDetails9(moneyDetails.java:407)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:774)
-	at org.testng.TestRunner.run(TestRunner.java:624)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1191)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
-	at org.testng.TestNG.run(TestNG.java:1024)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
-	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
-	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:386)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:323)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
-]]></system-err>
-  </testcase>
-  <testcase name="moneyDetails10" classname="Backstage.admin.moneyDetails" time="0.014"/>
-  <testcase name="moneyDetails11" classname="Backstage.admin.moneyDetails" time="0.218">
-    <failure message="expected [true] but found [false]" type="java.lang.AssertionError">java.lang.AssertionError: expected [true] but found [false]
-	at Backstage.admin.moneyDetails.moneyDetails11(moneyDetails.java:487)
-</failure>
-    <system-out><![CDATA[验证会员资金明细数据11
-交易类型：退水
-交易前金额：978.185
-交易金额：0.050
-余额：988.235
-计算结果余额：978.185+0.050 = 978.235
-]]></system-out>
-    <system-err><![CDATA[java.lang.AssertionError: expected [978.235] but found [988.235]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:496)
-	at org.testng.Assert.assertEquals(Assert.java:125)
-	at org.testng.Assert.assertEquals(Assert.java:167)
-	at ListenerPackage.Assertion.verifyEquals(Assertion.java:32)
-	at Backstage.admin.moneyDetails.moneyDetails11(moneyDetails.java:486)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:774)
-	at org.testng.TestRunner.run(TestRunner.java:624)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1191)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
-	at org.testng.TestNG.run(TestNG.java:1024)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
-	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
-	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:386)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:323)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
-]]></system-err>
-  </testcase>
-  <testcase name="moneyDetails12" classname="Backstage.admin.moneyDetails" time="0.156">
-    <failure message="expected [true] but found [false]" type="java.lang.AssertionError">java.lang.AssertionError: expected [true] but found [false]
-	at Backstage.admin.moneyDetails.moneyDetails12(moneyDetails.java:526)
-</failure>
-    <system-out><![CDATA[验证会员资金明细数据12
-交易类型：下注
-交易前金额：998.185
-交易金额：-10.000
-余额：978.185
-计算结果余额：998.185-10.000 = 988.185
-]]></system-out>
-    <system-err><![CDATA[java.lang.AssertionError: expected [988.185] but found [978.185]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:496)
-	at org.testng.Assert.assertEquals(Assert.java:125)
-	at org.testng.Assert.assertEquals(Assert.java:167)
-	at ListenerPackage.Assertion.verifyEquals(Assertion.java:32)
-	at Backstage.admin.moneyDetails.moneyDetails12(moneyDetails.java:525)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:774)
-	at org.testng.TestRunner.run(TestRunner.java:624)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1191)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
-	at org.testng.TestNG.run(TestNG.java:1024)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
-	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
-	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:386)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:323)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
-]]></system-err>
-  </testcase>
-  <testcase name="moneyDetails13" classname="Backstage.admin.moneyDetails" time="0.019"/>
-  <testcase name="moneyDetails14" classname="Backstage.admin.moneyDetails" time="0.092"/>
-  <testcase name="moneyDetails15" classname="Backstage.admin.moneyDetails" time="0.155"/>
-  <testcase name="moneyDetails16" classname="Backstage.admin.moneyDetails" time="0.293">
-    <failure message="expected [true] but found [false]" type="java.lang.AssertionError">java.lang.AssertionError: expected [true] but found [false]
-	at Backstage.admin.moneyDetails.moneyDetails16(moneyDetails.java:677)
-</failure>
-    <system-out><![CDATA[验证会员资金明细数据16
-交易类型：解冻金额
-交易前金额：1008.185
-交易金额：0.050
-余额：998.135
-计算结果余额：1008.1850.050 = 1008.235
-]]></system-out>
-    <system-err><![CDATA[java.lang.AssertionError: expected [1008.235] but found [998.135]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:496)
-	at org.testng.Assert.assertEquals(Assert.java:125)
-	at org.testng.Assert.assertEquals(Assert.java:167)
-	at ListenerPackage.Assertion.verifyEquals(Assertion.java:32)
-	at Backstage.admin.moneyDetails.moneyDetails16(moneyDetails.java:676)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:774)
-	at org.testng.TestRunner.run(TestRunner.java:624)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1191)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
-	at org.testng.TestNG.run(TestNG.java:1024)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
-	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
-	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:386)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:323)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
-]]></system-err>
-  </testcase>
-  <testcase name="moneyDetails17" classname="Backstage.admin.moneyDetails" time="0.095">
-    <failure message="expected [true] but found [false]" type="java.lang.AssertionError">java.lang.AssertionError: expected [true] but found [false]
-	at Backstage.admin.moneyDetails.moneyDetails17(moneyDetails.java:714)
-</failure>
-    <system-out><![CDATA[验证会员资金明细数据17
-交易类型：冻结金额
-交易前金额：998.235
-交易金额：-0.050
-余额：1008.185
-计算结果余额：998.235-0.050 = 998.185
-]]></system-out>
-    <system-err><![CDATA[java.lang.AssertionError: expected [998.185] but found [1008.185]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:496)
-	at org.testng.Assert.assertEquals(Assert.java:125)
-	at org.testng.Assert.assertEquals(Assert.java:167)
-	at ListenerPackage.Assertion.verifyEquals(Assertion.java:32)
-	at Backstage.admin.moneyDetails.moneyDetails17(moneyDetails.java:713)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:85)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:639)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:816)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1124)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:108)
-	at org.testng.TestRunner.privateRun(TestRunner.java:774)
-	at org.testng.TestRunner.run(TestRunner.java:624)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:312)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:261)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1191)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
-	at org.testng.TestNG.run(TestNG.java:1024)
-	at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:283)
-	at org.apache.maven.surefire.testng.TestNGXmlTestSuite.execute(TestNGXmlTestSuite.java:75)
-	at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:120)
-	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:386)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:323)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
-]]></system-err>
-  </testcase>
-  <testcase name="moneyDetails18" classname="Backstage.admin.moneyDetails" time="0.02"/>
-  <testcase name="moneyDetails19" classname="Backstage.admin.moneyDetails" time="0.093"/>
 </testsuite>

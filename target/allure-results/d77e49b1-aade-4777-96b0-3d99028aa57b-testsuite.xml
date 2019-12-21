@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1576726694563" stop="1576726718768" version="1.5.2" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>Default Suite : seleniumCp</name>
+    <title>Default Suite : seleniumCp</title>
+    <test-cases>
+        <test-case start="1576726712693" stop="1576726718747" status="passed">
+            <name>onlineRecharge</name>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="testSuite" value="Default Suite"/>
+                <label name="testGroup" value="seleniumCp"/>
+                <label name="testClass" value="complex.FinanceManagement"/>
+                <label name="testMethod" value="onlineRecharge"/>
+                <label name="host" value="DESKTOP-8DI1090"/>
+                <label name="thread" value="14244@DESKTOP-8DI1090.main(1)"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="framework" value="TestNG"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>

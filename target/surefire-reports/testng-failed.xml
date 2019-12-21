@@ -3,17 +3,17 @@
 <suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [All Test Suite]">
   <test name="平台管理员(failed)">
     <classes>
-      <class name="Backstage.admin.FinanceManagement">
+      <class name="Backstage.admin.moneyDetails">
         <methods>
-          <include name="ReconciliationVip2"/>
-          <include name="ReconciliationVip"/>
+          <include name="moneyDetails19"/>
         </methods>
-      </class> <!-- Backstage.admin.FinanceManagement -->
-      <class name="Backstage.admin.UserManagement">
+      </class> <!-- Backstage.admin.moneyDetails -->
+      <class name="Backstage.admin.panel">
         <methods>
-          <include name="vipNumber"/>
+          <include name="notesNumber"/>
+          <include name="loginBefore"/>
         </methods>
-      </class> <!-- Backstage.admin.UserManagement -->
+      </class> <!-- Backstage.admin.panel -->
       <class name="Backstage.admin.ReportManagement">
         <methods>
           <include name="activityLoseWin"/>
@@ -36,24 +36,17 @@
           <include name="activityWaterMoney"/>
         </methods>
       </class> <!-- Backstage.admin.ReportManagement -->
-      <class name="Backstage.admin.moneyDetails">
+      <class name="Backstage.admin.FinanceManagement">
         <methods>
-          <include name="moneyDetails17"/>
-          <include name="moneyDetails3"/>
-          <include name="moneyDetails16"/>
-          <include name="moneyDetails4"/>
-          <include name="moneyDetails8"/>
-          <include name="moneyDetails11"/>
-          <include name="moneyDetails9"/>
-          <include name="moneyDetails12"/>
+          <include name="ReconciliationVip3"/>
         </methods>
-      </class> <!-- Backstage.admin.moneyDetails -->
-      <class name="Backstage.admin.panel">
+      </class> <!-- Backstage.admin.FinanceManagement -->
+      <class name="Backstage.admin.UserManagement">
         <methods>
-          <include name="notesNumber"/>
-          <include name="loginBefore"/>
+          <include name="vipNumber"/>
+          <include name="onlinePlayer"/>
         </methods>
-      </class> <!-- Backstage.admin.panel -->
+      </class> <!-- Backstage.admin.UserManagement -->
     </classes>
   </test> <!-- 平台管理员(failed) -->
 </suite> <!-- Failed suite [All Test Suite] -->

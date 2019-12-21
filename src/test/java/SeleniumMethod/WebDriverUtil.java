@@ -151,7 +151,7 @@ import javax.xml.soap.Text;
                  profile.setPreference("browser.helperApps.neverAsk.saveToDisk",
                                  "application/octet-stream, application/vnd.ms-excel, text/csv, application/zip, application/msword");
                  profile.setPreference("dom.webnotifications.enabled", false);// 允许通知
-                 WebDriver driver = new FirefoxDriver(profile);// 启动火狐浏览器
+                 WebDriver driver = new FirefoxDriver();// 启动火狐浏览器
                  driver.manage().window().maximize();// 设置窗口大小
                  driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);// 设置页面加载超时
                  driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);// 设置查询组件等待时间
@@ -411,6 +411,11 @@ import javax.xml.soap.Text;
                  driver.findElement(By.xpath(xpath)).clear();
                  driver.findElement(By.xpath(xpath)).sendKeys(text);
              }
+
+            public void xpathClear(String xpath) {
+                driver.findElement(By.xpath(xpath)).clear();
+
+            }
               public void findElementByClassnameAndClearSendKeys(String classname, int num) {
                  driver.findElement(By.className(classname)).clear();
                  driver.findElement(By.className(classname)).sendKeys(num + "");
@@ -1005,7 +1010,7 @@ import javax.xml.soap.Text;
               /**
         *     关闭当前浏览器
         */
-              public static void closeCurrentBrowser() {
+              public  void closeCurrentBrowser() {
                  driver.close();
              }
       /**

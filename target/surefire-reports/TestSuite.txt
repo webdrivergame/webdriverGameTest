@@ -1,133 +1,107 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 61, Failures: 30, Errors: 0, Skipped: 0, Time elapsed: 211.364 s <<< FAILURE! - in TestSuite
-notesNumber(Backstage.admin.panel)  Time elapsed: 5.57 s  <<< FAILURE!
+Tests run: 61, Failures: 23, Errors: 0, Skipped: 0, Time elapsed: 227.129 s <<< FAILURE! - in TestSuite
+notesNumber(Backstage.admin.panel)  Time elapsed: 5.399 s  <<< FAILURE!
 java.lang.AssertionError: expected [true] but found [false]
 	at Backstage.admin.panel.notesNumber(panel.java:115)
 
-vipNumber(Backstage.admin.UserManagement)  Time elapsed: 3.625 s  <<< FAILURE!
+vipNumber(Backstage.admin.UserManagement)  Time elapsed: 3.722 s  <<< FAILURE!
 java.lang.AssertionError: expected [true] but found [false]
 	at Backstage.admin.UserManagement.vipNumber(UserManagement.java:101)
 
-ReconciliationVip(Backstage.admin.FinanceManagement)  Time elapsed: 3.658 s  <<< FAILURE!
-java.lang.AssertionError: expected [true] but found [false]
-	at Backstage.admin.FinanceManagement.ReconciliationVip(FinanceManagement.java:98)
-
-ReconciliationVip2(Backstage.admin.FinanceManagement)  Time elapsed: 0.278 s  <<< FAILURE!
-java.lang.AssertionError: expected [true] but found [false]
-	at Backstage.admin.FinanceManagement.ReconciliationVip2(FinanceManagement.java:158)
-
-betMoneyAgentTotal(Backstage.admin.ReportManagement)  Time elapsed: 4.766 s  <<< FAILURE!
-java.lang.AssertionError: expected [true] but found [false]
-	at Backstage.admin.ReportManagement.betMoneyAgentTotal(ReportManagement.java:129)
-
-waterBreakPracticeAgentTotal(Backstage.admin.ReportManagement)  Time elapsed: 5.911 s  <<< FAILURE!
-java.lang.AssertionError: expected [true] but found [false]
-	at Backstage.admin.ReportManagement.waterBreakPracticeAgentTotal(ReportManagement.java:342)
-
-loseWinAndWaterAgentTotal(Backstage.admin.ReportManagement)  Time elapsed: 5.686 s  <<< FAILURE!
-java.lang.AssertionError: expected [true] but found [false]
-	at Backstage.admin.ReportManagement.loseWinAndWaterAgentTotal(ReportManagement.java:378)
-
-rechargeMoneyAgent(Backstage.admin.ReportManagement)  Time elapsed: 4.413 s  <<< FAILURE!
-java.lang.AssertionError: expected [true] but found [false]
-	at Backstage.admin.ReportManagement.rechargeMoneyAgent(ReportManagement.java:458)
-
-countAgent(Backstage.admin.ReportManagement)  Time elapsed: 4.275 s  <<< FAILURE!
-java.lang.AssertionError: expected [true] but found [false]
-	at Backstage.admin.ReportManagement.countAgent(ReportManagement.java:494)
-
-betMoneyAgentReport(Backstage.admin.ReportManagement)  Time elapsed: 4.005 s  <<< FAILURE!
-java.lang.AssertionError: expected [true] but found [false]
-	at Backstage.admin.ReportManagement.betMoneyAgentReport(ReportManagement.java:530)
-
-waterBreakMoneyAgent(Backstage.admin.ReportManagement)  Time elapsed: 4.19 s  <<< FAILURE!
-java.lang.AssertionError: expected [true] but found [false]
-	at Backstage.admin.ReportManagement.waterBreakMoneyAgent(ReportManagement.java:674)
-
-winLoseWaterAgent(Backstage.admin.ReportManagement)  Time elapsed: 5.365 s  <<< FAILURE!
-java.lang.AssertionError: expected [true] but found [false]
-	at Backstage.admin.ReportManagement.winLoseWaterAgent(ReportManagement.java:746)
-
-waterBreakMoneyActivityAgent(Backstage.admin.ReportManagement)  Time elapsed: 5.009 s  <<< FAILURE!
-java.lang.AssertionError: expected [true] but found [false]
-	at Backstage.admin.ReportManagement.waterBreakMoneyActivityAgent(ReportManagement.java:781)
-
-rechargeMoneyVip(Backstage.admin.ReportManagement)  Time elapsed: 10.063 s  <<< FAILURE!
-java.lang.AssertionError: expected [true] but found [false]
-	at Backstage.admin.ReportManagement.rechargeMoneyVip(ReportManagement.java:837)
-
-withdrawMoneyVip(Backstage.admin.ReportManagement)  Time elapsed: 11.559 s  <<< FAILURE!
-java.lang.AssertionError: expected [true] but found [false]
-	at Backstage.admin.ReportManagement.withdrawMoneyVip(ReportManagement.java:888)
-
-betNumber(Backstage.admin.ReportManagement)  Time elapsed: 12.651 s  <<< FAILURE!
-java.lang.AssertionError: expected [true] but found [false]
-	at Backstage.admin.ReportManagement.betNumber(ReportManagement.java:931)
-
-betMoney(Backstage.admin.ReportManagement)  Time elapsed: 3.297 s  <<< FAILURE!
-java.lang.AssertionError: expected [true] but found [false]
-	at Backstage.admin.ReportManagement.betMoney(ReportManagement.java:963)
-
-agentMoney(Backstage.admin.ReportManagement)  Time elapsed: 0.373 s  <<< FAILURE!
-org.openqa.selenium.WebDriverException: 
-element click intercepted: Element <span>...</span> is not clickable at point (78, 325). Other element would receive the click: <div class="el-submenu__title" style="padding-left: 20px; color: rgb(191, 203, 217); background-color: rgb(48, 65, 86);">...</div>
+onlinePlayer(Backstage.admin.UserManagement)  Time elapsed: 12.245 s  <<< FAILURE!
+org.openqa.selenium.NoSuchElementException: 
+no such element: Unable to locate element: {"method":"xpath","selector":"//*[@id="app"]/div/div[2]/section/div/div[2]/div[1]/div[3]/table/tbody/tr[1]/td[11]/div/button/span"}
   (Session info: chrome=78.0.3904.97)
   (Driver info: chromedriver=78.0.3904.70 (edb9c9f3de0247fd912a77b7f6cae7447f6d3ad5-refs/branch-heads/3904@{#800}),platform=Windows NT 10.0.18363 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 139 milliseconds
+Command duration or timeout: 10.05 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.0.0', revision: '350cf60', time: '2016-10-13 10:48:57 -0700'
 System info: host: 'DESKTOP-8DI1090', ip: '10.1.101.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_231'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:54636}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=78.0.3904.70 (edb9c9f3de0247fd912a77b7f6cae7447f6d3ad5-refs/branch-heads/3904@{#800}), userDataDir=C:\Users\Owner\AppData\Local\Temp\scoped_dir2108_2065501313}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=78.0.3904.97, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
-Session ID: e221ed1dfd258ef4b02a34886400bb1f
-	at Backstage.admin.ReportManagement.agentMoney(ReportManagement.java:1022)
+Capabilities [{mobileEmulationEnabled=false, timeouts={implicit=0, pageLoad=300000, script=30000}, hasTouchScreen=false, platform=XP, acceptSslCerts=false, goog:chromeOptions={debuggerAddress=localhost:50320}, acceptInsecureCerts=false, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=ignore, applicationCacheEnabled=false, rotatable=false, networkConnectionEnabled=false, chrome={chromedriverVersion=78.0.3904.70 (edb9c9f3de0247fd912a77b7f6cae7447f6d3ad5-refs/branch-heads/3904@{#800}), userDataDir=C:\Users\Owner\AppData\Local\Temp\scoped_dir5656_1867398772}, takesHeapSnapshot=true, pageLoadStrategy=normal, strictFileInteractability=false, databaseEnabled=false, handlesAlerts=true, version=78.0.3904.97, browserConnectionEnabled=false, proxy={}, nativeEvents=true, locationContextEnabled=true, cssSelectorsEnabled=true}]
+Session ID: 1f7b0a126d48ed88aad89eef13367101
+*** Element info: {Using=xpath, value=//*[@id="app"]/div/div[2]/section/div/div[2]/div[1]/div[3]/table/tbody/tr[1]/td[11]/div/button/span}
+	at Backstage.admin.UserManagement.onlinePlayer(UserManagement.java:168)
 
-agentWater(Backstage.admin.ReportManagement)  Time elapsed: 0.202 s  <<< FAILURE!
+ReconciliationVip3(Backstage.admin.FinanceManagement)  Time elapsed: 0.369 s  <<< FAILURE!
 java.lang.AssertionError: expected [true] but found [false]
-	at Backstage.admin.ReportManagement.agentWater(ReportManagement.java:1062)
+	at Backstage.admin.FinanceManagement.ReconciliationVip3(FinanceManagement.java:218)
 
-activityLoseWin(Backstage.admin.ReportManagement)  Time elapsed: 0 s  <<< FAILURE!
-java.lang.NumberFormatException
-	at Backstage.admin.ReportManagement.activityLoseWin(ReportManagement.java:1085)
-
-activityLoseWinWater(Backstage.admin.ReportManagement)  Time elapsed: 4.278 s  <<< FAILURE!
+betMoneyAgentTotal(Backstage.admin.ReportManagement)  Time elapsed: 4.825 s  <<< FAILURE!
 java.lang.AssertionError: expected [true] but found [false]
-	at Backstage.admin.ReportManagement.activityLoseWinWater(ReportManagement.java:1130)
+	at Backstage.admin.ReportManagement.betMoneyAgentTotal(ReportManagement.java:129)
 
-activityWaterMoney(Backstage.admin.ReportManagement)  Time elapsed: 1.978 s  <<< FAILURE!
-java.lang.NumberFormatException
-	at Backstage.admin.ReportManagement.activityWaterMoney(ReportManagement.java:1152)
-
-moneyDetails3(Backstage.admin.moneyDetails)  Time elapsed: 0.286 s  <<< FAILURE!
+waterBreakPracticeAgentTotal(Backstage.admin.ReportManagement)  Time elapsed: 5.859 s  <<< FAILURE!
 java.lang.AssertionError: expected [true] but found [false]
-	at Backstage.admin.moneyDetails.moneyDetails3(moneyDetails.java:172)
+	at Backstage.admin.ReportManagement.waterBreakPracticeAgentTotal(ReportManagement.java:342)
 
-moneyDetails4(Backstage.admin.moneyDetails)  Time elapsed: 0.095 s  <<< FAILURE!
+loseWinAndWaterAgentTotal(Backstage.admin.ReportManagement)  Time elapsed: 5.656 s  <<< FAILURE!
 java.lang.AssertionError: expected [true] but found [false]
-	at Backstage.admin.moneyDetails.moneyDetails4(moneyDetails.java:210)
+	at Backstage.admin.ReportManagement.loseWinAndWaterAgentTotal(ReportManagement.java:378)
 
-moneyDetails8(Backstage.admin.moneyDetails)  Time elapsed: 0.185 s  <<< FAILURE!
+rechargeMoneyAgent(Backstage.admin.ReportManagement)  Time elapsed: 4.283 s  <<< FAILURE!
 java.lang.AssertionError: expected [true] but found [false]
-	at Backstage.admin.moneyDetails.moneyDetails8(moneyDetails.java:369)
+	at Backstage.admin.ReportManagement.rechargeMoneyAgent(ReportManagement.java:458)
 
-moneyDetails9(Backstage.admin.moneyDetails)  Time elapsed: 0.101 s  <<< FAILURE!
+countAgent(Backstage.admin.ReportManagement)  Time elapsed: 4.228 s  <<< FAILURE!
 java.lang.AssertionError: expected [true] but found [false]
-	at Backstage.admin.moneyDetails.moneyDetails9(moneyDetails.java:408)
+	at Backstage.admin.ReportManagement.countAgent(ReportManagement.java:494)
 
-moneyDetails11(Backstage.admin.moneyDetails)  Time elapsed: 0.218 s  <<< FAILURE!
+betMoneyAgentReport(Backstage.admin.ReportManagement)  Time elapsed: 4.083 s  <<< FAILURE!
 java.lang.AssertionError: expected [true] but found [false]
-	at Backstage.admin.moneyDetails.moneyDetails11(moneyDetails.java:487)
+	at Backstage.admin.ReportManagement.betMoneyAgentReport(ReportManagement.java:530)
 
-moneyDetails12(Backstage.admin.moneyDetails)  Time elapsed: 0.156 s  <<< FAILURE!
+waterBreakMoneyAgent(Backstage.admin.ReportManagement)  Time elapsed: 4.284 s  <<< FAILURE!
 java.lang.AssertionError: expected [true] but found [false]
-	at Backstage.admin.moneyDetails.moneyDetails12(moneyDetails.java:526)
+	at Backstage.admin.ReportManagement.waterBreakMoneyAgent(ReportManagement.java:674)
 
-moneyDetails16(Backstage.admin.moneyDetails)  Time elapsed: 0.293 s  <<< FAILURE!
+winLoseWaterAgent(Backstage.admin.ReportManagement)  Time elapsed: 5.201 s  <<< FAILURE!
 java.lang.AssertionError: expected [true] but found [false]
-	at Backstage.admin.moneyDetails.moneyDetails16(moneyDetails.java:677)
+	at Backstage.admin.ReportManagement.winLoseWaterAgent(ReportManagement.java:746)
 
-moneyDetails17(Backstage.admin.moneyDetails)  Time elapsed: 0.095 s  <<< FAILURE!
+waterBreakMoneyActivityAgent(Backstage.admin.ReportManagement)  Time elapsed: 5.033 s  <<< FAILURE!
 java.lang.AssertionError: expected [true] but found [false]
-	at Backstage.admin.moneyDetails.moneyDetails17(moneyDetails.java:714)
+	at Backstage.admin.ReportManagement.waterBreakMoneyActivityAgent(ReportManagement.java:781)
+
+rechargeMoneyVip(Backstage.admin.ReportManagement)  Time elapsed: 10.149 s  <<< FAILURE!
+java.lang.AssertionError: expected [true] but found [false]
+	at Backstage.admin.ReportManagement.rechargeMoneyVip(ReportManagement.java:837)
+
+withdrawMoneyVip(Backstage.admin.ReportManagement)  Time elapsed: 11.085 s  <<< FAILURE!
+java.lang.AssertionError: expected [true] but found [false]
+	at Backstage.admin.ReportManagement.withdrawMoneyVip(ReportManagement.java:888)
+
+betNumber(Backstage.admin.ReportManagement)  Time elapsed: 12.67 s  <<< FAILURE!
+java.lang.AssertionError: expected [true] but found [false]
+	at Backstage.admin.ReportManagement.betNumber(ReportManagement.java:931)
+
+betMoney(Backstage.admin.ReportManagement)  Time elapsed: 3.206 s  <<< FAILURE!
+java.lang.AssertionError: expected [true] but found [false]
+	at Backstage.admin.ReportManagement.betMoney(ReportManagement.java:963)
+
+agentMoney(Backstage.admin.ReportManagement)  Time elapsed: 6.215 s  <<< FAILURE!
+java.lang.AssertionError: expected [true] but found [false]
+	at Backstage.admin.ReportManagement.agentMoney(ReportManagement.java:1037)
+
+agentWater(Backstage.admin.ReportManagement)  Time elapsed: 0.112 s  <<< FAILURE!
+java.lang.AssertionError: expected [true] but found [false]
+	at Backstage.admin.ReportManagement.agentWater(ReportManagement.java:1063)
+
+activityLoseWin(Backstage.admin.ReportManagement)  Time elapsed: 2.107 s  <<< FAILURE!
+java.lang.AssertionError: expected [true] but found [false]
+	at Backstage.admin.ReportManagement.activityLoseWin(ReportManagement.java:1099)
+
+activityLoseWinWater(Backstage.admin.ReportManagement)  Time elapsed: 4.286 s  <<< FAILURE!
+java.lang.AssertionError: expected [true] but found [false]
+	at Backstage.admin.ReportManagement.activityLoseWinWater(ReportManagement.java:1131)
+
+activityWaterMoney(Backstage.admin.ReportManagement)  Time elapsed: 2.108 s  <<< FAILURE!
+java.lang.AssertionError: expected [true] but found [false]
+	at Backstage.admin.ReportManagement.activityWaterMoney(ReportManagement.java:1161)
+
+moneyDetails19(Backstage.admin.moneyDetails)  Time elapsed: 0.29 s  <<< FAILURE!
+java.lang.AssertionError: expected [true] but found [false]
+	at Backstage.admin.moneyDetails.moneyDetails19(moneyDetails.java:792)
 

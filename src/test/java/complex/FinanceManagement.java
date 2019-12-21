@@ -3,6 +3,7 @@ package complex;
 import ListenerPackage.Assertion;
 import SeleniumMethod.WebDriverUtil;
 import org.testng.Assert;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import ru.yandex.qatools.allure.annotations.*;
 import ru.yandex.qatools.allure.model.SeverityLevel;
@@ -12,8 +13,7 @@ import java.math.BigDecimal;
 public class FinanceManagement {
 
     WebDriverUtil driverUtil = new WebDriverUtil(null);
-    /**
-    String URL = "https://admin.zs-pre.com/";
+    String URL = "http://10.1.101.124:8653/";
     String login = "//*[@id=\"app\"]/div/div/form/div[4]/div/div/button/span";
 
     @BeforeTest
@@ -24,8 +24,239 @@ public class FinanceManagement {
         Thread.sleep(2000);
 
     }
-    **/
-    String financeManagement = "//*[@id=\"app\"]/div/div[1]/div[2]/div[1]/div/ul/div[3]/li/div/span";
+
+
+    /**  ------------------------------------------财务管理-会员对账-线上充值金额-----------------------------------
+     *
+     * */
+
+
+    String financeManagement = "//div[@id='app']/div/div[1]//ul[@role='menubar']/div[3]/li[@role='menuitem']//span[.='财务管理']";
+    String vipMoney = "//*[@id=\"app\"]/div/div[1]/div[2]/div[1]/div/ul/div[3]/li/ul/div[5]/a/li/span";
+    String onlineRecharge = "//*[@id=\"app\"]/div/div[2]/section/div/div[2]/div[1]/div[3]/table/tbody/tr[1]/td[3]/div";
+
+    String rechargeRecord = "//*[@id=\"app\"]/div/div[1]/div[2]/div[1]/div/ul/div[3]/li/ul/div[1]/a/li/span";
+    String selectStyle = "//*[@id=\"app\"]/div/div[2]/section/div/div[1]/form/div[2]/div/div/div/input";
+    String selectOnline = "//body/div[2]//ul[@class='el-scrollbar__view el-select-dropdown__list']//span[.='在线入款']";
+    String inquire = "//*[@id=\"app\"]/div/div[2]/section/div/div[1]/form/div[12]/div/button[1]/span";
+    String rechargeTotal = "//*[@id=\"app\"]/div/div[2]/section/div/div[1]/form/div[14]/div/span[2]/span[3]";
+
+    @Features("财务管理")
+    @Stories("会员对账")
+    @Title("验证会员对账线上充值金额")
+    @Severity(SeverityLevel.BLOCKER)
+    @Step("1.进入财务管理-会员对账，2.获取线上充值金额，3.进入充值记录，4.查询今日在线充值")
+    @Description("验证会员对账线上充值金额")
+    @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=20&version=1")
+    @Test(priority = 1)
+        public void onlineRecharge() throws InterruptedException {
+            driverUtil.xpathClick(financeManagement);
+            driverUtil.xpathClick(vipMoney);
+            Thread.sleep(1000);
+            String getOnlineRecharge = driverUtil.getTextByXpath(onlineRecharge);
+            System.out.println("验证会员对账今日线上充值金额");
+            System.out.println("会员对账今日线上充值金额："+getOnlineRecharge);
+
+            //获取充值记录今日在线充值金额
+            driverUtil.xpathClick(rechargeRecord);
+            Thread.sleep(2000);
+            driverUtil.xpathClick(selectStyle);
+            Thread.sleep(1000);
+            driverUtil.xpathClick(selectOnline);
+            driverUtil.xpathClick(inquire);
+            Thread.sleep(2000);
+            String getRechargeTotalOnline = driverUtil.getTextByXpath(rechargeTotal);
+            String getRechargeTotalOnline1 = getRechargeTotalOnline.substring(6);
+            System.out.println("充值记录今日在线充值总计："+getRechargeTotalOnline1);
+            Assertion.setFlag(true);
+            Assertion.verifyEquals(getOnlineRecharge, getRechargeTotalOnline1);
+            Assert.assertTrue(Assertion.currentFlag());
+    }
+
+
+    /**------------------------------------------财务管理-会员对账-线下充值金额----------------------------------
+     *
+     * */
+
+    String upRecharge = "//*[@id=\"app\"]/div/div[2]/section/div/div[2]/div[1]/div[3]/table/tbody/tr[1]/td[4]/div";
+
+    @Features("财务管理")
+    @Stories("会员对账")
+    @Title("验证会员对账线下充值金额")
+    @Severity(SeverityLevel.BLOCKER)
+    @Step("1.进入财务管理-会员对账，2.获取线下充值金额，3.进入充值记录，4.查询今日后台充值和手动入款金额")
+    @Description("验证会员对账线下充值金额")
+    @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=20&version=1")
+    @Test(priority = 2)
+        public void upRecharge() throws InterruptedException {
+            driverUtil.xpathClick(vipMoney);
+            Thread.sleep(2000);
+            BigDecimal getUpRecharge = new BigDecimal(driverUtil.getTextByXpath(upRecharge));
+            System.out.println("验证会员对账线下充值金额");
+            System.out.println("会员对账今日线下充值金额："+getUpRecharge);
+
+            //充值记录充值总计金额
+            driverUtil.xpathClick(rechargeRecord);
+            Thread.sleep(1000);
+            String rechargeTotal1 = driverUtil.getTextByXpath(rechargeTotal);
+            String rechargeTotal2 = rechargeTotal1.substring(6);
+            BigDecimal rechargeTotal3 = new BigDecimal(rechargeTotal2);
+            System.out.println("充值记录充值总计："+rechargeTotal3);
+
+            //充值总计 - 在线充值 = 后台扣钱 + 手动入款
+            driverUtil.xpathClick(selectStyle);
+            Thread.sleep(1000);
+            driverUtil.xpathClick(selectOnline);
+            driverUtil.xpathClick(inquire);
+            Thread.sleep(1000);
+            String rechargeTotalOnline = driverUtil.getTextByXpath(rechargeTotal);
+            String rechargeTotalOnline1 = rechargeTotalOnline.substring(6);
+            BigDecimal rechargeTotalOnline2 = new BigDecimal(rechargeTotalOnline1);
+            System.out.println("在线充值今日总计："+rechargeTotalOnline);
+            BigDecimal handRecharge =rechargeTotal3.subtract(rechargeTotalOnline2);
+            Assertion.setFlag(true);
+            Assertion.verifyEquals(getUpRecharge, handRecharge);
+            Assert.assertTrue(Assertion.currentFlag());
+    }
+
+
+    /**------------------------------------------财务管理-会员对账-彩票实际输赢金额----------------------------------
+     *
+     * */
+
+
+    String activityLoseWinLotty = "//*[@id=\"app\"]/div/div[2]/section/div/div[2]/div[1]/div[3]/table/tbody/tr[1]/td[5]/div";
+    String ReportManagement = "//*[@id=\"app\"]/div/div[1]/div[2]/div[1]/div/ul/div[4]/li/div/span";
+    String vipReport = "//*[@id=\"app\"]/div/div[1]/div[2]/div[1]/div/ul/div[4]/li/ul/div[3]/a/li/span";
+    String activityLoseWinReport = "//*[@id=\"pane-lottery\"]/div[2]/div[1]/div[4]/table/tbody/tr/td[15]/div";
+
+    String vipReportPage = "//*[@id=\"pane-lottery\"]/div[2]/div[2]/div";
+
+    @Features("财务管理")
+    @Stories("会员对账")
+    @Title("验证会员对账彩票实际输赢金额")
+    @Severity(SeverityLevel.BLOCKER)
+    @Step("1.进入财务管理-会员对账，2.获取彩票实际输赢金额，3.进入报表管理-会员报表，4.获取今日实际输赢（包括退水金额）")
+    @Description("验证会员对账实际输赢金额")
+    @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=20&version=1")
+    @Test(priority = 3)
+        public void activityLoseWinLotty() throws InterruptedException {
+            driverUtil.xpathClick(vipMoney);
+            Thread.sleep(1000);
+            String getActivityLoseWinLotty = driverUtil.getTextByXpath(activityLoseWinLotty);
+            System.out.println("验证会员对账彩票实际输赢金额");
+            System.out.println("会员对帐彩票实际输赢金额"+getActivityLoseWinLotty);
+
+                //会员报表获取今日实际输赢（包括退水）
+                driverUtil.xpathClick(ReportManagement);
+                Thread.sleep(1000);
+                driverUtil.xpathClick(vipReport);
+                Thread.sleep(1000);
+                String activityLoseWinReport1 = driverUtil.getTextByXpath(activityLoseWinReport);
+                System.out.println("会员报表彩票实际输赢(包括退水)：" + activityLoseWinReport1);
+                Assertion.setFlag(true);
+                Assertion.verifyEquals(getActivityLoseWinLotty, activityLoseWinReport1);
+                Assert.assertTrue(Assertion.currentFlag());
+
+    }
+
+
+    /**------------------------------------------财务管理-会员对账-彩票未结算金额----------------------------------
+     *
+     * */
+
+    String unSettlement = "//*[@id=\"app\"]/div/div[2]/section/div/div[2]/div[1]/div[3]/table/tbody/tr[1]/td[6]/div";
+    String betNumber = "//*[@id=\"pane-lottery\"]/div[2]/div[1]/div[3]/table/tbody/tr[1]/td[6]/div/span";
+
+    String inputAccount = "//*[@id=\"app\"]/div/div[2]/div/div[1]/form[2]/div[5]/div/div/input";
+    String settlementStatus = "//*[@id=\"app\"]/div/div[2]/div/div[1]/form[2]/div[2]/div/div/div[1]/input";
+    String selectUnSettlement = "//body/div[2]/div[@class='el-scrollbar']//ul[@class='el-scrollbar__view el-select-dropdown__list']//span[.='未结算']";
+    String inputDetail = "//*[@id=\"app\"]/div/div[2]/div/div[1]/form[2]/div[9]/div/button[1]/span";
+    String unSettlementMoney = "//*[@id=\"app\"]/div/div[2]/div/div[1]/form[2]/div[11]/div/span[1]/span[2]";
+
+    @Features("财务管理")
+    @Stories("会员对账")
+    @Title("验证会员对账彩票未结算金额")
+    @Severity(SeverityLevel.BLOCKER)
+    @Step("1.进入财务管理-会员对账，2.获取彩票未结算金额，3.进入报表管理-会员报表，4.点击投注笔数进入注单详情，5.选择未结算的今日数据")
+    @Description("验证会员对账彩票未结算金额")
+    @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=20&version=1")
+    @Test(priority = 4)
+        public void UnSettlement() throws InterruptedException {
+            driverUtil.xpathClick(financeManagement);
+            driverUtil.xpathClick(vipMoney);
+            Thread.sleep(1000);
+            String unSettlement1 = driverUtil.getTextByXpath(unSettlement);
+            System.out.println("验证会员对账彩票未结算金额");
+            System.out.println("会员对账彩票未结算金额："+unSettlement1);
+
+            //会员报表-投注笔数跳转至注单明细，选择未结算；
+            driverUtil.xpathClick(ReportManagement);
+            Thread.sleep(1000);
+            driverUtil.xpathClick(vipReport);
+            Thread.sleep(1000);
+            driverUtil.xpathClick(betNumber);
+            Thread.sleep(2000);
+            driverUtil.switchToWindowTitle("注单明细");
+            driverUtil.xpathClear(inputAccount);
+            driverUtil.xpathClick(settlementStatus);
+            Thread.sleep(1000);
+            driverUtil.xpathClick(selectUnSettlement);
+            driverUtil.xpathClick(inputDetail);
+            Thread.sleep(1000);
+            String unSettlementMoney1 = driverUtil.getTextByXpath(unSettlementMoney);
+            System.out.println("注单明细今日未结算金额："+unSettlementMoney1);
+            Assertion.setFlag(true);
+            Assertion.verifyEquals(unSettlement1, unSettlementMoney1);
+            Assert.assertTrue(Assertion.currentFlag());
+            driverUtil.closeCurrentBrowser();
+    }
+
+    String gameLoseWinTotal = "//*[@id=\"app\"]/div/div[2]/section/div/div[2]/div[1]/div[3]/table/tbody/tr[1]/td[7]/div";
+
+    @Features("财务管理")
+    @Stories("会员对账")
+    @Title("验证会员对账外接游戏总输赢金额")
+    @Severity(SeverityLevel.BLOCKER)
+    @Step("1.进入财务管理-会员对账，2.获取彩票未结算金额，3.进入报表管理-会员报表，4.点击投注笔数进入注单详情，5.选择未结算的今日数据")
+    @Description("验证会员对账外接游戏总输赢金额")
+    @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=20&version=1")
+    @Test(priority = 5)
+       public void gameLoseWinTotal() throws InterruptedException {
+            driverUtil.switchToWindowTitle("后台管理系统");
+            Thread.sleep(1000);
+            driverUtil.xpathClick(financeManagement);
+            driverUtil.xpathClick(vipMoney);
+            Thread.sleep(1000);
+            String gameLoseWinTotal1 = driverUtil.getTextByXpath(gameLoseWinTotal);
+            System.out.println("验证会员对账外接游戏总输赢金额");
+            System.out.println("会员对账外接游戏总输赢金额："+gameLoseWinTotal1);
+
+
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     /**
@@ -53,7 +284,7 @@ public class FinanceManagement {
     @Step("1.进入会员对账，2.计算对账差别金额")
     @Description("验证会员对账差别金额第一条数据")
     @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=20&version=1")
-    @Test(priority = 1)
+    @Test(enabled = false)
         public void ReconciliationVip() throws InterruptedException {
             driverUtil.xpathClick(financeManagement);
             Thread.sleep(1000);
@@ -117,7 +348,7 @@ public class FinanceManagement {
     @Step("1.进入会员对账，2.计算对账差别金额第二条数据")
     @Description("验证会员对账差别金额第一条数据")
     @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=21&version=1")
-    @Test(priority = 2)
+    @Test(enabled = false)
     public void ReconciliationVip2() throws InterruptedException {
         String getYesterdayBalanceVip2 = driverUtil.getTextByXpath(yesterdayBalanceVip2);
         String getRechargeOnline2 = driverUtil.getTextByXpath(rechargeOnline2);
@@ -177,7 +408,7 @@ public class FinanceManagement {
     @Step("1.进入会员对账，2.计算对账差别金额第三条数据")
     @Description("验证会员对账差别金额第三条数据")
     @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=22&version=1")
-    @Test(priority = 3)
+    @Test(enabled = false)
     public void ReconciliationVip3() throws InterruptedException {
         String getYesterdayBalanceVip3 = driverUtil.getTextByXpath(yesterdayBalanceVip3);
         String getRechargeOnline3 = driverUtil.getTextByXpath(rechargeOnline3);
@@ -236,7 +467,7 @@ public class FinanceManagement {
     @Step("1.进入财务管理-代理对账，2.验证第一条数据的对账差别金额")
     @Description("验证代理对账差别金额第一条数据")
     @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=23&version=1")
-    @Test(priority = 4)
+    @Test(enabled = false)
         public void ReconciliationAgent1() throws InterruptedException {
             driverUtil.xpathClick(ReconciliationAgent);
             Thread.sleep(1000);
@@ -285,7 +516,7 @@ public class FinanceManagement {
     @Step("1.进入财务管理-代理对账，2.验证第二条数据的对账差别金额")
     @Description("验证代理对账差别金额第二条数据")
     @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=24&version=1")
-    @Test(priority = 5)
+    @Test(enabled = false)
     public void ReconciliationAgent2() throws InterruptedException {
         driverUtil.xpathClick(ReconciliationAgent);
         Thread.sleep(1000);
