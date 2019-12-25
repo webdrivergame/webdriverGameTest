@@ -15,27 +15,16 @@ import java.math.BigDecimal;
 public class moneyDetails {
 
     WebDriverUtil driverUtil = new WebDriverUtil(null);
-    String Url = "http://10.1.101.121:8703/";
-    //String Url = "https://admin.zs-pre.com/";
-    String login = "//*[@id=\"app\"]/div/div/form/div[4]/div/div/button/span";
 
-   /** @BeforeTest
-        public void loginBefore() throws InterruptedException {
-            driverUtil.loginBefore(Url);
-            driverUtil.adminLogin("achao", "123123");
-            driverUtil.xpathClick(login);
-            Thread.sleep(2000);
 
-        }
-    */
 
 
     //用户管理-会员列表-输入账号-查询-资金明细
     String UserManagement = "//*[@id=\"app\"]/div/div[1]/div[2]/div[1]/div/ul/div[2]/li/div/span";
     String vipList = "//*[@id=\"app\"]/div/div[1]/div[2]/div[1]/div/ul/div[2]/li/ul/div[3]/a/li/span";
     String inputAccount = "//*[@id=\"app\"]/div/div[2]/section/div/div/div[1]/form/div[10]/div/div/input";
-    String inquireVip = "//*[@id=\"app\"]/div/div[2]/section/div/div/div[1]/form/div[15]/div/button[1]/span";
-    String moneyDetails = "//*[@id=\"app\"]/div/div[2]/section/div/div/div[2]/div[1]/div[3]/table/tbody/tr/td[17]/div/button[3]/span";
+    String inquireVip = "//*[@id=\"app\"]/div/div[2]/section/div/div/div[1]/form/div[10]/div/div/input";
+    String moneyDetails = "//*[@id=\"app\"]/div/div[2]/section/div/div/div[1]/form/div[15]/div/button[1]/span";
 
 
     @Features("用户管理")

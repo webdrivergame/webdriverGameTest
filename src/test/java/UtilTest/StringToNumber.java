@@ -141,7 +141,40 @@ public class StringToNumber {
 
 
 
+        @Test
+        public void sum(){
+            int a = 0;
+            for (int b1 = 0;b1 <=5; b1 ++){
+                a = a+b1;
+            }
+            System.out.println(a);
+        }
 
 
+
+        @Test
+        public void intTest(){
+            String str="4444.1122";
+
+            double num;
+
+            java.text.DecimalFormat myformat=new java.text.DecimalFormat("#0.000");
+
+            num=Double.parseDouble(str);//装换为double类型
+
+            num=Double.parseDouble(myformat.format(num));//保留3位小数
+
+            System.out.println(num);
+        }
+
+
+        @Test
+        public void test1(){
+            String s="125.671";
+            BigDecimal b = new BigDecimal(s);
+            //b=b.setScale(2, BigDecimal.ROUND_DOWN); //小数位 直接舍去
+            System.out.println(b);
+
+        }
 
 }

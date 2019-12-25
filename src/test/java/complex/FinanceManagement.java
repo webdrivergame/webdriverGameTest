@@ -13,17 +13,6 @@ import java.math.BigDecimal;
 public class FinanceManagement {
 
     WebDriverUtil driverUtil = new WebDriverUtil(null);
-    String URL = "http://10.1.101.124:8653/";
-    String login = "//*[@id=\"app\"]/div/div/form/div[4]/div/div/button/span";
-
-    @BeforeTest
-    public void loginBefore() throws InterruptedException {
-        driverUtil.loginBefore(URL);
-        driverUtil.adminLogin("achao", "123123");
-        driverUtil.xpathClick(login);
-        Thread.sleep(2000);
-
-    }
 
 
     /**  ------------------------------------------财务管理-会员对账-线上充值金额-----------------------------------
@@ -152,8 +141,10 @@ public class FinanceManagement {
                 Thread.sleep(1000);
                 driverUtil.xpathClick(vipReport);
                 Thread.sleep(1000);
+                driverUtil.scrollToWindow();
                 String activityLoseWinReport1 = driverUtil.getTextByXpath(activityLoseWinReport);
-                System.out.println("会员报表彩票实际输赢(包括退水)：" + activityLoseWinReport1);
+                System.out.println("会员报表彩票实际输赢(包括退水)："+activityLoseWinReport1);
+                driverUtil.scrollToWindowHundred();
                 Assertion.setFlag(true);
                 Assertion.verifyEquals(getActivityLoseWinLotty, activityLoseWinReport1);
                 Assert.assertTrue(Assertion.currentFlag());

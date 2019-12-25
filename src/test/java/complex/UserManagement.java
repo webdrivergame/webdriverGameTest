@@ -19,8 +19,7 @@ public class UserManagement {
 
     String UserManagement = "//*[@id=\"app\"]/div/div[1]/div[2]/div[1]/div/ul/div[2]/li/div/span";
     String agentTotal = "//*[@id=\"app\"]/div/div[1]/div[2]/div[1]/div/ul/div[2]/li/ul/div[1]/a/li/span";
-    String agentNumber = "//*[@id=\"app\"]/div/div[2]/section/div/div[2]/div[1]/div[3]/table/tbody/tr[1]/td[3]/div/span";
-    String clickAgentNumber = "//*[@id=\"app\"]/div/div[2]/section/div/div[2]/div[1]/div[3]/table/tbody/tr[1]/td[3]/div/span";
+    String agentNumber = "//*[@id=\"app\"]/div/div[2]/section/div/div[2]/div[1]/div[3]/table/tbody/tr[1]/td[3]/div/section/a/span";
     String agentNumberPage = "//*[@id=\"app\"]/div/div[2]/section/div/div/div[2]/div[2]/div[1]";
 
     @Features("用户管理")
@@ -42,7 +41,7 @@ public class UserManagement {
             System.out.println("总代理列表代理数："+getAgentNumber);
 
             //点击会员跳转会员列表获取代理数
-            driverUtil.xpathClick(clickAgentNumber);
+            driverUtil.xpathClick(agentNumber);
             Thread.sleep(2000);
             String getAgentNumberPage = driverUtil.getTextByXpath(agentNumberPage);
             String getAgentNumberPage1 = getAgentNumberPage.substring(1,getAgentNumberPage.indexOf("条"));
@@ -61,7 +60,7 @@ public class UserManagement {
         *
         * */
 
-    String vipNumber = "//*[@id=\"app\"]/div/div[2]/section/div/div[2]/div[1]/div[3]/table/tbody/tr[1]/td[4]/div/span";
+    String vipNumber = "//*[@id=\"app\"]/div/div[2]/section/div/div[2]/div[1]/div[3]/table/tbody/tr[1]/td[4]/div/section/a/span";
     String vipNumberPage = "//*[@id=\"app\"]/div/div[2]/section/div/div/div[2]/div[2]/div[1]";
 
     @Features("用户管理")
@@ -101,7 +100,7 @@ public class UserManagement {
       * */
 
     String agentList = "//*[@id=\"app\"]/div/div[1]/div[2]/div[1]/div/ul/div[2]/li/ul/div[2]/a/li/span";
-    String agentListVipNumber = "//*[@id=\"app\"]/div/div[2]/section/div/div/div[2]/div[1]/div[3]/table/tbody/tr[1]/td[4]/div/span";
+    String agentListVipNumber = "//*[@id=\"app\"]/div/div[2]/section/div/div/div[2]/div[1]/div[3]/table/tbody/tr[1]/td[4]/div/section/a/span";
     String agentListVipNumberPage = "//*[@id=\"app\"]/div/div[2]/section/div/div/div[2]/div[2]/div[1]";
 
     @Features("用户管理")
@@ -141,7 +140,7 @@ public class UserManagement {
          * */
 
     String clickOnlinePlayer = "//*[@id=\"app\"]/div/div[1]/div[2]/div[1]/div/ul/div[2]/li/ul/div[4]/a/li/span";
-    String shot = "//*[@id=\"app\"]/div/div[2]/section/div/div[2]/div[1]/div[3]/table/tbody/tr[1]/td[11]/div/button/span";
+    String shot = "//*[@id=\"app\"]/div/div[2]/section/div/div[2]/div[1]/div[3]/table/tbody/tr[1]/td[11]/div/section/button/span";
     String sure = "/html/body/div[2]/div/div[3]/button[2]/span";
     String success = "/html/body/div[3]/p";
 
@@ -152,7 +151,7 @@ public class UserManagement {
     @Step("1.进入用户管理，2.在线玩家点击提出，3.判断是否提出成功")
     @Description("测试踢出玩家功能")
     @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=18&version=1")
-    @Test(priority = 10)
+    @Test(priority = 4)
         public void onlinePlayer() throws InterruptedException {
             driverUtil.switchToParentFrame();//切换表格
             driverUtil.xpathClick(clickOnlinePlayer);
@@ -172,40 +171,6 @@ public class UserManagement {
         }
 
 
-        /** 1.进入用户管理，2.提出在线后台用户，3.判断是否踢出承成功
-         *
-         * */
-
-    String clickOnlineBackstage = "//*[@id=\"app\"]/div/div[1]/div[2]/div[1]/div/ul/div[2]/li/ul/div[5]/a/li/span";
-    String agentShot = "//*[@id=\"app\"]/div/div[2]/section/div/div[2]/div[1]/div[3]/table/tbody/tr[1]/td[8]/div/button/span";
-    String agentSure = "/html/body/div[2]/div/div[3]/button[2]/span";
-    String agentSuccess = "/html/body/div[3]/p";
-
-    @Features("用户管理")
-    @Stories("在线后台用户")
-    @Title("验证后台用户踢出功能")
-    @Severity(SeverityLevel.BLOCKER)
-    @Step("1.进入用户管理，2.提出在线后台用户，3.判断是否踢出承成功")
-    @Description("测试踢出用户功能")
-    @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=19&version=1")
-    @Test(enabled = false)
-        public void onlineBackstage() throws InterruptedException {
-            driverUtil.xpathClick(clickOnlineBackstage);
-            Thread.sleep(1000);
-            driverUtil.xpathClick(agentShot);
-            driverUtil.xpathClick(agentSure);
-            driverUtil.waitForElement(agentSuccess,5);
-            String getAgentSuccess = driverUtil.getTextByXpath(agentSuccess);
-            System.out.println("验证后台用户踢出功能");
-            System.out.println("踢出信息："+getAgentSuccess);
-
-            //判断是否踢出成功
-            Assertion.setFlag(true);
-            Assertion.verifyEquals(getAgentSuccess,"踢出成功!");
-            Assert.assertTrue(Assertion.currentFlag());
-            Thread.sleep(2000);
-
-        }
 
 
 

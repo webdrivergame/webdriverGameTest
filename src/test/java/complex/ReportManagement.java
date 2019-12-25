@@ -14,18 +14,6 @@ public class ReportManagement {
 
     WebDriverUtil driverUtil = new WebDriverUtil(null);
 
-    String URL = "http://10.1.101.124:8653/";
-    String login = "//*[@id=\"app\"]/div/div/form/div[4]/div/div/button/span";
-
-    @BeforeTest
-    public void loginBefore() throws InterruptedException {
-        driverUtil.loginBefore(URL);
-        driverUtil.adminLogin("achao", "123123");
-        driverUtil.xpathClick(login);
-        Thread.sleep(2000);
-
-    }
-
 
 
     /**
@@ -303,13 +291,18 @@ public class ReportManagement {
             driverUtil.xpathClick(mothsAgentTotal);
             driverUtil.xpathClick(inquireAgentTotal);
             Thread.sleep(2000);
+            driverUtil.scrollToWindow();//缩小窗口80%
             String getLoseWinAgentTotal = driverUtil.getTextByXpath(loseWinAgentTotal);
             System.out.println("验证总代理报表本月会员输赢(不包括退水)金额");
             System.out.println("总代理列表本月会员输赢(不包括退水)金额："+getLoseWinAgentTotal);
+            driverUtil.scrollToWindowHundred();
+
             driverUtil.xpathClick(accountAgentTotal);
             Thread.sleep(1000);
+            driverUtil.scrollToWindow();
             String getLoseWinAgent = driverUtil.getTextByXpath(loseWinAgent);
             System.out.println("代理列表本月会员输赢(不包括退水)金额："+getLoseWinAgent);
+            driverUtil.scrollToWindowHundred();
             Assertion.setFlag(true);
             Assertion.verifyEquals(getLoseWinAgentTotal,getLoseWinAgent);
             Assert.assertTrue(Assertion.currentFlag());
@@ -339,14 +332,19 @@ public class ReportManagement {
             driverUtil.xpathClick(mothsAgentTotal);
             driverUtil.xpathClick(inquireAgentTotal);
             Thread.sleep(2000);
+            driverUtil.scrollToWindow();
             String getWaterBreakPracticeAgentTotal = driverUtil.getTextByXpath(waterBreakPracticeAgentTotal);
             System.out.println("验证总代理报表本月实际退水金额");
             System.out.println("总代理列表本月实际退水金额："+getWaterBreakPracticeAgentTotal);
+            driverUtil.scrollToWindowHundred();
+
+
             driverUtil.xpathClick(accountAgentTotal);
             Thread.sleep(2000);
             driverUtil.scrollToRight();
             String getWaterBreakPracticeAgent = driverUtil.getTextByXpath(waterBreakPracticeAgent);
             System.out.println("代理列表本月实际退水金额："+getWaterBreakPracticeAgent);
+            driverUtil.scrollToWindowHundred();
             Assertion.setFlag(true);
             Assertion.verifyEquals(getWaterBreakPracticeAgentTotal,getWaterBreakPracticeAgent);
             Assert.assertTrue(Assertion.currentFlag());
@@ -376,13 +374,19 @@ public class ReportManagement {
             driverUtil.xpathClick(mothsAgentTotal);
             driverUtil.xpathClick(inquireAgentTotal);
             Thread.sleep(2000);
+            driverUtil.scrollToWindow();
             String getLoseWinAndWaterAgentTotal = driverUtil.getTextByXpath(loseWinAndWaterAgentTotal);
             System.out.println("验证总代理报表本月实际输赢(包括退水)金额");
             System.out.println("总代理列表本月实际输赢(包括退水)金额："+getLoseWinAndWaterAgentTotal);
+            driverUtil.scrollToWindowHundred();
+
+
             driverUtil.xpathClick(accountAgentTotal);
             Thread.sleep(2000);
+            driverUtil.scrollToWindow();
             String getLoseWinAndWaterAgent = driverUtil.getTextByXpath(loseWinAndWaterAgent);
             System.out.println("代理列表本月实际输赢(包括退水)金额："+getLoseWinAndWaterAgent);
+            driverUtil.scrollToWindowHundred();
             Assertion.setFlag(true);
             Assertion.verifyEquals(getLoseWinAndWaterAgentTotal,getLoseWinAndWaterAgent);
             Assert.assertTrue(Assertion.currentFlag());
@@ -416,8 +420,6 @@ public class ReportManagement {
     @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=34&version=1")
     @Test(priority = 11)
         public void vipNumberGame() throws InterruptedException {
-            driverUtil.xpathClick(reportManagement);
-            Thread.sleep(1000);
             driverUtil.xpathClick(reportAgentTotal);
             Thread.sleep(1000);
             driverUtil.xpathClick(clickGame);
@@ -462,6 +464,8 @@ public class ReportManagement {
     @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=34&version=1")
     @Test(priority = 12)
         public void betTotalGame() throws InterruptedException {
+            driverUtil.xpathClick(reportAgentTotal);
+            Thread.sleep(1000);
             driverUtil.xpathClick(clickGame);
             Thread.sleep(1000);
             driverUtil.xpathClick(GameMonthsAgentTotal);
@@ -476,15 +480,19 @@ public class ReportManagement {
             Thread.sleep(1000);
 
             BigDecimal betMoneyRealPeople1 = new BigDecimal(driverUtil.getTextByXpath(betMoneyRealPeople));//真人
+            System.out.println(betMoneyRealPeople1);
             BigDecimal betMoneyElectronicGame1 = new BigDecimal(driverUtil.getTextByXpath(betMoneyElectronicGame));//电子
+            System.out.println(betMoneyElectronicGame1);
+            driverUtil.scrollToWindowHalf();
             BigDecimal betMoneyChess1 = new BigDecimal(driverUtil.getTextByXpath(betMoneyChess));//棋牌
+            System.out.println(betMoneyChess1);
             BigDecimal betMoneySport1 = new BigDecimal(driverUtil.getTextByXpath(betMoneySport));//体育
             BigDecimal betMoneyElectronicSport1 = new BigDecimal(driverUtil.getTextByXpath(betMoneyElectronicSport));//电竞
 
 
             BigDecimal betMoneyAddAgentGame = betMoneyRealPeople1.add(betMoneyElectronicGame1).add(betMoneyChess1).add(betMoneySport1).add(betMoneyElectronicSport1);
             System.out.println("代理列表计算投注总额："+betMoneyAddAgentGame);
-
+            driverUtil.scrollToWindowHundred();
             Assertion.setFlag(true);
             Assertion.verifyEquals(betTotalGame1,betMoneyAddAgentGame);
             Assert.assertTrue(Assertion.currentFlag());
@@ -515,19 +523,23 @@ public class ReportManagement {
     @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=34&version=1")
     @Test(priority = 13)
         public void backWaterTotalGame() throws InterruptedException {
+            driverUtil.xpathClick(reportAgentTotal);
+            Thread.sleep(1000);
             driverUtil.xpathClick(clickGame);
             Thread.sleep(1000);
             driverUtil.xpathClick(GameMonthsAgentTotal);
             driverUtil.xpathClick(inquireGameAgentTotal);
             Thread.sleep(1000);
 
-
+            driverUtil.scrollToWindow();
             BigDecimal vipBackWaterAgentTotal1 = new BigDecimal(driverUtil.getTextByXpath(vipBackWaterAgentTotal));
             System.out.println("验证总代理报表会员实际反水总额");
             System.out.println("总代理报表外接游戏实际反水总额："+vipBackWaterAgentTotal1);
+            driverUtil.scrollToWindowHundred();
+
             driverUtil.xpathClick(clickGameAgentTotal);
             Thread.sleep(1000);
-
+        driverUtil.scrollToWindowHalf();
         BigDecimal VipBackWaterRealPeople1 = new BigDecimal(driverUtil.getTextByXpath(VipBackWaterRealPeople));//真人
         BigDecimal vipBackWaterElectronicGame1 = new BigDecimal(driverUtil.getTextByXpath(vipBackWaterElectronicGame));//电子
         BigDecimal vipBackWaterChess1 = new BigDecimal(driverUtil.getTextByXpath(vipBackWaterChess));//棋牌
@@ -536,6 +548,7 @@ public class ReportManagement {
 
         BigDecimal backWaterAddAgentGame = VipBackWaterRealPeople1.add(vipBackWaterElectronicGame1).add(vipBackWaterChess1).add(vipBackWaterSport1).add(vipBackWaterElectronicSport1);
         System.out.println("代理列表计算反水总额："+backWaterAddAgentGame);
+        driverUtil.scrollToWindowHundred();
         Assertion.setFlag(true);
         Assertion.verifyEquals(vipBackWaterAgentTotal1,backWaterAddAgentGame);
         Assert.assertTrue(Assertion.currentFlag());
@@ -567,6 +580,8 @@ public class ReportManagement {
     @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=34&version=1")
     @Test(priority = 14)
     public void loseWinTotalGame() throws InterruptedException {
+        driverUtil.xpathClick(reportAgentTotal);
+        Thread.sleep(1000);
         driverUtil.xpathClick(clickGame);
         Thread.sleep(1000);
         driverUtil.xpathClick(GameMonthsAgentTotal);
@@ -580,6 +595,7 @@ public class ReportManagement {
         driverUtil.xpathClick(clickGameAgentTotal);
         Thread.sleep(1000);
 
+        driverUtil.scrollToWindowHalf();
         BigDecimal loseWinRealPeople1 = new BigDecimal(driverUtil.getTextByXpath(loseWinRealPeople));//真人
         BigDecimal loseWinElectronicGame1 = new BigDecimal(driverUtil.getTextByXpath(loseWinElectronicGame));//电子
         BigDecimal loseWinChess1 = new BigDecimal(driverUtil.getTextByXpath(loseWinChess));//棋牌
@@ -588,6 +604,7 @@ public class ReportManagement {
 
         BigDecimal loseWinAddAgentGame = loseWinRealPeople1.add(loseWinElectronicGame1).add(loseWinChess1).add(loseWinSport1).add(loseWinElectronicSport1);
         System.out.println("代理列表计算输赢总额："+loseWinAddAgentGame);
+        driverUtil.scrollToWindowHundred();
         Assertion.setFlag(true);
         Assertion.verifyEquals(loseWinAgentGameTotal1,loseWinAddAgentGame);
         Assert.assertTrue(Assertion.currentFlag());
@@ -614,20 +631,26 @@ public class ReportManagement {
     @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=34&version=1")
     @Test(priority = 15)
     public void loseWinTotalNoWaterGame() throws InterruptedException {
+        driverUtil.xpathClick(reportAgentTotal);
+        Thread.sleep(1000);
         driverUtil.xpathClick(clickGame);
         Thread.sleep(1000);
         driverUtil.xpathClick(GameMonthsAgentTotal);
         driverUtil.xpathClick(inquireGameAgentTotal);
         Thread.sleep(1000);
 
+        driverUtil.scrollToWindow();
         String loseWinNoWaterGameAgentTotal1 = driverUtil.getTextByXpath(loseWinNoWaterGameAgentTotal);
         System.out.println("验证总代理报表会员实际输赢总额(无反水)");
         System.out.println("总代理报表会员实际输赢总额(无反水)："+loseWinNoWaterGameAgentTotal1);
+        driverUtil.scrollToWindowHundred();
         driverUtil.xpathClick(clickGameAgentTotal);
         Thread.sleep(1000);
 
+        driverUtil.scrollToWindow();
         String loseWinTotalNoWaterGameAgent1 = driverUtil.getTextByXpath(loseWinTotalNoWaterGameAgent);
-        System.out.println("代理报表实际输赢总额(无反水)"+loseWinTotalNoWaterGameAgent1);
+        System.out.println("代理报表实际输赢总额(无反水):"+loseWinTotalNoWaterGameAgent1);
+        driverUtil.scrollToWindowHundred();
         Assertion.setFlag(true);
         Assertion.verifyEquals(loseWinNoWaterGameAgentTotal1,loseWinTotalNoWaterGameAgent1);
         Assert.assertTrue(Assertion.currentFlag());
@@ -659,6 +682,8 @@ public class ReportManagement {
     @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=34&version=1")
     @Test(priority = 16)
     public void agentBackWaterGame() throws InterruptedException {
+        driverUtil.xpathClick(reportAgentTotal);
+        Thread.sleep(1000);
         driverUtil.xpathClick(clickGame);
         Thread.sleep(1000);
         driverUtil.xpathClick(GameMonthsAgentTotal);
@@ -672,6 +697,7 @@ public class ReportManagement {
         driverUtil.xpathClick(clickGameAgentTotal);
         Thread.sleep(1000);
 
+        driverUtil.scrollToWindowHalf();
         BigDecimal agentBackWaterRealPeople1 = new BigDecimal(driverUtil.getTextByXpath(agentBackWaterRealPeople));//真人
         BigDecimal agentBackWaterElectronicGame1 = new BigDecimal(driverUtil.getTextByXpath(agentBackWaterElectronicGame));//电子
         BigDecimal agentBackWaterChess1 = new BigDecimal(driverUtil.getTextByXpath(agentBackWaterChess));//棋牌
@@ -680,6 +706,7 @@ public class ReportManagement {
 
         BigDecimal loseWinAddAgentGame = agentBackWaterRealPeople1.add(agentBackWaterElectronicGame1).add(agentBackWaterChess1).add(agentBackWaterSport1).add(agentBackWaterElectronicSport1);
         System.out.println("代理报表外接游戏实际反水总额"+loseWinAddAgentGame);
+        driverUtil.scrollToWindowHundred();
         Assertion.setFlag(true);
         Assertion.verifyEquals(agentBackWaterGame1,loseWinAddAgentGame);
         Assert.assertTrue(Assertion.currentFlag());
@@ -703,24 +730,31 @@ public class ReportManagement {
     @Step("1.进入报表管理-总代理报表；2.获取本月代理额外反水总额，3.点击跳转代理列表，4.获取代理报表代理额外反水总额")
     @Description("测试代理额外反水总额是否等于跳转的代理下代理额外反水总额")
     @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=34&version=1")
-    @Test(priority = 15)
+    @Test(priority = 17)
     public void agentAddedBackWaterGame() throws InterruptedException {
+        driverUtil.xpathClick(reportAgentTotal);
+        Thread.sleep(1000);
         driverUtil.xpathClick(clickGame);
         Thread.sleep(1000);
         driverUtil.xpathClick(GameMonthsAgentTotal);
         driverUtil.xpathClick(inquireGameAgentTotal);
         Thread.sleep(1000);
 
+        driverUtil.scrollToWindowHalf();
         String agentAddedBackWaterGame1 = driverUtil.getTextByXpath(agentAddedBackWaterGame);
         System.out.println("验证总代理报表代理额外反水总额");
         System.out.println("总代理报表代理额外反水总额："+agentAddedBackWaterGame1);
+        driverUtil.scrollToWindowHundred();
+
         driverUtil.xpathClick(clickGameAgentTotal);
         Thread.sleep(1000);
 
+        driverUtil.scrollToWindowHalf();
         String agentAddedBackWaterGameAgent1 = driverUtil.getTextByXpath(agentAddedBackWaterGameAgent);
-        System.out.println("代理报表代理额外反水总额"+agentAddedBackWaterGameAgent);
+        System.out.println("代理报表代理额外反水总额"+agentAddedBackWaterGameAgent1);
+        driverUtil.scrollToWindowHundred();
         Assertion.setFlag(true);
-        Assertion.verifyEquals(agentAddedBackWaterGame1,agentAddedBackWaterGameAgent);
+        Assertion.verifyEquals(agentAddedBackWaterGame1,agentAddedBackWaterGameAgent1);
         Assert.assertTrue(Assertion.currentFlag());
 
 
@@ -743,31 +777,34 @@ public class ReportManagement {
     @Step("1.进入报表管理-总代理报表；2.获取本月代理代理实际佣金总额，3.点击跳转代理列表，4.获取代理报表代理实际佣金总额")
     @Description("测试代理代理实际佣金总额是否等于跳转的代理下代理实际佣金总额")
     @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=34&version=1")
-    @Test(priority = 15)
+    @Test(priority = 18)
     public void agentCommissionGame() throws InterruptedException {
+        driverUtil.xpathClick(reportAgentTotal);
+        Thread.sleep(1000);
         driverUtil.xpathClick(clickGame);
         Thread.sleep(1000);
         driverUtil.xpathClick(GameMonthsAgentTotal);
         driverUtil.xpathClick(inquireGameAgentTotal);
         Thread.sleep(1000);
 
+        driverUtil.scrollToWindowHalf();
         String agentCommissionGame1 = driverUtil.getTextByXpath(agentCommissionGame);
         System.out.println("验证总代理报表代理实际佣金总额");
         System.out.println("总代理报表代理实际佣金总额："+agentCommissionGame1);
+        driverUtil.scrollToWindowHundred();
+
         driverUtil.xpathClick(clickGameAgentTotal);
         Thread.sleep(1000);
-
+        driverUtil.scrollToWindowHalf();
         String agentCommissionGameAgent1 = driverUtil.getTextByXpath(agentCommissionGameAgent);
         System.out.println("代理报表代理实际佣金总额"+agentCommissionGameAgent1);
+        driverUtil.scrollToWindowHundred();
         Assertion.setFlag(true);
         Assertion.verifyEquals(agentCommissionGame1,agentCommissionGameAgent1);
         Assert.assertTrue(Assertion.currentFlag());
 
 
     }
-
-
-
 
 
 
@@ -794,7 +831,7 @@ public class ReportManagement {
     @Step("1.进入报表管理-代理报表；2.获取账号dl本月会员数；3.点击dl跳转；4.获取跳转后会员报表本月会员数")
     @Description("判断代理报表的本月会员数是否等于跳转后的代理报表本月会员数总和")
     @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=35&version=1")
-    @Test(priority = 11)
+    @Test(priority = 19)
         public void vipNumberAgentLotty() throws InterruptedException {
             driverUtil.xpathClick(reportAgent);
             driverUtil.xpathClearSendKeys(accountAgent,"dl");
@@ -834,7 +871,7 @@ public class ReportManagement {
     @Step("1.进入报表管理-代理报表；2.获取账号dl本月充值金额；3.点击dl跳转；4.获取跳转后会员报表本月充值金额")
     @Description("判断代理报表的本月充值金额是否等于跳转后的代理报表本月充值金额总和")
     @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=36&version=1")
-    @Test(priority = 12)
+    @Test(priority = 20)
         public void rechargeMoneyAgentLotty() throws InterruptedException {
             driverUtil.xpathClick(reportAgent);
             driverUtil.xpathClearSendKeys(accountAgent,"dl");
@@ -870,7 +907,7 @@ public class ReportManagement {
     @Step("1.进入报表管理-代理报表；2.获取账号dl本月笔数；3.点击dl跳转；4.获取跳转后会员报表本月笔数金额")
     @Description("判断代理报表的本月笔数是否等于跳转后的代理报表本月笔数总和")
     @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=37&version=1")
-    @Test(priority = 13)
+    @Test(priority = 21)
         public void countAgentLotty() throws InterruptedException {
             driverUtil.xpathClick(reportAgent);
             driverUtil.xpathClearSendKeys(accountAgent,"dl");
@@ -906,7 +943,7 @@ public class ReportManagement {
     @Step("1.进入报表管理-代理报表；2.获取账号dl本月投注金额；3.点击dl跳转；4.获取跳转后会员报表本月投注金额")
     @Description("判断代理报表的本月投注金额是否等于跳转后的代理报表本月投注金额总和")
     @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=38&version=1")
-    @Test(priority = 14)
+    @Test(priority = 22)
         public void betMoneyAgentReportLotty() throws InterruptedException {
             driverUtil.xpathClick(reportAgent);
             driverUtil.xpathClearSendKeys(accountAgent,"dl");
@@ -942,7 +979,7 @@ public class ReportManagement {
     @Step("1.进入报表管理-代理报表；2.获取账号dl本月赢利投注金额；3.点击dl跳转；4.获取跳转后会员报表本月赢利投注金额")
     @Description("判断代理报表的本月赢利投注金额是否等于跳转后的代理报表本月赢利投注金额总和")
     @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=39&version=1")
-    @Test(priority = 15)
+    @Test(priority = 23)
         public void winBetMoneyAgentReportLotty() throws InterruptedException {
             driverUtil.xpathClick(reportAgent);
             driverUtil.xpathClearSendKeys(accountAgent,"dl");
@@ -977,7 +1014,7 @@ public class ReportManagement {
     @Step("1.进入报表管理-代理报表；2.获取账号dl本月充值优惠/手续费金额；3.点击dl跳转；4.获取跳转后会员报表本月充值优惠/手续费金额")
     @Description("判断代理报表的本月充值优惠/手续费金额是否等于跳转后的代理报表本月充值优惠/手续费金额总和")
     @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=40&version=1")
-    @Test(priority = 16)
+    @Test(priority = 24)
         public void serviceMoneyAgentLotty() throws InterruptedException {
             driverUtil.xpathClick(reportAgent);
             driverUtil.xpathClearSendKeys(accountAgent,"dl");
@@ -1014,7 +1051,7 @@ public class ReportManagement {
     @Step("1.进入报表管理-代理报表；2.获取账号dl本月代理赔率金额；3.点击dl跳转；4.获取跳转后会员报表本月代理赔率金额")
     @Description("判断代理报表的本月代理赔率金额是否等于跳转后的代理报表本月代理赔率金额总和")
     @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=41&version=1")
-    @Test(priority = 17)
+    @Test(priority = 25)
         public void oddsAgentLotty() throws InterruptedException {
             driverUtil.xpathClick(reportAgent);
             driverUtil.xpathClearSendKeys(accountAgent,"dl");
@@ -1050,7 +1087,7 @@ public class ReportManagement {
     @Step("1.进入报表管理-代理报表；2.获取账号dl本月代理退水金额；3.点击dl跳转；4.获取跳转后会员报表本月代理退水金额")
     @Description("判断代理报表的本月代理退水金额是否等于跳转后的代理报表本月代理退水金额总和")
     @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=42&version=1")
-    @Test(priority = 18)
+    @Test(priority = 26)
         public void waterBreakMoneyAgentLotty() throws InterruptedException {
             driverUtil.xpathClick(reportAgent);
             driverUtil.xpathClearSendKeys(accountAgent,"dl");
@@ -1085,20 +1122,27 @@ public class ReportManagement {
     @Step("1.进入报表管理-代理报表；2.获取账号dl本月代理退水金额；3.点击dl跳转；4.获取跳转后会员报表本月代理退水金额")
     @Description("判断代理报表的本月会员输赢（不包括退水）是否等于跳转后的代理报表本月会员输赢（不包括退水）总和")
     @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=43&version=1")
-    @Test(priority = 19)
+    @Test(priority = 27)
         public void winLoseNotWaterAgentLotty() throws InterruptedException {
             driverUtil.xpathClick(reportAgent);
             driverUtil.xpathClearSendKeys(accountAgent,"dl");
             driverUtil.xpathClick(mothsAgent);
             driverUtil.xpathClick(inquireAgent);
             Thread.sleep(2000);
+
+            driverUtil.scrollToWindow();
             String getWinLoseNotWaterAgent = driverUtil.getTextByXpath(winLoseNotWaterAgent);
             System.out.println("验证代理报表本月实际输赢（不包括退水）");
             System.out.println("代理报表本月实际输赢（不包括退水）："+getWinLoseNotWaterAgent);
+            driverUtil.scrollToWindowHundred();
+
             driverUtil.xpathClick(clickAgent);
             Thread.sleep(1000);
+
+            driverUtil.scrollToWindow();
             String getWinLoseNotWaterVip = driverUtil.getTextByXpath(winLoseNotWaterVip);
             System.out.println("会员报表本月实际输赢（不包括退水）："+getWinLoseNotWaterVip);
+            driverUtil.scrollToWindowHundred();
             Assertion.setFlag(true);
             Assertion.verifyEquals(getWinLoseNotWaterAgent,getWinLoseNotWaterVip);
             Assert.assertTrue(Assertion.currentFlag());
@@ -1121,21 +1165,26 @@ public class ReportManagement {
     @Step("1.进入报表管理-代理报表；2.获取账号dl本月代理退水金额；3.点击dl跳转；4.获取跳转后会员报表本月代理退水金额")
     @Description("判断代理报表的本月会员输赢（包括退水）是否等于跳转后的代理报表本月会员输赢（包括退水）总和")
     @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=44&version=1")
-    @Test(priority = 20)
+    @Test(priority = 28)
         public void winLoseWaterAgentLotty() throws InterruptedException {
             driverUtil.xpathClick(reportAgent);
             driverUtil.xpathClearSendKeys(accountAgent,"dl");
             driverUtil.xpathClick(mothsAgent);
             driverUtil.xpathClick(inquireAgent);
             Thread.sleep(2000);
+
+            driverUtil.scrollToWindow();
             String getWinLoseWaterAgent = driverUtil.getTextByXpath(winLoseWaterAgent);
             System.out.println("验证代理报表本月实际输赢（包括退水）");
             System.out.println("代理报表本月实际输赢（包括退水）："+getWinLoseWaterAgent);
+            driverUtil.scrollToWindowHundred();
+
             driverUtil.xpathClick(clickAgent);
             Thread.sleep(2000);
-            driverUtil.scrollToRight();
+            driverUtil.scrollToWindow();
             String getWinLoseWaterVip = driverUtil.getTextByXpath(winLoseWaterVip);
             System.out.println("会员报表本月实际输赢（包括退水）："+getWinLoseWaterVip);
+            driverUtil.scrollToWindowHundred();
             Assertion.setFlag(true);
             Assertion.verifyEquals(getWinLoseWaterAgent,getWinLoseWaterVip);
             Assert.assertTrue(Assertion.currentFlag());
@@ -1156,25 +1205,36 @@ public class ReportManagement {
     @Step("1.进入报表管理-代理报表；2.获取账号dl本月代理退水金额；3.点击dl跳转；4.获取跳转后会员报表本月代理退水金额")
     @Description("判断代理报表的本月代理实际退水是否等于跳转后的代理报表本月代理实际退水总和")
     @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=45&version=1")
-    @Test(priority = 21)
+    @Test(priority = 29)
         public void waterBreakMoneyActivityAgentLotty() throws InterruptedException {
             driverUtil.xpathClick(reportAgent);
             driverUtil.xpathClearSendKeys(accountAgent,"dl");
             driverUtil.xpathClick(mothsAgent);
             driverUtil.xpathClick(inquireAgent);
             Thread.sleep(2000);
+
+            driverUtil.scrollToWindow();
             String getWaterBreakMoneyActivityAgent = driverUtil.getTextByXpath(waterBreakMoneyActivityAgent);
             System.out.println("验证代理报表本月实际退水金额");
             System.out.println("代理报表本月实际退水金额："+getWaterBreakMoneyActivityAgent);
+            driverUtil.scrollToWindowHundred();
+
             driverUtil.xpathClick(clickAgent);
             Thread.sleep(2000);
             driverUtil.scrollToRight();
+            driverUtil.scrollToWindow();
             String getWaterBreakMoneyActivityVip = driverUtil.getTextByXpath(waterBreakMoneyActivityVip);
             System.out.println("会员报表本月实际退水金额："+getWaterBreakMoneyActivityVip);
+            driverUtil.scrollToWindowHundred();
             Assertion.setFlag(true);
             Assertion.verifyEquals(getWaterBreakMoneyActivityAgent,getWaterBreakMoneyActivityVip);
             Assert.assertTrue(Assertion.currentFlag());
     }
+
+
+
+
+    //---------------------------------------从这里开始--------------------------------------------------------------------------
 
 
 
@@ -1206,7 +1266,7 @@ public class ReportManagement {
     @Step("1.进入报表管理-会员报表；2.获取账号achy01本月充值金额；3.进入充值记录；4.获取充值记录achy01的本月充值总计")
     @Description("判断会员报表的充值金额是否等于该会员充值记录的充值总计")
     @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=45&version=1")
-    @Test(priority = 22)
+    @Test(priority = 30)
         public void rechargeMoneyVipLotty() throws InterruptedException {
             //driverUtil.xpathClick(reportManagement);
             driverUtil.xpathClick(reportAgent);
@@ -1247,7 +1307,7 @@ public class ReportManagement {
     String inputWithdraw = "//*[@id=\"app\"]/div/div[2]/section/div/div[1]/form/div[3]/div/div/input";
     String monthsWithdraw = "//*[@id=\"app\"]/div/div[2]/section/div/div[1]/form/div[11]/div/div/label[3]/span";
     String inquireWithdraw = "//*[@id=\"app\"]/div/div[2]/section/div/div[1]/form/div[12]/div/button[1]";
-    String withdrawTotal = "//*[@id=\"app\"]/div/div[2]/section/div/div[1]/form/div[15]/div/span/span";
+    String withdrawTotal = "//div[@id='app']/div//section[@class='app-main']/div[@class='app-container']//form[@class='el-form el-form--inline']//span[@class='total']";
 
     @Features("报表管理")
     @Stories("会员报表-彩票")
@@ -1256,7 +1316,7 @@ public class ReportManagement {
     @Step("1.进入报表管理-会员报表；2.获取账号achy01本月提现金额；3.进入提现记录；4.获取充值记录achy01的本月提现总计")
     @Description("判断会员报表的提现金额是否等于该会员提现记录的提现总计")
     @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=45&version=1")
-    @Test(priority = 23)
+    @Test(priority = 31)
         public void withdrawMoneyVipLotty() throws InterruptedException {
             driverUtil.xpathClick(financeManagement);//收起财务管理防止点到投注记录
             Thread.sleep(1000);
@@ -1280,9 +1340,9 @@ public class ReportManagement {
             Thread.sleep(2000);
             String getWithdrawTotal = driverUtil.getTextByXpath(withdrawTotal);
             String getWithdrawTotals = getWithdrawTotal.substring(3);
-            System.out.println("提现记录提现总计："+getWithdrawTotals);
+            System.out.println("提现记录提现总计："+getWithdrawTotal);
             Assertion.setFlag(true);
-            Assertion.verifyEquals(getWithdrawMoney,getWithdrawTotals);
+            Assertion.verifyEquals(getWithdrawMoney,getWithdrawTotal);
             Assert.assertTrue(Assertion.currentFlag());
 
 
@@ -1303,7 +1363,7 @@ public class ReportManagement {
     @Step("1.进入报表管理-会员报表；2.获取账号achy01本月投注笔数；3.点击投注笔数跳转；4.获取投注详情页页面数量")
     @Description("判断会员报表的投注笔数是否等于投注详情页的投注数量")
     @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=45&version=1")
-    @Test(priority = 24)
+    @Test(priority = 32)
         public void betNumberLotty() throws InterruptedException {
             driverUtil.xpathClick(financeManagement);//收起财务管理防止点到投注记录
             Thread.sleep(1000);
@@ -1345,7 +1405,7 @@ public class ReportManagement {
     @Step("1.进入报表管理-会员报表；2.获取账号achy01本月投注金额；3.点击投注笔数跳转；4.获取投注详情页页面总投注金额")
     @Description("判断会员报表的投注金额是否等于投注详情页的投注金额总计")
     @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=45&version=1")
-    @Test(priority = 25)
+    @Test(priority = 33)
         public void betMoneyLotty() throws InterruptedException {
             driverUtil.switchToWindowTitle("后台管理系统");
             Thread.sleep(2000);
@@ -1377,7 +1437,7 @@ public class ReportManagement {
     @Step("1.进入报表管理-会员报表；2.获取账号achy01本月充值优惠金额；3.进入充值记录；4.获取该会员本月充值优惠金额总计")
     @Description("判断会员报表的充值优惠金额是否等于充值记录本月充值优惠金额总计")
     @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=45&version=1")
-    @Test(priority = 26)
+    @Test(priority = 34)
         public void rechargeDiscountLotty() throws InterruptedException {
             driverUtil.switchToWindowTitle("后台管理系统");
             Thread.sleep(2000);
@@ -1414,10 +1474,12 @@ public class ReportManagement {
     @Step("1.进入报表管理-会员报表；2.获取账号achy01本月代理赔率金额；")
     @Description("判断会员报表的代理赔率金额是否等于0")
     @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=45&version=1")
-    @Test(priority = 27)
+    @Test(priority = 35)
         public void agentMoneyLotty() throws InterruptedException {
             driverUtil.xpathClick(financeManagement);
+            Thread.sleep(1000);
             driverUtil.xpathClick(reportManagement);
+            Thread.sleep(1000);
             driverUtil.xpathClick(reportVip);
             Thread.sleep(2000);
             driverUtil.xpathClearSendKeys(inputVipAccount,"achy05");
@@ -1449,7 +1511,7 @@ public class ReportManagement {
     @Step("1.进入报表管理-会员报表；2.获取账号achy01本月代理退水金额；")
     @Description("判断会员报表的代理退水金额是否等于0")
     @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=45&version=1")
-    @Test(priority = 28)
+    @Test(priority = 36)
         public void agentWaterLotty() throws InterruptedException {
             String getAgentWater = driverUtil.getTextByXpath(agentWater);
             System.out.println("验证会员报表本月代理退水金额");
@@ -1478,13 +1540,16 @@ public class ReportManagement {
     @Step("1.进入报表管理-会员报表；2.获取账号achy01本月实际输赢（不包括退水）金额；3.进入投注详情；4.获取该会员本月实际输赢（不包括退水）金额")
     @Description("判断会员报表的实际输赢（不包括退水）金额是否等于投注详情的实际输赢金额减去退水金额")
     @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=45&version=1")
-    @Test(priority = 29)
+    @Test(priority = 37)
         public void activityLoseWinLotty() throws InterruptedException {
+            driverUtil.scrollToWindow();
+            Thread.sleep(2000);
             BigDecimal activityLoseWinNotWaters = new BigDecimal(driverUtil.getTextByXpath(activityLoseWinNotWater));
             BigDecimal ActivityWaters = new BigDecimal(driverUtil.getTextByXpath(activityWater));
             System.out.println("验证会员报表本月实际输赢（不包括退水）金额");
             System.out.println("会员报表本月实际输赢（不包括退水）金额："+activityLoseWinNotWaters);
             System.out.println("会员报表实际退水："+ActivityWaters);
+            driverUtil.scrollToWindowHundred();
 
             driverUtil.switchToWindowTitle("注单明细");
             Thread.sleep(2000);
@@ -1512,13 +1577,16 @@ public class ReportManagement {
     @Step("1.进入报表管理-会员报表；2.获取账号achy01本月实际输赢（包括退水）；3.进入投注详情；4.获取输赢总金额")
     @Description("判断会员报表的实际输赢（包括退水）是否等于投注详情的输赢总金额")
     @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=45&version=1")
-    @Test(priority = 30)
+    @Test(priority = 38)
         public void activityLoseWinWaterLotty() throws InterruptedException {
             driverUtil.switchToWindowTitle("后台管理系统");
             Thread.sleep(2000);
+            driverUtil.scrollToWindow();
             String getActivityLoseWinWater = driverUtil.getTextByXpath(activityLoseWinWater);
             System.out.println("验证会员报表本月实际输赢（包括退水）");
             System.out.println("会员报表本月实际输赢（包括退水）："+getActivityLoseWinWater);
+            driverUtil.scrollToWindowHundred();
+
             driverUtil.switchToWindowTitle("注单明细");
             Thread.sleep(2000);
             String getLoseWinMoneyTotal = driverUtil.getTextByXpath(loseWinMoneyTotal);
@@ -1543,16 +1611,18 @@ public class ReportManagement {
     @Step("1.进入报表管理-会员报表；2.获取账号achy01本月实际退水金额；3.用投注金额*0.5%")
     @Description("判断会员报表的实际退水金额是否等于投注金额*0.5%")
     @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=45&version=1")
-    @Test(priority = 31)
+    @Test(priority = 39)
         public void activityWaterMoneyLotty() throws InterruptedException {
             driverUtil.switchToWindowTitle("后台管理系统");
             Thread.sleep(2000);
+            driverUtil.scrollToWindow();
             BigDecimal ActivityWaters = new BigDecimal(driverUtil.getTextByXpath(activityWater));
             BigDecimal betMoneys = new BigDecimal(driverUtil.getTextByXpath(betMoney));
             BigDecimal result = betMoneys.multiply(BigDecimal.valueOf(0.005));
             System.out.println("验证会员报表本月实际退水金额");
             System.out.println("会员报表实际退水金额："+ActivityWaters);
             System.out.println("投注金额*0.5% = "+result);
+            driverUtil.scrollToWindowHundred();
             Assertion.setFlag(true);
             Assertion.verifyEquals(result,ActivityWaters);
             Assert.assertTrue(Assertion.currentFlag());

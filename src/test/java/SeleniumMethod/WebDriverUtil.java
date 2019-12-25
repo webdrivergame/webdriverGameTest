@@ -977,10 +977,21 @@ import javax.xml.soap.Text;
                 public void scrollToBottom(){
                     ((JavascriptExecutor) driver).executeScript("window.scrollTo(0,document.body.scrollHeight)");
                 }
-              //设置窗口比例
-               public void scrollToWindow(){
-                   ((JavascriptExecutor) driver).executeScript("document.body.style.zoom='90%';");
+              //设置窗口比例35%
+               public void scrollToWindowHalf(){
+                   ((JavascriptExecutor) driver).executeScript("document.body.style.zoom='35%';");
                }
+                //设置窗口比例60%
+                public void scrollToWindow(){
+                    ((JavascriptExecutor) driver).executeScript("document.body.style.zoom='60%';");
+                }
+
+                //设置窗口比例100%
+                public void scrollToWindowHundred(){
+                    ((JavascriptExecutor) driver).executeScript("document.body.style.zoom='100%';");
+                }
+
+
               //滚动到最右边
                public void scrollToRight(){
                    ((JavascriptExecutor) driver).executeScript("window.scrollTo(10000,1024);");

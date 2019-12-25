@@ -3,50 +3,66 @@
 <suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [All Test Suite]">
   <test name="平台管理员(failed)">
     <classes>
-      <class name="Backstage.admin.moneyDetails">
+      <class name="complex.ReportManagement">
         <methods>
-          <include name="moneyDetails19"/>
+          <include name="loseWinTotalGame"/>
+          <include name="betMoneyLotty"/>
+          <include name="betNumberLotty"/>
+          <include name="loseWinTotalNoWaterGame"/>
+          <include name="withdrawMoneyVipLotty"/>
+          <include name="rechargeDiscountLotty"/>
+          <include name="serviceMoneyAgentLotty"/>
+          <include name="betMoneyAgentTotalLotty"/>
+          <include name="rechargeMoneyAgentLotty"/>
+          <include name="agentMoneyLotty"/>
+          <include name="betTotalGame"/>
+          <include name="waterBreakPracticeAgentTotalLotty"/>
+          <include name="activityLoseWinLotty"/>
+          <include name="activityLoseWinWaterLotty"/>
+          <include name="winBetMoneyAgentTotalLotty"/>
         </methods>
-      </class> <!-- Backstage.admin.moneyDetails -->
-      <class name="Backstage.admin.panel">
+      </class> <!-- complex.ReportManagement -->
+      <class name="complex.FinanceManagement">
+        <methods>
+          <include name="upRecharge"/>
+          <include name="UnSettlement"/>
+          <include name="onlineRecharge"/>
+        </methods>
+      </class> <!-- complex.FinanceManagement -->
+      <class name="complex.UserManagement">
+        <methods>
+          <include name="vipNumber"/>
+        </methods>
+      </class> <!-- complex.UserManagement -->
+      <class name="complex.moneyDetails">
+        <methods>
+          <include name="moneyDetails15"/>
+          <include name="moneyDetails14"/>
+          <include name="moneyDetails13"/>
+          <include name="moneyDetails12"/>
+          <include name="moneyDetails11"/>
+          <include name="moneyDetails9"/>
+          <include name="moneyDetails10"/>
+          <include name="moneyDetails5"/>
+          <include name="moneyDetails6"/>
+          <include name="moneyDetails7"/>
+          <include name="moneyDetails8"/>
+          <include name="moneyDetails1"/>
+          <include name="moneyDetails19"/>
+          <include name="moneyDetails18"/>
+          <include name="moneyDetails2"/>
+          <include name="moneyDetails17"/>
+          <include name="moneyDetails3"/>
+          <include name="moneyDetails16"/>
+          <include name="moneyDetails4"/>
+        </methods>
+      </class> <!-- complex.moneyDetails -->
+      <class name="complex.panel">
         <methods>
           <include name="notesNumber"/>
           <include name="loginBefore"/>
         </methods>
-      </class> <!-- Backstage.admin.panel -->
-      <class name="Backstage.admin.ReportManagement">
-        <methods>
-          <include name="activityLoseWin"/>
-          <include name="agentMoney"/>
-          <include name="betMoneyAgentReport"/>
-          <include name="rechargeMoneyAgent"/>
-          <include name="betMoneyAgentTotal"/>
-          <include name="activityLoseWinWater"/>
-          <include name="withdrawMoneyVip"/>
-          <include name="countAgent"/>
-          <include name="winLoseWaterAgent"/>
-          <include name="betNumber"/>
-          <include name="waterBreakPracticeAgentTotal"/>
-          <include name="loseWinAndWaterAgentTotal"/>
-          <include name="waterBreakMoneyAgent"/>
-          <include name="rechargeMoneyVip"/>
-          <include name="betMoney"/>
-          <include name="agentWater"/>
-          <include name="waterBreakMoneyActivityAgent"/>
-          <include name="activityWaterMoney"/>
-        </methods>
-      </class> <!-- Backstage.admin.ReportManagement -->
-      <class name="Backstage.admin.FinanceManagement">
-        <methods>
-          <include name="ReconciliationVip3"/>
-        </methods>
-      </class> <!-- Backstage.admin.FinanceManagement -->
-      <class name="Backstage.admin.UserManagement">
-        <methods>
-          <include name="vipNumber"/>
-          <include name="onlinePlayer"/>
-        </methods>
-      </class> <!-- Backstage.admin.UserManagement -->
+      </class> <!-- complex.panel -->
     </classes>
   </test> <!-- 平台管理员(failed) -->
 </suite> <!-- Failed suite [All Test Suite] -->
