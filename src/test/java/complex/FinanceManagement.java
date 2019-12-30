@@ -232,59 +232,6 @@ public class FinanceManagement {
     }
 
 
-    /**------------------------------------------测试财务管理-会员对账-外接游戏输赢总额2----------------------------------
-     *
-     * */
-
-    String gameLoseWinTotal1 = "//*[@id=\"app\"]/div/div[2]/section/div/div[2]/div[1]/div[3]/table/tbody/tr[1]/td[7]/div";
-
-    @Features("财务管理")
-    @Stories("会员对账")
-    @Title("验证会员对账外接游戏总输赢金额")
-    @Severity(SeverityLevel.BLOCKER)
-    @Step("1.进入财务管理-会员对账，2.获取彩票未结算金git额，3.进入报表管理-会员报表，4.点击投注笔数进入注单详情，5.选择未结算的今日数据")
-    @Description("验证会员对账外接游戏总输赢金额")
-    @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=20&version=1")
-    @Test(priority = 6)
-    public void gameLoseWinTotal1() throws InterruptedException {
-        driverUtil.switchToWindowTitle("后台管理系统");
-        Thread.sleep(1000);
-        driverUtil.xpathClick(financeManagement);
-        driverUtil.xpathClick(vipMoney);
-        Thread.sleep(1000);
-        String gameLoseWinTotal11 = driverUtil.getTextByXpath(gameLoseWinTotal1);
-        System.out.println("验证会员对账外接游戏总输赢金额");
-        System.out.println("会员对账外接游戏总输赢金额："+gameLoseWinTotal11);
-
-
-    }
-
-    /**------------------------------------------测试财务管理-会员对账-外接游戏输赢总额2----------------------------------
-     *
-     * */
-
-    String gameLoseWinTotal12 = "//*[@id=\"app\"]/div/div[2]/section/div/div[2]/div[1]/div[3]/table/tbody/tr[1]/td[7]/div";
-
-    @Features("财务管理")
-    @Stories("会员对账")
-    @Title("验证会员对账外接游戏总输赢金额")
-    @Severity(SeverityLevel.BLOCKER)
-    @Step("1.进入财务管理-会员对账，2.获取彩票未结算金git额，3.进入报表管理-会员报表，4.点击投注笔数进入注单详情，5.选择未结算的今日数据")
-    @Description("验证会员对账外接游戏总输赢金额")
-    @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=20&version=1")
-    @Test(priority = 6)
-    public void gameLoseWinTotal12() throws InterruptedException {
-        driverUtil.switchToWindowTitle("后台管理系统");
-        Thread.sleep(1000);
-        driverUtil.xpathClick(financeManagement);
-        driverUtil.xpathClick(vipMoney);
-        Thread.sleep(1000);
-        String gameLoseWinTotal122 = driverUtil.getTextByXpath(gameLoseWinTotal12);
-        System.out.println("验证会员对账外接游戏总输赢金额");
-        System.out.println("会员对账外接游戏总输赢金额："+gameLoseWinTotal122);
-
-
-    }
 
 
 
