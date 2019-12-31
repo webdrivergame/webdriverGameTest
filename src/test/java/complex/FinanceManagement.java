@@ -204,11 +204,21 @@ public class FinanceManagement {
     }
 
 
-    /**------------------------------------------财务管理-会员对账-外接游戏输赢总额----------------------------------
+
+
+
+
+
+
+
+
+
+
+    /**------------------------------------------测试merge财务管理-会员对账-外接游戏输赢总额----------------------------------
      *
      * */
 
-    String gameLoseWinTotal = "//*[@id=\"app\"]/div/div[2]/section/div/div[2]/div[1]/div[3]/table/tbody/tr[1]/td[7]/div";
+    String gameLoseWinTotal1 = "//*[@id=\"app\"]/div/div[2]/section/div/div[2]/div[1]/div[3]/table/tbody/tr[1]/td[7]/div";
 
     @Features("财务管理")
     @Stories("会员对账")
@@ -218,22 +228,18 @@ public class FinanceManagement {
     @Description("验证会员对账外接游戏总输赢金额")
     @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=20&version=1")
     @Test(priority = 5)
-       public void gameLoseWinTotal() throws InterruptedException {
-            driverUtil.switchToWindowTitle("后台管理系统");
-            Thread.sleep(1000);
-            driverUtil.xpathClick(financeManagement);
-            driverUtil.xpathClick(vipMoney);
-            Thread.sleep(1000);
-            String gameLoseWinTotal1 = driverUtil.getTextByXpath(gameLoseWinTotal);
-            System.out.println("验证会员对账外接游戏总输赢金额");
-            System.out.println("会员对账外接游戏总输赢金额："+gameLoseWinTotal1);
+    public void gameLoseWinTotal1() throws InterruptedException {
+        driverUtil.switchToWindowTitle("后台管理系统");
+        Thread.sleep(1000);
+        driverUtil.xpathClick(financeManagement);
+        driverUtil.xpathClick(vipMoney);
+        Thread.sleep(1000);
+        String gameLoseWinTotal11 = driverUtil.getTextByXpath(gameLoseWinTotal1);
+        System.out.println("验证会员对账外接游戏总输赢金额");
+        System.out.println("会员对账外接游戏总输赢金额："+gameLoseWinTotal11);
 
 
     }
-
-
-
-
 
 
 
