@@ -5,12 +5,7 @@
         <classes>
             <class name="complex.panel"></class>
             <class name="complex.UserManagement"></class>
-            <class name="complex.FinanceManagement"></class>
             <class name="complex.ReportManagement"></class>
-
-
         </classes>
     </test>
-
-
 </suite>

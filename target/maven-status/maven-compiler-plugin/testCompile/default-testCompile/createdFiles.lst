@@ -6,6 +6,7 @@ complex\ReportManagement.class
 ListenerPackage\AssertionListener.class
 Backstage\admin\UserManagement.class
 mysql\JDBCUtils.class
+ListenerPackage\TestFailListener.class
 UtilTest\testMoneyDetails.class
 test\switchWindow.class
 complex\moneyDetails.class
@@ -23,4 +24,3 @@ CPBet\cycleRacingCar.class
 Backstage\admin\test.class
 CPBet\chongqingTimeLottery.class
 complex\FinanceManagement.class
-ListenerPackage\TestngListener.class

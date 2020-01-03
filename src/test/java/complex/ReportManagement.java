@@ -15,6 +15,18 @@ public class ReportManagement {
     WebDriverUtil driverUtil = new WebDriverUtil(null);
 
 
+    String URL = "http://10.1.101.124:8653/";
+    String login = "//*[@id=\"app\"]/div/div/form/div[4]/div/div/button/span";
+
+    @BeforeTest
+    public void loginBefore() throws InterruptedException {
+
+        driverUtil.loginBefore(URL);
+        driverUtil.adminLogin("achao", "123123");
+        driverUtil.xpathClick(login);
+        Thread.sleep(2000);
+
+    }
 
     /**
      * -------------------------------------------报表管理-总代理报表-会员数-----------------------------------------
@@ -23,10 +35,8 @@ public class ReportManagement {
 
     String reportManagement = "//*[@id=\"app\"]/div/div[1]/div[2]/div[1]/div/ul/div[4]/li/div/span";
     String reportAgentTotal = "//*[@id=\"app\"]/div/div[1]/div[2]/div[1]/div/ul/div[4]/li/ul/div[1]/a/li/span";
-
     String mothsAgentTotal = "//*[@id=\"pane-lottery\"]/div[1]/form/div[5]/div/div[1]/div/div/label[4]/span";
     String inquireAgentTotal = "//*[@id=\"pane-lottery\"]/div[1]/form/div[5]/div/div[2]/div/button[1]/span";
-
     String vipNumberMonths = "//*[@id=\"pane-lottery\"]/div[2]/div/div[3]/table/tbody/tr/td[2]/div";
     String accountAgentTotal = "//*[@id=\"pane-lottery\"]/div[2]/div/div[3]/table/tbody/tr/td[1]/div/span";
     String totalVip = "//*[@id=\"pane-lottery\"]/div[2]/div/div[4]/table/tbody/tr/td[2]/div";
@@ -40,19 +50,20 @@ public class ReportManagement {
     @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=25&version=1")
     @Test(priority = 1)
          public void vipNumberMonthsLotty() throws InterruptedException {
-            driverUtil.xpathClick(reportManagement);
+            driverUtil.xpathClick(reportManagement);//点击报表管理
             Thread.sleep(1000);
-            driverUtil.xpathClick(reportAgentTotal);
+            driverUtil.xpathClick(reportAgentTotal);//点击总代理报表
             Thread.sleep(2000);
-            driverUtil.xpathClick(mothsAgentTotal);
-            driverUtil.xpathClick(inquireAgentTotal);
+            driverUtil.xpathClick(mothsAgentTotal);//点击本月
+            driverUtil.xpathClick(inquireAgentTotal);//点击查询彩票本月数据
             Thread.sleep(2000);
-            String getVipNumberMonths = driverUtil.getTextByXpath(vipNumberMonths);
+
+            String getVipNumberMonths = driverUtil.getTextByXpath(vipNumberMonths);//获取本月会员数数量
             System.out.println("验证总代理报表本月会员数");
             System.out.println("总代理报表本月会员数："+getVipNumberMonths);
-            driverUtil.xpathClick(accountAgentTotal);
+            driverUtil.xpathClick(accountAgentTotal);//点击zdl
             Thread.sleep(1000);
-            String getTotalVip = driverUtil.getTextByXpath(totalVip);
+            String getTotalVip = driverUtil.getTextByXpath(totalVip);//代理报表本月会员数
             System.out.println("代理报表本月会员数："+getTotalVip);
             Assertion.setFlag(true);
             Assertion.verifyEquals(getVipNumberMonths,getTotalVip);
@@ -69,24 +80,24 @@ public class ReportManagement {
 
     @Features("报表管理")
     @Stories("总代理报表-彩票")
-    @Title("验证总代理报表本月充值金额")
+    @Title("验证总代理报表本月投注笔数")
     @Severity(SeverityLevel.BLOCKER)
-    @Step("1.进入报表管理-总代理报表；2.获取zdl本月充值笔数；3.点击zdl跳转；4.获取跳转后代理报表充值总数")
+    @Step("1.进入报表管理-总代理报表；2.获取zdl本月投注笔数；3.点击zdl跳转；4.获取跳转后代理报表投注总数")
     @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=26&version=1")
     @Description("测试总代理报表本月充值笔数是否等于跳转后的代理报表的充值笔数总和")
     @Test(priority = 2)
         public void countTotalLotty() throws InterruptedException {
-            driverUtil.xpathClick(reportAgentTotal);
+            driverUtil.xpathClick(reportAgentTotal);//点击总代理报表
             Thread.sleep(1000);
-            driverUtil.xpathClick(mothsAgentTotal);
-            driverUtil.xpathClick(inquireAgentTotal);
+            driverUtil.xpathClick(mothsAgentTotal);//点击本月
+            driverUtil.xpathClick(inquireAgentTotal);///点击查询彩票本月数据
             Thread.sleep(2000);
-            String getCountTotal = driverUtil.getTextByXpath(countTotal);
-            System.out.println("验证总代理报表本月充值金额");
+            String getCountTotal = driverUtil.getTextByXpath(countTotal);//获取总代理报表本月投注笔数
+            System.out.println("验证总代理报表本月投注笔数");
             System.out.println("总代理报表本月下注笔数："+getCountTotal);
-            driverUtil.xpathClick(accountAgentTotal);
+            driverUtil.xpathClick(accountAgentTotal);//点击zdl跳转
             Thread.sleep(1000);
-            String getCountAgentTotal = driverUtil.getTextByXpath(countAgentTotal);
+            String getCountAgentTotal = driverUtil.getTextByXpath(countAgentTotal);//获取代理报表投注笔数
             System.out.println("代理报表本月投注笔数："+getCountAgentTotal);
             Assertion.setFlag(true);
             Assertion.verifyEquals(getCountTotal,getCountAgentTotal);
@@ -110,10 +121,10 @@ public class ReportManagement {
     @Description("判断总代理报表的投注金额是否等于跳转后的代理报表投注金额总和")
     @Test(priority = 3)
         public void betMoneyAgentTotalLotty() throws InterruptedException {
-            driverUtil.xpathClick(reportAgentTotal);
+            driverUtil.xpathClick(reportAgentTotal);//点击总代理报表
             Thread.sleep(1000);
-            driverUtil.xpathClick(mothsAgentTotal);
-            driverUtil.xpathClick(inquireAgentTotal);
+            driverUtil.xpathClick(mothsAgentTotal);//点击本月
+            driverUtil.xpathClick(inquireAgentTotal);//点击查询彩票本月数据
             Thread.sleep(2000);
             String getBetMoneyAgentTotal = driverUtil.getTextByXpath(betMoneyAgentTotal);
             System.out.println("验证总代理报表本月投注金额");
@@ -146,10 +157,10 @@ public class ReportManagement {
     @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=28&version=1")
     @Test(priority = 4)
         public void winBetMoneyAgentTotalLotty() throws InterruptedException {
-            driverUtil.xpathClick(reportAgentTotal);
+            driverUtil.xpathClick(reportAgentTotal);//点击总代理报表
             Thread.sleep(1000);
-            driverUtil.xpathClick(mothsAgentTotal);
-            driverUtil.xpathClick(inquireAgentTotal);
+            driverUtil.xpathClick(mothsAgentTotal);//点击本月
+            driverUtil.xpathClick(inquireAgentTotal);//点击查询彩票本月数据
             Thread.sleep(2000);
             String getWinBetMoneyAgentTotal = driverUtil.getTextByXpath(winBetMoneyAgentTotal);
             System.out.println("验证总代理报表本月赢利投注金额");
@@ -180,10 +191,10 @@ public class ReportManagement {
     @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=29&version=1")
     @Test(priority = 5)
         public void serviceChargeAgentTotalLotty() throws InterruptedException {
-            driverUtil.xpathClick(reportAgentTotal);
+            driverUtil.xpathClick(reportAgentTotal);//点击总代理报表
             Thread.sleep(1000);
-            driverUtil.xpathClick(mothsAgentTotal);
-            driverUtil.xpathClick(inquireAgentTotal);
+            driverUtil.xpathClick(mothsAgentTotal);//点击本月
+            driverUtil.xpathClick(inquireAgentTotal);//点击查询彩票本月数据
             Thread.sleep(2000);
             String getServiceChargeAgentTotal = driverUtil.getTextByXpath(serviceChargeAgentTotal);
             System.out.println("验证总代理报表本月充值优惠/服务费金额");
@@ -215,10 +226,10 @@ public class ReportManagement {
     @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=30&version=1")
     @Test(priority = 6)
         public void waterBreakAgentTotalLotty() throws InterruptedException {
-            driverUtil.xpathClick(reportAgentTotal);
+            driverUtil.xpathClick(reportAgentTotal);//点击总代理报表
             Thread.sleep(1000);
-            driverUtil.xpathClick(mothsAgentTotal);
-            driverUtil.xpathClick(inquireAgentTotal);
+            driverUtil.xpathClick(mothsAgentTotal);//点击本月
+            driverUtil.xpathClick(inquireAgentTotal);//点击查询彩票本月数据
             Thread.sleep(2000);
             String getWaterBreakAgentTotal = driverUtil.getTextByXpath(waterBreakAgentTotal);
             System.out.println("验证总代理报表本月代理退水金额");
@@ -250,10 +261,10 @@ public class ReportManagement {
     @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=31&version=1")
     @Test(priority = 7)
         public void oddsMoneyAgentTotalLotty() throws InterruptedException {
-            driverUtil.xpathClick(reportAgentTotal);
+            driverUtil.xpathClick(reportAgentTotal);//点击总代理报表
             Thread.sleep(1000);
-            driverUtil.xpathClick(mothsAgentTotal);
-            driverUtil.xpathClick(inquireAgentTotal);
+            driverUtil.xpathClick(mothsAgentTotal);//点击本月
+            driverUtil.xpathClick(inquireAgentTotal);//点击查询彩票本月数据
             Thread.sleep(2000);
             String getOddsMoneyAgentTotal = driverUtil.getTextByXpath(oddsMoneyAgentTotal);
             System.out.println("验证总代理报表本月代理赔率金额");
@@ -286,10 +297,10 @@ public class ReportManagement {
     @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=32&version=1")
     @Test(priority = 8)
         public void loseWinAgentTotalLotty() throws InterruptedException {
-            driverUtil.xpathClick(reportAgentTotal);
+            driverUtil.xpathClick(reportAgentTotal);//点击总代理报表
             Thread.sleep(1000);
-            driverUtil.xpathClick(mothsAgentTotal);
-            driverUtil.xpathClick(inquireAgentTotal);
+            driverUtil.xpathClick(mothsAgentTotal);//点击本月
+            driverUtil.xpathClick(inquireAgentTotal);//点击查询彩票本月数据
             Thread.sleep(2000);
             driverUtil.scrollToWindow();//缩小窗口80%
             String getLoseWinAgentTotal = driverUtil.getTextByXpath(loseWinAgentTotal);
@@ -327,10 +338,10 @@ public class ReportManagement {
     @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=33&version=1")
     @Test(priority = 9)
         public void waterBreakPracticeAgentTotalLotty() throws InterruptedException {
-            driverUtil.xpathClick(reportAgentTotal);
+            driverUtil.xpathClick(reportAgentTotal);//点击总代理报表
             Thread.sleep(1000);
-            driverUtil.xpathClick(mothsAgentTotal);
-            driverUtil.xpathClick(inquireAgentTotal);
+            driverUtil.xpathClick(mothsAgentTotal);//点击本月
+            driverUtil.xpathClick(inquireAgentTotal);//点击查询彩票本月数据
             Thread.sleep(2000);
             driverUtil.scrollToWindow();
             String getWaterBreakPracticeAgentTotal = driverUtil.getTextByXpath(waterBreakPracticeAgentTotal);
@@ -369,10 +380,10 @@ public class ReportManagement {
     @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=34&version=1")
     @Test(priority = 10)
         public void loseWinAndWaterAgentTotalLotty() throws InterruptedException {
-            driverUtil.xpathClick(reportAgentTotal);
+            driverUtil.xpathClick(reportAgentTotal);//点击总代理报表
             Thread.sleep(1000);
-            driverUtil.xpathClick(mothsAgentTotal);
-            driverUtil.xpathClick(inquireAgentTotal);
+            driverUtil.xpathClick(mothsAgentTotal);//点击本月
+            driverUtil.xpathClick(inquireAgentTotal);//点击查询彩票本月数据
             Thread.sleep(2000);
             driverUtil.scrollToWindow();
             String getLoseWinAndWaterAgentTotal = driverUtil.getTextByXpath(loseWinAndWaterAgentTotal);
@@ -420,11 +431,11 @@ public class ReportManagement {
     @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=34&version=1")
     @Test(priority = 11)
         public void vipNumberGame() throws InterruptedException {
-            driverUtil.xpathClick(reportAgentTotal);
+            driverUtil.xpathClick(reportAgentTotal);//点击总代理报表
             Thread.sleep(1000);
-            driverUtil.xpathClick(clickGame);
+            driverUtil.xpathClick(clickGame);//点击切换外接游戏
             Thread.sleep(1000);
-            driverUtil.xpathClick(GameMonthsAgentTotal);
+            driverUtil.xpathClick(GameMonthsAgentTotal);//点击外接游戏时间本月
             driverUtil.xpathClick(inquireGameAgentTotal);
             Thread.sleep(1000);
 
@@ -464,12 +475,12 @@ public class ReportManagement {
     @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=34&version=1")
     @Test(priority = 12)
         public void betTotalGame() throws InterruptedException {
-            driverUtil.xpathClick(reportAgentTotal);
+            driverUtil.xpathClick(reportAgentTotal);//点击总代理报表
             Thread.sleep(1000);
-            driverUtil.xpathClick(clickGame);
+            driverUtil.xpathClick(clickGame);//点击切换外接游戏
             Thread.sleep(1000);
-            driverUtil.xpathClick(GameMonthsAgentTotal);
-            driverUtil.xpathClick(inquireGameAgentTotal);
+            driverUtil.xpathClick(GameMonthsAgentTotal);//点击外接游戏时间本月
+            driverUtil.xpathClick(inquireGameAgentTotal);//点击查询外接游戏本月数据
             Thread.sleep(1000);
 
 
@@ -523,12 +534,12 @@ public class ReportManagement {
     @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=34&version=1")
     @Test(priority = 13)
         public void backWaterTotalGame() throws InterruptedException {
-            driverUtil.xpathClick(reportAgentTotal);
+            driverUtil.xpathClick(reportAgentTotal);//点击总代理报表
             Thread.sleep(1000);
-            driverUtil.xpathClick(clickGame);
+            driverUtil.xpathClick(clickGame);//点击切换外接游戏
             Thread.sleep(1000);
-            driverUtil.xpathClick(GameMonthsAgentTotal);
-            driverUtil.xpathClick(inquireGameAgentTotal);
+            driverUtil.xpathClick(GameMonthsAgentTotal);//点击外接游戏时间本月
+            driverUtil.xpathClick(inquireGameAgentTotal);//点击查询外接游戏本月数据
             Thread.sleep(1000);
 
             driverUtil.scrollToWindow();
@@ -580,12 +591,12 @@ public class ReportManagement {
     @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=34&version=1")
     @Test(priority = 14)
     public void loseWinTotalGame() throws InterruptedException {
-        driverUtil.xpathClick(reportAgentTotal);
+        driverUtil.xpathClick(reportAgentTotal);//点击总代理报表
         Thread.sleep(1000);
-        driverUtil.xpathClick(clickGame);
+        driverUtil.xpathClick(clickGame);//点击切换外接游戏
         Thread.sleep(1000);
-        driverUtil.xpathClick(GameMonthsAgentTotal);
-        driverUtil.xpathClick(inquireGameAgentTotal);
+        driverUtil.xpathClick(GameMonthsAgentTotal);//点击外接游戏时间本月
+        driverUtil.xpathClick(inquireGameAgentTotal);//点击查询外接游戏本月数据
         Thread.sleep(1000);
 
 
@@ -631,12 +642,12 @@ public class ReportManagement {
     @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=34&version=1")
     @Test(priority = 15)
     public void loseWinTotalNoWaterGame() throws InterruptedException {
-        driverUtil.xpathClick(reportAgentTotal);
+        driverUtil.xpathClick(reportAgentTotal);//点击总代理报表
         Thread.sleep(1000);
-        driverUtil.xpathClick(clickGame);
+        driverUtil.xpathClick(clickGame);//点击切换外接游戏
         Thread.sleep(1000);
-        driverUtil.xpathClick(GameMonthsAgentTotal);
-        driverUtil.xpathClick(inquireGameAgentTotal);
+        driverUtil.xpathClick(GameMonthsAgentTotal);//点击外接游戏时间本月
+        driverUtil.xpathClick(inquireGameAgentTotal);//点击查询外接游戏本月数据
         Thread.sleep(1000);
 
         driverUtil.scrollToWindow();
@@ -682,12 +693,12 @@ public class ReportManagement {
     @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=34&version=1")
     @Test(priority = 16)
     public void agentBackWaterGame() throws InterruptedException {
-        driverUtil.xpathClick(reportAgentTotal);
+        driverUtil.xpathClick(reportAgentTotal);//点击总代理报表
         Thread.sleep(1000);
-        driverUtil.xpathClick(clickGame);
+        driverUtil.xpathClick(clickGame);//点击切换外接游戏
         Thread.sleep(1000);
-        driverUtil.xpathClick(GameMonthsAgentTotal);
-        driverUtil.xpathClick(inquireGameAgentTotal);
+        driverUtil.xpathClick(GameMonthsAgentTotal);//点击外接游戏时间本月
+        driverUtil.xpathClick(inquireGameAgentTotal);//点击查询外接游戏本月数据
         Thread.sleep(1000);
 
 
@@ -732,12 +743,12 @@ public class ReportManagement {
     @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=34&version=1")
     @Test(priority = 17)
     public void agentAddedBackWaterGame() throws InterruptedException {
-        driverUtil.xpathClick(reportAgentTotal);
+        driverUtil.xpathClick(reportAgentTotal);//点击总代理报表
         Thread.sleep(1000);
-        driverUtil.xpathClick(clickGame);
+        driverUtil.xpathClick(clickGame);//点击切换外接游戏
         Thread.sleep(1000);
-        driverUtil.xpathClick(GameMonthsAgentTotal);
-        driverUtil.xpathClick(inquireGameAgentTotal);
+        driverUtil.xpathClick(GameMonthsAgentTotal);//点击外接游戏时间本月
+        driverUtil.xpathClick(inquireGameAgentTotal);//点击查询外接游戏本月数据
         Thread.sleep(1000);
 
         driverUtil.scrollToWindowHalf();
@@ -779,12 +790,12 @@ public class ReportManagement {
     @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=34&version=1")
     @Test(priority = 18)
     public void agentCommissionGame() throws InterruptedException {
-        driverUtil.xpathClick(reportAgentTotal);
+        driverUtil.xpathClick(reportAgentTotal);//点击总代理报表
         Thread.sleep(1000);
-        driverUtil.xpathClick(clickGame);
+        driverUtil.xpathClick(clickGame);//点击切换外接游戏
         Thread.sleep(1000);
-        driverUtil.xpathClick(GameMonthsAgentTotal);
-        driverUtil.xpathClick(inquireGameAgentTotal);
+        driverUtil.xpathClick(GameMonthsAgentTotal);//点击外接游戏时间本月
+        driverUtil.xpathClick(inquireGameAgentTotal);//点击查询外接游戏本月数据
         Thread.sleep(1000);
 
         driverUtil.scrollToWindowHalf();
@@ -819,9 +830,9 @@ public class ReportManagement {
     String reportAgent = "//*[@id=\"app\"]/div/div[1]/div[2]/div[1]/div/ul/div[4]/li/ul/div[2]/a/li/span";
     String accountAgent = "//*[@id=\"pane-lottery\"]/div[1]/form/div[2]/div/div/input";
     String mothsAgent = "//*[@id=\"pane-lottery\"]/div[1]/form/div[5]/div/div/label[4]/span";
-    String inquireAgent = "//*[@id=\"pane-lottery\"]/div[1]/form/div[6]/div/button[1]";
-    String clickAgent = "//*[@id=\"pane-lottery\"]/div[2]/div/div[3]/table/tbody/tr/td[1]/div/span[1]";
-    String vipNumberAgent = "//*[@id=\"pane-lottery\"]/div[2]/div/div[3]/table/tbody/tr/td[2]/div";
+    String inquireAgent = "//*[@id=\"pane-lottery\"]/div[1]/form/div[6]/div/button[1]/span";
+    String clickAgent = "//*[@id=\"pane-lottery\"]/div[2]/div/div[3]/table/tbody/tr[1]/td[1]/div/span[1]";
+    String vipNumberAgent = "//*[@id=\"pane-lottery\"]/div[2]/div/div[3]/table/tbody/tr[1]/td[2]/div";
     String vipNumberVip = "//*[@id=\"pane-lottery\"]/div[2]/div[2]/div";
 
     @Features("报表管理")
@@ -833,8 +844,8 @@ public class ReportManagement {
     @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=35&version=1")
     @Test(priority = 19)
         public void vipNumberAgentLotty() throws InterruptedException {
-            driverUtil.xpathClick(reportAgent);
-            driverUtil.xpathClearSendKeys(accountAgent,"dl");
+            driverUtil.xpathClick(reportAgent);//点击代理报表
+            driverUtil.xpathClearSendKeys(accountAgent,"dl");//点击清空输入dl账号
             driverUtil.xpathClick(mothsAgent);
             driverUtil.xpathClick(inquireAgent);
             Thread.sleep(2000);
@@ -873,8 +884,8 @@ public class ReportManagement {
     @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=36&version=1")
     @Test(priority = 20)
         public void rechargeMoneyAgentLotty() throws InterruptedException {
-            driverUtil.xpathClick(reportAgent);
-            driverUtil.xpathClearSendKeys(accountAgent,"dl");
+            driverUtil.xpathClick(reportAgent);//点击代理报表
+            driverUtil.xpathClearSendKeys(accountAgent,"dl");//点击清空输入dl账号
             driverUtil.xpathClick(mothsAgent);
             driverUtil.xpathClick(inquireAgent);
             Thread.sleep(2000);
@@ -909,8 +920,8 @@ public class ReportManagement {
     @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=37&version=1")
     @Test(priority = 21)
         public void countAgentLotty() throws InterruptedException {
-            driverUtil.xpathClick(reportAgent);
-            driverUtil.xpathClearSendKeys(accountAgent,"dl");
+            driverUtil.xpathClick(reportAgent);//点击代理报表
+            driverUtil.xpathClearSendKeys(accountAgent,"dl");//点击清空输入dl账号
             driverUtil.xpathClick(mothsAgent);
             driverUtil.xpathClick(inquireAgent);
             Thread.sleep(2000);
@@ -945,8 +956,8 @@ public class ReportManagement {
     @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=38&version=1")
     @Test(priority = 22)
         public void betMoneyAgentReportLotty() throws InterruptedException {
-            driverUtil.xpathClick(reportAgent);
-            driverUtil.xpathClearSendKeys(accountAgent,"dl");
+            driverUtil.xpathClick(reportAgent);//点击代理报表
+            driverUtil.xpathClearSendKeys(accountAgent,"dl");//点击清空输入dl账号
             driverUtil.xpathClick(mothsAgent);
             driverUtil.xpathClick(inquireAgent);
             Thread.sleep(2000);
@@ -981,8 +992,8 @@ public class ReportManagement {
     @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=39&version=1")
     @Test(priority = 23)
         public void winBetMoneyAgentReportLotty() throws InterruptedException {
-            driverUtil.xpathClick(reportAgent);
-            driverUtil.xpathClearSendKeys(accountAgent,"dl");
+            driverUtil.xpathClick(reportAgent);//点击代理报表
+            driverUtil.xpathClearSendKeys(accountAgent,"dl");//点击清空输入dl账号
             driverUtil.xpathClick(mothsAgent);
             driverUtil.xpathClick(inquireAgent);
             Thread.sleep(2000);
@@ -1016,8 +1027,8 @@ public class ReportManagement {
     @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=40&version=1")
     @Test(priority = 24)
         public void serviceMoneyAgentLotty() throws InterruptedException {
-            driverUtil.xpathClick(reportAgent);
-            driverUtil.xpathClearSendKeys(accountAgent,"dl");
+            driverUtil.xpathClick(reportAgent);//点击代理报表
+            driverUtil.xpathClearSendKeys(accountAgent,"dl");//点击清空输入dl账号
             driverUtil.xpathClick(mothsAgent);
             driverUtil.xpathClick(inquireAgent);
             Thread.sleep(2000);
@@ -1053,8 +1064,8 @@ public class ReportManagement {
     @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=41&version=1")
     @Test(priority = 25)
         public void oddsAgentLotty() throws InterruptedException {
-            driverUtil.xpathClick(reportAgent);
-            driverUtil.xpathClearSendKeys(accountAgent,"dl");
+            driverUtil.xpathClick(reportAgent);//点击代理报表
+            driverUtil.xpathClearSendKeys(accountAgent,"dl");//点击清空输入dl账号
             driverUtil.xpathClick(mothsAgent);
             driverUtil.xpathClick(inquireAgent);
             Thread.sleep(2000);
@@ -1089,8 +1100,8 @@ public class ReportManagement {
     @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=42&version=1")
     @Test(priority = 26)
         public void waterBreakMoneyAgentLotty() throws InterruptedException {
-            driverUtil.xpathClick(reportAgent);
-            driverUtil.xpathClearSendKeys(accountAgent,"dl");
+            driverUtil.xpathClick(reportAgent);//点击代理报表
+            driverUtil.xpathClearSendKeys(accountAgent,"dl");//点击清空输入dl账号
             driverUtil.xpathClick(mothsAgent);
             driverUtil.xpathClick(inquireAgent);
             Thread.sleep(2000);
@@ -1124,8 +1135,8 @@ public class ReportManagement {
     @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=43&version=1")
     @Test(priority = 27)
         public void winLoseNotWaterAgentLotty() throws InterruptedException {
-            driverUtil.xpathClick(reportAgent);
-            driverUtil.xpathClearSendKeys(accountAgent,"dl");
+            driverUtil.xpathClick(reportAgent);//点击代理报表
+            driverUtil.xpathClearSendKeys(accountAgent,"dl");//点击清空输入dl账号
             driverUtil.xpathClick(mothsAgent);
             driverUtil.xpathClick(inquireAgent);
             Thread.sleep(2000);
@@ -1167,8 +1178,8 @@ public class ReportManagement {
     @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=44&version=1")
     @Test(priority = 28)
         public void winLoseWaterAgentLotty() throws InterruptedException {
-            driverUtil.xpathClick(reportAgent);
-            driverUtil.xpathClearSendKeys(accountAgent,"dl");
+            driverUtil.xpathClick(reportAgent);//点击代理报表
+            driverUtil.xpathClearSendKeys(accountAgent,"dl");//点击清空输入dl账号
             driverUtil.xpathClick(mothsAgent);
             driverUtil.xpathClick(inquireAgent);
             Thread.sleep(2000);
@@ -1207,8 +1218,8 @@ public class ReportManagement {
     @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=45&version=1")
     @Test(priority = 29)
         public void waterBreakMoneyActivityAgentLotty() throws InterruptedException {
-            driverUtil.xpathClick(reportAgent);
-            driverUtil.xpathClearSendKeys(accountAgent,"dl");
+            driverUtil.xpathClick(reportAgent);//点击代理报表
+            driverUtil.xpathClearSendKeys(accountAgent,"dl");//点击清空输入dl账号
             driverUtil.xpathClick(mothsAgent);
             driverUtil.xpathClick(inquireAgent);
             Thread.sleep(2000);
@@ -1269,8 +1280,8 @@ public class ReportManagement {
     @Test(priority = 30)
         public void rechargeMoneyVipLotty() throws InterruptedException {
             //driverUtil.xpathClick(reportManagement);
-            driverUtil.xpathClick(reportAgent);
-            driverUtil.xpathClick(reportVip);
+            driverUtil.xpathClick(reportAgent);//点击代理报表
+            driverUtil.xpathClick(reportVip);//点击会员报表
             Thread.sleep(2000);
             driverUtil.xpathClearSendKeys(inputVipAccount,"achy05");
             driverUtil.xpathClick(monthsVip);
@@ -1321,7 +1332,7 @@ public class ReportManagement {
             driverUtil.xpathClick(financeManagement);//收起财务管理防止点到投注记录
             Thread.sleep(1000);
             driverUtil.xpathClick(reportManagement);
-            driverUtil.xpathClick(reportVip);
+            driverUtil.xpathClick(reportVip);//点击会员报表
             Thread.sleep(2000);
             driverUtil.xpathClearSendKeys(inputVipAccount,"achy05");
             driverUtil.xpathClick(monthsVip);
@@ -1368,7 +1379,7 @@ public class ReportManagement {
             driverUtil.xpathClick(financeManagement);//收起财务管理防止点到投注记录
             Thread.sleep(1000);
             driverUtil.xpathClick(reportManagement);
-            driverUtil.xpathClick(reportVip);
+            driverUtil.xpathClick(reportVip);//点击会员报表
             Thread.sleep(2000);
             driverUtil.xpathClearSendKeys(inputVipAccount,"achy05");
             driverUtil.xpathClick(monthsVip);

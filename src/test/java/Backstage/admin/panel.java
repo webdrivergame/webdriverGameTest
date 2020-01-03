@@ -2,19 +2,15 @@ package Backstage.admin;
 
 import ListenerPackage.Assertion;
 import ListenerPackage.AssertionListener;
-import ListenerPackage.TestngListener;
 import SeleniumMethod.WebDriverUtil;
 import io.qameta.allure.Link;
-import io.qameta.allure.Links;
-import io.qameta.allure.TmsLink;
 import org.testng.Assert;
 import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import ru.yandex.qatools.allure.annotations.*;
 import ru.yandex.qatools.allure.model.SeverityLevel;
 
-@Listeners(TestngListener.class)
+
 public class panel    {
 
 

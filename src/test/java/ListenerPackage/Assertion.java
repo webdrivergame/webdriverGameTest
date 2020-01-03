@@ -103,7 +103,7 @@ public class Assertion {
 
         }catch(Error e){
 
-            e.printStackTrace(); //仅仅代表异常消息的输出
+            e.printStackTrace(); /*仅仅代表异常消息的输出*/
             setFlag(false); //抛出异常时记录flag=false
 
         }

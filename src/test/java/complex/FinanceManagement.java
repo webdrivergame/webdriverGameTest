@@ -13,7 +13,18 @@ import java.math.BigDecimal;
 public class FinanceManagement {
 
     WebDriverUtil driverUtil = new WebDriverUtil(null);
+    String URL = "http://10.1.101.124:8653/";
+    String login = "//*[@id=\"app\"]/div/div/form/div[4]/div/div/button/span";
 
+    @BeforeTest
+    public void loginBefore() throws InterruptedException {
+
+        driverUtil.loginBefore(URL);
+        driverUtil.adminLogin("achao", "123123");
+        driverUtil.xpathClick(login);
+        Thread.sleep(2000);
+
+    }
 
     /**  ------------------------------------------财务管理-会员对账-线上充值金额-----------------------------------
      *
@@ -22,13 +33,13 @@ public class FinanceManagement {
 
     String financeManagement = "//div[@id='app']/div/div[1]//ul[@role='menubar']/div[3]/li[@role='menuitem']//span[.='财务管理']";
     String vipMoney = "//*[@id=\"app\"]/div/div[1]/div[2]/div[1]/div/ul/div[3]/li/ul/div[5]/a/li/span";
-    String onlineRecharge = "//*[@id=\"app\"]/div/div[2]/section/div/div[2]/div[1]/div[3]/table/tbody/tr[1]/td[3]/div";
+    String onlineRecharge = "//*[@id=\"app\"]/div/div[2]/div[2]/div[2]/div[1]/div[3]/table/tbody/tr[1]/td[3]/div";
 
     String rechargeRecord = "//*[@id=\"app\"]/div/div[1]/div[2]/div[1]/div/ul/div[3]/li/ul/div[1]/a/li/span";
-    String selectStyle = "//*[@id=\"app\"]/div/div[2]/section/div/div[1]/form/div[2]/div/div/div/input";
-    String selectOnline = "//body/div[2]//ul[@class='el-scrollbar__view el-select-dropdown__list']//span[.='在线入款']";
-    String inquire = "//*[@id=\"app\"]/div/div[2]/section/div/div[1]/form/div[12]/div/button[1]/span";
-    String rechargeTotal = "//*[@id=\"app\"]/div/div[2]/section/div/div[1]/form/div[14]/div/span[2]/span[3]";
+    String selectStyle = "//*[@id=\"app\"]/div/div[2]/div[2]/div[1]/form/div[2]/div/div/div/input";
+    String selectOnline = "//body/div[2]/div[@class='el-scrollbar']//ul[@class='el-scrollbar__view el-select-dropdown__list']/li[3]";
+    String inquire = "//*[@id=\"app\"]/div/div[2]/div[2]/div[1]/form/div[12]/div/button[1]/span";
+    String rechargeTotal = "//*[@id=\"app\"]/div/div[2]/div[2]/div[1]/form/div[14]/div/span[2]/span[3]";
 
     @Features("财务管理")
     @Stories("会员对账")
@@ -67,7 +78,7 @@ public class FinanceManagement {
      *
      * */
 
-    String upRecharge = "//*[@id=\"app\"]/div/div[2]/section/div/div[2]/div[1]/div[3]/table/tbody/tr[1]/td[4]/div";
+    String upRecharge = "//*[@id=\"app\"]/div/div[2]/div[2]/div[2]/div[1]/div[3]/table/tbody/tr[1]/td[4]/div";
 
     @Features("财务管理")
     @Stories("会员对账")
@@ -114,7 +125,7 @@ public class FinanceManagement {
      * */
 
 
-    String activityLoseWinLotty = "//*[@id=\"app\"]/div/div[2]/section/div/div[2]/div[1]/div[3]/table/tbody/tr[1]/td[5]/div";
+    String activityLoseWinLotty = "//*[@id=\"app\"]/div/div[2]/div[2]/div[2]/div[1]/div[3]/table/tbody/tr[1]/td[5]/div";
     String ReportManagement = "//*[@id=\"app\"]/div/div[1]/div[2]/div[1]/div/ul/div[4]/li/div/span";
     String vipReport = "//*[@id=\"app\"]/div/div[1]/div[2]/div[1]/div/ul/div[4]/li/ul/div[3]/a/li/span";
     String activityLoseWinReport = "//*[@id=\"pane-lottery\"]/div[2]/div[1]/div[4]/table/tbody/tr/td[15]/div";
@@ -156,7 +167,7 @@ public class FinanceManagement {
      *
      * */
 
-    String unSettlement = "//*[@id=\"app\"]/div/div[2]/section/div/div[2]/div[1]/div[3]/table/tbody/tr[1]/td[6]/div";
+    String unSettlement = "//*[@id=\"app\"]/div/div[2]/div[2]/div[2]/div[1]/div[3]/table/tbody/tr[1]/td[6]/div";
     String betNumber = "//*[@id=\"pane-lottery\"]/div[2]/div[1]/div[3]/table/tbody/tr[1]/td[6]/div/span";
 
     String inputAccount = "//*[@id=\"app\"]/div/div[2]/div/div[1]/form[2]/div[5]/div/div/input";
@@ -197,49 +208,15 @@ public class FinanceManagement {
             Thread.sleep(1000);
             String unSettlementMoney1 = driverUtil.getTextByXpath(unSettlementMoney);
             System.out.println("注单明细今日未结算金额："+unSettlementMoney1);
+            driverUtil.switchToWindowTitleClose("注单明细");
             Assertion.setFlag(true);
             Assertion.verifyEquals(unSettlement1, unSettlementMoney1);
             Assert.assertTrue(Assertion.currentFlag());
-            driverUtil.closeCurrentBrowser();
-    }
-
-
-
-
-
-
-
-
-
-
-
-
-    /**------------------------------------------测试merge财务管理-会员对账-外接游戏输赢总额----------------------------------
-     *
-     * */
-
-    String gameLoseWinTotal1 = "//*[@id=\"app\"]/div/div[2]/section/div/div[2]/div[1]/div[3]/table/tbody/tr[1]/td[7]/div";
-
-    @Features("财务管理")
-    @Stories("会员对账")
-    @Title("验证会员对账外接游戏总输赢金额")
-    @Severity(SeverityLevel.BLOCKER)
-    @Step("1.进入财务管理-会员对账，2.获取彩票未结算金额，3.进入报表管理-会员报表，4.点击投注笔数进入注单详情，5.选择未结算的今日数据")
-    @Description("验证会员对账外接游戏总输赢金额")
-    @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=20&version=1")
-    @Test(priority = 5)
-    public void gameLoseWinTotal1() throws InterruptedException {
-        driverUtil.switchToWindowTitle("后台管理系统");
-        Thread.sleep(1000);
-        driverUtil.xpathClick(financeManagement);
-        driverUtil.xpathClick(vipMoney);
-        Thread.sleep(1000);
-        String gameLoseWinTotal11 = driverUtil.getTextByXpath(gameLoseWinTotal1);
-        System.out.println("验证会员对账外接游戏总输赢金额");
-        System.out.println("会员对账外接游戏总输赢金额："+gameLoseWinTotal11);
-
 
     }
+
+
+
 
 
 
