@@ -287,18 +287,18 @@ import org.openqa.selenium.support.ui.WebDriverWait;
          /**
     *    定位元素并点击
    */
-          public void findElementByIdAndClick(String id) {
+          public void idClick(String id) {
 
               driver.findElement(By.id(id)).click();
          }
-          public void findElementByNameAndClick(String name) {
+          public void nameClick(String name) {
 
               driver.findElement(By.name(name)).click();
          }
-          public void findElementByTextAndClick(String text) {
+          public void linkTextClick(String text) {
              driver.findElement(By.linkText(text)).click();
          }
-          public void findElementByPartiaTextAndClick(String text) {
+          public void partialLinkTextClick(String text) {
              driver.findElement(By.partialLinkText(text)).click();
          }
 
@@ -314,7 +314,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 
 
-        public void findElementByClassNameAndClick(String name) {
+        public void classNameClick(String name) {
              driver.findElement(By.className(name)).click();
          }
 

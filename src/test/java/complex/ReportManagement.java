@@ -792,7 +792,7 @@ public class ReportManagement {
     public void agentCommissionGame() throws InterruptedException {
         driverUtil.xpathClick(reportAgentTotal);//点击总代理报表
         Thread.sleep(1000);
-        driverUtil.xpathClick(clickGame);//点击切换外接游戏
+        driverUtil.xpathClick(clickGame);//点击外接游戏
         Thread.sleep(1000);
         driverUtil.xpathClick(GameMonthsAgentTotal);//点击外接游戏时间本月
         driverUtil.xpathClick(inquireGameAgentTotal);//点击查询外接游戏本月数据
@@ -844,6 +844,7 @@ public class ReportManagement {
     @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=35&version=1")
     @Test(priority = 19)
         public void vipNumberAgentLotty() throws InterruptedException {
+            driverUtil.xpathClick(reportAgentTotal);//点击总代理报表
             driverUtil.xpathClick(reportAgent);//点击代理报表
             driverUtil.xpathClearSendKeys(accountAgent,"dl");//点击清空输入dl账号
             driverUtil.xpathClick(mothsAgent);

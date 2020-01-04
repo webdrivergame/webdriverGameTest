@@ -3,9 +3,9 @@
 <suite name="All Test Suite" >
     <test name="平台管理员" preserve-order="true" >
         <classes>
+            <class name="complex.FinanceManagement"></class>
             <class name="complex.panel"></class>
-            <class name="complex.UserManagement"></class>
-            <class name="complex.ReportManagement"></class>
+          
         </classes>
     </test>
 </suite>
