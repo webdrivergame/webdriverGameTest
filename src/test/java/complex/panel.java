@@ -44,21 +44,13 @@ public class panel  {
     String userManagement = "//*[@id=\"app\"]/div/div[1]/div[2]/div[1]/div/ul/div[2]/li/div/span";
     String vip = "//*[@id=\"app\"]/div/div[1]/div[2]/div[1]/div/ul/div[2]/li/ul/div[3]/a/li/span";
     String playerNumberPage = "//*[@id=\"app\"]/div/div[2]/div[2]/div/div[2]/div[2]/div[1]";
+    String isTestUser = "/html//div[@id='app']/div//div[@class='filter-container']//span[@class='el-checkbox__label']";
+    String inquireVip = "//*[@id=\"app\"]/div/div[2]/div[2]/div/div[1]/form/div[15]/div/button[1]/span";
 
 
 
 
-    /** 1.点击仪表盘，2.获取平台总注单量，3.进入历史投注记录，4.获取投注笔数
-     *
-     * */
 
-    String clickNotesNumber = "//*[@id=\"tab-2\"]";
-    String totalNotes = "//*[@id=\"app\"]/div/div[2]/div[2]/div/div/div[1]/div/div/div[2]/div[2]/span[2]";
-    String betRecord = "//*[@id=\"app\"]/div/div[1]/div[2]/div[1]/div/ul/div[5]/li/div/span";
-    String historyBet = "//*[@id=\"app\"]/div/div[1]/div[2]/div[1]/div/ul/div[5]/li/ul/div[2]/a/li/span";
-    String clickTime = "//*[@id=\"app\"]/div/div[2]/div[2]/div[1]/form/div[6]/div/div[2]/i[2]";
-    String inquire = "//*[@id=\"app\"]/div/div[2]/div[2]/div[1]/form/div[7]/div/button[1]";
-    String notesPage = "//*[@id=\"app\"]/div/div[2]/section/div/div[2]/div[2]/div[1]";
 
     @Features("仪表盘")
     @Stories("会员数量")
@@ -75,6 +67,9 @@ public class panel  {
             //会员列表总会员数
             driverUtil.xpathClick(userManagement);
             driverUtil.xpathClick(vip);
+            Thread.sleep(1000);
+            driverUtil.xpathClick(isTestUser);
+            driverUtil.xpathClick(inquireVip);
             Thread.sleep(2000);
 
             String getPlayerNumberPage = driverUtil.getTextByXpath(playerNumberPage);
@@ -89,6 +84,17 @@ public class panel  {
 
     }
 
+    /** 1.点击仪表盘，2.获取平台总注单量，3.进入历史投注记录，4.获取投注笔数
+     *
+     * */
+
+    String clickNotesNumber = "//*[@id=\"tab-2\"]";
+    String totalNotes = "//*[@id=\"app\"]/div/div[2]/div[2]/div/div/div[1]/div/div/div[2]/div[2]/span[2]";
+    String betRecord = "//*[@id=\"app\"]/div/div[1]/div[2]/div[1]/div/ul/div[5]/li/div/span";
+    String historyBet = "//*[@id=\"app\"]/div/div[1]/div[2]/div[1]/div/ul/div[5]/li/ul/div[2]/a/li/span";
+    String clickTime = "//*[@id=\"app\"]/div/div[2]/div[2]/div[1]/form/div[6]/div/div[2]/i[2]";
+    String inquire = "//*[@id=\"app\"]/div/div[2]/div[2]/div[1]/form/div[7]/div/button[1]/span";
+    String notesPage = "//*[@id=\"app\"]/div/div[2]/div[2]/div[2]/div[2]/div[1]";
 
 
     @Features("仪表盘")
