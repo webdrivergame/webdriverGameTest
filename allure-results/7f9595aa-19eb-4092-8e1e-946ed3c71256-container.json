@@ -1,0 +1,1 @@
+{"uuid":"7f9595aa-19eb-4092-8e1e-946ed3c71256","name":"seleniumCp","start":1578374357283,"stop":1578374391658,"children":["679a6b67-708a-4441-8f1e-65c8ff696096"],"befores":[{"name":"loginBefore","status":"passed","stage":"finished","description":"","start":1578374357330,"stop":1578374375229}]}

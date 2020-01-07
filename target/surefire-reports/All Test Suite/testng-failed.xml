@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [All Test Suite]">
+  <test name="平台管理员(failed)">
+    <classes>
+      <class name="complex.panel">
+        <methods>
+          <include name="notesNumber"/>
+          <include name="loginBefore"/>
+        </methods>
+      </class> <!-- complex.panel -->
+      <class name="complex.UserManagement">
+        <methods>
+          <include name="agentVipNumber"/>
+          <include name="onlinePlayer"/>
+          <include name="agentNumber"/>
+          <include name="vipNumber"/>
+        </methods>
+      </class> <!-- complex.UserManagement -->
+      <class name="complex.ReportManagement">
+        <methods>
+          <include name="agentAddedBackWaterGame"/>
+          <include name="betMoneyLotty"/>
+          <include name="loseWinTotalNoWaterGame"/>
+          <include name="rechargeMoneyAgentLotty"/>
+          <include name="agentMoneyLotty"/>
+          <include name="agentWaterLotty"/>
+          <include name="withdrawMoneyVipLotty"/>
+          <include name="betTotalGame"/>
+          <include name="rechargeDiscountLotty"/>
+          <include name="serviceMoneyAgentLotty"/>
+          <include name="activityLoseWinLotty"/>
+        </methods>
+      </class> <!-- complex.ReportManagement -->
+    </classes>
+  </test> <!-- 平台管理员(failed) -->
+</suite> <!-- Failed suite [All Test Suite] -->

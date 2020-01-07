@@ -15,21 +15,10 @@ public class ReportManagement {
     WebDriverUtil driverUtil = new WebDriverUtil(null);
 
 
-    String URL = "http://10.1.101.124:8653/";
-    String login = "//*[@id=\"app\"]/div/div/form/div[4]/div/div/button/span";
 
-    @BeforeTest
-    public void loginBefore() throws InterruptedException {
-
-        driverUtil.loginBefore(URL);
-        driverUtil.adminLogin("achao", "123123");
-        driverUtil.xpathClick(login);
-        Thread.sleep(2000);
-
-    }
 
     /**
-     * -------------------------------------------报表管理-总代理报表-会员数-----------------------------------------
+     * -------------------------------------------报表管理-总代理报表彩票-会员数-----------------------------------------
      *
      * */
 
@@ -43,7 +32,7 @@ public class ReportManagement {
 
     @Features("报表管理")
     @Stories("总代理报表-彩票")
-    @Title("验证总代理报表本月会员数")
+    @Title("验证总代理报表彩票本月会员数")
     @Severity(SeverityLevel.BLOCKER)
     @Step("1.进入报表管理-总代理报表；2.获取zdl本月会员数；3.点击zdl跳转；4.获取跳转后代理报表会员总数")
     @Description("测试仪表盘总会员数是否等于会员列表的会员数")
@@ -59,7 +48,7 @@ public class ReportManagement {
             Thread.sleep(2000);
 
             String getVipNumberMonths = driverUtil.getTextByXpath(vipNumberMonths);//获取本月会员数数量
-            System.out.println("验证总代理报表本月会员数");
+            System.out.println("验证总代理报表彩票本月会员数");
             System.out.println("总代理报表本月会员数："+getVipNumberMonths);
             driverUtil.xpathClick(accountAgentTotal);//点击zdl
             Thread.sleep(1000);
@@ -71,7 +60,7 @@ public class ReportManagement {
     }
 
     /**
-     * -------------------------------------------报表管理-总代理报表-笔数-----------------------------------------
+     * -------------------------------------------报表管理-总代理报表彩票-笔数-----------------------------------------
      *
      * */
 
@@ -80,7 +69,7 @@ public class ReportManagement {
 
     @Features("报表管理")
     @Stories("总代理报表-彩票")
-    @Title("验证总代理报表本月投注笔数")
+    @Title("验证总代理报表彩票本月投注笔数")
     @Severity(SeverityLevel.BLOCKER)
     @Step("1.进入报表管理-总代理报表；2.获取zdl本月投注笔数；3.点击zdl跳转；4.获取跳转后代理报表投注总数")
     @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=26&version=1")
@@ -93,7 +82,7 @@ public class ReportManagement {
             driverUtil.xpathClick(inquireAgentTotal);///点击查询彩票本月数据
             Thread.sleep(2000);
             String getCountTotal = driverUtil.getTextByXpath(countTotal);//获取总代理报表本月投注笔数
-            System.out.println("验证总代理报表本月投注笔数");
+            System.out.println("验证总代理报表彩票本月投注笔数");
             System.out.println("总代理报表本月下注笔数："+getCountTotal);
             driverUtil.xpathClick(accountAgentTotal);//点击zdl跳转
             Thread.sleep(1000);
@@ -105,16 +94,16 @@ public class ReportManagement {
     }
 
     /**
-     * -------------------------------------------报表管理-总代理报表-投注金额-----------------------------------------
+     * -------------------------------------------报表管理-总代理报表彩票-投注金额-----------------------------------------
      *
      * */
 
     String betMoneyAgentTotal = "//*[@id=\"pane-lottery\"]/div[2]/div/div[3]/table/tbody/tr/td[4]/div";
-    String betMoneyAgent = "//*[@id=\"pane-lottery\"]/div[2]/div/div[3]/table/tbody/tr/td[6]/div";
+    String betMoneyAgent = "//*[@id=\"pane-lottery\"]/div[2]/div/div[4]/table/tbody/tr/td[6]/div";
 
     @Features("报表管理")
     @Stories("总代理报表-彩票")
-    @Title("验证总代理报表本月投注金额")
+    @Title("验证总代理报表彩票本月投注金额")
     @Severity(SeverityLevel.BLOCKER)
     @Step("1.进入报表管理-总代理报表；2.获取zdl本月投注金额；3.点击zdl跳转；4.获取跳转后代理报表投注金额")
     @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=27&version=1")
@@ -127,7 +116,7 @@ public class ReportManagement {
             driverUtil.xpathClick(inquireAgentTotal);//点击查询彩票本月数据
             Thread.sleep(2000);
             String getBetMoneyAgentTotal = driverUtil.getTextByXpath(betMoneyAgentTotal);
-            System.out.println("验证总代理报表本月投注金额");
+            System.out.println("验证总代理报表彩票本月投注金额");
             System.out.println("总代理列表本月投注金额："+getBetMoneyAgentTotal);
             driverUtil.xpathClick(accountAgentTotal);
             Thread.sleep(1000);
@@ -141,16 +130,16 @@ public class ReportManagement {
 
 
     /**
-     * -------------------------------------------报表管理-总代理报表-赢利投注金额-----------------------------------------
+     * -------------------------------------------报表管理-总代理报表彩票-赢利投注金额-----------------------------------------
      *
      * */
 
     String winBetMoneyAgentTotal = "//*[@id=\"pane-lottery\"]/div[2]/div/div[3]/table/tbody/tr/td[5]/div/span";
-    String winBetMoneyAgent = "//*[@id=\"pane-lottery\"]/div[2]/div/div[3]/table/tbody/tr/td[7]/div/span";
+    String winBetMoneyAgent = "//*[@id=\"pane-lottery\"]/div[2]/div/div[4]/table/tbody/tr/td[7]/div";
 
     @Features("报表管理")
     @Stories("总代理报表-彩票")
-    @Title("验证总代理报表本月赢利投注金额")
+    @Title("验证总代理报表彩票本月赢利投注金额")
     @Severity(SeverityLevel.BLOCKER)
     @Step("1.进入报表管理-总代理报表；2.获取zdl本月盈利投注金额；3.点击zdl跳转；4.获取跳转后代理报表赢利投注金额")
     @Description("判断总代理报表的赢利投注金额是否等于跳转后的代理报表赢利投注金额总和")
@@ -163,7 +152,7 @@ public class ReportManagement {
             driverUtil.xpathClick(inquireAgentTotal);//点击查询彩票本月数据
             Thread.sleep(2000);
             String getWinBetMoneyAgentTotal = driverUtil.getTextByXpath(winBetMoneyAgentTotal);
-            System.out.println("验证总代理报表本月赢利投注金额");
+            System.out.println("验证总代理报表彩票本月赢利投注金额");
             System.out.println("总代理列表本月赢利投注金额："+getWinBetMoneyAgentTotal);
             driverUtil.xpathClick(accountAgentTotal);
             Thread.sleep(1000);
@@ -175,7 +164,7 @@ public class ReportManagement {
     }
 
     /**
-     * -------------------------------------------报表管理-总代理报表-充值优惠/手续费金额-----------------------------------------
+     * -------------------------------------------报表管理-总代理报表彩票-充值优惠/手续费金额-----------------------------------------
      *
      * */
 
@@ -184,7 +173,7 @@ public class ReportManagement {
 
     @Features("报表管理")
     @Stories("总代理报表-彩票")
-    @Title("验证总代理报表本月充值优惠/服务费金额")
+    @Title("验证总代理报表彩票本月充值优惠/服务费金额")
     @Severity(SeverityLevel.BLOCKER)
     @Step("1.进入报表管理-总代理报表；2.获取zdl本月盈利投注金额；3.点击zdl跳转；4.获取跳转后代理报表赢利投注金额")
     @Description("判断总代理报表的充值优惠/手续费金额是否等于跳转后的代理报表充值优惠/手续费金额总和")
@@ -197,7 +186,7 @@ public class ReportManagement {
             driverUtil.xpathClick(inquireAgentTotal);//点击查询彩票本月数据
             Thread.sleep(2000);
             String getServiceChargeAgentTotal = driverUtil.getTextByXpath(serviceChargeAgentTotal);
-            System.out.println("验证总代理报表本月充值优惠/服务费金额");
+            System.out.println("验证总代理报表彩票本月充值优惠/服务费金额");
             System.out.println("总代理列表本月充值优惠/服务费金额："+getServiceChargeAgentTotal);
             driverUtil.xpathClick(accountAgentTotal);
             Thread.sleep(1000);
@@ -210,7 +199,7 @@ public class ReportManagement {
 
 
     /**
-     * -------------------------------------------报表管理-总代理报表-代理退水金额-----------------------------------------
+     * -------------------------------------------报表管理-总代理报表彩票-代理退水金额-----------------------------------------
      *
      * */
 
@@ -219,7 +208,7 @@ public class ReportManagement {
 
     @Features("报表管理")
     @Stories("总代理报表-彩票")
-    @Title("验证总代理报表本月代理退水金额")
+    @Title("验证总代理报表彩票本月代理退水金额")
     @Severity(SeverityLevel.BLOCKER)
     @Step("1.进入报表管理-总代理报表；2.获取zdl本月代理退水金额；3.点击zdl跳转；4.获取跳转后代理报表代理退水金额")
     @Description("判断总代理报表的代理退水金额是否等于跳转后的代理报表代理退水金额总和")
@@ -232,7 +221,7 @@ public class ReportManagement {
             driverUtil.xpathClick(inquireAgentTotal);//点击查询彩票本月数据
             Thread.sleep(2000);
             String getWaterBreakAgentTotal = driverUtil.getTextByXpath(waterBreakAgentTotal);
-            System.out.println("验证总代理报表本月代理退水金额");
+            System.out.println("验证总代理报表彩票本月代理退水金额");
             System.out.println("总代理列表本月代理退水金额："+getWaterBreakAgentTotal);
             driverUtil.xpathClick(accountAgentTotal);
             Thread.sleep(1000);
@@ -245,7 +234,7 @@ public class ReportManagement {
 
 
     /**
-     * -------------------------------------------报表管理-总代理报表-代理赔率金额-----------------------------------------
+     * -------------------------------------------报表管理-总代理报表彩票-代理赔率金额-----------------------------------------
      *
      * */
 
@@ -254,7 +243,7 @@ public class ReportManagement {
 
     @Features("报表管理")
     @Stories("总代理报表-彩票")
-    @Title("验证总代理报表本月代理赔率金额")
+    @Title("验证总代理报表彩票本月代理赔率金额")
     @Severity(SeverityLevel.BLOCKER)
     @Step("1.进入报表管理-总代理报表；2.获取zdl本月代理赔率金额；3.点击zdl跳转；4.获取跳转后代理报表代理赔率金额")
     @Description("判断总代理报表的代理赔率金额是否等于跳转后的代理报表代理赔率金额总和")
@@ -267,7 +256,7 @@ public class ReportManagement {
             driverUtil.xpathClick(inquireAgentTotal);//点击查询彩票本月数据
             Thread.sleep(2000);
             String getOddsMoneyAgentTotal = driverUtil.getTextByXpath(oddsMoneyAgentTotal);
-            System.out.println("验证总代理报表本月代理赔率金额");
+            System.out.println("验证总代理报表彩票本月代理赔率金额");
             System.out.println("总代理列表本月代理赔率金额："+getOddsMoneyAgentTotal);
             driverUtil.xpathClick(accountAgentTotal);
             Thread.sleep(1000);
@@ -281,7 +270,7 @@ public class ReportManagement {
 
 
     /**
-     * -------------------------------------------报表管理-总代理报表-会员输赢（不包括退水）金额-----------------------------------------
+     * -------------------------------------------报表管理-总代理报表彩票-会员输赢（不包括退水）金额-----------------------------------------
      *
      * */
 
@@ -290,7 +279,7 @@ public class ReportManagement {
 
     @Features("报表管理")
     @Stories("总代理报表-彩票")
-    @Title("验证总代理报表本月会员输赢(不包括退水)金额")
+    @Title("验证总代理报表彩票本月会员输赢(不包括退水)金额")
     @Severity(SeverityLevel.BLOCKER)
     @Step("1.进入报表管理-总代理报表；2.获取zdl本月会员输赢（不包括退水）金额；3.点击zdl跳转；4.获取跳转后代理报表会员输赢（不包括退水）金额")
     @Description("判断总代理报表的会员输赢（不包括退水）金额是否等于跳转后的代理报表会员输赢（不包括退水）金额总和")
@@ -304,7 +293,7 @@ public class ReportManagement {
             Thread.sleep(2000);
             driverUtil.scrollToWindow();//缩小窗口80%
             String getLoseWinAgentTotal = driverUtil.getTextByXpath(loseWinAgentTotal);
-            System.out.println("验证总代理报表本月会员输赢(不包括退水)金额");
+            System.out.println("验证总代理报表彩票本月会员输赢(不包括退水)金额");
             System.out.println("总代理列表本月会员输赢(不包括退水)金额："+getLoseWinAgentTotal);
             driverUtil.scrollToWindowHundred();
 
@@ -322,7 +311,7 @@ public class ReportManagement {
 
 
     /**
-     * -------------------------------------------报表管理-总代理报表-实际退水金额-----------------------------------------
+     * -------------------------------------------报表管理-总代理报表彩票-实际退水金额-----------------------------------------
      *
      * */
 
@@ -331,7 +320,7 @@ public class ReportManagement {
 
     @Features("报表管理")
     @Stories("总代理报表-彩票")
-    @Title("验证总代理报表本月实际退水金额")
+    @Title("验证总代理报表彩票本月实际退水金额")
     @Severity(SeverityLevel.BLOCKER)
     @Step("1.进入报表管理-总代理报表；2.获取zdl本月实际退水金额；3.点击zdl跳转；4.获取跳转后代理报表实际退水金额")
     @Description("判断总代理报表的实际退水金额是否等于跳转后的代理报表实际退水金额总和")
@@ -345,14 +334,14 @@ public class ReportManagement {
             Thread.sleep(2000);
             driverUtil.scrollToWindow();
             String getWaterBreakPracticeAgentTotal = driverUtil.getTextByXpath(waterBreakPracticeAgentTotal);
-            System.out.println("验证总代理报表本月实际退水金额");
+            System.out.println("验证总代理报表彩票本月实际退水金额");
             System.out.println("总代理列表本月实际退水金额："+getWaterBreakPracticeAgentTotal);
             driverUtil.scrollToWindowHundred();
 
 
             driverUtil.xpathClick(accountAgentTotal);
             Thread.sleep(2000);
-            driverUtil.scrollToRight();
+            driverUtil.scrollToWindow();
             String getWaterBreakPracticeAgent = driverUtil.getTextByXpath(waterBreakPracticeAgent);
             System.out.println("代理列表本月实际退水金额："+getWaterBreakPracticeAgent);
             driverUtil.scrollToWindowHundred();
@@ -364,7 +353,7 @@ public class ReportManagement {
 
 
     /**
-     * -------------------------------------------报表管理-总代理报表-实际输赢(包括退水)金额-----------------------------------------
+     * -------------------------------------------报表管理-总代理报表彩票-实际输赢(包括退水)金额-----------------------------------------
      *
      * */
 
@@ -373,7 +362,7 @@ public class ReportManagement {
 
     @Features("报表管理")
     @Stories("总代理报表-彩票")
-    @Title("验证总代理报表本月实际输赢(包括退水)金额")
+    @Title("验证总代理报表彩票本月实际输赢(包括退水)金额")
     @Severity(SeverityLevel.BLOCKER)
     @Step("1.进入报表管理-总代理报表；2.获取zdl本月实际输赢(包括退水)金额；3.点击zdl跳转；4.获取跳转后代理报表实际输赢(包括退水)金额")
     @Description("判断总代理报表的实际输赢(包括退水)金额是否等于跳转后的代理报表实际输赢(包括退水)金额总和")
@@ -387,7 +376,7 @@ public class ReportManagement {
             Thread.sleep(2000);
             driverUtil.scrollToWindow();
             String getLoseWinAndWaterAgentTotal = driverUtil.getTextByXpath(loseWinAndWaterAgentTotal);
-            System.out.println("验证总代理报表本月实际输赢(包括退水)金额");
+            System.out.println("验证总代理报表彩票本月实际输赢(包括退水)金额");
             System.out.println("总代理列表本月实际输赢(包括退水)金额："+getLoseWinAndWaterAgentTotal);
             driverUtil.scrollToWindowHundred();
 
@@ -411,7 +400,7 @@ public class ReportManagement {
 
 
 
-    /** -------------------------------------报表管理-总代理报表-外接游戏-会员数--------------------------------
+    /** -------------------------------------报表管理-总代理报表外接游戏-会员数--------------------------------
      *
      **/
 
@@ -424,7 +413,7 @@ public class ReportManagement {
 
     @Features("报表管理")
     @Stories("总代理报表-外接游戏")
-    @Title("验证总代理报表会员数")
+    @Title("验证总代理报外接游戏表会员数")
     @Severity(SeverityLevel.BLOCKER)
     @Step("1.进入报表管理-总代理报表；2.获取本月会员数，3.点击跳转代理列表，4.获取代理报表总的会员数")
     @Description("测试总代理报表会员总数")
@@ -441,7 +430,7 @@ public class ReportManagement {
 
             //总代理列表外接游戏zdl会员总数是否等于跳转的代理会员总数
             String vipNumberOutGameTotal1 = driverUtil.getTextByXpath(vipNumberGameTotal);
-            System.out.println("测试总代理报表会员总数");
+            System.out.println("测试总代理报表外接游戏会员总数");
             System.out.println("总代理报表外接游戏会员总数："+vipNumberOutGameTotal1);
             driverUtil.xpathClick(clickGameAgentTotal);
             Thread.sleep(1000);
@@ -468,7 +457,7 @@ public class ReportManagement {
 
     @Features("报表管理")
     @Stories("总代理报表-外接游戏")
-    @Title("验证总代理报表会员实际投注总额")
+    @Title("验证总代理报外接游戏表会员实际投注总额")
     @Severity(SeverityLevel.BLOCKER)
     @Step("1.进入报表管理-总代理报表；2.获取本月会员实际投注总额，3.点击跳转代理列表，4.获取代理报表会员实际投注总额")
     @Description("测试会员实际投注总额是否等于跳转的代理下实际投注总额相加")
@@ -485,7 +474,7 @@ public class ReportManagement {
 
 
             BigDecimal betTotalGame1 = new BigDecimal(driverUtil.getTextByXpath(betTotalGame));
-            System.out.println("验证总代理报表会员实际投注总额");
+            System.out.println("验证总代理报表外接游戏会员实际投注总额");
             System.out.println("外接游戏总代理报表实际投注金额："+betTotalGame1);
             driverUtil.xpathClick(clickGameAgentTotal);
             Thread.sleep(1000);
@@ -527,7 +516,7 @@ public class ReportManagement {
 
     @Features("报表管理")
     @Stories("总代理报表-外接游戏")
-    @Title("验证总代理报表会员实际反水总额")
+    @Title("验证总代理报表外接游戏会员实际反水总额")
     @Severity(SeverityLevel.BLOCKER)
     @Step("1.进入报表管理-总代理报表；2.获取本月会员实际反水总额，3.点击跳转代理列表，4.获取代理报表会员实际反水总额")
     @Description("测试会员实际反水总额是否等于跳转的代理下实际反水总额相加")
@@ -544,7 +533,7 @@ public class ReportManagement {
 
             driverUtil.scrollToWindow();
             BigDecimal vipBackWaterAgentTotal1 = new BigDecimal(driverUtil.getTextByXpath(vipBackWaterAgentTotal));
-            System.out.println("验证总代理报表会员实际反水总额");
+            System.out.println("验证总代理报表外接游戏会员实际反水总额");
             System.out.println("总代理报表外接游戏实际反水总额："+vipBackWaterAgentTotal1);
             driverUtil.scrollToWindowHundred();
 
@@ -584,7 +573,7 @@ public class ReportManagement {
 
     @Features("报表管理")
     @Stories("总代理报表-外接游戏")
-    @Title("验证总代理报表会员实际输赢总额")
+    @Title("验证总代理报表外接游戏会员实际输赢总额")
     @Severity(SeverityLevel.BLOCKER)
     @Step("1.进入报表管理-总代理报表；2.获取本月会员实际输赢总额，3.点击跳转代理列表，4.获取代理报表会员实际输赢总额")
     @Description("测试会员实际输赢总额是否等于跳转的代理下实际输赢总额相加")
@@ -601,7 +590,7 @@ public class ReportManagement {
 
 
         BigDecimal loseWinAgentGameTotal1 = new BigDecimal(driverUtil.getTextByXpath(loseWinAgentGameTotal));
-        System.out.println("验证总代理报表会员实际输赢总额");
+        System.out.println("验证总代理报表外接游戏会员实际输赢总额");
         System.out.println("总代理报表外接游戏实际输赢总额："+loseWinAgentGameTotal1);
         driverUtil.xpathClick(clickGameAgentTotal);
         Thread.sleep(1000);
@@ -635,7 +624,7 @@ public class ReportManagement {
 
     @Features("报表管理")
     @Stories("总代理报表-外接游戏")
-    @Title("验证总代理报表会员实际输赢总额(无反水)")
+    @Title("验证总代理报表外接游戏会员实际输赢总额(无反水)")
     @Severity(SeverityLevel.BLOCKER)
     @Step("1.进入报表管理-总代理报表；2.获取本月会员实际输赢总额(无反水)，3.点击跳转代理列表，4.获取代理报表会员实际输赢总额(无反水)")
     @Description("测试会员实际输赢总额(无反水)是否等于跳转的代理下实际输赢总额(无反水)")
@@ -650,15 +639,15 @@ public class ReportManagement {
         driverUtil.xpathClick(inquireGameAgentTotal);//点击查询外接游戏本月数据
         Thread.sleep(1000);
 
-        driverUtil.scrollToWindow();
+        driverUtil.scrollToWindowHalf();
         String loseWinNoWaterGameAgentTotal1 = driverUtil.getTextByXpath(loseWinNoWaterGameAgentTotal);
-        System.out.println("验证总代理报表会员实际输赢总额(无反水)");
+        System.out.println("验证总代理报表外接游戏会员实际输赢总额(无反水)");
         System.out.println("总代理报表会员实际输赢总额(无反水)："+loseWinNoWaterGameAgentTotal1);
         driverUtil.scrollToWindowHundred();
         driverUtil.xpathClick(clickGameAgentTotal);
         Thread.sleep(1000);
 
-        driverUtil.scrollToWindow();
+        driverUtil.scrollToWindowHalf();
         String loseWinTotalNoWaterGameAgent1 = driverUtil.getTextByXpath(loseWinTotalNoWaterGameAgent);
         System.out.println("代理报表实际输赢总额(无反水):"+loseWinTotalNoWaterGameAgent1);
         driverUtil.scrollToWindowHundred();
@@ -686,7 +675,7 @@ public class ReportManagement {
 
     @Features("报表管理")
     @Stories("总代理报表-外接游戏")
-    @Title("验证总代理报表代理反水总额")
+    @Title("验证总代理报表外接游戏代理反水总额")
     @Severity(SeverityLevel.BLOCKER)
     @Step("1.进入报表管理-总代理报表；2.获取本月会代理反水总额，3.点击跳转代理列表，4.获取代理报表代理反水总额")
     @Description("测试代理反水总额是否等于跳转的代理代理反水总额相加")
@@ -703,7 +692,7 @@ public class ReportManagement {
 
 
         BigDecimal agentBackWaterGame1 = new BigDecimal(driverUtil.getTextByXpath(agentBackWaterGame));
-        System.out.println("验证总代理报表会员实际反水总额");
+        System.out.println("验证总代理报表外接游戏会员实际反水总额");
         System.out.println("总代理报表外接游戏实际反水总额："+agentBackWaterGame1);
         driverUtil.xpathClick(clickGameAgentTotal);
         Thread.sleep(1000);
@@ -736,7 +725,7 @@ public class ReportManagement {
 
     @Features("报表管理")
     @Stories("总代理报表-外接游戏")
-    @Title("验证总代理报表代理额外反水总额")
+    @Title("验证总代理报表外接游戏代理额外反水总额")
     @Severity(SeverityLevel.BLOCKER)
     @Step("1.进入报表管理-总代理报表；2.获取本月代理额外反水总额，3.点击跳转代理列表，4.获取代理报表代理额外反水总额")
     @Description("测试代理额外反水总额是否等于跳转的代理下代理额外反水总额")
@@ -753,7 +742,7 @@ public class ReportManagement {
 
         driverUtil.scrollToWindowHalf();
         String agentAddedBackWaterGame1 = driverUtil.getTextByXpath(agentAddedBackWaterGame);
-        System.out.println("验证总代理报表代理额外反水总额");
+        System.out.println("验证总代理报表外接游戏代理额外反水总额");
         System.out.println("总代理报表代理额外反水总额："+agentAddedBackWaterGame1);
         driverUtil.scrollToWindowHundred();
 
@@ -783,7 +772,7 @@ public class ReportManagement {
 
     @Features("报表管理")
     @Stories("总代理报表-外接游戏")
-    @Title("验证总代理报表代理实际佣金总额")
+    @Title("验证总代理报表外接游戏代理实际佣金总额")
     @Severity(SeverityLevel.BLOCKER)
     @Step("1.进入报表管理-总代理报表；2.获取本月代理代理实际佣金总额，3.点击跳转代理列表，4.获取代理报表代理实际佣金总额")
     @Description("测试代理代理实际佣金总额是否等于跳转的代理下代理实际佣金总额")
@@ -800,7 +789,7 @@ public class ReportManagement {
 
         driverUtil.scrollToWindowHalf();
         String agentCommissionGame1 = driverUtil.getTextByXpath(agentCommissionGame);
-        System.out.println("验证总代理报表代理实际佣金总额");
+        System.out.println("验证总代理报表外接游戏代理实际佣金总额");
         System.out.println("总代理报表代理实际佣金总额："+agentCommissionGame1);
         driverUtil.scrollToWindowHundred();
 
@@ -823,7 +812,7 @@ public class ReportManagement {
 
 
     /**
-     * -------------------------------------------报表管理-代理报表-本月会员数-----------------------------------------
+     * -------------------------------------------报表管理-代理报表彩票-本月会员数-----------------------------------------
      *
      * */
 
@@ -837,21 +826,25 @@ public class ReportManagement {
 
     @Features("报表管理")
     @Stories("代理报表-彩票")
-    @Title("验证代理报表本月会员数量")
+    @Title("验证代理报表彩票本月会员数量")
     @Severity(SeverityLevel.BLOCKER)
     @Step("1.进入报表管理-代理报表；2.获取账号dl本月会员数；3.点击dl跳转；4.获取跳转后会员报表本月会员数")
     @Description("判断代理报表的本月会员数是否等于跳转后的代理报表本月会员数总和")
     @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=35&version=1")
     @Test(priority = 19)
         public void vipNumberAgentLotty() throws InterruptedException {
+
             driverUtil.xpathClick(reportAgentTotal);//点击总代理报表
+
+            driverUtil.xpathClick(reportAgentTotal);
+
             driverUtil.xpathClick(reportAgent);//点击代理报表
             driverUtil.xpathClearSendKeys(accountAgent,"dl");//点击清空输入dl账号
             driverUtil.xpathClick(mothsAgent);
             driverUtil.xpathClick(inquireAgent);
             Thread.sleep(2000);
             String getVipNumberAgent = driverUtil.getTextByXpath(vipNumberAgent);
-            System.out.println("验证代理报表本月会员数量");
+            System.out.println("验证代理报表彩票本月会员数量");
             System.out.println("代理报表本月会员数："+getVipNumberAgent);
             driverUtil.xpathClick(clickAgent);
             Thread.sleep(1000);
@@ -869,7 +862,7 @@ public class ReportManagement {
 
 
     /**
-     * -------------------------------------------报表管理-代理报表-充值金额-----------------------------------------
+     * -------------------------------------------报表管理-代理报表彩票-充值金额-----------------------------------------
      *
      * */
 
@@ -878,7 +871,7 @@ public class ReportManagement {
 
     @Features("报表管理")
     @Stories("代理报表-彩票")
-    @Title("验证代理报表本月充值金额")
+    @Title("验证代理报表彩票本月充值金额")
     @Severity(SeverityLevel.BLOCKER)
     @Step("1.进入报表管理-代理报表；2.获取账号dl本月充值金额；3.点击dl跳转；4.获取跳转后会员报表本月充值金额")
     @Description("判断代理报表的本月充值金额是否等于跳转后的代理报表本月充值金额总和")
@@ -891,7 +884,7 @@ public class ReportManagement {
             driverUtil.xpathClick(inquireAgent);
             Thread.sleep(2000);
             String getRechargeMoneyAgent = driverUtil.getTextByXpath(rechargeMoneyAgent);
-            System.out.println("验证代理报表本月充值金额");
+            System.out.println("验证代理报表彩票本月充值金额");
             System.out.println("代理报表本月充值金额："+getRechargeMoneyAgent);
             driverUtil.xpathClick(clickAgent);
             Thread.sleep(1000);
@@ -905,7 +898,7 @@ public class ReportManagement {
 
 
     /**
-     * -------------------------------------------报表管理-代理报表-笔数-----------------------------------------
+     * -------------------------------------------报表管理-代理报表彩票-笔数-----------------------------------------
      *
      * */
 
@@ -914,7 +907,7 @@ public class ReportManagement {
 
     @Features("报表管理")
     @Stories("代理报表-彩票")
-    @Title("验证代理报表本月充值笔数")
+    @Title("验证代理报表彩票本月充值笔数")
     @Severity(SeverityLevel.BLOCKER)
     @Step("1.进入报表管理-代理报表；2.获取账号dl本月笔数；3.点击dl跳转；4.获取跳转后会员报表本月笔数金额")
     @Description("判断代理报表的本月笔数是否等于跳转后的代理报表本月笔数总和")
@@ -927,7 +920,7 @@ public class ReportManagement {
             driverUtil.xpathClick(inquireAgent);
             Thread.sleep(2000);
             String getCountAgent = driverUtil.getTextByXpath(countAgent);
-            System.out.println("验证代理报表本月充值笔数");
+            System.out.println("验证代理报表彩票本月充值笔数");
             System.out.println("代理报表本月充值笔数："+getCountAgent);
             driverUtil.xpathClick(clickAgent);
             Thread.sleep(1000);
@@ -941,7 +934,7 @@ public class ReportManagement {
 
 
     /**
-     * -------------------------------------------报表管理-代理报表-投注金额-----------------------------------------
+     * -------------------------------------------报表管理-代理报表彩票-投注金额-----------------------------------------
      *
      * */
 
@@ -950,7 +943,7 @@ public class ReportManagement {
 
     @Features("报表管理")
     @Stories("代理报表-彩票")
-    @Title("验证代理报表本月投注金额")
+    @Title("验证代理报表彩票本月投注金额")
     @Severity(SeverityLevel.BLOCKER)
     @Step("1.进入报表管理-代理报表；2.获取账号dl本月投注金额；3.点击dl跳转；4.获取跳转后会员报表本月投注金额")
     @Description("判断代理报表的本月投注金额是否等于跳转后的代理报表本月投注金额总和")
@@ -963,7 +956,7 @@ public class ReportManagement {
             driverUtil.xpathClick(inquireAgent);
             Thread.sleep(2000);
             String getBetMoneyAgentReport = driverUtil.getTextByXpath(betMoneyAgentReport);
-            System.out.println("验证代理报表本月投注金额");
+            System.out.println("验证代理报表彩票本月投注金额");
             System.out.println("代理报表本月充值笔数："+getBetMoneyAgentReport);
             driverUtil.xpathClick(clickAgent);
             Thread.sleep(1000);
@@ -977,7 +970,7 @@ public class ReportManagement {
 
 
     /**
-     * -------------------------------------------报表管理-代理报表-赢利投注金额-----------------------------------------
+     * -------------------------------------------报表管理-代理报表彩票-赢利投注金额-----------------------------------------
      *
      * */
 
@@ -986,7 +979,7 @@ public class ReportManagement {
 
     @Features("报表管理")
     @Stories("代理报表-彩票")
-    @Title("验证代理报表本月赢利投注金额")
+    @Title("验证代理报表彩票本月赢利投注金额")
     @Severity(SeverityLevel.BLOCKER)
     @Step("1.进入报表管理-代理报表；2.获取账号dl本月赢利投注金额；3.点击dl跳转；4.获取跳转后会员报表本月赢利投注金额")
     @Description("判断代理报表的本月赢利投注金额是否等于跳转后的代理报表本月赢利投注金额总和")
@@ -999,7 +992,7 @@ public class ReportManagement {
             driverUtil.xpathClick(inquireAgent);
             Thread.sleep(2000);
             String getWinBetMoneyAgentReport = driverUtil.getTextByXpath(winBetMoneyAgentReport);
-            System.out.println("验证代理报表本月赢利投注金额");
+            System.out.println("验证代理报表彩票本月赢利投注金额");
             System.out.println("代理报表本月赢利投注金额："+getWinBetMoneyAgentReport);
             driverUtil.xpathClick(clickAgent);
             Thread.sleep(1000);
@@ -1012,7 +1005,7 @@ public class ReportManagement {
 
 
     /**
-     * -------------------------------------------报表管理-代理报表-充值优惠/手续费金额-----------------------------------------
+     * -------------------------------------------报表管理-代理报表彩票-充值优惠/手续费金额-----------------------------------------
      *
      * */
 
@@ -1021,7 +1014,7 @@ public class ReportManagement {
 
     @Features("报表管理")
     @Stories("代理报表-彩票")
-    @Title("验证代理报表本月充值优惠/手续费")
+    @Title("验证代理报表彩票本月充值优惠/手续费")
     @Severity(SeverityLevel.BLOCKER)
     @Step("1.进入报表管理-代理报表；2.获取账号dl本月充值优惠/手续费金额；3.点击dl跳转；4.获取跳转后会员报表本月充值优惠/手续费金额")
     @Description("判断代理报表的本月充值优惠/手续费金额是否等于跳转后的代理报表本月充值优惠/手续费金额总和")
@@ -1034,7 +1027,7 @@ public class ReportManagement {
             driverUtil.xpathClick(inquireAgent);
             Thread.sleep(2000);
             String getServiceMoneyAgent = driverUtil.getTextByXpath(serviceMoneyAgent);
-            System.out.println("验证代理报表本月充值优惠/手续费");
+            System.out.println("验证代理报表彩票本月充值优惠/手续费");
             System.out.println("代理报表本月充值优惠/手续费："+getServiceMoneyAgent);
             driverUtil.xpathClick(clickAgent);
             Thread.sleep(1000);
@@ -1049,7 +1042,7 @@ public class ReportManagement {
 
 
     /**
-     * -------------------------------------------报表管理-代理报表-代理赔率金额-----------------------------------------
+     * -------------------------------------------报表管理-代理报表彩票-代理赔率金额-----------------------------------------
      *
      * */
 
@@ -1058,7 +1051,7 @@ public class ReportManagement {
 
     @Features("报表管理")
     @Stories("代理报表-彩票")
-    @Title("验证代理报表本月代理赔率金额")
+    @Title("验证代理报表彩票本月代理赔率金额")
     @Severity(SeverityLevel.BLOCKER)
     @Step("1.进入报表管理-代理报表；2.获取账号dl本月代理赔率金额；3.点击dl跳转；4.获取跳转后会员报表本月代理赔率金额")
     @Description("判断代理报表的本月代理赔率金额是否等于跳转后的代理报表本月代理赔率金额总和")
@@ -1071,7 +1064,7 @@ public class ReportManagement {
             driverUtil.xpathClick(inquireAgent);
             Thread.sleep(2000);
             String getOddsAgent = driverUtil.getTextByXpath(oddsAgent);
-            System.out.println("验证代理报表本月代理赔率金额");
+            System.out.println("验证代理报表彩票本月代理赔率金额");
             System.out.println("代理报表本月代理赔率金额："+getOddsAgent);
             driverUtil.xpathClick(clickAgent);
             Thread.sleep(1000);
@@ -1085,7 +1078,7 @@ public class ReportManagement {
 
 
     /**
-     * -------------------------------------------报表管理-代理报表-代理退水金额-----------------------------------------
+     * -------------------------------------------报表管理-代理报表彩票-代理退水金额-----------------------------------------
      *
      * */
 
@@ -1094,7 +1087,7 @@ public class ReportManagement {
 
     @Features("报表管理")
     @Stories("代理报表-彩票")
-    @Title("验证代理报表本月代理退水金额")
+    @Title("验证代理报表彩票本月代理退水金额")
     @Severity(SeverityLevel.BLOCKER)
     @Step("1.进入报表管理-代理报表；2.获取账号dl本月代理退水金额；3.点击dl跳转；4.获取跳转后会员报表本月代理退水金额")
     @Description("判断代理报表的本月代理退水金额是否等于跳转后的代理报表本月代理退水金额总和")
@@ -1107,7 +1100,7 @@ public class ReportManagement {
             driverUtil.xpathClick(inquireAgent);
             Thread.sleep(2000);
             String getWaterBreakMoneyAgent = driverUtil.getTextByXpath(waterBreakMoneyAgent);
-            System.out.println("验证代理报表本月代理退水金额");
+            System.out.println("验证代理报表彩票本月代理退水金额");
             System.out.println("代理报表本月代理退水金额："+getWaterBreakMoneyAgent);
             driverUtil.xpathClick(clickAgent);
             Thread.sleep(1000);
@@ -1120,7 +1113,7 @@ public class ReportManagement {
 
 
     /**
-     * -------------------------------------------报表管理-代理报表-会员输赢（不包括退水）-----------------------------------------
+     * -------------------------------------------报表管理-代理报表彩票-会员输赢（不包括退水）-----------------------------------------
      *
      * */
 
@@ -1129,7 +1122,7 @@ public class ReportManagement {
 
     @Features("报表管理")
     @Stories("代理报表-彩票")
-    @Title("验证代理报表本月实际输赢（不包括退水）")
+    @Title("验证代理报表彩票本月实际输赢（不包括退水）")
     @Severity(SeverityLevel.BLOCKER)
     @Step("1.进入报表管理-代理报表；2.获取账号dl本月代理退水金额；3.点击dl跳转；4.获取跳转后会员报表本月代理退水金额")
     @Description("判断代理报表的本月会员输赢（不包括退水）是否等于跳转后的代理报表本月会员输赢（不包括退水）总和")
@@ -1144,7 +1137,7 @@ public class ReportManagement {
 
             driverUtil.scrollToWindow();
             String getWinLoseNotWaterAgent = driverUtil.getTextByXpath(winLoseNotWaterAgent);
-            System.out.println("验证代理报表本月实际输赢（不包括退水）");
+            System.out.println("验证代理报表彩票本月实际输赢（不包括退水）");
             System.out.println("代理报表本月实际输赢（不包括退水）："+getWinLoseNotWaterAgent);
             driverUtil.scrollToWindowHundred();
 
@@ -1163,7 +1156,7 @@ public class ReportManagement {
 
 
     /**
-     * -------------------------------------------报表管理-代理报表-会员输赢（包括退水）-----------------------------------------
+     * -------------------------------------------报表管理-代理报表彩票-会员输赢（包括退水）-----------------------------------------
      *
      * */
 
@@ -1172,7 +1165,7 @@ public class ReportManagement {
 
     @Features("报表管理")
     @Stories("代理报表-彩票")
-    @Title("验证代理报表本月实际输赢（包括退水）")
+    @Title("验证代理报表彩票本月实际输赢（包括退水）")
     @Severity(SeverityLevel.BLOCKER)
     @Step("1.进入报表管理-代理报表；2.获取账号dl本月代理退水金额；3.点击dl跳转；4.获取跳转后会员报表本月代理退水金额")
     @Description("判断代理报表的本月会员输赢（包括退水）是否等于跳转后的代理报表本月会员输赢（包括退水）总和")
@@ -1187,7 +1180,7 @@ public class ReportManagement {
 
             driverUtil.scrollToWindow();
             String getWinLoseWaterAgent = driverUtil.getTextByXpath(winLoseWaterAgent);
-            System.out.println("验证代理报表本月实际输赢（包括退水）");
+            System.out.println("验证代理报表彩票本月实际输赢（包括退水）");
             System.out.println("代理报表本月实际输赢（包括退水）："+getWinLoseWaterAgent);
             driverUtil.scrollToWindowHundred();
 
@@ -1203,7 +1196,7 @@ public class ReportManagement {
     }
 
     /**
-     * -------------------------------------------报表管理-代理报表-实际退水-------------------------------
+     * -------------------------------------------报表管理-代理报表彩票-实际退水-------------------------------
      *
      * */
 
@@ -1212,7 +1205,7 @@ public class ReportManagement {
 
     @Features("报表管理")
     @Stories("代理报表-彩票")
-    @Title("验证代理报表本月实际退水金额")
+    @Title("验证代理报表彩票本月实际退水金额")
     @Severity(SeverityLevel.BLOCKER)
     @Step("1.进入报表管理-代理报表；2.获取账号dl本月代理退水金额；3.点击dl跳转；4.获取跳转后会员报表本月代理退水金额")
     @Description("判断代理报表的本月代理实际退水是否等于跳转后的代理报表本月代理实际退水总和")
@@ -1227,7 +1220,7 @@ public class ReportManagement {
 
             driverUtil.scrollToWindow();
             String getWaterBreakMoneyActivityAgent = driverUtil.getTextByXpath(waterBreakMoneyActivityAgent);
-            System.out.println("验证代理报表本月实际退水金额");
+            System.out.println("验证代理报表彩票本月实际退水金额");
             System.out.println("代理报表本月实际退水金额："+getWaterBreakMoneyActivityAgent);
             driverUtil.scrollToWindowHundred();
 
@@ -1253,7 +1246,7 @@ public class ReportManagement {
 
 
     /**
-     * -------------------------------------报表管理-会员报表-充值金额-----------------------------------------------
+     * -------------------------------------报表管理-会员报表彩票-充值金额-----------------------------------------------
      *
      * */
 
@@ -1266,14 +1259,14 @@ public class ReportManagement {
     //充值记录获取充值总计
     String financeManagement = "//*[@id=\"app\"]/div/div[1]/div[2]/div[1]/div/ul/div[3]/li/div/span";
     String rechargeRecord = "//*[@id=\"app\"]/div/div[1]/div[2]/div[1]/div/ul/div[3]/li/ul/div[1]/a/li/span";
-    String inputVipRechargeRecord = "//*[@id=\"app\"]/div/div[2]/section/div/div[1]/form/div[5]/div/div/input";
-    String monthsRechargeRecord = "//*[@id=\"app\"]/div/div[2]/section/div/div[1]/form/div[11]/div/div/label[3]/span";
-    String inquireRechargeRecord = "//*[@id=\"app\"]/div/div[2]/section/div/div[1]/form/div[12]/div/button[1]/span";
-    String rechargeTotal = "//*[@id=\"app\"]/div/div[2]/section/div/div[1]/form/div[14]/div/span[2]/span[3]";
+    String inputVipRechargeRecord = "//*[@id=\"app\"]/div/div[2]/div[2]/div[1]/form/div[5]/div/div/input";
+    String monthsRechargeRecord = "//*[@id=\"app\"]/div/div[2]/div[2]/div[1]/form/div[11]/div/div/label[3]/span";
+    String inquireRechargeRecord = "//*[@id=\"app\"]/div/div[2]/div[2]/div[1]/form/div[12]/div/button[1]/span";
+    String rechargeTotal = "//*[@id=\"app\"]/div/div[2]/div[2]/div[1]/form/div[14]/div/span[2]/span[3]";
 
     @Features("报表管理")
     @Stories("会员报表-彩票")
-    @Title("验证会员报表本月充值金额")
+    @Title("验证会员报表彩票本月充值金额")
     @Severity(SeverityLevel.BLOCKER)
     @Step("1.进入报表管理-会员报表；2.获取账号achy01本月充值金额；3.进入充值记录；4.获取充值记录achy01的本月充值总计")
     @Description("判断会员报表的充值金额是否等于该会员充值记录的充值总计")
@@ -1289,7 +1282,7 @@ public class ReportManagement {
             driverUtil.xpathClick(inquireVip);
             Thread.sleep(2000);
             String getRechargeMoneyVip1 = driverUtil.getTextByXpath(getRechargeMoneyVip);
-            System.out.println("验证会员报表本月充值金额");
+            System.out.println("验证会员报表彩票本月充值金额");
             System.out.println("会员报表会员充值金额："+getRechargeMoneyVip1);
 
             driverUtil.xpathClick(financeManagement);
@@ -1310,20 +1303,20 @@ public class ReportManagement {
     }
 
     /**
-     * -------------------------------------报表管理-会员报表-提现金额-----------------------------------------------
+     * -------------------------------------报表管理-会员报表彩票-提现金额-----------------------------------------------
      *
      * */
 
     String withdrawMoney = "//*[@id=\"pane-lottery\"]/div[2]/div[1]/div[3]/table/tbody/tr/td[5]/div";
     String withdrawRecord = "//*[@id=\"app\"]/div/div[1]/div[2]/div[1]/div/ul/div[3]/li/ul/div[2]/a/li/span";
-    String inputWithdraw = "//*[@id=\"app\"]/div/div[2]/section/div/div[1]/form/div[3]/div/div/input";
-    String monthsWithdraw = "//*[@id=\"app\"]/div/div[2]/section/div/div[1]/form/div[11]/div/div/label[3]/span";
-    String inquireWithdraw = "//*[@id=\"app\"]/div/div[2]/section/div/div[1]/form/div[12]/div/button[1]";
-    String withdrawTotal = "//div[@id='app']/div//section[@class='app-main']/div[@class='app-container']//form[@class='el-form el-form--inline']//span[@class='total']";
+    String inputWithdraw = "//*[@id=\"app\"]/div/div[2]/div[2]/div[1]/form/div[3]/div/div/input";
+    String monthsWithdraw = "//*[@id=\"app\"]/div/div[2]/div[2]/div[1]/form/div[11]/div/div/label[3]/span";
+    String inquireWithdraw = "//*[@id=\"app\"]/div/div[2]/div[2]/div[1]/form/div[12]/div/button[1]/span";
+    String withdrawTotal = "//*[@id=\"app\"]/div/div[2]/div[2]/div[1]/form/div[15]/div/span";
 
     @Features("报表管理")
     @Stories("会员报表-彩票")
-    @Title("验证会员报表本月提现金额")
+    @Title("验证会员报表彩票本月提现金额")
     @Severity(SeverityLevel.BLOCKER)
     @Step("1.进入报表管理-会员报表；2.获取账号achy01本月提现金额；3.进入提现记录；4.获取充值记录achy01的本月提现总计")
     @Description("判断会员报表的提现金额是否等于该会员提现记录的提现总计")
@@ -1340,7 +1333,7 @@ public class ReportManagement {
             driverUtil.xpathClick(inquireVip);
             Thread.sleep(2000);
             String getWithdrawMoney = driverUtil.getTextByXpath(withdrawMoney);
-            System.out.println("验证会员报表本月提现金额");
+            System.out.println("验证会员报表彩票本月提现金额");
             System.out.println("会员报表会员提现金额："+getWithdrawMoney);
 
             driverUtil.xpathClick(financeManagement);
@@ -1352,16 +1345,16 @@ public class ReportManagement {
             Thread.sleep(2000);
             String getWithdrawTotal = driverUtil.getTextByXpath(withdrawTotal);
             String getWithdrawTotals = getWithdrawTotal.substring(3);
-            System.out.println("提现记录提现总计："+getWithdrawTotal);
+            System.out.println("提现记录提现总计："+getWithdrawTotals);
             Assertion.setFlag(true);
-            Assertion.verifyEquals(getWithdrawMoney,getWithdrawTotal);
+            Assertion.verifyEquals(getWithdrawMoney,getWithdrawTotals);
             Assert.assertTrue(Assertion.currentFlag());
 
 
     }
 
     /**
-     * -------------------------------------报表管理-会员报表-本月投注笔数-----------------------------------------------
+     * -------------------------------------报表管理-会员报表彩票-本月投注笔数-----------------------------------------------
      *
      * */
 
@@ -1370,7 +1363,7 @@ public class ReportManagement {
 
     @Features("报表管理")
     @Stories("会员报表-彩票")
-    @Title("验证会员报表本月投注笔数")
+    @Title("验证会员报表彩票本月投注笔数")
     @Severity(SeverityLevel.BLOCKER)
     @Step("1.进入报表管理-会员报表；2.获取账号achy01本月投注笔数；3.点击投注笔数跳转；4.获取投注详情页页面数量")
     @Description("判断会员报表的投注笔数是否等于投注详情页的投注数量")
@@ -1387,7 +1380,7 @@ public class ReportManagement {
             driverUtil.xpathClick(inquireVip);
             Thread.sleep(2000);
             String getBetNumber = driverUtil.getTextByXpath(betNumber);
-            System.out.println("验证会员报表本月投注笔数");
+            System.out.println("验证会员报表彩票本月投注笔数");
             System.out.println("会员报表投注笔数："+getBetNumber);
             driverUtil.xpathClick(betNumber);
             Thread.sleep(2000);
@@ -1403,7 +1396,7 @@ public class ReportManagement {
     }
 
     /**
-     * -------------------------------------报表管理-会员报表-投注金额------------------------------------------------
+     * -------------------------------------报表管理-会员报表彩票-投注金额------------------------------------------------
      *
      * */
 
@@ -1412,7 +1405,7 @@ public class ReportManagement {
 
     @Features("报表管理")
     @Stories("会员报表-彩票")
-    @Title("验证会员报表本月投注金额")
+    @Title("验证会员报表彩票本月投注金额")
     @Severity(SeverityLevel.BLOCKER)
     @Step("1.进入报表管理-会员报表；2.获取账号achy01本月投注金额；3.点击投注笔数跳转；4.获取投注详情页页面总投注金额")
     @Description("判断会员报表的投注金额是否等于投注详情页的投注金额总计")
@@ -1422,7 +1415,7 @@ public class ReportManagement {
             driverUtil.switchToWindowTitle("后台管理系统");
             Thread.sleep(2000);
             String getBetMoney = driverUtil.getTextByXpath(betMoney);
-            System.out.println("验证会员报表本月投注金额");
+            System.out.println("验证会员报表彩票本月投注金额");
             System.out.println("会员报表投注金额："+getBetMoney);
             driverUtil.switchToWindowTitle("注单明细");
             Thread.sleep(1000);
@@ -1435,16 +1428,16 @@ public class ReportManagement {
     }
 
     /**
-     * -------------------------------------报表管理-会员报表-充值优惠/手续费-----------------------------------------------
+     * -------------------------------------报表管理-会员报表彩票-充值优惠/手续费-----------------------------------------------
      *
      * */
 
     String rechargeDiscount = "//*[@id=\"pane-lottery\"]/div[2]/div[1]/div[3]/table/tbody/tr/td[10]/div";
-    String rechargeDiscount1 = "//*[@id=\"app\"]/div/div[2]/section/div/div[1]/form/div[14]/div/span[2]/span[2]";
+    String rechargeDiscount1 = "//*[@id=\"app\"]/div/div[2]/div[2]/div[1]/form/div[14]/div/span[2]/span[2]";
 
     @Features("报表管理")
     @Stories("会员报表-彩票")
-    @Title("验证会员报表本月充值优惠金额")
+    @Title("验证会员报表彩票本月充值优惠金额")
     @Severity(SeverityLevel.BLOCKER)
     @Step("1.进入报表管理-会员报表；2.获取账号achy01本月充值优惠金额；3.进入充值记录；4.获取该会员本月充值优惠金额总计")
     @Description("判断会员报表的充值优惠金额是否等于充值记录本月充值优惠金额总计")
@@ -1454,7 +1447,7 @@ public class ReportManagement {
             driverUtil.switchToWindowTitle("后台管理系统");
             Thread.sleep(2000);
             String getRechargeDiscount = driverUtil.getTextByXpath(rechargeDiscount);
-            System.out.println("验证会员报表本月充值优惠金额");
+            System.out.println("验证会员报表彩票本月充值优惠金额");
             System.out.println("会员报表本月充值优惠金额："+getRechargeDiscount);
             driverUtil.xpathClick(financeManagement);
             driverUtil.xpathClick(rechargeRecord);
@@ -1473,7 +1466,7 @@ public class ReportManagement {
     }
 
     /**
-     * -------------------------------------报表管理-会员报表-代理赔率金额-----------------------------------------------
+     * -------------------------------------报表管理-会员报表彩票-代理赔率金额-----------------------------------------------
      *
      * */
 
@@ -1481,7 +1474,7 @@ public class ReportManagement {
 
     @Features("报表管理")
     @Stories("会员报表-彩票")
-    @Title("验证会员报表本月代理赔率金额")
+    @Title("验证会员报表彩票本月代理赔率金额")
     @Severity(SeverityLevel.BLOCKER)
     @Step("1.进入报表管理-会员报表；2.获取账号achy01本月代理赔率金额；")
     @Description("判断会员报表的代理赔率金额是否等于0")
@@ -1500,7 +1493,7 @@ public class ReportManagement {
             Thread.sleep(2000);
 
             String getAgentMoney = driverUtil.getTextByXpath(agentMoney);
-            System.out.println("验证会员报表本月代理赔率金额");
+            System.out.println("验证会员报表彩票本月代理赔率金额");
             System.out.println("代理赔率金额："+getAgentMoney);
             System.out.println("验证默认代理赔率金额为0");
             Assertion.setFlag(true);
@@ -1510,7 +1503,7 @@ public class ReportManagement {
     }
 
     /**
-     * -------------------------------------报表管理-会员报表-代理退水金额-----------------------------------------------
+     * -------------------------------------报表管理-会员报表彩票-代理退水金额-----------------------------------------------
      *
      * */
 
@@ -1518,7 +1511,7 @@ public class ReportManagement {
 
     @Features("报表管理")
     @Stories("会员报表-彩票")
-    @Title("验证会员报表本月代理退水金额")
+    @Title("验证会员报表彩票本月代理退水金额")
     @Severity(SeverityLevel.BLOCKER)
     @Step("1.进入报表管理-会员报表；2.获取账号achy01本月代理退水金额；")
     @Description("判断会员报表的代理退水金额是否等于0")
@@ -1526,7 +1519,7 @@ public class ReportManagement {
     @Test(priority = 36)
         public void agentWaterLotty() throws InterruptedException {
             String getAgentWater = driverUtil.getTextByXpath(agentWater);
-            System.out.println("验证会员报表本月代理退水金额");
+            System.out.println("验证会员报表彩票本月代理退水金额");
             System.out.println("代理退水金额："+getAgentWater);
             System.out.println("该代理为系统代理退水默认为0");
             Assertion.setFlag(true);
@@ -1536,7 +1529,7 @@ public class ReportManagement {
         }
 
     /**
-     * -------------------------------------报表管理-会员报表-实际输赢（不包括退水）-----------------------------------------------
+     * -------------------------------------报表管理-会员报表彩票-实际输赢（不包括退水）-----------------------------------------------
      *
      * */
 
@@ -1547,7 +1540,7 @@ public class ReportManagement {
 
     @Features("报表管理")
     @Stories("会员报表-彩票")
-    @Title("验证会员报表本月实际输赢（不包括退水）金额")
+    @Title("验证会员报表彩票本月实际输赢（不包括退水）金额")
     @Severity(SeverityLevel.BLOCKER)
     @Step("1.进入报表管理-会员报表；2.获取账号achy01本月实际输赢（不包括退水）金额；3.进入投注详情；4.获取该会员本月实际输赢（不包括退水）金额")
     @Description("判断会员报表的实际输赢（不包括退水）金额是否等于投注详情的实际输赢金额减去退水金额")
@@ -1558,7 +1551,7 @@ public class ReportManagement {
             Thread.sleep(2000);
             BigDecimal activityLoseWinNotWaters = new BigDecimal(driverUtil.getTextByXpath(activityLoseWinNotWater));
             BigDecimal ActivityWaters = new BigDecimal(driverUtil.getTextByXpath(activityWater));
-            System.out.println("验证会员报表本月实际输赢（不包括退水）金额");
+            System.out.println("验证会员报表彩票本月实际输赢（不包括退水）金额");
             System.out.println("会员报表本月实际输赢（不包括退水）金额："+activityLoseWinNotWaters);
             System.out.println("会员报表实际退水："+ActivityWaters);
             driverUtil.scrollToWindowHundred();
@@ -1576,7 +1569,7 @@ public class ReportManagement {
 
 
     /**
-     * -------------------------------------报表管理-会员报表-实际输赢（包括退水）-----------------------------------------------
+     * -------------------------------------报表管理-会员报表彩票-实际输赢（包括退水）-----------------------------------------------
      *
      * */
 
@@ -1584,7 +1577,7 @@ public class ReportManagement {
 
     @Features("报表管理")
     @Stories("会员报表-彩票")
-    @Title("验证会员报表本月实际输赢（包括退水）")
+    @Title("验证会员报表彩票本月实际输赢（包括退水）")
     @Severity(SeverityLevel.BLOCKER)
     @Step("1.进入报表管理-会员报表；2.获取账号achy01本月实际输赢（包括退水）；3.进入投注详情；4.获取输赢总金额")
     @Description("判断会员报表的实际输赢（包括退水）是否等于投注详情的输赢总金额")
@@ -1595,7 +1588,7 @@ public class ReportManagement {
             Thread.sleep(2000);
             driverUtil.scrollToWindow();
             String getActivityLoseWinWater = driverUtil.getTextByXpath(activityLoseWinWater);
-            System.out.println("验证会员报表本月实际输赢（包括退水）");
+            System.out.println("验证会员报表彩票本月实际输赢（包括退水）");
             System.out.println("会员报表本月实际输赢（包括退水）："+getActivityLoseWinWater);
             driverUtil.scrollToWindowHundred();
 
@@ -1611,14 +1604,14 @@ public class ReportManagement {
 
 
     /**
-     * -------------------------------------报表管理-会员报表-实际退水-----------------------------------------------
+     * -------------------------------------报表管理-会员报表彩票-实际退水-----------------------------------------------
      *
      * */
 
 
     @Features("报表管理")
     @Stories("会员报表-彩票")
-    @Title("验证会员报表本月实际退水金额")
+    @Title("验证会员报表彩票本月实际退水金额")
     @Severity(SeverityLevel.BLOCKER)
     @Step("1.进入报表管理-会员报表；2.获取账号achy01本月实际退水金额；3.用投注金额*0.5%")
     @Description("判断会员报表的实际退水金额是否等于投注金额*0.5%")
@@ -1631,7 +1624,7 @@ public class ReportManagement {
             BigDecimal ActivityWaters = new BigDecimal(driverUtil.getTextByXpath(activityWater));
             BigDecimal betMoneys = new BigDecimal(driverUtil.getTextByXpath(betMoney));
             BigDecimal result = betMoneys.multiply(BigDecimal.valueOf(0.005));
-            System.out.println("验证会员报表本月实际退水金额");
+            System.out.println("验证会员报表彩票本月实际退水金额");
             System.out.println("会员报表实际退水金额："+ActivityWaters);
             System.out.println("投注金额*0.5% = "+result);
             driverUtil.scrollToWindowHundred();
