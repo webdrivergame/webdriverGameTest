@@ -1468,7 +1468,7 @@ public class ReportManagement {
     /**
      * -------------------------------------报表管理-会员报表彩票-代理赔率金额-----------------------------------------------
      *
-     * */
+
 
     String agentMoney = "//*[@id=\"pane-lottery\"]/div[2]/div[1]/div[3]/table/tbody/tr/td[11]/div";
 
@@ -1502,10 +1502,17 @@ public class ReportManagement {
 
     }
 
+     * */
+
+
+
+
+
+
     /**
      * -------------------------------------报表管理-会员报表彩票-代理退水金额-----------------------------------------------
      *
-     * */
+
 
     String agentWater = "//*[@id=\"pane-lottery\"]/div[2]/div[1]/div[3]/table/tbody/tr/td[12]/div";
 
@@ -1528,6 +1535,12 @@ public class ReportManagement {
 
         }
 
+     * */
+
+
+
+
+
     /**
      * -------------------------------------报表管理-会员报表彩票-实际输赢（不包括退水）-----------------------------------------------
      *
@@ -1537,6 +1550,9 @@ public class ReportManagement {
     String activityLoseWinNotWater = "//*[@id=\"pane-lottery\"]/div[2]/div[1]/div[3]/table/tbody/tr/td[13]/div";
     String loseWinMoneyTotal = "//*[@id=\"app\"]/div/div[2]/div/div[1]/form[2]/div[11]/div/span[2]/span[2]";
     String activityWater = "//*[@id=\"pane-lottery\"]/div[2]/div[1]/div[3]/table/tbody/tr/td[14]/div";
+    String agentWater = "//*[@id=\"pane-lottery\"]/div[2]/div[1]/div[3]/table/tbody/tr/td[12]/div";
+    String agentMoney = "//*[@id=\"pane-lottery\"]/div[2]/div[1]/div[3]/table/tbody/tr/td[11]/div";
+
 
     @Features("报表管理")
     @Stories("会员报表-彩票")
@@ -1545,24 +1561,32 @@ public class ReportManagement {
     @Step("1.进入报表管理-会员报表；2.获取账号achy01本月实际输赢（不包括退水）金额；3.进入投注详情；4.获取该会员本月实际输赢（不包括退水）金额")
     @Description("判断会员报表的实际输赢（不包括退水）金额是否等于投注详情的实际输赢金额减去退水金额")
     @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=45&version=1")
-    @Test(priority = 37)
+    @Test(priority = 35)
         public void activityLoseWinLotty() throws InterruptedException {
             driverUtil.scrollToWindow();
             Thread.sleep(2000);
             BigDecimal activityLoseWinNotWaters = new BigDecimal(driverUtil.getTextByXpath(activityLoseWinNotWater));
             BigDecimal ActivityWaters = new BigDecimal(driverUtil.getTextByXpath(activityWater));
+            BigDecimal agentWaters = new BigDecimal(driverUtil.getTextByXpath(agentWater));
+            BigDecimal agentMoneys = new BigDecimal(driverUtil.getTextByXpath(agentMoney));
+            BigDecimal activityLoseWinWaters = new BigDecimal(driverUtil.getTextByXpath(activityLoseWinWater));
             System.out.println("验证会员报表彩票本月实际输赢（不包括退水）金额");
+
             System.out.println("会员报表本月实际输赢（不包括退水）金额："+activityLoseWinNotWaters);
             System.out.println("会员报表实际退水："+ActivityWaters);
-            driverUtil.scrollToWindowHundred();
+            System.out.println("会员报表代理退水金额："+agentWaters);
+            System.out.println("会员报表代理赔率金额："+agentMoneys);
+            System.out.println("会员报表实际输赢(包括退水)："+activityLoseWinWaters);
 
+            driverUtil.scrollToWindowHundred();
             driverUtil.switchToWindowTitle("注单明细");
             Thread.sleep(2000);
             BigDecimal loseWinMoneyTotals= new BigDecimal(driverUtil.getTextByXpath(loseWinMoneyTotal));
             System.out.println("投注详情输赢总金额："+loseWinMoneyTotals);
-            BigDecimal result = activityLoseWinNotWaters.add(ActivityWaters);//会员输赢（不包括退水）+实际退水=输赢总金额
+            BigDecimal result =activityLoseWinWaters.subtract(ActivityWaters).subtract(agentWaters).subtract(agentMoneys) ;
+            System.out.println("会员实际输赢(不包括退水)计算结果："+result);
             Assertion.setFlag(true);
-            Assertion.verifyEquals(result,loseWinMoneyTotals);
+            Assertion.verifyEquals(result,activityLoseWinNotWaters);
             Assert.assertTrue(Assertion.currentFlag());
 
     }
@@ -1582,7 +1606,7 @@ public class ReportManagement {
     @Step("1.进入报表管理-会员报表；2.获取账号achy01本月实际输赢（包括退水）；3.进入投注详情；4.获取输赢总金额")
     @Description("判断会员报表的实际输赢（包括退水）是否等于投注详情的输赢总金额")
     @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=45&version=1")
-    @Test(priority = 38)
+    @Test(priority = 36)
         public void activityLoseWinWaterLotty() throws InterruptedException {
             driverUtil.switchToWindowTitle("后台管理系统");
             Thread.sleep(2000);
@@ -1606,7 +1630,7 @@ public class ReportManagement {
     /**
      * -------------------------------------报表管理-会员报表彩票-实际退水-----------------------------------------------
      *
-     * */
+
 
 
     @Features("报表管理")
@@ -1634,6 +1658,7 @@ public class ReportManagement {
 
     }
 
+     */
 
 
 
