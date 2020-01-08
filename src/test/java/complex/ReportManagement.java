@@ -457,7 +457,7 @@ public class ReportManagement {
 
     @Features("报表管理")
     @Stories("总代理报表-外接游戏")
-    @Title("验证总代理报外接游戏表会员实际投注总额")
+    @Title("验证总代理报外接游戏会员实际投注总额")
     @Severity(SeverityLevel.BLOCKER)
     @Step("1.进入报表管理-总代理报表；2.获取本月会员实际投注总额，3.点击跳转代理列表，4.获取代理报表会员实际投注总额")
     @Description("测试会员实际投注总额是否等于跳转的代理下实际投注总额相加")
@@ -1344,7 +1344,7 @@ public class ReportManagement {
             driverUtil.xpathClick(inquireWithdraw);
             Thread.sleep(2000);
             String getWithdrawTotal = driverUtil.getTextByXpath(withdrawTotal);
-            String getWithdrawTotals = getWithdrawTotal.substring(3);
+            String getWithdrawTotals = getWithdrawTotal.substring(4);
             System.out.println("提现记录提现总计："+getWithdrawTotals);
             Assertion.setFlag(true);
             Assertion.verifyEquals(getWithdrawMoney,getWithdrawTotals);

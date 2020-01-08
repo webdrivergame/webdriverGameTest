@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite xmlns:ns2="urn:model.allure.qatools.yandex.ru" start="1578397379504" stop="1578397399504" version="1.4.8">
+    <name>Default Suite</name>
+    <title>Default Suite : seleniumCp[]</title>
+    <test-cases>
+        <test-case start="1578397397678" stop="1578397399404" status="passed">
+            <name>moneyDetails1</name>
+            <title>验证会员资金明细数据1</title>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="story" value="会员列表"/>
+                <label name="feature" value="用户管理"/>
+                <label name="host" value="DESKTOP-8DI1090"/>
+                <label name="thread" value="26236@DESKTOP-8DI1090.main"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="framework" value="TestNG"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>

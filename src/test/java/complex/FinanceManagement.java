@@ -15,6 +15,8 @@ public class FinanceManagement {
     WebDriverUtil driverUtil = new WebDriverUtil(null);
 
 
+
+
     /**  ------------------------------------------财务管理-会员对账-线上充值金额-----------------------------------
      *
      * */
@@ -119,7 +121,6 @@ public class FinanceManagement {
     String vipReport = "//*[@id=\"app\"]/div/div[1]/div[2]/div[1]/div/ul/div[4]/li/ul/div[3]/a/li/span";
     String activityLoseWinReport = "//*[@id=\"pane-lottery\"]/div[2]/div[1]/div[4]/table/tbody/tr/td[15]/div";
 
-    String vipReportPage = "//*[@id=\"pane-lottery\"]/div[2]/div[2]/div";
 
     @Features("财务管理")
     @Stories("会员对账")
@@ -136,85 +137,28 @@ public class FinanceManagement {
             System.out.println("验证会员对账彩票实际输赢金额");
             System.out.println("会员对帐彩票实际输赢金额"+getActivityLoseWinLotty);
 
-                //会员报表获取今日实际输赢（包括退水）
-                driverUtil.xpathClick(ReportManagement);
-                Thread.sleep(1000);
-                driverUtil.xpathClick(vipReport);
-                Thread.sleep(1000);
-                driverUtil.scrollToWindow();
-                String activityLoseWinReport1 = driverUtil.getTextByXpath(activityLoseWinReport);
-                System.out.println("会员报表彩票实际输赢(包括退水)："+activityLoseWinReport1);
-                driverUtil.scrollToWindowHundred();
-                Assertion.setFlag(true);
-                Assertion.verifyEquals(getActivityLoseWinLotty, activityLoseWinReport1);
-                Assert.assertTrue(Assertion.currentFlag());
-
-    }
-
-
-    /**------------------------------------------财务管理-会员对账-彩票未结算金额----------------------------------
-     *
-     * */
-
-    String unSettlement = "//*[@id=\"app\"]/div/div[2]/div[2]/div[2]/div[1]/div[3]/table/tbody/tr[1]/td[6]/div";
-    String betNumber = "//*[@id=\"pane-lottery\"]/div[2]/div[1]/div[3]/table/tbody/tr[1]/td[6]/div/span";
-
-    String inputAccount = "//*[@id=\"app\"]/div/div[2]/div/div[1]/form[2]/div[5]/div/div/input";
-    String settlementStatus = "//*[@id=\"app\"]/div/div[2]/div/div[1]/form[2]/div[2]/div/div/div[1]/input";
-    String selectUnSettlement = "//body/div[2]/div[@class='el-scrollbar']//ul[@class='el-scrollbar__view el-select-dropdown__list']//span[.='未结算']";
-    String inputDetail = "//*[@id=\"app\"]/div/div[2]/div/div[1]/form[2]/div[9]/div/button[1]/span";
-    String unSettlementMoney = "//*[@id=\"app\"]/div/div[2]/div/div[1]/form[2]/div[11]/div/span[1]/span[2]";
-
-    @Features("财务管理")
-    @Stories("会员对账")
-    @Title("验证会员对账彩票未结算金额")
-    @Severity(SeverityLevel.BLOCKER)
-    @Step("1.进入财务管理-会员对账，2.获取彩票未结算金额，3.进入报表管理-会员报表，4.点击投注笔数进入注单详情，5.选择未结算的今日数据")
-    @Description("验证会员对账彩票未结算金额")
-    @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=20&version=1")
-    @Test(priority = 4)
-        public void UnSettlement() throws InterruptedException {
-            driverUtil.xpathClick(financeManagement);
-            driverUtil.xpathClick(vipMoney);
-            Thread.sleep(1000);
-            String unSettlement1 = driverUtil.getTextByXpath(unSettlement);
-            System.out.println("验证会员对账彩票未结算金额");
-            System.out.println("会员对账彩票未结算金额："+unSettlement1);
-
-            //会员报表-投注笔数跳转至注单明细，选择未结算；
+            //会员报表获取今日实际输赢（包括退水）
             driverUtil.xpathClick(ReportManagement);
             Thread.sleep(1000);
             driverUtil.xpathClick(vipReport);
             Thread.sleep(1000);
-            driverUtil.xpathClick(betNumber);
-            Thread.sleep(2000);
-            driverUtil.switchToWindowTitle("注单明细");
-            driverUtil.xpathClear(inputAccount);
-            driverUtil.xpathClick(settlementStatus);
-            Thread.sleep(1000);
-            driverUtil.xpathClick(selectUnSettlement);
-            driverUtil.xpathClick(inputDetail);
-            Thread.sleep(1000);
-            String unSettlementMoney1 = driverUtil.getTextByXpath(unSettlementMoney);
-            System.out.println("注单明细今日未结算金额："+unSettlementMoney1);
-            driverUtil.switchToWindowTitleClose("注单明细");
+            driverUtil.scrollToWindow();
+            String activityLoseWinReport1 = driverUtil.getTextByXpath(activityLoseWinReport);
+            System.out.println("会员报表彩票实际输赢(包括退水)："+activityLoseWinReport1);
+            driverUtil.scrollToWindowHundred();
             Assertion.setFlag(true);
-            Assertion.verifyEquals(unSettlement1, unSettlementMoney1);
+            Assertion.verifyEquals(getActivityLoseWinLotty, activityLoseWinReport1);
             Assert.assertTrue(Assertion.currentFlag());
+
 
     }
 
 
-
-
-
-
-
-
-
-
-
-
+    /***
+     *    -----------------------------------财务管理-会员对账-外接游戏总输赢--------------------------------------
+     *
+     *
+     * */
 
 
 
@@ -250,8 +194,10 @@ public class FinanceManagement {
     @Step("1.进入会员对账，2.计算对账差别金额")
     @Description("验证会员对账差别金额第一条数据")
     @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=20&version=1")
-    @Test(enabled = false)
+    @Test(enabled =false )
         public void ReconciliationVip() throws InterruptedException {
+            driverUtil.switchToWindowTitle("后台管理系统");
+            Thread.sleep(1000);
             driverUtil.xpathClick(financeManagement);
             Thread.sleep(1000);
             driverUtil.xpathClick(reconciliationVip);

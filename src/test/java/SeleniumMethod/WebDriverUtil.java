@@ -999,6 +999,8 @@ public WebElement waitForElement(String xpath, int timeout ) {
           //public void scrollToBottom() {
              //((JavascriptExecutor) driver).executeScript("window.scrollTo(0,10000);");
          //}
+
+
             public void scrollToBottom(){
                 ((JavascriptExecutor) driver).executeScript("window.scrollTo(0,document.body.scrollHeight)");
             }
@@ -1017,12 +1019,39 @@ public WebElement waitForElement(String xpath, int timeout ) {
             }
 
 
+            //设置窗口比例80%
+            public void scrollToWindowEighty(){
+                ((JavascriptExecutor) driver).executeScript("document.body.style.zoom='75%';");
+            }
+
+
 
 
           //滚动到最右边
            public void scrollToRight(){
-               ((JavascriptExecutor) driver).executeScript("window.scrollTo(10000,1024);");
+               ((JavascriptExecutor) driver).executeScript("window.scrollTo(10000,1024);");//横坐标，纵坐标
            }
+
+        //右滚动三分之一
+        public void scrollToRight1OneThree(){
+            ((JavascriptExecutor) driver).executeScript("window.scrollTo(420,42);");//横坐标，纵坐标
+        }
+
+
+    /**
+     * 控制水平滚动条左右拉到中间
+     */
+    public static void horizontaltoMiddle() {
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        //左右拉到中间
+        js.executeScript("window.scrollBy(0, 0-document.body.scrollWidht *1/2)");
+    }
+
+
+
+
+
+
 
 
           // 滚动到某个元素
@@ -1172,6 +1201,58 @@ public WebElement waitForElement(String xpath, int timeout ) {
          public void refreshWithCtrlF5() {
              getKeyboard().sendKeys(Keys.CONTROL, Keys.F5);
          }
+
+    /**Tab键封装*/
+
+        public static void pressTabKey(){
+            Robot robot = null;
+            try{
+                robot = new Robot();
+            }catch (AWTException e){
+                e.printStackTrace();
+            }
+            //调用keypress方法来实现按下Tab键
+            assert robot != null;
+            robot.keyPress(KeyEvent.VK_TAB);
+            //调用keyrelease方法来实现释放Tab键
+            robot.keyRelease(KeyEvent.VK_TAB);
+        }
+
+
+    /**Enter键封装*/
+
+        public static void pressEnterKey(){
+            Robot robot = null;
+            try{
+                robot = new Robot();
+            }catch (AWTException e){
+                e.printStackTrace();
+            }
+            //调用keypress方法来实现按下Enter键
+            assert robot != null;
+            robot.keyPress(KeyEvent.VK_ENTER);
+            //调用keyrelease方法来实现释放Enter键
+            robot.keyRelease(KeyEvent.VK_ENTER);
+        }
+
+
+
+    /**
+     * 键盘向下键封装
+     */
+    public static void pressDownKey(){
+        Robot robot = null;
+        try{
+            robot = new Robot();
+        }catch (AWTException e){
+            e.printStackTrace();
+        }
+        assert robot != null;
+        robot.keyPress(KeyEvent.VK_DOWN);
+        robot.keyRelease(KeyEvent.VK_DOWN);
+    }
+
+
  /**
    *     按物理按键(KeyEvent类中查找相关的常量)
    *     例子：
@@ -1248,6 +1329,25 @@ public WebElement waitForElement(String xpath, int timeout ) {
                  }
              actions.release(driver.findElement(by)).perform();
          }
+
+
+        /**
+         * 模拟鼠标拖拽
+         * @param driver
+         * @param source
+         * @param target
+         */
+
+        public void dragAction(WebDriver driver, WebElement source, WebElement target) {
+            Actions actions = new Actions(driver);
+            // 鼠标拖拽动作，将 source 元素拖放到 target 元素的位置
+            actions.dragAndDrop(source, target);
+        }
+
+
+
+
+
 
          /**
           * 浏览器返回

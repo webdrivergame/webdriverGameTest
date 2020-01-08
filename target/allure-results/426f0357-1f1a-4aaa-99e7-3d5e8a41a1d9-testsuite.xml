@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite xmlns:ns2="urn:model.allure.qatools.yandex.ru" start="1578454147663" stop="1578454167504" version="1.4.8">
+    <name>Default Suite</name>
+    <title>Default Suite : seleniumCp[]</title>
+    <test-cases>
+        <test-case start="1578454165738" stop="1578454167392" status="passed">
+            <name>moneyDetails1</name>
+            <steps/>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-8DI1090"/>
+                <label name="thread" value="25756@DESKTOP-8DI1090.main"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="framework" value="TestNG"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>

@@ -88,7 +88,6 @@ public class UserManagement {
     String vipList = "//*[@id=\"app\"]/div/div[1]/div[2]/div[1]/div/ul/div[2]/li/ul/div[3]/a/li/span";
     String testUser = "//*[@id=\"app\"]/div/div[2]/div[2]/div/div[1]/div/label/span[2]";
     String selectVipAgentTotal = "//*[@id=\"app\"]/div/div[2]/div[2]/div/div[1]/form/div[11]/div/div/div/input";
-    String selectVipZDL = "//body/div[3]/div[@class='el-scrollbar']//ul[@class='el-scrollbar__view el-select-dropdown__list']//span[.='zdl (系统总代理)']";
     String inquireVip = "//*[@id=\"app\"]/div/div[2]/div[2]/div/div[1]/form/div[15]/div/button[1]/span";
     String vipNumberPage = "//*[@id=\"app\"]/div/div[2]/div[2]/div/div[2]/div[2]/div[1]";
 
@@ -101,7 +100,7 @@ public class UserManagement {
     @Issue("http://10.1.101.66:890/index.php?m=testcase&f=view&caseID=16&version=1")
     @Test(priority = 2)
         public void vipNumber() throws InterruptedException {
-
+            driverUtil.xpathClick(UserManagement);
             driverUtil.xpathClick(agentTotal); //点击总代理列表
             Thread.sleep(1000);
             String getVipNumber = driverUtil.getTextByXpath(vipNumber);//获取zdl会员数
@@ -111,9 +110,11 @@ public class UserManagement {
             driverUtil.xpathClick(vipList);//点击会员列表
             Thread.sleep(1000);
 
+
             driverUtil.xpathClick(selectVipAgentTotal);//点击上级总代理筛选
             Thread.sleep(1000);
-            driverUtil.xpathClick(selectVipZDL);//选择zdl
+            driverUtil.pressDownKey();//键盘向下选择
+            driverUtil.pressEnterKey();//键盘enter键
             driverUtil.xpathClick(testUser);//勾选测试用户筛选
             driverUtil.xpathClick(inquireVip);//查询
             Thread.sleep(1000);
