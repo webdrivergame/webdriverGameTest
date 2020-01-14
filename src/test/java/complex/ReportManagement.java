@@ -16,14 +16,13 @@ public class ReportManagement {
 
 
 
-
     /**
      * -------------------------------------------报表管理-总代理报表彩票-会员数-----------------------------------------
      *
      * */
 
     String reportManagement = "//*[@id=\"app\"]/div/div[1]/div[2]/div[1]/div/ul/div[4]/li/div/span";
-    String reportAgentTotal = "//*[@id=\"app\"]/div/div[1]/div[2]/div[1]/div/ul/div[4]/li/ul/div[1]/a/li/span";
+    String reportAgentTotal = "//*[@id=\"app\"]/div/div[1]/div[2]/div[1]/div/ul/div/li[4]/ul/li[1]/span";
     String mothsAgentTotal = "//*[@id=\"pane-lottery\"]/div[1]/form/div[5]/div/div[1]/div/div/label[4]/span";
     String inquireAgentTotal = "//*[@id=\"pane-lottery\"]/div[1]/form/div[5]/div/div[2]/div/button[1]/span";
     String vipNumberMonths = "//*[@id=\"pane-lottery\"]/div[2]/div/div[3]/table/tbody/tr/td[2]/div";
@@ -1274,8 +1273,8 @@ public class ReportManagement {
     @Test(priority = 30)
         public void rechargeMoneyVipLotty() throws InterruptedException {
             //driverUtil.xpathClick(reportManagement);
-            driverUtil.xpathClick(reportAgent);//点击代理报表
-            driverUtil.xpathClick(reportVip);//点击会员报表
+            driverUtil.xpathClick(reportAgent);//点击代理报表表
+            driverUtil.xpathClick(reportVip);//点击会员报
             Thread.sleep(2000);
             driverUtil.xpathClearSendKeys(inputVipAccount,"achy05");
             driverUtil.xpathClick(monthsVip);

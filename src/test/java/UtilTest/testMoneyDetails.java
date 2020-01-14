@@ -62,8 +62,9 @@ public class testMoneyDetails {
         //driverUtil.scrollToRight1OneThree();//右边滚动三分之一
 
 
-        driverUtil.horizontaltoMiddle();
+        //driverUtil.horizontaltoMiddle();
         //driverUtil.scrollToRight();//滚动到最右边
+
         String loseWins = driverUtil.getTextByXpath(loseWin);
         System.out.println("会员输赢："+loseWins);
 

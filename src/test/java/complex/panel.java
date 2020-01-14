@@ -39,10 +39,10 @@ public class panel  {
      *
      * */
 
-    String panel = "//*[@id=\"app\"]/div/div[1]/div[2]/div[1]/div/ul/div[1]/a/li/span";
+    String panel = "//*[@id=\"app\"]/div/div[1]/div[2]/div[1]/div/ul/div/li[1]/div/span";
     String playerNumber = "//*[@id=\"app\"]/div/div[2]/div[2]/div/div/div[1]/div/div/div[2]/div[2]/span[2]";
-    String userManagement = "//*[@id=\"app\"]/div/div[1]/div[2]/div[1]/div/ul/div[2]/li/div/span";
-    String vip = "//*[@id=\"app\"]/div/div[1]/div[2]/div[1]/div/ul/div[2]/li/ul/div[3]/a/li/span";
+    String userManagement = "//*[@id=\"app\"]/div/div[1]/div[2]/div[1]/div/ul/div/li[2]/div/span";
+    String vip = "//*[@id=\"app\"]/div/div[1]/div[2]/div[1]/div/ul/div/li[2]/ul/li[4]/span";
     String playerNumberPage = "//*[@id=\"app\"]/div/div[2]/div[2]/div/div[2]/div[2]/div[1]";
     String isTestUser = "/html//div[@id='app']/div//div[@class='filter-container']//span[@class='el-checkbox__label']";
     String inquireVip = "//*[@id=\"app\"]/div/div[2]/div[2]/div/div[1]/form/div[15]/div/button[1]/span";
@@ -62,7 +62,7 @@ public class panel  {
     @Test(priority = 1)
         public void playerNumber() throws InterruptedException {
             //仪表盘总会员数
-            driverUtil.xpathClick(panel);
+            //driverUtil.xpathClick(panel);
             String getPlayerNumber = driverUtil.getTextByXpath(playerNumber);
             //会员列表总会员数
             driverUtil.xpathClick(userManagement);
@@ -87,11 +87,11 @@ public class panel  {
     /** 1.点击仪表盘，2.获取平台总注单量，3.进入历史投注记录，4.获取投注笔数
      *
      * */
-
+    String pancl1 = "//*[@id=\"app\"]/div/div[1]/div[2]/div[1]/div/ul/div/li[1]/ul/li/span";
     String clickNotesNumber = "//*[@id=\"tab-2\"]";
     String totalNotes = "//*[@id=\"app\"]/div/div[2]/div[2]/div/div/div[1]/div/div/div[2]/div[2]/span[2]";
-    String betRecord = "//*[@id=\"app\"]/div/div[1]/div[2]/div[1]/div/ul/div[5]/li/div/span";
-    String historyBet = "//*[@id=\"app\"]/div/div[1]/div[2]/div[1]/div/ul/div[5]/li/ul/div[2]/a/li/span";
+    String betRecord = "//*[@id=\"app\"]/div/div[1]/div[2]/div[1]/div/ul/div/li[5]/div/span";
+    String historyBet = "//*[@id=\"app\"]/div/div[1]/div[2]/div[1]/div/ul/div/li[5]/ul/li[2]/span";
     String clickTime = "//*[@id=\"app\"]/div/div[2]/div[2]/div[1]/form/div[6]/div/div[2]/i[2]";
     String inquire = "//*[@id=\"app\"]/div/div[2]/div[2]/div[1]/form/div[7]/div/button[1]/span";
     String notesPage = "//*[@id=\"app\"]/div/div[2]/div[2]/div[2]/div[2]/div[1]";
@@ -108,6 +108,8 @@ public class panel  {
         public void notesNumber() throws InterruptedException {
             //仪表盘总注单量
             driverUtil.xpathClick(panel);
+            driverUtil.xpathClick(pancl1);
+            Thread.sleep(1000);
             driverUtil.xpathClick(clickNotesNumber);
             String getTotalNotes = driverUtil.getTextByXpath(totalNotes);
 
@@ -130,6 +132,12 @@ public class panel  {
             Thread.sleep(2000);
 
         }
+
+    @Test(priority = 3)
+    public void openUrl() throws InterruptedException {
+        driverUtil.openUrl("http://10.1.101.124:8044/");
+        Thread.sleep(2000);
+    }
 
 
 

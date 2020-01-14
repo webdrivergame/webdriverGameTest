@@ -152,20 +152,7 @@ public class StringToNumber {
 
 
 
-        @Test
-        public void intTest(){
-            String str="4444.1122";
 
-            double num;
-
-            java.text.DecimalFormat myformat=new java.text.DecimalFormat("#0.000");
-
-            num=Double.parseDouble(str);//装换为double类型
-
-            num=Double.parseDouble(myformat.format(num));//保留3位小数
-
-            System.out.println(num);
-        }
 
 
         @Test

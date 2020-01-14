@@ -89,11 +89,11 @@ import org.openqa.selenium.support.ui.WebDriverWait;
  */
 
         public void playerLogin(String username,String password){
-                WebElement user = driver.findElement(By.xpath("//*[@id=\"app\"]/div/div[1]/div/div[1]/div[2]/div[2]/div[1]/input[1]"));
+                WebElement user = driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div[1]/div[2]/div[2]/div[1]/div[2]/input"));
                 user.clear();
                 user.click();
                 user.sendKeys(username);
-                WebElement pass = driver.findElement(By.xpath("//*[@id=\"app\"]/div/div[1]/div/div[1]/div[2]/div[2]/div[1]/input[2]"));
+                WebElement pass = driver.findElement(By.xpath("//*[@id=\"app\"]/div[1]/div[1]/div[2]/div[2]/div[2]/div[2]/input"));
                 pass.clear();
                 pass.click();
                 pass.sendKeys(password);
@@ -724,16 +724,8 @@ public WebElement waitForElement(String xpath, int timeout ) {
 
       //---------------------------------------下拉列表操作---------------------------------------------------------
 
-           // 根据id获取下拉框，根据index选择选项
-          public void findSelectByIdAndSelectByIndex(String id, int index) {
-             Select select = new Select(findElementById(id));
-             select.selectByIndex(index);
-         }
-          // 根据id获取下拉框，根据value选择选项
-          public void findSelectByIdAndSelectByValue(String id, String value) {
-             Select select = new Select(findElementById(id));
-             select.selectByValue(value);
-         }
+
+
           // 根据id获取下拉框，根据text选择选项
           public void findSelectByIdAndSelectByText(String id, String text) {
              Select select = new Select(findElementById(id));
@@ -745,16 +737,8 @@ public WebElement waitForElement(String xpath, int timeout ) {
              Select select = new Select(findElementByClassName(name));
              select.selectByVisibleText(text);
          }
-          // 根据classname获取下拉框，根据Value选择选项
-          public void findSelectByClassNameAndSelectByValue(String name, String value) {
-             Select select = new Select(findElementByClassName(name));
-             select.selectByValue(value);
-         }
-          // 根据classname获取下拉框，根据index选择选项
-          public void findSelectByClassNameAndSelectByIndex(String name, int index) {
-             Select select = new Select(findElementByClassName(name));
-             select.selectByIndex(index);
-         }
+
+
 
 
          // 根据name获取下拉框，根据index选择选项
@@ -762,12 +746,7 @@ public WebElement waitForElement(String xpath, int timeout ) {
              Select select = new Select(findElementByName(name));
              select.selectByIndex(index);
          }
-          //根据xpath获取下拉框，根据name选择选项
-           public void findSelectByXpathAndSelectByValue(String xpath,String text){
-              Select select = new Select(findElementByXpath(xpath));
-              //select.selectByValue(value);
-              select.selectByVisibleText(text);
-           }
+
         //通过linkText查找元素
             public void findElementByLinkText(String linkText){
               driver.findElement(By.linkText(linkText));
@@ -941,12 +920,7 @@ public WebElement waitForElement(String xpath, int timeout ) {
           public void switchToFrameByXpath(String frameXpath) {
              driver.switchTo().frame(frameXpath);
          }
-          public void switchToFrameByIndex(int index) {
-             driver.switchTo().frame(index);
-         }
-          public void switchToFrameByElement(By locator) {
-             driver.switchTo().frame(driver.findElement(locator));
-         }
+
 
           /**
            *
@@ -1001,6 +975,10 @@ public WebElement waitForElement(String xpath, int timeout ) {
          //}
 
 
+
+
+
+
             public void scrollToBottom(){
                 ((JavascriptExecutor) driver).executeScript("window.scrollTo(0,document.body.scrollHeight)");
             }
@@ -1038,17 +1016,18 @@ public WebElement waitForElement(String xpath, int timeout ) {
         }
 
 
+
+
     /**
      * 控制水平滚动条左右拉到中间
+     * @param driver 浏览器驱动
      */
-    public static void horizontaltoMiddle() {
+
+    public static void horizontaltoMiddle(WebDriver driver) {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         //左右拉到中间
         js.executeScript("window.scrollBy(0, 0-document.body.scrollWidht *1/2)");
     }
-
-
-
 
 
 
@@ -1219,7 +1198,7 @@ public WebElement waitForElement(String xpath, int timeout ) {
         }
 
 
-    /**Enter键封装*/
+    //键盘enter键
 
         public static void pressEnterKey(){
             Robot robot = null;
@@ -1390,18 +1369,29 @@ public WebElement waitForElement(String xpath, int timeout ) {
          public static Set<Cookie> getAllCookies() {
              return driver.manage().getCookies();
          }
+
+
+
+
+
+
+
  // 输出cookies信息
          public void outputCookie() {
              Set<Cookie> cookie = driver.manage().getCookies();
              System.out.println(cookie);
          }
+
  //添加cookie信息
-         public void addCookie(Map<String, String> args) {
+    /**
+         public void addCookie() {
              Set<String> keys = args.keySet();
              for (String key : keys) {
                      driver.manage().addCookie(new Cookie(key, args.get(key)));
                  }
          }
+     */
+
  /**
    *     用给定的name和value创建默认路径的Cookie并添加, 永久有效
    * @param name
